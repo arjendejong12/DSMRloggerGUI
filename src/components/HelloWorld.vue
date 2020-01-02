@@ -76,6 +76,7 @@
 
 <script lang="ts">
 import Vue from "vue";
+import { mapActions } from "vuex";
 
 export default Vue.extend({
   name: "HelloWorld",
@@ -131,6 +132,12 @@ export default Vue.extend({
         href: "https://vuetifyjs.com/getting-started/frequently-asked-questions"
       }
     ]
-  })
+  }),
+
+  created() {
+    if (!this.$store.state.deviceInfo.length) {
+      this.$store.dispatch("getDeviceInfo");
+    }
+  }
 });
 </script>
