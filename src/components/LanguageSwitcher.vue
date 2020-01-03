@@ -1,13 +1,4 @@
 <template>
-  <!-- <v-select
-    :value="$i18n.locale"
-    :items="$i18n.availableLocales"
-    item-text="label"
-    item-value="code"
-    :label="$t('language')"
-    return-object
-    @change="onChangeLocale"
-  /> -->
   <v-menu offset-y>
     <template v-slot:activator="{ on: menu }">
       <v-tooltip bottom>

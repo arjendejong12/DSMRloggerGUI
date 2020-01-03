@@ -63,7 +63,7 @@ export default Vue.extend({
   data: () => ({
     drawer: null,
     menuItems: [
-      { icon: "mdi-clock-outline", title: "Actueel", link: "/" },
+      { icon: "mdi-clock-outline", title: "Slimme meter", link: "/" },
       { icon: "mdi-history", title: "Per uur", link: "/per-hour" },
       { icon: "mdi-calendar-today", title: "Per dag", link: "/per-day" },
       { icon: "mdi-calendar-month", title: "Per maand", link: "/per-month" },
