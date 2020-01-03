@@ -10,6 +10,7 @@ interface IState {
 
 export default new Vuex.Store({
   state: {
+    smartMeter: [],
     deviceInfo: [],
     isLoading: true
   },
@@ -23,14 +24,21 @@ export default new Vuex.Store({
     }
   },
   actions: {
+    async getSmartMeter({ commit }) {
+      commit(FETCH_START);
+      try {
+        const { data } = await Vue.axios.get("/sm/fields");
+        commit(FETCH_END, { data, stateProperty: "smartMeter" });
+      } catch (error) {
+        throw new Error(error);
+      }
+    },
     async getDeviceInfo({ commit }) {
       commit(FETCH_START);
       try {
         const { data } = await Vue.axios.get("/dev/info");
-        console.log(data);
         commit(FETCH_END, { data, stateProperty: "deviceInfo" });
       } catch (error) {
-        console.log(error);
         throw new Error(error);
       }
     }
