@@ -31,24 +31,16 @@
       <v-toolbar-title>DSMRloggerGUI</v-toolbar-title>
       <v-spacer></v-spacer>
       <language-switcher :languages="languages"></language-switcher>
-    </v-app-bar>
-
-    <v-content>
-      <router-view></router-view>
       <v-btn
-        key="theme-light-dark-toggle"
-        :color="isDark ? 'yellow darken-3' : 'dark-gray'"
-        fab
-        large
-        dark
-        bottom
-        right
-        fixed
-        class="v-btn--example"
+        icon
         @click="isDark = !isDark"
       >
         <v-icon>mdi-theme-light-dark</v-icon>
       </v-btn>
+    </v-app-bar>
+
+    <v-content>
+      <router-view></router-view>
     </v-content>
 
     <v-footer app>
