@@ -1,6 +1,6 @@
 import Vue from "vue";
 import Vuetify from "vuetify/lib";
-import nl from "vuetify/src/locale/nl";
+import i18n from "@/i18n";
 
 Vue.use(Vuetify);
 
@@ -22,8 +22,7 @@ export default new Vuetify({
     }
   },
   lang: {
-    locales: { nl },
-    current: "nl"
+    t: (key, ...params) => i18n.t(key, params) as string
   },
   icons: {
     iconfont: "mdi"

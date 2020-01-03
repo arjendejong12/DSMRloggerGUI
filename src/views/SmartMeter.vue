@@ -3,14 +3,14 @@
     <v-container>
       <v-row text-center wrap>
         <v-col cols="12" sm="12" class="d-flex justify-space-between">
-          <h1>Slimme Meter</h1>
+          <h1>{{ $t("smart_meter") }}</h1>
           <v-btn
             color="orange"
             class="ma-2 white--text"
             :disabled="isLoading"
             @click="refresh"
           >
-            Vernieuw
+            {{ $t("refresh") }}
             <v-icon right>mdi-refresh</v-icon>
           </v-btn>
         </v-col>
@@ -98,13 +98,6 @@ export default {
         this.$store.dispatch("getSmartMeter");
       }, 10000);
     }
-  },
-  beforeRouteEnter(to, from, next) {
-    next(vm => {
-      if (vm.data.intervalTab) {
-        clearInterval(vm.data.intervalTab);
-      }
-    });
   },
   beforeRouteLeave(to, from, next) {
     next(vm => {

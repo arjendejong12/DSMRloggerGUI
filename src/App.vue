@@ -29,6 +29,8 @@
     <v-app-bar app clipped-left>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-toolbar-title>DSMRloggerGUI</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <language-switcher :languages="languages"></language-switcher>
     </v-app-bar>
 
     <v-content>
@@ -57,11 +59,14 @@
 
 <script lang="ts">
 import Vue from "vue";
+import LanguageSwitcher from "@/components/LanguageSwitcher.vue";
 
 export default Vue.extend({
   name: "App",
 
-  components: {},
+  components: {
+    LanguageSwitcher
+  },
 
   data: () => ({
     drawer: null,
@@ -80,6 +85,18 @@ export default Vue.extend({
         icon: "mdi-information-outline",
         title: "Systeeminfo",
         link: "/system-info"
+      }
+    ],
+    languages: [
+      {
+        id: "en",
+        title: "English",
+        flagSrc: "https://cdn.vuetifyjs.com/images/flags/us.png"
+      },
+      {
+        id: "nl",
+        title: "Dutch",
+        flagSrc: "https://cdn.vuetifyjs.com/images/flags/nl.png"
       }
     ],
     isDark: true
