@@ -17,7 +17,7 @@
             <v-icon v-else>mdi-earth</v-icon>
           </v-btn>
         </template>
-        <span>Switch Language</span>
+        <span>{{ $t("language") }}</span>
       </v-tooltip>
     </template>
     <v-list>
@@ -29,13 +29,13 @@
         <v-list-item-avatar tile size="24">
           <v-img :src="language.flagSrc"></v-img>
         </v-list-item-avatar>
-        <v-list-item-title>{{ language.title }}</v-list-item-title>
+        <v-list-item-title>{{ $t(language.title) }}</v-list-item-title>
       </v-list-item>
     </v-list>
   </v-menu>
 </template>
 
-<script lang="ts">
+<script>
 export default {
   props: {
     languages: {
@@ -53,12 +53,12 @@ export default {
       if (!this.currentLanguage || !this.currentLanguage) {
         return null;
       }
-      return this.$props.languages.filter(x => x.id === this.currentLanguage)[0]
+      return this.languages.filter(x => x.id === this.currentLanguage)[0]
         .flagSrc;
     }
   },
   methods: {
-    changeLanguage(id: string) {
+    changeLanguage(id) {
       this.$i18n.locale = id;
     }
   }

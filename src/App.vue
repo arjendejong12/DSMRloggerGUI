@@ -57,7 +57,7 @@
   </v-app>
 </template>
 
-<script lang="ts">
+<script>
 import Vue from "vue";
 import LanguageSwitcher from "@/components/LanguageSwitcher.vue";
 
@@ -90,12 +90,12 @@ export default Vue.extend({
     languages: [
       {
         id: "en",
-        title: "English",
+        title: "english",
         flagSrc: "https://cdn.vuetifyjs.com/images/flags/us.png"
       },
       {
         id: "nl",
-        title: "Dutch",
+        title: "dutch",
         flagSrc: "https://cdn.vuetifyjs.com/images/flags/nl.png"
       }
     ],

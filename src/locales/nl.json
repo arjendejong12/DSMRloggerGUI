@@ -1,5 +1,7 @@
 {
   "language": "Taal",
+  "english": "Engels",
+  "dutch": "Nederlands",
   "smart_meter": "Slimme meter",
   "refresh": "Vernieuw",
   "$vuetify": {

@@ -12,13 +12,5 @@ module.exports = {
       ...config.get("externals"),
       moment: "moment"
     });
-  },
-  pluginOptions: {
-    i18n: {
-      locale: "nl",
-      fallbackLocale: "en",
-      localeDir: "locales",
-      enableInSFC: true
-    }
   }
 };

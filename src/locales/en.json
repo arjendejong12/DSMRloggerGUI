@@ -1,5 +1,7 @@
 {
   "language": "Language",
+  "english": "English",
+  "dutch": "Dutch",
   "smart_meter": "Smart meter",
   "refresh": "Refresh",
   "$vuetify": {

@@ -4,10 +4,6 @@ import { FETCH_START, FETCH_END } from "./mutation-types";
 
 Vue.use(Vuex);
 
-interface IState {
-  [key: string]: any;
-}
-
 export default new Vuex.Store({
   state: {
     smartMeter: [],
@@ -18,7 +14,7 @@ export default new Vuex.Store({
     [FETCH_START](state) {
       state.isLoading = true;
     },
-    [FETCH_END](state: IState, { data, stateProperty }) {
+    [FETCH_END](state, { data, stateProperty }) {
       state.isLoading = false;
       state[stateProperty] = data;
     }
