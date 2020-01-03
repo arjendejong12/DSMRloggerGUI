@@ -1,15 +1,10 @@
 <template>
   <v-menu offset-y>
     <template v-slot:activator="{ on: menu }">
-      <v-tooltip bottom>
-        <template v-slot:activator="{ on: tooltip }">
-          <v-btn icon v-on="{ ...tooltip, ...menu }">
-            <img :src="currentLanguageIcon" v-if="currentLanguageIcon" />
-            <v-icon v-else>mdi-earth</v-icon>
-          </v-btn>
-        </template>
-        <span>{{ $t("language") }}</span>
-      </v-tooltip>
+      <v-btn icon v-on="{...menu }">
+        <img :src="currentLanguageIcon" v-if="currentLanguageIcon" />
+        <v-icon v-else>mdi-translate</v-icon>
+      </v-btn>
     </template>
     <v-list>
       <v-list-item
