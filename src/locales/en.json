@@ -47,6 +47,7 @@
       "pm": "PM"
     }
   },
+  "actual": "Actual",
   "current_l1": "Current L1",
   "current_l2": "Current L2",
   "current_l3": "Current L3",
