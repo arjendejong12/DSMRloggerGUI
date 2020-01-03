@@ -1,107 +1,107 @@
 {
-	"$vuetify": {
-		"badge": "insigne",
-		"calendar": {
-			"moreEvents": "{0} meer"
-		},
-		"carousel": {
-			"ariaLabel": {
-				"delimiter": "Carousel slide {0} of {1}"
-			},
-			"next": "Volgend beeld",
-			"prev": "Vorig beeld"
-		},
-		"close": "Sluiten",
-		"dataFooter": {
-			"firstPage": "Eerste pagina",
-			"itemsPerPageAll": "Alles",
-			"itemsPerPageText": "Aantal per pagina:",
-			"lastPage": "Laatste pagina",
-			"nextPage": "Volgende pagina",
-			"pageText": "{0}-{1} van {2}",
-			"prevPage": "Vorige pagina"
-		},
-		"dataIterator": {
-			"loadingText": "Items aan het laden...",
-			"noResultsText": "Geen overeenkomende resultaten gevonden"
-		},
-		"dataTable": {
-			"ariaLabel": {
-				"sortAscending": ": Oplopend gesorteerd. Activeer om aflopend te sorteren.",
-				"sortDescending": ": Aflopend gesorteerd. Activeer om de sortering te verwijderen.",
-				"sortNone": ": Niet gesorterrd. Activeer om oplopend te sorteren."
-			},
-			"itemsPerPageText": "Rijen per pagina:",
-			"sortBy": "Sorteer volgens"
-		},
-		"datePicker": {
-			"itemsSelected": "{0} geselecteerd"
-		},
-		"fileInput": {
-			"counter": "{0} bestanden",
-			"counterSize": "{0} bestanden ({1} in totaal)"
-		},
-		"noDataText": "Geen gegevens beschikbaar",
-		"timePicker": {
-			"am": "AM",
-			"pm": "PM"
-		}
-	},
-	"current_l1": "Stroom L1",
-	"current_l2": "Stroom L2",
-	"current_l3": "Stroom L3",
-	"dutch": "Nederlands",
-	"electricity_failure_log": "Stroomstoringslogboek",
-	"electricity_failures": "Stroomstoringen",
-	"electricity_long_failures": "Lange stroomstoringen",
-	"electricity_sags_l1": "",
-	"electricity_sags_l2": "",
-	"electricity_sags_l3": "",
-	"electricity_swells_l1": "",
-	"electricity_swells_l2": "",
-	"electricity_swells_l3": "",
-	"electricity_switch_position": "Positie van de stroomschakelaar",
-	"electricity_tariff": "Stroomtarief",
-	"electricity_threshold": "",
-	"energy_delivered_tariff1": "",
-	"energy_delivered_tariff2": "",
-	"energy_returned_tariff1": "",
-	"energy_returned_tariff2": "",
-	"english": "Engels",
-	"equipment_id": "Apparaat ID",
-	"gas_delivered": "Gas verbruikt",
-	"gas_device_type": "Type gasapparaat",
-	"gas_equipment_id": "Gasapparaat ID",
-	"gas_valve_position": "Positie gasklep",
-	"identification": "Slimme meter ID",
-	"language": "Taal",
-	"message_long": "Lang bericht",
-	"message_short": "Kort bericht",
-	"p1_version": "P1 versie",
-	"power_delivered": "Vermogen verbruikt",
-	"power_delivered_l1": "Vermogen verbruikt L1",
-	"power_delivered_l2": "Vermogen verbruikt L2",
-	"power_delivered_l3": "Vermogen verbruikt L3",
-	"power_returned": "Vermogen opgewekt",
-	"power_returned_l1": "Vermogen opgewekt L1",
-	"power_returned_l2": "Vermogen opgewekt L2",
-	"power_returned_l3": "Vermogen opgewekt L3",
-	"refresh": "Vernieuw",
-	"slave_delivered": "",
-	"slave_device_type": "",
-	"slave_equipment_id": "",
-	"slave_valve_position": "",
-	"smart_meter": "Slimme meter",
-	"thermal_delivered": "",
-	"thermal_device_type": "",
-	"thermal_equipment_id": "",
-	"thermal_valve_position": "",
-	"timestamp": "Tijdstempel",
-	"voltage_l1": "Voltage L1",
-	"voltage_l2": "Voltage L2",
-	"voltage_l3": "Voltage L3",
-	"water_delivered": "Water verbruikt",
-	"water_device_type": "Type waterapparaat",
-	"water_equipment_id": "Waterapparaat ID",
-	"water_valve_position": "Positie waterklep"
+  "$vuetify": {
+    "badge": "insigne",
+    "calendar": {
+      "moreEvents": "{0} meer"
+    },
+    "carousel": {
+      "ariaLabel": {
+        "delimiter": "Carousel slide {0} of {1}"
+      },
+      "next": "Volgend beeld",
+      "prev": "Vorig beeld"
+    },
+    "close": "Sluiten",
+    "dataFooter": {
+      "firstPage": "Eerste pagina",
+      "itemsPerPageAll": "Alles",
+      "itemsPerPageText": "Aantal per pagina:",
+      "lastPage": "Laatste pagina",
+      "nextPage": "Volgende pagina",
+      "pageText": "{0}-{1} van {2}",
+      "prevPage": "Vorige pagina"
+    },
+    "dataIterator": {
+      "loadingText": "Items aan het laden...",
+      "noResultsText": "Geen overeenkomende resultaten gevonden"
+    },
+    "dataTable": {
+      "ariaLabel": {
+        "sortAscending": ": Oplopend gesorteerd. Activeer om aflopend te sorteren.",
+        "sortDescending": ": Aflopend gesorteerd. Activeer om de sortering te verwijderen.",
+        "sortNone": ": Niet gesorterrd. Activeer om oplopend te sorteren."
+      },
+      "itemsPerPageText": "Rijen per pagina:",
+      "sortBy": "Sorteer volgens"
+    },
+    "datePicker": {
+      "itemsSelected": "{0} geselecteerd"
+    },
+    "fileInput": {
+      "counter": "{0} bestanden",
+      "counterSize": "{0} bestanden ({1} in totaal)"
+    },
+    "noDataText": "Geen gegevens beschikbaar",
+    "timePicker": {
+      "am": "AM",
+      "pm": "PM"
+    }
+  },
+  "current_l1": "Stroom L1",
+  "current_l2": "Stroom L2",
+  "current_l3": "Stroom L3",
+  "dutch": "Nederlands",
+  "electricity_failure_log": "Stroomstoringslogboek",
+  "electricity_failures": "Stroomstoringen",
+  "electricity_long_failures": "Lange stroomstoringen",
+  "electricity_sags_l1": "Stroomdips L1",
+  "electricity_sags_l2": "Stroomdips L2",
+  "electricity_sags_l3": "Stroomdips L3",
+  "electricity_swells_l1": "Stroomzwelling L1",
+  "electricity_swells_l2": "Stroomzwelling L2",
+  "electricity_swells_l3": "Stroomzwelling L3",
+  "electricity_switch_position": "Positie van de stroomschakelaar",
+  "electricity_tariff": "Stroomtarief",
+  "electricity_threshold": "Elektriciteitsdrempel",
+  "energy_delivered_tariff1": "Energie verbruikt tarief 1",
+  "energy_delivered_tariff2": "Energie verbruikt tarief 2",
+  "energy_returned_tariff1": "Energie geleverd tarief 1",
+  "energy_returned_tariff2": "Energie geleverd tarief 2",
+  "english": "Engels",
+  "equipment_id": "Apparaat ID",
+  "gas_delivered": "Gas verbruikt",
+  "gas_device_type": "Type gasapparaat",
+  "gas_equipment_id": "Gasapparaat ID",
+  "gas_valve_position": "Positie gasklep",
+  "identification": "Slimme meter ID",
+  "language": "Taal",
+  "message_long": "Lang bericht",
+  "message_short": "Kort bericht",
+  "p1_version": "P1 versie",
+  "power_delivered": "Vermogen verbruikt",
+  "power_delivered_l1": "Vermogen verbruikt L1",
+  "power_delivered_l2": "Vermogen verbruikt L2",
+  "power_delivered_l3": "Vermogen verbruikt L3",
+  "power_returned": "Vermogen opgewekt",
+  "power_returned_l1": "Vermogen opgewekt L1",
+  "power_returned_l2": "Vermogen opgewekt L2",
+  "power_returned_l3": "Vermogen opgewekt L3",
+  "refresh": "Vernieuw",
+  "slave_delivered": "Slave verbruikt",
+  "slave_device_type": "Type slave-apparaat",
+  "slave_equipment_id": "Slave-apparaat ID",
+  "slave_valve_position": "Positie slave-klep",
+  "smart_meter": "Slimme meter",
+  "thermal_delivered": "Thermisch verbruikt",
+  "thermal_device_type": "Type thermisch apparaat",
+  "thermal_equipment_id": "Thermisch apparaat ID",
+  "thermal_valve_position": "Positie thermische klep",
+  "timestamp": "Tijdstempel",
+  "voltage_l1": "Voltage L1",
+  "voltage_l2": "Voltage L2",
+  "voltage_l3": "Voltage L3",
+  "water_delivered": "Water verbruikt",
+  "water_device_type": "Type waterapparaat",
+  "water_equipment_id": "Waterapparaat ID",
+  "water_valve_position": "Positie waterklep"
 }
