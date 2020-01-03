@@ -1,55 +1,107 @@
 {
-  "language": "Taal",
-  "english": "Engels",
-  "dutch": "Nederlands",
-  "smart_meter": "Slimme meter",
-  "refresh": "Vernieuw",
-  "$vuetify": {
-    "badge": "insigne",
-    "close": "Sluiten",
-    "dataIterator": {
-      "noResultsText": "Geen overeenkomende resultaten gevonden",
-      "loadingText": "Items aan het laden..."
-    },
-    "dataTable": {
-      "itemsPerPageText": "Rijen per pagina:",
-      "ariaLabel": {
-        "sortDescending": ": Aflopend gesorteerd. Activeer om de sortering te verwijderen.",
-        "sortAscending": ": Oplopend gesorteerd. Activeer om aflopend te sorteren.",
-        "sortNone": ": Niet gesorterrd. Activeer om oplopend te sorteren."
-      },
-      "sortBy": "Sorteer volgens"
-    },
-    "dataFooter": {
-      "itemsPerPageText": "Aantal per pagina:",
-      "itemsPerPageAll": "Alles",
-      "nextPage": "Volgende pagina",
-      "prevPage": "Vorige pagina",
-      "firstPage": "Eerste pagina",
-      "lastPage": "Laatste pagina",
-      "pageText": "{0}-{1} van {2}"
-    },
-    "datePicker": {
-      "itemsSelected": "{0} geselecteerd"
-    },
-    "noDataText": "Geen gegevens beschikbaar",
-    "carousel": {
-      "prev": "Vorig beeld",
-      "next": "Volgend beeld",
-      "ariaLabel": {
-        "delimiter": "Carousel slide {0} of {1}"
-      }
-    },
-    "calendar": {
-      "moreEvents": "{0} meer"
-    },
-    "fileInput": {
-      "counter": "{0} bestanden",
-      "counterSize": "{0} bestanden ({1} in totaal)"
-    },
-    "timePicker": {
-      "am": "AM",
-      "pm": "PM"
-    }
-  }
+	"$vuetify": {
+		"badge": "insigne",
+		"calendar": {
+			"moreEvents": "{0} meer"
+		},
+		"carousel": {
+			"ariaLabel": {
+				"delimiter": "Carousel slide {0} of {1}"
+			},
+			"next": "Volgend beeld",
+			"prev": "Vorig beeld"
+		},
+		"close": "Sluiten",
+		"dataFooter": {
+			"firstPage": "Eerste pagina",
+			"itemsPerPageAll": "Alles",
+			"itemsPerPageText": "Aantal per pagina:",
+			"lastPage": "Laatste pagina",
+			"nextPage": "Volgende pagina",
+			"pageText": "{0}-{1} van {2}",
+			"prevPage": "Vorige pagina"
+		},
+		"dataIterator": {
+			"loadingText": "Items aan het laden...",
+			"noResultsText": "Geen overeenkomende resultaten gevonden"
+		},
+		"dataTable": {
+			"ariaLabel": {
+				"sortAscending": ": Oplopend gesorteerd. Activeer om aflopend te sorteren.",
+				"sortDescending": ": Aflopend gesorteerd. Activeer om de sortering te verwijderen.",
+				"sortNone": ": Niet gesorterrd. Activeer om oplopend te sorteren."
+			},
+			"itemsPerPageText": "Rijen per pagina:",
+			"sortBy": "Sorteer volgens"
+		},
+		"datePicker": {
+			"itemsSelected": "{0} geselecteerd"
+		},
+		"fileInput": {
+			"counter": "{0} bestanden",
+			"counterSize": "{0} bestanden ({1} in totaal)"
+		},
+		"noDataText": "Geen gegevens beschikbaar",
+		"timePicker": {
+			"am": "AM",
+			"pm": "PM"
+		}
+	},
+	"current_l1": "Stroom L1",
+	"current_l2": "Stroom L2",
+	"current_l3": "Stroom L3",
+	"dutch": "Nederlands",
+	"electricity_failure_log": "",
+	"electricity_failures": "",
+	"electricity_long_failures": "",
+	"electricity_sags_l1": "",
+	"electricity_sags_l2": "",
+	"electricity_sags_l3": "",
+	"electricity_swells_l1": "",
+	"electricity_swells_l2": "",
+	"electricity_swells_l3": "",
+	"electricity_switch_position": "",
+	"electricity_tariff": "",
+	"electricity_threshold": "",
+	"energy_delivered_tariff1": "",
+	"energy_delivered_tariff2": "",
+	"energy_returned_tariff1": "",
+	"energy_returned_tariff2": "",
+	"english": "Engels",
+	"equipment_id": "Apparaat ID",
+	"gas_delivered": "",
+	"gas_device_type": "",
+	"gas_equipment_id": "",
+	"gas_valve_position": "",
+	"identification": "Slimme meter ID",
+	"language": "Taal",
+	"message_long": "Lang bericht",
+	"message_short": "Kort bericht",
+	"p1_version": "P1 versie",
+	"power_delivered": "Vermogen gebruikt",
+	"power_delivered_l1": "",
+	"power_delivered_l2": "",
+	"power_delivered_l3": "",
+	"power_returned": "Vermogen opgewekt",
+	"power_returned_l1": "",
+	"power_returned_l2": "",
+	"power_returned_l3": "",
+	"refresh": "Vernieuw",
+	"slave_delivered": "",
+	"slave_device_type": "",
+	"slave_equipment_id": "",
+	"slave_valve_position": "",
+	"smart_meter": "Slimme meter",
+	"thermal_delivered": "",
+	"thermal_device_type": "",
+	"thermal_equipment_id": "",
+	"thermal_valve_position": "",
+	"timestamp": "Tijdstempel",
+	"voltage_l1": "Voltage L1",
+	"voltage_l2": "Voltage L2",
+	"voltage_l3": "Voltage L3",
+	"water_delivered": "",
+	"water_device_type": "",
+	"water_equipment_id": "",
+	"water_valve_position": ""
 }

@@ -89,7 +89,11 @@ export default {
     isLoading: state => state.isLoading,
     smartMeter: state => state.smartMeter
   }),
-  watch: {},
+  watch: {
+    smartMeter: function(newVal) {
+      Object.keys(newVal.fields).forEach(e => console.log(this.$t(newVal.fields[e].name)));
+    }
+  },
   created() {
     if (!this.$store.state.smartMeter.length) {
       this.$store.dispatch("getSmartMeter");
