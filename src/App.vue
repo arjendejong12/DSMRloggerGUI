@@ -112,6 +112,10 @@ export default Vue.extend({
   },
 
   created() {
+    if (!this.$store.state.settings.length) {
+      this.$store.dispatch("getSettings");
+    }
+
     // Set localStorage if it does not exist.
     if (!localStorage.getItem("dsmrloggergui-darkmode")) {
       this.$vuetify.theme.dark = this.isDark;

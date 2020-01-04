@@ -9,6 +9,7 @@ export default new Vuex.Store({
     smartMeter: [],
     hours: [],
     deviceInfo: [],
+    settings: [],
     isLoading: true
   },
   mutations: {
@@ -25,7 +26,7 @@ export default new Vuex.Store({
       commit(FETCH_START);
       try {
         const { data } = await Vue.axios.get("/sm/fields");
-        commit(FETCH_END, { data, stateProperty: "smartMeter" });
+        commit(FETCH_END, { data: data.fields, stateProperty: "smartMeter" });
       } catch (error) {
         throw new Error(error);
       }
@@ -44,6 +45,15 @@ export default new Vuex.Store({
       try {
         const { data } = await Vue.axios.get("/dev/info");
         commit(FETCH_END, { data, stateProperty: "deviceInfo" });
+      } catch (error) {
+        throw new Error(error);
+      }
+    },
+    async getSettings({ commit }) {
+      commit(FETCH_START);
+      try {
+        const { data } = await Vue.axios.get("/dev/settings");
+        commit(FETCH_END, { data: data.settings, stateProperty: "settings" });
       } catch (error) {
         throw new Error(error);
       }

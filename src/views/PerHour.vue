@@ -36,8 +36,6 @@ export default {
   computed: {
     headers: function() {
       return [
-        { text: "#", value: "id" },
-        { text: "Slot", value: "slot" },
         { text: this.$t("date_hour"), value: "hour" },
         { text: this.$t("energy_delivered_watt"), value: "energy_delivered" },
         { text: this.$t("energy_returned_watt"), value: "energy_returned" },
@@ -47,48 +45,99 @@ export default {
     },
     tableData: function() {
       try {
-        return this.hours.map((hour, index, array) => {
-          let energy_delivered;
-          let energy_returned;
-          let gas_delivered;
+        return this.hours
+          .map((currentHour, index, array) => {
+            let energy_delivered;
+            let energy_returned;
+            let gas_delivered;
+            let costs;
+            const prevHour = array[index + 1];
+            const settings = {
+              ed_tariff1: this.settings.find(
+                setting => setting.name === "ed_tariff1"
+              ).value,
+              ed_tariff2: this.settings.find(
+                setting => setting.name === "ed_tariff2"
+              ).value,
+              er_tariff1: this.settings.find(
+                setting => setting.name === "er_tariff1"
+              ).value,
+              er_tariff2: this.settings.find(
+                setting => setting.name === "er_tariff2"
+              ).value,
+              gd_tariff: this.settings.find(
+                setting => setting.name === "gd_tariff"
+              ).value,
+              electr_netw_costs:
+                this.settings.find(
+                  setting => setting.name === "electr_netw_costs"
+                ).value /
+                this.daysInThisMonth() /
+                24, // Hours.
+              gas_netw_costs:
+                this.settings.find(setting => setting.name === "gas_netw_costs")
+                  .value /
+                this.daysInThisMonth() /
+                24 // Hours.
+            };
 
-          if (index < array.length - 1) {
-            energy_delivered = (
-              (hour.edt1 +
-                hour.edt2 -
-                (array[index + 1].edt1 + array[index + 1].edt2)) *
-              1000
-            ).toFixed(0);
-            energy_returned = (
-              (hour.ert1 +
-                hour.ert2 -
-                (array[index + 1].ert1 + array[index + 1].ert2)) *
-              1000
-            ).toFixed(0);
-            gas_delivered = (hour.gdt - array[index + 1].gdt).toFixed(3);
-          } else {
-            energy_delivered = (hour.edt1 + hour.edt2).toFixed(3);
-            energy_returned = (hour.ert1 + hour.ert2).toFixed(3);
-            gas_delivered = hour.gdt.toFixed(3);
-          }
+            if (index < array.length - 1) {
+              energy_delivered = (
+                (currentHour.edt1 +
+                  currentHour.edt2 -
+                  (prevHour.edt1 + prevHour.edt2)) *
+                1000
+              ).toFixed(0);
+              energy_returned = (
+                (currentHour.ert1 +
+                  currentHour.ert2 -
+                  (prevHour.ert1 + prevHour.ert2)) *
+                1000
+              ).toFixed(0);
+              gas_delivered = (currentHour.gdt - prevHour.gdt).toFixed(3);
 
-          return {
-            id: hour.recnr,
-            slot: hour.slot,
-            hour: this.formatDate("hours", hour.recid),
-            energy_delivered: energy_delivered,
-            energy_returned: energy_returned,
-            gas_delivered: gas_delivered,
-            costs: "-"
-          };
-        });
+              costs = (currentHour.edt1 - prevHour.edt1) * settings.ed_tariff1;
+              costs += (currentHour.edt2 - prevHour.edt2) * settings.ed_tariff2;
+              costs -= (currentHour.ert1 - prevHour.ert1) * settings.er_tariff1;
+              costs -= (currentHour.ert2 - prevHour.ert2) * settings.er_tariff2;
+              costs += (currentHour.gdt - prevHour.gdt) * settings.gd_tariff;
+              costs += settings.electr_netw_costs;
+              costs += settings.gas_netw_costs;
+            } else {
+              energy_delivered = (currentHour.edt1 + currentHour.edt2).toFixed(
+                3
+              );
+              energy_returned = (currentHour.ert1 + currentHour.ert2).toFixed(
+                3
+              );
+              gas_delivered = currentHour.gdt.toFixed(3);
+
+              costs = currentHour.edt1 * settings.ed_tariff1;
+              costs += currentHour.edt2 * settings.ed_tariff2;
+              costs -= currentHour.ert1 * settings.er_tariff1;
+              costs -= currentHour.ert2 * settings.er_tariff2;
+              costs += currentHour.gdt * settings.gd_tariff;
+              costs += settings.electr_netw_costs;
+              costs += settings.gas_netw_costs;
+            }
+
+            return {
+              hour: this.formatDate("hours", currentHour.recid),
+              energy_delivered: energy_delivered,
+              energy_returned: energy_returned,
+              gas_delivered: gas_delivered,
+              costs: +costs.toFixed(4)
+            };
+          })
+          .slice(0, -1);
       } catch (error) {
         return [];
       }
     },
     ...mapState({
       isLoading: state => state.isLoading,
-      hours: state => state.hours
+      hours: state => state.hours,
+      settings: state => state.settings
     })
   },
   watch: {},
@@ -101,6 +150,11 @@ export default {
       }, 20000);
     }
   },
-  methods: {}
+  methods: {
+    daysInThisMonth: function() {
+      const now = new Date();
+      return new Date(now.getFullYear(), now.getMonth() + 1, 0).getDate();
+    }
+  }
 };
 </script>

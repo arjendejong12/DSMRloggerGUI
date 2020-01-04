@@ -84,7 +84,7 @@ export default {
   computed: {
     actual: function() {
       try {
-        return this.smartMeter.fields.filter(field => {
+        return this.smartMeter.filter(field => {
           return [
             "timestamp",
             "energy_delivered_tariff1",
