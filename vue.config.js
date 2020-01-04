@@ -12,5 +12,7 @@ module.exports = {
       ...config.get("externals"),
       moment: "moment"
     });
+
+    config.output.filename("[name].js");
   }
 };
