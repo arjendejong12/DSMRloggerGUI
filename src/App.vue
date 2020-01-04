@@ -59,23 +59,6 @@ export default Vue.extend({
 
   data: () => ({
     drawer: null,
-    menuItems: [
-      { icon: "mdi-clock-outline", title: "Slimme meter", link: "/" },
-      { icon: "mdi-history", title: "Per uur", link: "/per-hour" },
-      { icon: "mdi-calendar-today", title: "Per dag", link: "/per-day" },
-      { icon: "mdi-calendar-month", title: "Per maand", link: "/per-month" },
-      { icon: "mdi-chart-bar", title: "Grafieken", link: "/charts" },
-      {
-        icon: "mdi-settings-outline",
-        title: "Instellingen",
-        link: "/settings"
-      },
-      {
-        icon: "mdi-information-outline",
-        title: "Systeeminfo",
-        link: "/system-info"
-      }
-    ],
     languages: [
       {
         id: "en",
@@ -90,6 +73,36 @@ export default Vue.extend({
     ],
     isDark: true
   }),
+
+  computed: {
+    menuItems: function() {
+      return [
+        { icon: "mdi-clock-outline", title: this.$t("smart_meter"), link: "/" },
+        { icon: "mdi-history", title: this.$t("per_hour"), link: "/per-hour" },
+        {
+          icon: "mdi-calendar-today",
+          title: this.$t("per_day"),
+          link: "/per-day"
+        },
+        {
+          icon: "mdi-calendar-month",
+          title: this.$t("per_month"),
+          link: "/per-month"
+        },
+        { icon: "mdi-chart-bar", title: this.$t("graphs"), link: "/charts" },
+        {
+          icon: "mdi-settings-outline",
+          title: this.$t("settings"),
+          link: "/settings"
+        },
+        {
+          icon: "mdi-information-outline",
+          title: this.$t("system_info"),
+          link: "/system-info"
+        }
+      ];
+    }
+  },
 
   watch: {
     isDark(status) {

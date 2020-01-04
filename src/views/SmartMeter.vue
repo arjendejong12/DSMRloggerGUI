@@ -4,15 +4,7 @@
       <v-row text-center wrap>
         <v-col cols="12" sm="12" class="d-flex justify-space-between">
           <h1>{{ $t("smart_meter") }}</h1>
-          <v-btn
-            color="orange"
-            class="ma-2 white--text"
-            :disabled="isLoading"
-            @click="refresh"
-          >
-            {{ $t("refresh") }}
-            <v-icon right>mdi-refresh</v-icon>
-          </v-btn>
+          <refresh-button dispatch="getSmartMeter"></refresh-button>
         </v-col>
         <v-col cols="12" sm="12" md="6">
           <v-row>
@@ -31,7 +23,7 @@
                     <v-list-item-content class="align-end"
                       >{{
                         field.name === "timestamp"
-                          ? buildDateTimeString(field.value)
+                          ? formatDate("timestamp", field.value)
                           : field.value
                       }}{{
                         field.unit ? " " + field.unit : ""
@@ -78,10 +70,14 @@
 </template>
 
 <script>
+import RefreshButton from "@/components/RefreshButton.vue";
+import mixin from "@/mixin";
 import { mapState } from "vuex";
 
 export default {
   name: "smart-meter",
+  components: { RefreshButton },
+  mixins: [mixin],
   data: () => ({
     intervalTab: null
   }),
@@ -135,20 +131,6 @@ export default {
       clearInterval(vm.data.intervalTab);
     });
   },
-  methods: {
-    refresh: function() {
-      this.$store.dispatch("getSmartMeter");
-    },
-    buildDateTimeString(timeStamp) {
-      let dateTime = "";
-      dateTime = timeStamp.substr(4, 2);
-      dateTime += "-" + timeStamp.substr(2, 2);
-      dateTime += "-20" + timeStamp.substr(0, 2);
-      dateTime += " " + timeStamp.substr(6, 2);
-      dateTime += ":" + timeStamp.substr(8, 2);
-      dateTime += ":" + timeStamp.substr(10, 2);
-      return dateTime;
-    }
-  }
+  methods: {}
 };
 </script>
