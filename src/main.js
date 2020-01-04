@@ -7,10 +7,15 @@ import vuetify from "./plugins/vuetify";
 import axios from "axios";
 import VueAxios from "vue-axios";
 
-Vue.config.productionTip = false;
-
-axios.defaults.baseURL = "http://192.168.178.101/api/v1";
+// Set API URLs for development and production.
+const baseURL =
+  process.env.NODE_ENV === "development"
+    ? "http://192.168.178.101/api/v1"
+    : "http://" + location.host + "/api/v1";
+axios.defaults.baseURL = baseURL;
 Vue.use(VueAxios, axios);
+
+Vue.config.productionTip = false;
 
 new Vue({
   i18n,
