@@ -94,11 +94,24 @@ export default Vue.extend({
   watch: {
     isDark(status) {
       this.$vuetify.theme.dark = status;
+      localStorage.setItem("dsmrloggergui-darkmode", status);
     }
   },
 
   created() {
-    this.$vuetify.theme.dark = this.isDark;
+    // Set localStorage if it does not exist.
+    if (!localStorage.getItem("dsmrloggergui-darkmode")) {
+      this.$vuetify.theme.dark = this.isDark;
+      localStorage.setItem("dsmrloggergui-darkmode", this.isDark);
+    } else {
+      this.$vuetify.theme.dark =
+        localStorage.getItem("dsmrloggergui-darkmode") == "true";
+
+      // If it should be light mode, also set 'isDark' to false.
+      if (localStorage.getItem("dsmrloggergui-darkmode") == "false") {
+        this.isDark = false;
+      }
+    }
   }
 });
 </script>

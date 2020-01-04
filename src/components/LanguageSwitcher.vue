@@ -1,7 +1,7 @@
 <template>
   <v-menu offset-y>
     <template v-slot:activator="{ on: menu }">
-      <v-btn icon v-on="{...menu }">
+      <v-btn icon v-on="{ ...menu }">
         <img :src="currentLanguageIcon" v-if="currentLanguageIcon" />
         <v-icon v-else>mdi-translate</v-icon>
       </v-btn>
@@ -46,6 +46,16 @@ export default {
   methods: {
     changeLanguage(id) {
       this.$i18n.locale = id;
+      localStorage.setItem("dsmrloggergui-language", id);
+    }
+  },
+  created() {
+    // Set localStorage if it does not exist.
+    if (!localStorage.getItem("dsmrloggergui-language")) {
+      this.$i18n.locale = "nl";
+      localStorage.setItem("dsmrloggergui-language", "nl");
+    } else {
+      this.$i18n.locale = localStorage.getItem("dsmrloggergui-language");
     }
   }
 };
