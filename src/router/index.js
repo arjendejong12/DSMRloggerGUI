@@ -2,6 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import SmartMeter from "../views/SmartMeter.vue";
 import PerHour from "../views/PerHour.vue";
+import PerDay from "../views/PerDay.vue";
 
 Vue.use(VueRouter);
 
@@ -17,6 +18,11 @@ const routes = [
     path: "/per-hour",
     name: "per-hour",
     component: PerHour
+  },
+  {
+    path: "/per-day",
+    name: "per-day",
+    component: PerDay
   }
 ];
 

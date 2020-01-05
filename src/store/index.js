@@ -8,6 +8,7 @@ export default new Vuex.Store({
   state: {
     smartMeter: [],
     hours: [],
+    days: [],
     deviceInfo: [],
     settings: [],
     isLoading: true
@@ -36,6 +37,15 @@ export default new Vuex.Store({
       try {
         const { data } = await Vue.axios.get("/hist/hours/asc");
         commit(FETCH_END, { data: data.hours, stateProperty: "hours" });
+      } catch (error) {
+        throw new Error(error);
+      }
+    },
+    async getDays({ commit }) {
+      commit(FETCH_START);
+      try {
+        const { data } = await Vue.axios.get("/hist/days/asc");
+        commit(FETCH_END, { data: data.days, stateProperty: "days" });
       } catch (error) {
         throw new Error(error);
       }
