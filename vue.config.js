@@ -5,6 +5,9 @@ module.exports = {
   configureWebpack: {
     optimization: {
       splitChunks: false
+    },
+    output: {
+      filename: "[name].js"
     }
   },
   chainWebpack: config => {
@@ -12,7 +15,10 @@ module.exports = {
       ...config.get("externals"),
       moment: "moment"
     });
-
-    config.output.filename("[name].js");
+  },
+  css: {
+    extract: {
+      filename: "[name].css"
+    }
   }
 };
