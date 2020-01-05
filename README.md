@@ -1,4 +1,4 @@
-# dsmrlogger
+# DSMRloggerGUI
 
 ## Project setup
 ```
