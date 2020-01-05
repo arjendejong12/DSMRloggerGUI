@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 import SmartMeter from "../views/SmartMeter.vue";
 import PerHour from "../views/PerHour.vue";
 import PerDay from "../views/PerDay.vue";
+import PerMonth from "../views/PerMonth.vue";
 
 Vue.use(VueRouter);
 
@@ -23,11 +24,15 @@ const routes = [
     path: "/per-day",
     name: "per-day",
     component: PerDay
+  },
+  {
+    path: "/per-month",
+    name: "per-month",
+    component: PerMonth
   }
 ];
 
 const router = new VueRouter({
-  mode: "history",
   base: process.env.BASE_URL,
   routes
 });

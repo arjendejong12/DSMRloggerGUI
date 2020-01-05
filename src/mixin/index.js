@@ -13,19 +13,9 @@ export default {
         date += "]-" + dateIn.substr(2, 2);
         date += "-20" + dateIn.substr(0, 2);
       } else if (type == "months") {
-        date =
-          "20" +
-          dateIn.substring(0, 2) +
-          "-[" +
-          dateIn.substring(2, 4) +
-          "]-" +
-          dateIn.substring(4, 6) +
-          ":" +
-          dateIn.substring(6, 8);
-
-        // date = dateIn.substr(4, 2);
-        // date += "-[" + dateIn.substr(2, 2);
-        // date += "]-20" + dateIn.substr(0, 2);
+        date = dateIn.substr(4, 2);
+        date += "-[" + dateIn.substr(2, 2);
+        date += "]-20" + dateIn.substr(0, 2);
       } else if (type == "timestamp") {
         date = dateIn.substr(4, 2);
         date += "-" + dateIn.substr(2, 2);
