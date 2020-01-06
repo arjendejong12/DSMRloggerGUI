@@ -4,7 +4,8 @@ module.exports = {
   filenameHashing: false,
   configureWebpack: {
     optimization: {
-      splitChunks: false
+      splitChunks: false,
+      minimize: false
     },
     output: {
       filename: "[name].js"
