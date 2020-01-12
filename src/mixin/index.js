@@ -16,6 +16,10 @@ export default {
         date = dateIn.substr(4, 2);
         date += "-[" + dateIn.substr(2, 2);
         date += "]-20" + dateIn.substr(0, 2);
+      } else if (type == "time") {
+        date = dateIn.substr(6, 2);
+        date += ":" + dateIn.substr(8, 2);
+        date += ":" + dateIn.substr(10, 2);
       } else if (type == "timestamp") {
         date = dateIn.substr(4, 2);
         date += "-" + dateIn.substr(2, 2);

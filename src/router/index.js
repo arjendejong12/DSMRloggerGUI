@@ -4,6 +4,7 @@ import SmartMeter from "../views/SmartMeter.vue";
 import PerHour from "../views/PerHour.vue";
 import PerDay from "../views/PerDay.vue";
 import PerMonth from "../views/PerMonth.vue";
+import Charts from "../views/Charts.vue";
 
 Vue.use(VueRouter);
 
@@ -29,6 +30,11 @@ const routes = [
     path: "/per-month",
     name: "per-month",
     component: PerMonth
+  },
+  {
+    path: "/charts",
+    name: "charts",
+    component: Charts
   }
 ];
 

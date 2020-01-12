@@ -89,7 +89,7 @@ export default Vue.extend({
           title: this.$t("per_month"),
           link: "/per-month"
         },
-        { icon: "mdi-chart-bar", title: this.$t("graphs"), link: "/charts" },
+        { icon: "mdi-chart-bar", title: this.$t("charts"), link: "/charts" },
         {
           icon: "mdi-settings-outline",
           title: this.$t("settings"),
