@@ -111,8 +111,7 @@ export default {
     Gas2: [],
     DeliveredL1: [],
     DeliveredL2: [],
-    DeliveredL3: [],
-    data: []
+    DeliveredL3: []
   }),
   computed: {
     dynamicChartData() {
@@ -421,12 +420,11 @@ export default {
     actual(newValue) {
       // Check if array is empty, or if previous array object is not the same as current.
       if (
-        this.data.length === 0 ||
-        this.data[this.data.length - 1][0].value !== newValue[0].value
+        this.Labels.length === 0 ||
+        this.Labels[this.Labels.length - 1][0].value !== newValue[0].value
       ) {
         // Remove first array item if the array contains 50 items.
-        if (this.data.length === 50) {
-          this.data.shift();
+        if (this.Labels.length === 50) {
           this.Labels.shift();
           this.Returned.shift();
           this.DeliveredL1.shift();
@@ -455,7 +453,6 @@ export default {
         ).value;
 
         // Push processed data to their respective variables.
-        this.data.push(newValue);
         this.Labels.push(labels);
         this.Returned.push(-returned);
         this.DeliveredL1.push(deliveredL1);
@@ -526,6 +523,7 @@ export default {
       }
     },
     clearVariables(instance) {
+      console.log("clearing...");
       instance.Labels = [];
       instance.Delivered = [];
       instance.Returned = [];

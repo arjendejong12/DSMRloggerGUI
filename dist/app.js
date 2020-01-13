@@ -47369,8 +47369,8 @@ var PerMonth_component = normalizeComponent(
 
 installComponents_default()(PerMonth_component, {VCol: VCol,VContainer: VContainer,VDataTable: VDataTable_VDataTable,VRow: VRow})
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"b256d970-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/Charts.vue?vue&type=template&id=2ae10f03&
-var Chartsvue_type_template_id_2ae10f03_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"charts"},[_c('v-container',[_c('v-row',{attrs:{"text-center":"","wrap":""}},[_c('v-col',{staticClass:"d-flex justify-space-between",attrs:{"cols":"12","sm":"12"}},[_c('h1',[_vm._v(_vm._s(_vm.$t("charts")))]),_c('refresh-button',{attrs:{"dispatch":"getActual"},on:{"execute":_vm.refresh}})],1),_c('v-col',{attrs:{"cols":"12","sm":"12"}},[_c('v-card',{staticClass:"mb-4",attrs:{"elevation":"4","loading":_vm.isLoading}},[_c('v-card-text',[_c('v-row',{attrs:{"wrap":""}},[_c('v-col',{staticClass:"py-2",attrs:{"cols":"12","sm":"12","lg":"6"}},[_c('p',[_vm._v(_vm._s(_vm.$t("data")))]),_c('v-btn-toggle',{staticClass:"flex-column flex-sm-row",attrs:{"mandatory":""},model:{value:(_vm.chart),callback:function ($$v) {_vm.chart=$$v},expression:"chart"}},[_c('v-btn',{attrs:{"value":"actual"}},[_vm._v(" "+_vm._s(_vm.$t("actual"))+" "),_c('v-icon',{attrs:{"small":"","right":""}},[_vm._v("mdi-clock-outline")])],1),_c('v-btn',{attrs:{"value":"financial"}},[_vm._v(" "+_vm._s(_vm.$t("financial"))+" "),_c('v-icon',{attrs:{"small":"","right":""}},[_vm._v("mdi-currency-eur")])],1),_c('v-btn',{attrs:{"value":"day"}},[_vm._v(" "+_vm._s(_vm.$t("day"))+" "),_c('v-icon',{attrs:{"small":"","right":""}},[_vm._v("mdi-calendar-today")])],1),_c('v-btn',{attrs:{"value":"week"}},[_vm._v(" "+_vm._s(_vm.$t("week"))+" "),_c('v-icon',{attrs:{"small":"","right":""}},[_vm._v("mdi-calendar-month")])],1),_c('v-btn',{attrs:{"value":"year"}},[_vm._v(" "+_vm._s(_vm.$t("year"))+" "),_c('v-icon',{attrs:{"small":"","right":""}},[_vm._v("mdi-calendar-multiple")])],1)],1)],1),_c('v-col',{staticClass:"py-2",attrs:{"cols":"12","sm":"12","lg":"6"}},[_c('p',[_vm._v(_vm._s(_vm.$t("type")))]),_c('v-btn-toggle',{attrs:{"mandatory":""},model:{value:(_vm.chartType),callback:function ($$v) {_vm.chartType=$$v},expression:"chartType"}},[_c('v-btn',{attrs:{"value":"bar"}},[_vm._v(" "+_vm._s(_vm.$t("bar"))+" "),_c('v-icon',{attrs:{"small":"","right":""}},[_vm._v("mdi-chart-bar")])],1),_c('v-btn',{attrs:{"value":"line"}},[_vm._v(" "+_vm._s(_vm.$t("line"))+" "),_c('v-icon',{attrs:{"small":"","right":""}},[_vm._v("mdi-chart-line")])],1)],1)],1),_c('v-col',{staticClass:"py-2",attrs:{"cols":"12","sm":"12"}},[(
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"b256d970-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/Charts.vue?vue&type=template&id=8b446a38&
+var Chartsvue_type_template_id_8b446a38_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"charts"},[_c('v-container',[_c('v-row',{attrs:{"text-center":"","wrap":""}},[_c('v-col',{staticClass:"d-flex justify-space-between",attrs:{"cols":"12","sm":"12"}},[_c('h1',[_vm._v(_vm._s(_vm.$t("charts")))]),_c('refresh-button',{attrs:{"dispatch":"getActual"},on:{"execute":_vm.refresh}})],1),_c('v-col',{attrs:{"cols":"12","sm":"12"}},[_c('v-card',{staticClass:"mb-4",attrs:{"elevation":"4","loading":_vm.isLoading}},[_c('v-card-text',[_c('v-row',{attrs:{"wrap":""}},[_c('v-col',{staticClass:"py-2",attrs:{"cols":"12","sm":"12","lg":"6"}},[_c('p',[_vm._v(_vm._s(_vm.$t("data")))]),_c('v-btn-toggle',{staticClass:"flex-column flex-sm-row",attrs:{"mandatory":""},model:{value:(_vm.chart),callback:function ($$v) {_vm.chart=$$v},expression:"chart"}},[_c('v-btn',{attrs:{"value":"actual"}},[_vm._v(" "+_vm._s(_vm.$t("actual"))+" "),_c('v-icon',{attrs:{"small":"","right":""}},[_vm._v("mdi-clock-outline")])],1),_c('v-btn',{attrs:{"value":"financial"}},[_vm._v(" "+_vm._s(_vm.$t("financial"))+" "),_c('v-icon',{attrs:{"small":"","right":""}},[_vm._v("mdi-currency-eur")])],1),_c('v-btn',{attrs:{"value":"day"}},[_vm._v(" "+_vm._s(_vm.$t("day"))+" "),_c('v-icon',{attrs:{"small":"","right":""}},[_vm._v("mdi-calendar-today")])],1),_c('v-btn',{attrs:{"value":"week"}},[_vm._v(" "+_vm._s(_vm.$t("week"))+" "),_c('v-icon',{attrs:{"small":"","right":""}},[_vm._v("mdi-calendar-month")])],1),_c('v-btn',{attrs:{"value":"year"}},[_vm._v(" "+_vm._s(_vm.$t("year"))+" "),_c('v-icon',{attrs:{"small":"","right":""}},[_vm._v("mdi-calendar-multiple")])],1)],1)],1),_c('v-col',{staticClass:"py-2",attrs:{"cols":"12","sm":"12","lg":"6"}},[_c('p',[_vm._v(_vm._s(_vm.$t("type")))]),_c('v-btn-toggle',{attrs:{"mandatory":""},model:{value:(_vm.chartType),callback:function ($$v) {_vm.chartType=$$v},expression:"chartType"}},[_c('v-btn',{attrs:{"value":"bar"}},[_vm._v(" "+_vm._s(_vm.$t("bar"))+" "),_c('v-icon',{attrs:{"small":"","right":""}},[_vm._v("mdi-chart-bar")])],1),_c('v-btn',{attrs:{"value":"line"}},[_vm._v(" "+_vm._s(_vm.$t("line"))+" "),_c('v-icon',{attrs:{"small":"","right":""}},[_vm._v("mdi-chart-line")])],1)],1)],1),_c('v-col',{staticClass:"py-2",attrs:{"cols":"12","sm":"12"}},[(
                     !_vm.isLoading &&
                       _vm.chartType === 'line' &&
                       _vm.dynamicChartData.datasets.length
@@ -47379,10 +47379,10 @@ var Chartsvue_type_template_id_2ae10f03_render = function () {var _vm=this;var _
                       _vm.chartType === 'bar' &&
                       _vm.dynamicChartData.datasets.length
                   )?_c('bar-chart',{ref:"barChart",attrs:{"chartData":_vm.dynamicChartData,"options":_vm.dynamicChartOptions}}):_vm._e()],1)],1)],1)],1)],1)],1)],1)],1)}
-var Chartsvue_type_template_id_2ae10f03_staticRenderFns = []
+var Chartsvue_type_template_id_8b446a38_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/views/Charts.vue?vue&type=template&id=2ae10f03&
+// CONCATENATED MODULE: ./src/views/Charts.vue?vue&type=template&id=8b446a38&
 
 // CONCATENATED MODULE: ./node_modules/vue-chartjs/es/mixins/index.js
 function dataHandler(newData, oldData) {
@@ -48158,8 +48158,7 @@ function Chartsvue_type_script_lang_js_objectSpread(target) { for (var i = 1; i 
       Gas2: [],
       DeliveredL1: [],
       DeliveredL2: [],
-      DeliveredL3: [],
-      data: []
+      DeliveredL3: []
     };
   },
   computed: Chartsvue_type_script_lang_js_objectSpread({
@@ -48431,10 +48430,9 @@ function Chartsvue_type_script_lang_js_objectSpread(target) { for (var i = 1; i 
   watch: {
     actual: function actual(newValue) {
       // Check if array is empty, or if previous array object is not the same as current.
-      if (this.data.length === 0 || this.data[this.data.length - 1][0].value !== newValue[0].value) {
+      if (this.Labels.length === 0 || this.Labels[this.Labels.length - 1][0].value !== newValue[0].value) {
         // Remove first array item if the array contains 50 items.
-        if (this.data.length === 50) {
-          this.data.shift();
+        if (this.Labels.length === 50) {
           this.Labels.shift();
           this.Returned.shift();
           this.DeliveredL1.shift();
@@ -48463,7 +48461,6 @@ function Chartsvue_type_script_lang_js_objectSpread(target) { for (var i = 1; i 
           return field.name === "power_delivered_l3";
         }).value; // Push processed data to their respective variables.
 
-        this.data.push(newValue);
         this.Labels.push(labels);
         this.Returned.push(-returned);
         this.DeliveredL1.push(deliveredL1);
@@ -48538,6 +48535,7 @@ function Chartsvue_type_script_lang_js_objectSpread(target) { for (var i = 1; i 
       }
     },
     clearVariables: function clearVariables(instance) {
+      console.log("clearing...");
       instance.Labels = [];
       instance.Delivered = [];
       instance.Returned = [];
@@ -48642,8 +48640,8 @@ function VBtnToggle_objectSpread(target) { for (var i = 1; i < arguments.length;
 
 var Charts_component = normalizeComponent(
   views_Chartsvue_type_script_lang_js_,
-  Chartsvue_type_template_id_2ae10f03_render,
-  Chartsvue_type_template_id_2ae10f03_staticRenderFns,
+  Chartsvue_type_template_id_8b446a38_render,
+  Chartsvue_type_template_id_8b446a38_staticRenderFns,
   false,
   null,
   null,
