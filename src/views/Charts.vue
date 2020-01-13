@@ -454,7 +454,7 @@ export default {
         // Push processed data to their respective variables.
         this.data.push(newValue);
         this.Labels.push(labels);
-        this.Returned.push(returned);
+        this.Returned.push(-returned);
         this.DeliveredL1.push(deliveredL1);
         this.DeliveredL2.push(deliveredL2);
         this.DeliveredL3.push(deliveredL3);
@@ -474,7 +474,7 @@ export default {
   },
   created() {
     if (!this.$store.state.actual.length) {
-      this.$store.dispatch("getActual");
+      this.$store.dispatch("getActual", { loadingStatus: false });
 
       this.intervalTab = setInterval(() => {
         this.$store.dispatch("getActual");
