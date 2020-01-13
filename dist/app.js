@@ -47368,8 +47368,8 @@ var PerMonth_component = normalizeComponent(
 
 installComponents_default()(PerMonth_component, {VCol: VCol,VContainer: VContainer,VDataTable: VDataTable_VDataTable,VRow: VRow})
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"b256d970-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/Charts.vue?vue&type=template&id=71ca583b&
-var Chartsvue_type_template_id_71ca583b_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"charts"},[_c('v-container',[_c('v-row',{attrs:{"text-center":"","wrap":""}},[_c('v-col',{staticClass:"d-flex justify-space-between",attrs:{"cols":"12","sm":"12"}},[_c('h1',[_vm._v(_vm._s(_vm.$t("charts")))]),_c('refresh-button',{attrs:{"dispatch":"getActual"}})],1),_c('v-col',{attrs:{"cols":"12","sm":"12"}},[_c('v-card',{staticClass:"mb-4",attrs:{"elevation":"4","loading":_vm.isLoading}},[_c('v-card-text',[_c('v-row',{attrs:{"wrap":""}},[_c('v-col',{staticClass:"py-2",attrs:{"cols":"12","sm":"12","lg":"6"}},[_c('p',[_vm._v(_vm._s(_vm.$t("data")))]),_c('v-btn-toggle',{staticClass:"flex-column flex-sm-row",attrs:{"mandatory":""},model:{value:(_vm.chart),callback:function ($$v) {_vm.chart=$$v},expression:"chart"}},[_c('v-btn',{attrs:{"value":"actual"}},[_vm._v(" "+_vm._s(_vm.$t("actual"))+" "),_c('v-icon',{attrs:{"small":"","right":""}},[_vm._v("mdi-clock-outline")])],1),_c('v-btn',{attrs:{"value":"financial"}},[_vm._v(" "+_vm._s(_vm.$t("financial"))+" "),_c('v-icon',{attrs:{"small":"","right":""}},[_vm._v("mdi-currency-eur")])],1),_c('v-btn',{attrs:{"value":"day"}},[_vm._v(" "+_vm._s(_vm.$t("day"))+" "),_c('v-icon',{attrs:{"small":"","right":""}},[_vm._v("mdi-calendar-today")])],1),_c('v-btn',{attrs:{"value":"week"}},[_vm._v(" "+_vm._s(_vm.$t("week"))+" "),_c('v-icon',{attrs:{"small":"","right":""}},[_vm._v("mdi-calendar-month")])],1),_c('v-btn',{attrs:{"value":"year"}},[_vm._v(" "+_vm._s(_vm.$t("year"))+" "),_c('v-icon',{attrs:{"small":"","right":""}},[_vm._v("mdi-calendar-multiple")])],1)],1)],1),_c('v-col',{staticClass:"py-2",attrs:{"cols":"12","sm":"12","lg":"6"}},[_c('p',[_vm._v(_vm._s(_vm.$t("type")))]),_c('v-btn-toggle',{attrs:{"mandatory":""},model:{value:(_vm.chartType),callback:function ($$v) {_vm.chartType=$$v},expression:"chartType"}},[_c('v-btn',{attrs:{"value":"bar"}},[_vm._v(" "+_vm._s(_vm.$t("bar"))+" "),_c('v-icon',{attrs:{"small":"","right":""}},[_vm._v("mdi-chart-bar")])],1),_c('v-btn',{attrs:{"value":"line"}},[_vm._v(" "+_vm._s(_vm.$t("line"))+" "),_c('v-icon',{attrs:{"small":"","right":""}},[_vm._v("mdi-chart-line")])],1)],1)],1),_c('v-col',{staticClass:"py-2",attrs:{"cols":"12","sm":"12"}},[(
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"b256d970-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/Charts.vue?vue&type=template&id=7291ab3a&
+var Chartsvue_type_template_id_7291ab3a_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"charts"},[_c('v-container',[_c('v-row',{attrs:{"text-center":"","wrap":""}},[_c('v-col',{staticClass:"d-flex justify-space-between",attrs:{"cols":"12","sm":"12"}},[_c('h1',[_vm._v(_vm._s(_vm.$t("charts")))]),_c('refresh-button',{attrs:{"dispatch":"getActual"}})],1),_c('v-col',{attrs:{"cols":"12","sm":"12"}},[_c('v-card',{staticClass:"mb-4",attrs:{"elevation":"4","loading":_vm.isLoading}},[_c('v-card-text',[_c('v-row',{attrs:{"wrap":""}},[_c('v-col',{staticClass:"py-2",attrs:{"cols":"12","sm":"12","lg":"6"}},[_c('p',[_vm._v(_vm._s(_vm.$t("data")))]),_c('v-btn-toggle',{staticClass:"flex-column flex-sm-row",attrs:{"mandatory":""},model:{value:(_vm.chart),callback:function ($$v) {_vm.chart=$$v},expression:"chart"}},[_c('v-btn',{attrs:{"value":"actual"}},[_vm._v(" "+_vm._s(_vm.$t("actual"))+" "),_c('v-icon',{attrs:{"small":"","right":""}},[_vm._v("mdi-clock-outline")])],1),_c('v-btn',{attrs:{"value":"financial"}},[_vm._v(" "+_vm._s(_vm.$t("financial"))+" "),_c('v-icon',{attrs:{"small":"","right":""}},[_vm._v("mdi-currency-eur")])],1),_c('v-btn',{attrs:{"value":"day"}},[_vm._v(" "+_vm._s(_vm.$t("day"))+" "),_c('v-icon',{attrs:{"small":"","right":""}},[_vm._v("mdi-calendar-today")])],1),_c('v-btn',{attrs:{"value":"week"}},[_vm._v(" "+_vm._s(_vm.$t("week"))+" "),_c('v-icon',{attrs:{"small":"","right":""}},[_vm._v("mdi-calendar-month")])],1),_c('v-btn',{attrs:{"value":"year"}},[_vm._v(" "+_vm._s(_vm.$t("year"))+" "),_c('v-icon',{attrs:{"small":"","right":""}},[_vm._v("mdi-calendar-multiple")])],1)],1)],1),_c('v-col',{staticClass:"py-2",attrs:{"cols":"12","sm":"12","lg":"6"}},[_c('p',[_vm._v(_vm._s(_vm.$t("type")))]),_c('v-btn-toggle',{attrs:{"mandatory":""},model:{value:(_vm.chartType),callback:function ($$v) {_vm.chartType=$$v},expression:"chartType"}},[_c('v-btn',{attrs:{"value":"bar"}},[_vm._v(" "+_vm._s(_vm.$t("bar"))+" "),_c('v-icon',{attrs:{"small":"","right":""}},[_vm._v("mdi-chart-bar")])],1),_c('v-btn',{attrs:{"value":"line"}},[_vm._v(" "+_vm._s(_vm.$t("line"))+" "),_c('v-icon',{attrs:{"small":"","right":""}},[_vm._v("mdi-chart-line")])],1)],1)],1),_c('v-col',{staticClass:"py-2",attrs:{"cols":"12","sm":"12"}},[(
                     !_vm.isLoading &&
                       _vm.chartType === 'line' &&
                       _vm.dynamicChartData.datasets.length
@@ -47378,10 +47378,10 @@ var Chartsvue_type_template_id_71ca583b_render = function () {var _vm=this;var _
                       _vm.chartType === 'bar' &&
                       _vm.dynamicChartData.datasets.length
                   )?_c('bar-chart',{ref:"barChart",attrs:{"chartData":_vm.dynamicChartData,"options":_vm.dynamicChartOptions}}):_vm._e()],1)],1)],1)],1)],1)],1)],1)],1)}
-var Chartsvue_type_template_id_71ca583b_staticRenderFns = []
+var Chartsvue_type_template_id_7291ab3a_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/views/Charts.vue?vue&type=template&id=71ca583b&
+// CONCATENATED MODULE: ./src/views/Charts.vue?vue&type=template&id=7291ab3a&
 
 // CONCATENATED MODULE: ./node_modules/vue-chartjs/es/mixins/index.js
 function dataHandler(newData, oldData) {
@@ -48461,7 +48461,7 @@ function Chartsvue_type_script_lang_js_objectSpread(target) { for (var i = 1; i 
 
         this.data.push(newValue);
         this.Labels.push(labels);
-        this.Returned.push(returned);
+        this.Returned.push(-returned);
         this.DeliveredL1.push(deliveredL1);
         this.DeliveredL2.push(deliveredL2);
         this.DeliveredL3.push(deliveredL3);
@@ -48483,7 +48483,9 @@ function Chartsvue_type_script_lang_js_objectSpread(target) { for (var i = 1; i 
     var _this = this;
 
     if (!this.$store.state.actual.length) {
-      this.$store.dispatch("getActual");
+      this.$store.dispatch("getActual", {
+        loadingStatus: false
+      });
       this.intervalTab = setInterval(function () {
         _this.$store.dispatch("getActual");
       }, 9900);
@@ -48638,8 +48640,8 @@ function VBtnToggle_objectSpread(target) { for (var i = 1; i < arguments.length;
 
 var Charts_component = normalizeComponent(
   views_Chartsvue_type_script_lang_js_,
-  Chartsvue_type_template_id_71ca583b_render,
-  Chartsvue_type_template_id_71ca583b_staticRenderFns,
+  Chartsvue_type_template_id_7291ab3a_render,
+  Chartsvue_type_template_id_7291ab3a_staticRenderFns,
   false,
   null,
   null,
@@ -48825,7 +48827,7 @@ vue_runtime_esm["a" /* default */].use(vuex_esm["a" /* default */]);
     getActual: function () {
       var _getActual = _asyncToGenerator(
       /*#__PURE__*/
-      regeneratorRuntime.mark(function _callee2(_ref4) {
+      regeneratorRuntime.mark(function _callee2(_ref4, payload) {
         var commit, _ref5, data;
 
         return regeneratorRuntime.wrap(function _callee2$(_context2) {
@@ -48833,7 +48835,12 @@ vue_runtime_esm["a" /* default */].use(vuex_esm["a" /* default */]);
             switch (_context2.prev = _context2.next) {
               case 0:
                 commit = _ref4.commit;
-                commit(FETCH_START);
+
+                // Don't change loading status after initial request.
+                if ((payload === null || payload === void 0 ? void 0 : payload.loadingStatus) === false) {
+                  commit(FETCH_START);
+                }
+
                 _context2.prev = 2;
                 _context2.next = 5;
                 return vue_runtime_esm["a" /* default */].axios.get("/sm/actual");
@@ -48861,7 +48868,7 @@ vue_runtime_esm["a" /* default */].use(vuex_esm["a" /* default */]);
         }, _callee2, null, [[2, 10]]);
       }));
 
-      function getActual(_x2) {
+      function getActual(_x2, _x3) {
         return _getActual.apply(this, arguments);
       }
 
@@ -48906,7 +48913,7 @@ vue_runtime_esm["a" /* default */].use(vuex_esm["a" /* default */]);
         }, _callee3, null, [[2, 10]]);
       }));
 
-      function getHours(_x3) {
+      function getHours(_x4) {
         return _getHours.apply(this, arguments);
       }
 
@@ -48951,7 +48958,7 @@ vue_runtime_esm["a" /* default */].use(vuex_esm["a" /* default */]);
         }, _callee4, null, [[2, 10]]);
       }));
 
-      function getDays(_x4) {
+      function getDays(_x5) {
         return _getDays.apply(this, arguments);
       }
 
@@ -48996,7 +49003,7 @@ vue_runtime_esm["a" /* default */].use(vuex_esm["a" /* default */]);
         }, _callee5, null, [[2, 10]]);
       }));
 
-      function getMonths(_x5) {
+      function getMonths(_x6) {
         return _getMonths.apply(this, arguments);
       }
 
@@ -49041,7 +49048,7 @@ vue_runtime_esm["a" /* default */].use(vuex_esm["a" /* default */]);
         }, _callee6, null, [[2, 10]]);
       }));
 
-      function getDeviceInfo(_x6) {
+      function getDeviceInfo(_x7) {
         return _getDeviceInfo.apply(this, arguments);
       }
 
@@ -49086,7 +49093,7 @@ vue_runtime_esm["a" /* default */].use(vuex_esm["a" /* default */]);
         }, _callee7, null, [[2, 10]]);
       }));
 
-      function getSettings(_x7) {
+      function getSettings(_x8) {
         return _getSettings.apply(this, arguments);
       }
 
