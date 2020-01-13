@@ -5,6 +5,7 @@ import PerHour from "../views/PerHour.vue";
 import PerDay from "../views/PerDay.vue";
 import PerMonth from "../views/PerMonth.vue";
 import Charts from "../views/Charts.vue";
+import Settings from "../views/Settings.vue";
 
 Vue.use(VueRouter);
 
@@ -35,6 +36,11 @@ const routes = [
     path: "/charts",
     name: "charts",
     component: Charts
+  },
+  {
+    path: "/settings",
+    name: "settings",
+    component: Settings
   }
 ];
 

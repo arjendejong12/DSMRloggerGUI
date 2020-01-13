@@ -48663,7 +48663,461 @@ var Charts_component = normalizeComponent(
 
 installComponents_default()(Charts_component, {VBtn: VBtn_VBtn,VBtnToggle: VBtnToggle_VBtnToggle,VCard: VCard_VCard,VCardText: VCardText,VCol: VCol,VContainer: VContainer,VIcon: components_VIcon_VIcon,VRow: VRow})
 
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"b256d970-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/Settings.vue?vue&type=template&id=4b73f880&
+var Settingsvue_type_template_id_4b73f880_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"settings"},[_c('v-container',[_c('v-row',{attrs:{"text-center":"","wrap":"","justify":"center"}},[_c('v-col',{attrs:{"cols":"12","sm":"12","md":"6"}},[_c('v-row',[_c('v-col',{staticClass:"d-flex justify-space-between",attrs:{"cols":"12","sm":"12"}},[_c('h1',[_vm._v("Instellingen")]),_c('refresh-button',{attrs:{"dispatch":"getSettings"}})],1),_c('v-col',{attrs:{"cols":"12","sm":"12"}},[_c('v-card',{staticClass:"mb-4",attrs:{"elevation":"4","loading":_vm.isLoading}},[_c('v-card-text',[_c('v-form',{ref:"form",attrs:{"lazy-validation":""},model:{value:(_vm.valid),callback:function ($$v) {_vm.valid=$$v},expression:"valid"}},[_vm._l((_vm.settings),function(value,name){return _c('v-text-field',{key:name,attrs:{"label":_vm.settings[name].name,"rules":_vm.settings[name].rules || [],"type":_vm.settings[name].type || 'text',"filled":"","required":"","loading":_vm.isLoading},model:{value:(_vm.settings[name].value),callback:function ($$v) {_vm.$set(_vm.settings[name], "value", $$v)},expression:"settings[name].value"}})}),_c('v-btn',{staticClass:"ma-2",attrs:{"disabled":_vm.isLoading || !_vm.valid},on:{"click":_vm.saveSettings}},[_vm._v(" Opslaan "),_c('v-icon',{attrs:{"right":""}},[_vm._v("mdi-content-save")])],1)],2)],1)],1)],1)],1)],1)],1)],1)],1)}
+var Settingsvue_type_template_id_4b73f880_staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/views/Settings.vue?vue&type=template&id=4b73f880&
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/Settings.vue?vue&type=script&lang=js&
+
+
+
+
+
+
+
+
+function Settingsvue_type_script_lang_js_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function Settingsvue_type_script_lang_js_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { Settingsvue_type_script_lang_js_ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { Settingsvue_type_script_lang_js_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+var Settingsvue_type_script_lang_js_pattern = /^\d{1,2}(\.\d{1,2})?$/;
+var Settingsvue_type_script_lang_js_max = 99.99;
+/* harmony default export */ var Settingsvue_type_script_lang_js_ = ({
+  name: "settings",
+  components: {
+    RefreshButton: RefreshButton
+  },
+  mixins: [src_mixin],
+  data: function data() {
+    return {
+      valid: true,
+      settingsData: {
+        "ed_tariff1": {
+          label: "Prijs per verbruikte kWh (tarief 1)",
+          value: null,
+          rules: [function (v) {
+            return Settingsvue_type_script_lang_js_pattern.test(v) || "Verkeerd formaat!";
+          }, function (v) {
+            return v < Settingsvue_type_script_lang_js_max || "Getal te groot!";
+          }],
+          type: "number"
+        },
+        "ed_tariff2": {
+          label: "Prijs per verbruikte kWh (tarief 2)",
+          value: null,
+          rules: [function (v) {
+            return Settingsvue_type_script_lang_js_pattern.test(v) || "Verkeerd formaat!";
+          }, function (v) {
+            return v < Settingsvue_type_script_lang_js_max || "Getal te groot!";
+          }],
+          type: "number"
+        },
+        "er_tariff1": {
+          label: "Prijs per teruggeleverde kWh (tarief 1)",
+          value: null,
+          rules: [function (v) {
+            return Settingsvue_type_script_lang_js_pattern.test(v) || "Verkeerd formaat!";
+          }, function (v) {
+            return v < Settingsvue_type_script_lang_js_max || "Getal te groot!";
+          }],
+          type: "number"
+        },
+        "er_tariff2": {
+          label: "Prijs per teruggeleverde kWh (tarief 2)",
+          value: null,
+          rules: [function (v) {
+            return Settingsvue_type_script_lang_js_pattern.test(v) || "Verkeerd formaat!";
+          }, function (v) {
+            return v < Settingsvue_type_script_lang_js_max || "Getal te groot!";
+          }],
+          type: "number"
+        },
+        "gd_tariff": {
+          label: "Prijs per verbruikte m3 gas",
+          value: null,
+          rules: [function (v) {
+            return Settingsvue_type_script_lang_js_pattern.test(v) || "Verkeerd formaat!";
+          }, function (v) {
+            return v < Settingsvue_type_script_lang_js_max || "Getal te groot!";
+          }],
+          type: "number"
+        },
+        "electr_netw_costs": {
+          label: "Electra vaste kosten per maand",
+          value: null,
+          rules: [function (v) {
+            return Settingsvue_type_script_lang_js_pattern.test(v) || "Verkeerd formaat!";
+          }, function (v) {
+            return v < Settingsvue_type_script_lang_js_max || "Getal te groot!";
+          }],
+          type: "number"
+        },
+        "gas_netw_costs": {
+          label: "Gas vaste kosten per maand",
+          value: null,
+          rules: [function (v) {
+            return Settingsvue_type_script_lang_js_pattern.test(v) || "Verkeerd formaat!";
+          }, function (v) {
+            return v < Settingsvue_type_script_lang_js_max || "Getal te groot!";
+          }],
+          type: "number"
+        },
+        BgColor: {
+          label: "Achtergrondkleur",
+          value: null
+        },
+        FontColor: {
+          label: "Tekstkleur",
+          value: null
+        },
+        "tlgrm_interval": {
+          label: "Telegram verwerkingsinterval (sec.)",
+          value: null,
+          type: "number"
+        },
+        SleepTime: {
+          label: "OLED slaapstand (min.) (0 = oneindig)",
+          value: null,
+          type: "number"
+        },
+        "mqtt_broker": {
+          label: "MQTT Broker URL/IP",
+          value: null
+        },
+        "mqtt_broker_port": {
+          label: "MQTT Broker Port",
+          value: null
+        },
+        "mqtt_user": {
+          label: "MQTT gebruikersnaam",
+          value: null
+        },
+        "mqtt_passwd": {
+          label: "MQTT wachtwoord",
+          value: null
+        },
+        "mqtt_topTopic": {
+          label: "MQTT hoofdonderwerp",
+          value: null
+        },
+        "mqtt_interval": {
+          label: "MQTT interval (sec.)",
+          value: null,
+          type: "number"
+        }
+      }
+    };
+  },
+  computed: Settingsvue_type_script_lang_js_objectSpread({}, Object(vuex_esm["b" /* mapState */])({
+    isLoading: function isLoading(state) {
+      return state.isLoading;
+    },
+    settings: function settings(state) {
+      return state.settings;
+    }
+  })),
+  watch: {
+    settings: function settings(newValue) {
+      Object.keys(newValue).forEach(function (key) {
+        console.log(key); // key
+
+        console.log(newValue[key]); // value
+        // Add rules and labels for each object
+      });
+      this.settings = newValue; // // A message consists of data split by a comma, for example:
+      // // msgType=PerHoursHeaders,R=25,DH=(31) 00,H=(31) 00:00 - 00:59,ED=381,ER=0,GD=0.27,COSTS=0.27
+      // const singlePairs = newValue.split(",");
+      // const msgType = singlePairs[0].split("=")[1];
+      // if (msgType == "settings") {
+      //   for (var i = 1; i < singlePairs.length; i++) {
+      //     const onePair = singlePairs[i].split("=");
+      //     const label = onePair[0].trim();
+      //     const value = onePair[1].trim();
+      //     if (
+      //       label == "DT1" ||
+      //       label == "DT2" ||
+      //       label == "RT1" ||
+      //       label == "RT2" ||
+      //       label == "GAST" ||
+      //       label == "ENBK" ||
+      //       label == "GNBK" ||
+      //       label == "Interval" ||
+      //       label == "SleepTime"
+      //     ) {
+      //       this.settings[label].value = value * 1;
+      //     } else {
+      //       this.settings[label].value = value;
+      //     }
+      //   }
+      //   this.isLoading = false;
+      // }
+    }
+  },
+  created: function created() {
+    if (!this.$store.state.settings.length) {
+      this.$store.dispatch("getSettings");
+    }
+  },
+  methods: {
+    saveSettings: function saveSettings() {// const data = Object.entries(this.settings).reduce(
+      //   (accumulator, currentValue, currentIndex, array) => {
+      //     return (accumulator +=
+      //       "," + currentValue[0] + "=" + currentValue[1].value);
+      //   },
+      //   "saveSettings"
+      // );
+      // this.isLoading = true;
+      // this.$store.dispatch("sendMessage", data);
+      // this.$store.dispatch("sendMessage", "getDevInfo");
+      // this.$store.dispatch("sendMessage", "sendSettings");
+    }
+  }
+});
+// CONCATENATED MODULE: ./src/views/Settings.vue?vue&type=script&lang=js&
+ /* harmony default export */ var views_Settingsvue_type_script_lang_js_ = (Settingsvue_type_script_lang_js_); 
+// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VForm/VForm.js
+
+
+
+
+
+
+
+
+
+
+
+
+function VForm_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function VForm_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { VForm_ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { VForm_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+// Mixins
+
+
+
+/* @vue/component */
+
+/* harmony default export */ var VForm = (mixins(binds_attrs, registrable_provide('form')
+/* @vue/component */
+).extend({
+  name: 'v-form',
+  inheritAttrs: false,
+  props: {
+    lazyValidation: Boolean,
+    value: Boolean
+  },
+  data: function data() {
+    return {
+      inputs: [],
+      watchers: [],
+      errorBag: {}
+    };
+  },
+  watch: {
+    errorBag: {
+      handler: function handler(val) {
+        var errors = Object.values(val).includes(true);
+        this.$emit('input', !errors);
+      },
+      deep: true,
+      immediate: true
+    }
+  },
+  methods: {
+    watchInput: function watchInput(input) {
+      var _this = this;
+
+      var watcher = function watcher(input) {
+        return input.$watch('hasError', function (val) {
+          _this.$set(_this.errorBag, input._uid, val);
+        }, {
+          immediate: true
+        });
+      };
+
+      var watchers = {
+        _uid: input._uid,
+        valid: function valid() {},
+        shouldValidate: function shouldValidate() {}
+      };
+
+      if (this.lazyValidation) {
+        // Only start watching inputs if we need to
+        watchers.shouldValidate = input.$watch('shouldValidate', function (val) {
+          if (!val) return; // Only watch if we're not already doing it
+
+          if (_this.errorBag.hasOwnProperty(input._uid)) return;
+          watchers.valid = watcher(input);
+        });
+      } else {
+        watchers.valid = watcher(input);
+      }
+
+      return watchers;
+    },
+
+    /** @public */
+    validate: function validate() {
+      return this.inputs.filter(function (input) {
+        return !input.validate(true);
+      }).length === 0;
+    },
+
+    /** @public */
+    reset: function reset() {
+      this.inputs.forEach(function (input) {
+        return input.reset();
+      });
+      this.resetErrorBag();
+    },
+    resetErrorBag: function resetErrorBag() {
+      var _this2 = this;
+
+      if (this.lazyValidation) {
+        // Account for timeout in validatable
+        setTimeout(function () {
+          _this2.errorBag = {};
+        }, 0);
+      }
+    },
+
+    /** @public */
+    resetValidation: function resetValidation() {
+      this.inputs.forEach(function (input) {
+        return input.resetValidation();
+      });
+      this.resetErrorBag();
+    },
+    register: function register(input) {
+      this.inputs.push(input);
+      this.watchers.push(this.watchInput(input));
+    },
+    unregister: function unregister(input) {
+      var found = this.inputs.find(function (i) {
+        return i._uid === input._uid;
+      });
+      if (!found) return;
+      var unwatch = this.watchers.find(function (i) {
+        return i._uid === found._uid;
+      });
+
+      if (unwatch) {
+        unwatch.valid();
+        unwatch.shouldValidate();
+      }
+
+      this.watchers = this.watchers.filter(function (i) {
+        return i._uid !== found._uid;
+      });
+      this.inputs = this.inputs.filter(function (i) {
+        return i._uid !== found._uid;
+      });
+      this.$delete(this.errorBag, found._uid);
+    }
+  },
+  render: function render(h) {
+    var _this3 = this;
+
+    return h('form', {
+      staticClass: 'v-form',
+      attrs: VForm_objectSpread({
+        novalidate: true
+      }, this.attrs$),
+      on: {
+        submit: function submit(e) {
+          return _this3.$emit('submit', e);
+        }
+      }
+    }, this.$slots.default);
+  }
+}));
+// CONCATENATED MODULE: ./src/views/Settings.vue
+
+
+
+
+
+/* normalize component */
+
+var Settings_component = normalizeComponent(
+  views_Settingsvue_type_script_lang_js_,
+  Settingsvue_type_template_id_4b73f880_render,
+  Settingsvue_type_template_id_4b73f880_staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* harmony default export */ var Settings = (Settings_component.exports);
+
+/* vuetify-loader */
+
+
+
+
+
+
+
+
+
+
+installComponents_default()(Settings_component, {VBtn: VBtn_VBtn,VCard: VCard_VCard,VCardText: VCardText,VCol: VCol,VContainer: VContainer,VForm: VForm,VIcon: components_VIcon_VIcon,VRow: VRow,VTextField: VTextField_VTextField})
+
 // CONCATENATED MODULE: ./src/router/index.js
+
 
 
 
@@ -48694,6 +49148,10 @@ var routes = [{
   path: "/charts",
   name: "charts",
   component: Charts
+}, {
+  path: "/settings",
+  name: "settings",
+  component: Settings
 }];
 var router = new vue_router_esm({
   base: "/",
