@@ -25,6 +25,7 @@ export default {
   }),
   methods: {
     refresh: function() {
+      this.$emit("execute");
       this.$store.dispatch(this.dispatch);
     }
   }

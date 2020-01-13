@@ -4,7 +4,10 @@
       <v-row text-center wrap>
         <v-col cols="12" sm="12" class="d-flex justify-space-between">
           <h1>{{ $t("charts") }}</h1>
-          <refresh-button dispatch="getActual"></refresh-button>
+          <refresh-button
+            dispatch="getActual"
+            @execute="refresh"
+          ></refresh-button>
         </v-col>
         <v-col cols="12" sm="12">
           <v-card class="mb-4" elevation="4" :loading="isLoading">
@@ -474,10 +477,10 @@ export default {
   },
   created() {
     if (!this.$store.state.actual.length) {
-      this.$store.dispatch("getActual", { loadingStatus: false });
+      this.$store.dispatch("getActual");
 
       this.intervalTab = setInterval(() => {
-        this.$store.dispatch("getActual");
+        this.$store.dispatch("getActual", true);
       }, 9900);
     }
   },
@@ -513,7 +516,7 @@ export default {
         this.$store.dispatch("getActual");
         this.intervalTab = setInterval(() => {
           console.error("actual interval");
-          this.$store.dispatch("getActual");
+          this.$store.dispatch("getActual", true);
         }, 9900);
       } else if (graphType == "financial") {
         console.error("graphStart: graphFinancialRow");

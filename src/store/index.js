@@ -36,9 +36,10 @@ export default new Vuex.Store({
     },
     async getActual({ commit }, payload) {
       // Don't change loading status after initial request.
-      if (payload?.loadingStatus === false) {
+      if (payload !== true) {
         commit(FETCH_START);
       }
+
       try {
         const { data } = await Vue.axios.get("/sm/actual");
         commit(FETCH_END, { data: data.actual, stateProperty: "actual" });
