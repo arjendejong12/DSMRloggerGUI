@@ -28363,7 +28363,7 @@ var store = __webpack_require__("c6cd");
 (module.exports = function (key, value) {
   return store[key] || (store[key] = value !== undefined ? value : {});
 })('versions', []).push({
-  version: '3.6.3',
+  version: '3.6.4',
   mode: IS_PURE ? 'pure' : 'global',
   copyright: '© 2020 Denis Pushkarev (zloirock.ru)'
 });
@@ -28407,14 +28407,14 @@ var es_promise_finally = __webpack_require__("37e1");
 // EXTERNAL MODULE: ./node_modules/vue/dist/vue.runtime.esm.js
 var vue_runtime_esm = __webpack_require__("2b0e");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"b256d970-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App.vue?vue&type=template&id=675bf799&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"f072728c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App.vue?vue&type=template&id=675bf799&
 var Appvue_type_template_id_675bf799_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('v-app',[_c('v-navigation-drawer',{attrs:{"app":"","clipped":""},model:{value:(_vm.drawer),callback:function ($$v) {_vm.drawer=$$v},expression:"drawer"}},[_c('v-list',{attrs:{"dense":""}},[_vm._l((_vm.menuItems),function(item){return _c('v-list-item',{key:item.title,attrs:{"link":"","to":item.link}},[_c('v-list-item-action',[_c('v-icon',[_vm._v(_vm._s(item.icon))])],1),_c('v-list-item-content',[_c('v-list-item-title',[_vm._v(_vm._s(item.title))])],1)],1)}),_c('v-list-item',{key:"FSexplorer",attrs:{"href":"/FSexplorer"}},[_c('v-list-item-action',[_c('v-icon',[_vm._v("mdi-folder")])],1),_c('v-list-item-content',[_c('v-list-item-title',[_vm._v("FSExplorer")])],1)],1)],2)],1),_c('v-app-bar',{attrs:{"app":"","clipped-left":""}},[_c('v-app-bar-nav-icon',{on:{"click":function($event){$event.stopPropagation();_vm.drawer = !_vm.drawer}}}),_c('v-toolbar-title',[_vm._v("DSMRloggerGUI")]),_c('v-spacer'),_c('language-switcher',{attrs:{"languages":_vm.languages}}),_c('v-btn',{attrs:{"icon":""},on:{"click":function($event){_vm.isDark = !_vm.isDark}}},[_c('v-icon',[_vm._v("mdi-theme-light-dark")])],1)],1),_c('v-content',[_c('router-view')],1),_c('v-footer',{attrs:{"app":""}},[_c('span',[_vm._v("© 2020 - Arjen de Jong")])])],1)}
 var staticRenderFns = []
 
 
 // CONCATENATED MODULE: ./src/App.vue?vue&type=template&id=675bf799&
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"b256d970-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/LanguageSwitcher.vue?vue&type=template&id=d5960546&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"f072728c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/LanguageSwitcher.vue?vue&type=template&id=d5960546&
 var LanguageSwitchervue_type_template_id_d5960546_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('v-menu',{attrs:{"offset-y":""},scopedSlots:_vm._u([{key:"activator",fn:function(ref){
 var menu = ref.on;
 return [_c('v-btn',_vm._g({attrs:{"icon":""}},Object.assign({}, menu)),[(_vm.currentLanguageIcon)?_c('img',{attrs:{"src":_vm.currentLanguageIcon}}):_c('v-icon',[_vm._v("mdi-translate")])],1)]}}])},[_c('v-list',_vm._l((_vm.languages),function(language){return _c('v-list-item',{key:language.id,on:{"click":function($event){return _vm.changeLanguage(language.id)}}},[_c('v-list-item-avatar',{attrs:{"tile":"","size":"24"}},[_c('v-img',{attrs:{"src":language.flagSrc}})],1),_c('v-list-item-title',[_vm._v(_vm._s(_vm.$t(language.title)))])],1)}),1)],1)}
@@ -32451,10 +32451,8 @@ var BaseItemGroup = mixins(proxyable, themeable).extend({
     }
   },
   watch: {
-    internalValue: function internalValue() {
-      // https://github.com/vuetifyjs/vuetify/issues/5352
-      this.$nextTick(this.updateItemsState);
-    }
+    internalValue: 'updateItemsState',
+    items: 'updateItemsState'
   },
   created: function created() {
     if (this.multiple && !Array.isArray(this.internalValue)) {
@@ -32482,7 +32480,7 @@ var BaseItemGroup = mixins(proxyable, themeable).extend({
       }); // If no value provided and mandatory,
       // assign first registered item
 
-      if (this.mandatory && this.internalLazyValue == null) {
+      if (this.mandatory && !this.selectedValues.length) {
         this.updateMandatory();
       }
 
@@ -32522,15 +32520,20 @@ var BaseItemGroup = mixins(proxyable, themeable).extend({
       var value = this.getValue(item, index);
       item.isActive = this.toggleMethod(value);
     },
+    // https://github.com/vuetifyjs/vuetify/issues/5352
     updateItemsState: function updateItemsState() {
-      if (this.mandatory && !this.selectedItems.length) {
-        return this.updateMandatory();
-      } // TODO: Make this smarter so it
-      // doesn't have to iterate every
-      // child in an update
+      var _this4 = this;
+
+      this.$nextTick(function () {
+        if (_this4.mandatory && !_this4.selectedItems.length) {
+          return _this4.updateMandatory();
+        } // TODO: Make this smarter so it
+        // doesn't have to iterate every
+        // child in an update
 
 
-      this.items.forEach(this.updateItem);
+        _this4.items.forEach(_this4.updateItem);
+      });
     },
     updateInternalValue: function updateInternalValue(value) {
       this.multiple ? this.updateMultiple(value) : this.updateSingle(value);
@@ -37926,8 +37929,8 @@ function loadLocaleMessages() {
 }));
 // CONCATENATED MODULE: ./node_modules/vue-router/dist/vue-router.esm.js
 /*!
-  * vue-router v3.1.3
-  * (c) 2019 Evan You
+  * vue-router v3.1.5
+  * (c) 2020 Evan You
   * @license MIT
   */
 /*  */
@@ -37991,14 +37994,12 @@ var View = {
     var depth = 0;
     var inactive = false;
     while (parent && parent._routerRoot !== parent) {
-      var vnodeData = parent.$vnode && parent.$vnode.data;
-      if (vnodeData) {
-        if (vnodeData.routerView) {
-          depth++;
-        }
-        if (vnodeData.keepAlive && parent._inactive) {
-          inactive = true;
-        }
+      var vnodeData = parent.$vnode ? parent.$vnode.data : {};
+      if (vnodeData.routerView) {
+        depth++;
+      }
+      if (vnodeData.keepAlive && parent._directInactive && parent._inactive) {
+        inactive = true;
       }
       parent = parent.$parent;
     }
@@ -38006,17 +38007,32 @@ var View = {
 
     // render previous view if the tree is inactive and kept-alive
     if (inactive) {
-      return h(cache[name], data, children)
+      var cachedData = cache[name];
+      var cachedComponent = cachedData && cachedData.component;
+      if (cachedComponent) {
+        // #2301
+        // pass props
+        if (cachedData.configProps) {
+          fillPropsinData(cachedComponent, data, cachedData.route, cachedData.configProps);
+        }
+        return h(cachedComponent, data, children)
+      } else {
+        // render previous empty view
+        return h()
+      }
     }
 
     var matched = route.matched[depth];
-    // render empty node if no matched route
-    if (!matched) {
+    var component = matched && matched.components[name];
+
+    // render empty node if no matched route or no config component
+    if (!matched || !component) {
       cache[name] = null;
       return h()
     }
 
-    var component = cache[name] = matched.components[name];
+    // cache component
+    cache[name] = { component: component };
 
     // attach instance registration hook
     // this will be called in the instance's injected lifecycle hooks
@@ -38048,24 +38064,36 @@ var View = {
       }
     };
 
-    // resolve props
-    var propsToPass = data.props = resolveProps(route, matched.props && matched.props[name]);
-    if (propsToPass) {
-      // clone to prevent mutation
-      propsToPass = data.props = vue_router_esm_extend({}, propsToPass);
-      // pass non-declared props as attrs
-      var attrs = data.attrs = data.attrs || {};
-      for (var key in propsToPass) {
-        if (!component.props || !(key in component.props)) {
-          attrs[key] = propsToPass[key];
-          delete propsToPass[key];
-        }
-      }
+    var configProps = matched.props && matched.props[name];
+    // save route and configProps in cachce
+    if (configProps) {
+      vue_router_esm_extend(cache[name], {
+        route: route,
+        configProps: configProps
+      });
+      fillPropsinData(component, data, route, configProps);
     }
 
     return h(component, data, children)
   }
 };
+
+function fillPropsinData (component, data, route, configProps) {
+  // resolve props
+  var propsToPass = data.props = resolveProps(route, configProps);
+  if (propsToPass) {
+    // clone to prevent mutation
+    propsToPass = data.props = vue_router_esm_extend({}, propsToPass);
+    // pass non-declared props as attrs
+    var attrs = data.attrs = data.attrs || {};
+    for (var key in propsToPass) {
+      if (!component.props || !(key in component.props)) {
+        attrs[key] = propsToPass[key];
+        delete propsToPass[key];
+      }
+    }
+  }
+}
 
 function resolveProps (route, config) {
   switch (typeof config) {
@@ -38861,20 +38889,25 @@ function normalizeLocation (
   if (next._normalized) {
     return next
   } else if (next.name) {
-    return vue_router_esm_extend({}, raw)
+    next = vue_router_esm_extend({}, raw);
+    var params = next.params;
+    if (params && typeof params === 'object') {
+      next.params = vue_router_esm_extend({}, params);
+    }
+    return next
   }
 
   // relative params
   if (!next.path && next.params && current) {
     next = vue_router_esm_extend({}, next);
     next._normalized = true;
-    var params = vue_router_esm_extend(vue_router_esm_extend({}, current.params), next.params);
+    var params$1 = vue_router_esm_extend(vue_router_esm_extend({}, current.params), next.params);
     if (current.name) {
       next.name = current.name;
-      next.params = params;
+      next.params = params$1;
     } else if (current.matched.length) {
       var rawPath = current.matched[current.matched.length - 1].path;
-      next.path = fillParams(rawPath, params, ("path " + (current.path)));
+      next.path = fillParams(rawPath, params$1, ("path " + (current.path)));
     } else if (false) {}
     return next
   }
@@ -39663,7 +39696,10 @@ function pushState (url, replace) {
   var history = window.history;
   try {
     if (replace) {
-      history.replaceState({ key: getStateKey() }, '', url);
+      // preserve existing history state as it could be overriden by the user
+      var stateCopy = vue_router_esm_extend({}, history.state);
+      stateCopy.key = getStateKey();
+      history.replaceState(stateCopy, '', url);
     } else {
       history.pushState({ key: setStateKey(genStateKey()) }, '', url);
     }
@@ -40378,9 +40414,7 @@ function getHash () {
       href = decodeURI(href.slice(0, hashIndex)) + href.slice(hashIndex);
     } else { href = decodeURI(href); }
   } else {
-    if (searchIndex > -1) {
-      href = decodeURI(href.slice(0, searchIndex)) + href.slice(searchIndex);
-    }
+    href = decodeURI(href.slice(0, searchIndex)) + href.slice(searchIndex);
   }
 
   return href
@@ -40708,7 +40742,7 @@ function createHref (base, fullPath, mode) {
 }
 
 VueRouter.install = vue_router_esm_install;
-VueRouter.version = '3.1.3';
+VueRouter.version = '3.1.5';
 
 if (inBrowser && window.Vue) {
   window.Vue.use(VueRouter);
@@ -40716,14 +40750,14 @@ if (inBrowser && window.Vue) {
 
 /* harmony default export */ var vue_router_esm = (VueRouter);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"b256d970-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/SmartMeter.vue?vue&type=template&id=2c61a12e&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"f072728c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/SmartMeter.vue?vue&type=template&id=2c61a12e&
 var SmartMetervue_type_template_id_2c61a12e_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"smart-meter"},[_c('v-container',[_c('v-row',{attrs:{"text-center":"","wrap":""}},[_c('v-col',{staticClass:"d-flex justify-space-between",attrs:{"cols":"12","sm":"12"}},[_c('h1',[_vm._v(_vm._s(_vm.$t("smart_meter")))]),_c('refresh-button',{attrs:{"dispatch":"getSmartMeter"}})],1),_c('v-col',{attrs:{"cols":"12","sm":"12","md":"6"}},[_c('v-row',[_c('v-col',{attrs:{"cols":"12","sm":"12"}},[_c('v-card',{staticClass:"mb-4",attrs:{"elevation":"4","loading":_vm.isLoading}},[_c('v-card-title',[_c('h4',[_vm._v(_vm._s(_vm.$t("actual")))])]),_c('v-divider'),_c('v-list',{attrs:{"dense":""}},_vm._l((_vm.actual),function(field){return _c('v-list-item',{key:field.name},[_c('v-list-item-content',{staticStyle:{"font-weight":"bold"}},[_vm._v(_vm._s(_vm.$t(field.name))+":")]),_c('v-list-item-content',{staticClass:"align-end"},[_vm._v(_vm._s(field.name === "timestamp" ? _vm.formatDate("timestamp", field.value) : field.value)+_vm._s(field.unit ? " " + field.unit : ""))])],1)}),1)],1)],1)],1)],1),_c('v-col',{attrs:{"cols":"12","sm":"12","md":"6"}},[_c('v-row',[_c('v-col',{attrs:{"cols":"12","sm":"12"}})],1)],1)],1)],1)],1)}
 var SmartMetervue_type_template_id_2c61a12e_staticRenderFns = []
 
 
 // CONCATENATED MODULE: ./src/views/SmartMeter.vue?vue&type=template&id=2c61a12e&
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"b256d970-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/RefreshButton.vue?vue&type=template&id=f20c023e&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"f072728c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/RefreshButton.vue?vue&type=template&id=f20c023e&
 var RefreshButtonvue_type_template_id_f20c023e_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('v-btn',{staticClass:"ma-2 white--text",attrs:{"color":"orange","disabled":_vm.isLoading},on:{"click":_vm.refresh}},[_vm._v(" "+_vm._s(_vm.$t("refresh"))+" "),_c('v-icon',{attrs:{"right":""}},[_vm._v("mdi-refresh")])],1)}
 var RefreshButtonvue_type_template_id_f20c023e_staticRenderFns = []
 
@@ -41901,7 +41935,7 @@ var SmartMeter_component = normalizeComponent(
 
 installComponents_default()(SmartMeter_component, {VCard: VCard_VCard,VCardTitle: VCardTitle,VCol: VCol,VContainer: VContainer,VDivider: VDivider_VDivider,VList: VList_VList,VListItem: VList_VListItem,VListItemContent: VListItemContent,VRow: VRow})
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"b256d970-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/PerHour.vue?vue&type=template&id=744183cc&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"f072728c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/PerHour.vue?vue&type=template&id=744183cc&
 var PerHourvue_type_template_id_744183cc_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"per-hour"},[_c('v-container',[_c('v-row',{attrs:{"text-center":"","wrap":""}},[_c('v-col',{staticClass:"d-flex justify-space-between",attrs:{"cols":"12","sm":"12"}},[_c('h1',[_vm._v(_vm._s(_vm.$t("hours")))]),_c('refresh-button',{attrs:{"dispatch":"getHours"}})],1),_c('v-col',{attrs:{"cols":"12","sm":"12"}},[_c('v-data-table',{staticClass:"elevation-1",attrs:{"hide-default-footer":"","loading":_vm.isLoading,"loading-text":_vm.$t('loading_please_wait'),"items-per-page":-1,"headers":_vm.headers,"items":_vm.tableData,"item-key":"hour"}})],1)],1)],1)],1)}
 var PerHourvue_type_template_id_744183cc_staticRenderFns = []
 
@@ -42637,6 +42671,7 @@ function VChip_objectSpread(target) { for (var i = 1; i < arguments.length; i++)
         on: {
           click: function click(e) {
             e.stopPropagation();
+            e.preventDefault();
 
             _this2.$emit('click:close');
 
@@ -43397,7 +43432,7 @@ var VMessages = __webpack_require__("8ff2");
       // if disabled
       if (!val && !this.disabled) {
         this.hasFocused = true;
-        this.validateOnBlur && this.validate();
+        this.validateOnBlur && this.$nextTick(this.validate);
       }
     },
     isResetting: function isResetting() {
@@ -43457,8 +43492,8 @@ var VMessages = __webpack_require__("8ff2");
         var rule = this.rules[index];
         var valid = typeof rule === 'function' ? rule(value) : rule;
 
-        if (typeof valid === 'string') {
-          errorBucket.push(valid);
+        if (valid === false || typeof valid === 'string') {
+          errorBucket.push(valid || '');
         } else if (typeof valid !== 'boolean') {
           consoleError("Rules should return a string or boolean, received '".concat(_typeof(valid), "' instead"), this);
         }
@@ -43665,6 +43700,7 @@ var VInput_baseMixins = mixins(binds_attrs, validatable);
         props: {
           color: this.validationState,
           dark: this.dark,
+          disabled: this.disabled,
           focused: this.hasState,
           for: this.computedId,
           light: this.light
@@ -43977,7 +44013,7 @@ var dirtyTypes = ['color', 'file', 'time', 'date', 'datetime-local', 'week', 'mo
       return this.lazyValue != null && this.lazyValue.toString().length > 0 || this.badInput;
     },
     isEnclosed: function isEnclosed() {
-      return this.filled || this.isSolo || this.outlined || this.fullWidth;
+      return this.filled || this.isSolo || this.outlined;
     },
     isLabelActive: function isLabelActive() {
       return this.isDirty || dirtyTypes.includes(this.type);
@@ -44949,7 +44985,7 @@ var VSelect_baseMixins = mixins(VTextField_VTextField, comparable, filterable);
     onMouseUp: function onMouseUp(e) {
       var _this12 = this;
 
-      if (this.hasMouseDown && e.which !== 3) {
+      if (this.hasMouseDown && e.which !== 3 && !this.isDisabled) {
         // If append inner is present
         // and the target is itself
         // or inside, toggle menu
@@ -44958,7 +44994,7 @@ var VSelect_baseMixins = mixins(VTextField_VTextField, comparable, filterable);
             return _this12.isMenuActive = !_this12.isMenuActive;
           }); // If user is clicking in the container
           // and field is enclosed, activate it
-        } else if (this.isEnclosed && !this.isDisabled) {
+        } else if (this.isEnclosed) {
           this.isMenuActive = true;
         }
       }
@@ -46923,7 +46959,7 @@ var PerHour_component = normalizeComponent(
 
 installComponents_default()(PerHour_component, {VCol: VCol,VContainer: VContainer,VDataTable: VDataTable_VDataTable,VRow: VRow})
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"b256d970-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/PerDay.vue?vue&type=template&id=82503c88&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"f072728c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/PerDay.vue?vue&type=template&id=82503c88&
 var PerDayvue_type_template_id_82503c88_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"per-day"},[_c('v-container',[_c('v-row',{attrs:{"text-center":"","wrap":""}},[_c('v-col',{staticClass:"d-flex justify-space-between",attrs:{"cols":"12","sm":"12"}},[_c('h1',[_vm._v(_vm._s(_vm.$t("days")))]),_c('refresh-button',{attrs:{"dispatch":"getDays"}})],1),_c('v-col',{attrs:{"cols":"12","sm":"12"}},[_c('v-data-table',{staticClass:"elevation-1",attrs:{"hide-default-footer":"","loading":_vm.isLoading,"loading-text":_vm.$t('loading_please_wait'),"items-per-page":-1,"headers":_vm.headers,"items":_vm.tableData,"item-key":"day"}})],1)],1)],1)],1)}
 var PerDayvue_type_template_id_82503c88_staticRenderFns = []
 
@@ -47134,7 +47170,7 @@ var PerDay_component = normalizeComponent(
 
 installComponents_default()(PerDay_component, {VCol: VCol,VContainer: VContainer,VDataTable: VDataTable_VDataTable,VRow: VRow})
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"b256d970-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/PerMonth.vue?vue&type=template&id=49affcf2&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"f072728c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/PerMonth.vue?vue&type=template&id=49affcf2&
 var PerMonthvue_type_template_id_49affcf2_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"per-month"},[_c('v-container',[_c('v-row',{attrs:{"text-center":"","wrap":""}},[_c('v-col',{staticClass:"d-flex justify-space-between",attrs:{"cols":"12","sm":"12"}},[_c('h1',[_vm._v(_vm._s(_vm.$t("months")))]),_c('refresh-button',{attrs:{"dispatch":"getMonths"}})],1),_c('v-col',{attrs:{"cols":"12","sm":"12"}},[_c('v-data-table',{staticClass:"elevation-1",attrs:{"hide-default-footer":"","loading":_vm.isLoading,"loading-text":_vm.$t('loading_please_wait'),"items-per-page":-1,"headers":_vm.headers,"items":_vm.tableData,"item-key":"month"}})],1)],1)],1)],1)}
 var PerMonthvue_type_template_id_49affcf2_staticRenderFns = []
 
@@ -47369,7 +47405,7 @@ var PerMonth_component = normalizeComponent(
 
 installComponents_default()(PerMonth_component, {VCol: VCol,VContainer: VContainer,VDataTable: VDataTable_VDataTable,VRow: VRow})
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"b256d970-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/Charts.vue?vue&type=template&id=a6b9182c&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"f072728c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/Charts.vue?vue&type=template&id=a6b9182c&
 var Chartsvue_type_template_id_a6b9182c_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"charts"},[_c('v-container',[_c('v-row',{attrs:{"text-center":"","wrap":""}},[_c('v-col',{staticClass:"d-flex justify-space-between",attrs:{"cols":"12","sm":"12"}},[_c('h1',[_vm._v(_vm._s(_vm.$t("charts")))]),_c('refresh-button',{attrs:{"dispatch":"getActual"},on:{"execute":_vm.refresh}})],1),_c('v-col',{attrs:{"cols":"12","sm":"12"}},[_c('v-card',{staticClass:"mb-4",attrs:{"elevation":"4","loading":_vm.isLoading}},[_c('v-card-text',[_c('v-row',{attrs:{"wrap":""}},[_c('v-col',{staticClass:"py-2",attrs:{"cols":"12","sm":"12","lg":"6"}},[_c('p',[_vm._v(_vm._s(_vm.$t("data")))]),_c('v-btn-toggle',{staticClass:"flex-column flex-sm-row",attrs:{"mandatory":""},model:{value:(_vm.chart),callback:function ($$v) {_vm.chart=$$v},expression:"chart"}},[_c('v-btn',{attrs:{"value":"actual"}},[_vm._v(" "+_vm._s(_vm.$t("actual"))+" "),_c('v-icon',{attrs:{"small":"","right":""}},[_vm._v("mdi-clock-outline")])],1),_c('v-btn',{attrs:{"value":"financial"}},[_vm._v(" "+_vm._s(_vm.$t("financial"))+" "),_c('v-icon',{attrs:{"small":"","right":""}},[_vm._v("mdi-currency-eur")])],1),_c('v-btn',{attrs:{"value":"day"}},[_vm._v(" "+_vm._s(_vm.$t("day"))+" "),_c('v-icon',{attrs:{"small":"","right":""}},[_vm._v("mdi-calendar-today")])],1),_c('v-btn',{attrs:{"value":"week"}},[_vm._v(" "+_vm._s(_vm.$t("week"))+" "),_c('v-icon',{attrs:{"small":"","right":""}},[_vm._v("mdi-calendar-month")])],1),_c('v-btn',{attrs:{"value":"year"}},[_vm._v(" "+_vm._s(_vm.$t("year"))+" "),_c('v-icon',{attrs:{"small":"","right":""}},[_vm._v("mdi-calendar-multiple")])],1)],1)],1),_c('v-col',{staticClass:"py-2",attrs:{"cols":"12","sm":"12","lg":"6"}},[_c('p',[_vm._v(_vm._s(_vm.$t("type")))]),_c('v-btn-toggle',{attrs:{"mandatory":""},model:{value:(_vm.chartType),callback:function ($$v) {_vm.chartType=$$v},expression:"chartType"}},[_c('v-btn',{attrs:{"value":"bar"}},[_vm._v(" "+_vm._s(_vm.$t("bar"))+" "),_c('v-icon',{attrs:{"small":"","right":""}},[_vm._v("mdi-chart-bar")])],1),_c('v-btn',{attrs:{"value":"line"}},[_vm._v(" "+_vm._s(_vm.$t("line"))+" "),_c('v-icon',{attrs:{"small":"","right":""}},[_vm._v("mdi-chart-line")])],1)],1)],1),_c('v-col',{staticClass:"py-2",attrs:{"cols":"12","sm":"12"}},[(
                     !_vm.isLoading &&
                       _vm.chartType === 'line' &&
@@ -48667,14 +48703,18 @@ var Charts_component = normalizeComponent(
 
 installComponents_default()(Charts_component, {VBtn: VBtn_VBtn,VBtnToggle: VBtnToggle_VBtnToggle,VCard: VCard_VCard,VCardText: VCardText,VCol: VCol,VContainer: VContainer,VIcon: components_VIcon_VIcon,VRow: VRow})
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"b256d970-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/Settings.vue?vue&type=template&id=4b73f880&
-var Settingsvue_type_template_id_4b73f880_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"settings"},[_c('v-container',[_c('v-row',{attrs:{"text-center":"","wrap":"","justify":"center"}},[_c('v-col',{attrs:{"cols":"12","sm":"12","md":"6"}},[_c('v-row',[_c('v-col',{staticClass:"d-flex justify-space-between",attrs:{"cols":"12","sm":"12"}},[_c('h1',[_vm._v("Instellingen")]),_c('refresh-button',{attrs:{"dispatch":"getSettings"}})],1),_c('v-col',{attrs:{"cols":"12","sm":"12"}},[_c('v-card',{staticClass:"mb-4",attrs:{"elevation":"4","loading":_vm.isLoading}},[_c('v-card-text',[_c('v-form',{ref:"form",attrs:{"lazy-validation":""},model:{value:(_vm.valid),callback:function ($$v) {_vm.valid=$$v},expression:"valid"}},[_vm._l((_vm.settings),function(value,name){return _c('v-text-field',{key:name,attrs:{"label":_vm.settings[name].name,"rules":_vm.settings[name].rules || [],"type":_vm.settings[name].type || 'text',"filled":"","required":"","loading":_vm.isLoading},model:{value:(_vm.settings[name].value),callback:function ($$v) {_vm.$set(_vm.settings[name], "value", $$v)},expression:"settings[name].value"}})}),_c('v-btn',{staticClass:"ma-2",attrs:{"disabled":_vm.isLoading || !_vm.valid},on:{"click":_vm.saveSettings}},[_vm._v(" Opslaan "),_c('v-icon',{attrs:{"right":""}},[_vm._v("mdi-content-save")])],1)],2)],1)],1)],1)],1)],1)],1)],1)],1)}
-var Settingsvue_type_template_id_4b73f880_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"f072728c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/Settings.vue?vue&type=template&id=c38202f8&
+var Settingsvue_type_template_id_c38202f8_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"settings"},[_c('v-container',[_c('v-row',{attrs:{"text-center":"","wrap":"","justify":"center"}},[_c('v-col',{attrs:{"cols":"12","sm":"12","md":"6"}},[_c('v-row',[_c('v-col',{staticClass:"d-flex justify-space-between",attrs:{"cols":"12","sm":"12"}},[_c('h1',[_vm._v(_vm._s(_vm.$t('settings')))]),_c('refresh-button',{attrs:{"dispatch":"getSettings"}})],1),_c('v-col',{attrs:{"cols":"12","sm":"12"}},[_c('v-card',{staticClass:"mb-4",attrs:{"elevation":"4","loading":_vm.isLoading}},[_c('v-card-text',[_c('v-form',{ref:"form",attrs:{"lazy-validation":""},model:{value:(_vm.valid),callback:function ($$v) {_vm.valid=$$v},expression:"valid"}},[_vm._l((_vm.settingsData),function(value,name){return _c('v-text-field',{key:name,attrs:{"label":_vm.$t(("settings_" + (_vm.settingsData[name].name))),"rules":_vm.settingsData[name].rules || [],"type":_vm.settingsData[name].type || 'text',"counter":_vm.settingsData[name].maxlen
+                        ? _vm.settingsData[name].maxlen
+                        : null,"filled":"","required":"","loading":_vm.isLoading},model:{value:(_vm.settingsData[name].value),callback:function ($$v) {_vm.$set(_vm.settingsData[name], "value", $$v)},expression:"settingsData[name].value"}})}),_c('v-btn',{staticClass:"ma-2",attrs:{"disabled":_vm.isLoading || !_vm.valid},on:{"click":_vm.saveSettings}},[_vm._v(" "+_vm._s(_vm.$t("save"))+" "),_c('v-icon',{attrs:{"right":""}},[_vm._v("mdi-content-save")])],1)],2)],1)],1)],1)],1)],1)],1)],1)],1)}
+var Settingsvue_type_template_id_c38202f8_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/views/Settings.vue?vue&type=template&id=4b73f880&
+// CONCATENATED MODULE: ./src/views/Settings.vue?vue&type=template&id=c38202f8&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/Settings.vue?vue&type=script&lang=js&
+
+
 
 
 
@@ -48731,11 +48771,14 @@ function Settingsvue_type_script_lang_js_objectSpread(target) { for (var i = 1; 
 //
 //
 //
+//
+//
+//
+//
+//
 
 
 
-var Settingsvue_type_script_lang_js_pattern = /^\d{1,2}(\.\d{1,2})?$/;
-var Settingsvue_type_script_lang_js_max = 99.99;
 /* harmony default export */ var Settingsvue_type_script_lang_js_ = ({
   name: "settings",
   components: {
@@ -48745,121 +48788,7 @@ var Settingsvue_type_script_lang_js_max = 99.99;
   data: function data() {
     return {
       valid: true,
-      settingsData: {
-        "ed_tariff1": {
-          label: "Prijs per verbruikte kWh (tarief 1)",
-          value: null,
-          rules: [function (v) {
-            return Settingsvue_type_script_lang_js_pattern.test(v) || "Verkeerd formaat!";
-          }, function (v) {
-            return v < Settingsvue_type_script_lang_js_max || "Getal te groot!";
-          }],
-          type: "number"
-        },
-        "ed_tariff2": {
-          label: "Prijs per verbruikte kWh (tarief 2)",
-          value: null,
-          rules: [function (v) {
-            return Settingsvue_type_script_lang_js_pattern.test(v) || "Verkeerd formaat!";
-          }, function (v) {
-            return v < Settingsvue_type_script_lang_js_max || "Getal te groot!";
-          }],
-          type: "number"
-        },
-        "er_tariff1": {
-          label: "Prijs per teruggeleverde kWh (tarief 1)",
-          value: null,
-          rules: [function (v) {
-            return Settingsvue_type_script_lang_js_pattern.test(v) || "Verkeerd formaat!";
-          }, function (v) {
-            return v < Settingsvue_type_script_lang_js_max || "Getal te groot!";
-          }],
-          type: "number"
-        },
-        "er_tariff2": {
-          label: "Prijs per teruggeleverde kWh (tarief 2)",
-          value: null,
-          rules: [function (v) {
-            return Settingsvue_type_script_lang_js_pattern.test(v) || "Verkeerd formaat!";
-          }, function (v) {
-            return v < Settingsvue_type_script_lang_js_max || "Getal te groot!";
-          }],
-          type: "number"
-        },
-        "gd_tariff": {
-          label: "Prijs per verbruikte m3 gas",
-          value: null,
-          rules: [function (v) {
-            return Settingsvue_type_script_lang_js_pattern.test(v) || "Verkeerd formaat!";
-          }, function (v) {
-            return v < Settingsvue_type_script_lang_js_max || "Getal te groot!";
-          }],
-          type: "number"
-        },
-        "electr_netw_costs": {
-          label: "Electra vaste kosten per maand",
-          value: null,
-          rules: [function (v) {
-            return Settingsvue_type_script_lang_js_pattern.test(v) || "Verkeerd formaat!";
-          }, function (v) {
-            return v < Settingsvue_type_script_lang_js_max || "Getal te groot!";
-          }],
-          type: "number"
-        },
-        "gas_netw_costs": {
-          label: "Gas vaste kosten per maand",
-          value: null,
-          rules: [function (v) {
-            return Settingsvue_type_script_lang_js_pattern.test(v) || "Verkeerd formaat!";
-          }, function (v) {
-            return v < Settingsvue_type_script_lang_js_max || "Getal te groot!";
-          }],
-          type: "number"
-        },
-        BgColor: {
-          label: "Achtergrondkleur",
-          value: null
-        },
-        FontColor: {
-          label: "Tekstkleur",
-          value: null
-        },
-        "tlgrm_interval": {
-          label: "Telegram verwerkingsinterval (sec.)",
-          value: null,
-          type: "number"
-        },
-        SleepTime: {
-          label: "OLED slaapstand (min.) (0 = oneindig)",
-          value: null,
-          type: "number"
-        },
-        "mqtt_broker": {
-          label: "MQTT Broker URL/IP",
-          value: null
-        },
-        "mqtt_broker_port": {
-          label: "MQTT Broker Port",
-          value: null
-        },
-        "mqtt_user": {
-          label: "MQTT gebruikersnaam",
-          value: null
-        },
-        "mqtt_passwd": {
-          label: "MQTT wachtwoord",
-          value: null
-        },
-        "mqtt_topTopic": {
-          label: "MQTT hoofdonderwerp",
-          value: null
-        },
-        "mqtt_interval": {
-          label: "MQTT interval (sec.)",
-          value: null,
-          type: "number"
-        }
-      }
+      settingsData: []
     };
   },
   computed: Settingsvue_type_script_lang_js_objectSpread({}, Object(vuex_esm["b" /* mapState */])({
@@ -48872,39 +48801,55 @@ var Settingsvue_type_script_lang_js_max = 99.99;
   })),
   watch: {
     settings: function settings(newValue) {
-      Object.keys(newValue).forEach(function (key) {
-        console.log(key); // key
+      var _this = this;
 
-        console.log(newValue[key]); // value
-        // Add rules and labels for each object
+      // Add rules for each object.
+      newValue.map(function (obj) {
+        switch (obj.name) {
+          case "ed_tariff1":
+          case "ed_tariff2":
+          case "er_tariff1":
+          case "er_tariff2":
+          case "gd_tariff":
+          case "electr_netw_costs":
+          case "gas_netw_costs":
+            obj.type = "number";
+            obj.rules = [function (v) {
+              return /^\d+(\.\d{1,2})?$/.test(v) || _this.$t("wrong_format");
+            }, function (v) {
+              return v >= obj.min || _this.$t("number_too_small");
+            }, function (v) {
+              return v <= obj.max || _this.$t("number_too_big");
+            }];
+            break;
+
+          case "tlgrm_interval":
+          case "mqtt_broker_port":
+          case "mqtt_interval":
+            obj.type = "number";
+            obj.rules = [function (v) {
+              return /^([+-]?[1-9]\d*|0)$/.test(v) || _this.$t("wrong_format");
+            }, function (v) {
+              return v >= obj.min || _this.$t("number_too_small");
+            }, function (v) {
+              return v <= obj.max || _this.$t("number_too_big");
+            }];
+            break;
+
+          case "mqtt_broker":
+          case "mqtt_user":
+          case "mqtt_passwd":
+          case "mqtt_topTopic":
+          case "mindergastoken":
+            obj.type = "text";
+            obj.rules = [function (v) {
+              return v.length <= obj.maxlen || _this.$t("too_long");
+            }];
+        }
+
+        return obj;
       });
-      this.settings = newValue; // // A message consists of data split by a comma, for example:
-      // // msgType=PerHoursHeaders,R=25,DH=(31) 00,H=(31) 00:00 - 00:59,ED=381,ER=0,GD=0.27,COSTS=0.27
-      // const singlePairs = newValue.split(",");
-      // const msgType = singlePairs[0].split("=")[1];
-      // if (msgType == "settings") {
-      //   for (var i = 1; i < singlePairs.length; i++) {
-      //     const onePair = singlePairs[i].split("=");
-      //     const label = onePair[0].trim();
-      //     const value = onePair[1].trim();
-      //     if (
-      //       label == "DT1" ||
-      //       label == "DT2" ||
-      //       label == "RT1" ||
-      //       label == "RT2" ||
-      //       label == "GAST" ||
-      //       label == "ENBK" ||
-      //       label == "GNBK" ||
-      //       label == "Interval" ||
-      //       label == "SleepTime"
-      //     ) {
-      //       this.settings[label].value = value * 1;
-      //     } else {
-      //       this.settings[label].value = value;
-      //     }
-      //   }
-      //   this.isLoading = false;
-      // }
+      this.settingsData = newValue;
     }
   },
   created: function created() {
@@ -48913,17 +48858,7 @@ var Settingsvue_type_script_lang_js_max = 99.99;
     }
   },
   methods: {
-    saveSettings: function saveSettings() {// const data = Object.entries(this.settings).reduce(
-      //   (accumulator, currentValue, currentIndex, array) => {
-      //     return (accumulator +=
-      //       "," + currentValue[0] + "=" + currentValue[1].value);
-      //   },
-      //   "saveSettings"
-      // );
-      // this.isLoading = true;
-      // this.$store.dispatch("sendMessage", data);
-      // this.$store.dispatch("sendMessage", "getDevInfo");
-      // this.$store.dispatch("sendMessage", "sendSettings");
+    saveSettings: function saveSettings() {// Remove unwanted properties from each object and send it.
     }
   }
 });
@@ -49096,8 +49031,8 @@ function VForm_objectSpread(target) { for (var i = 1; i < arguments.length; i++)
 
 var Settings_component = normalizeComponent(
   views_Settingsvue_type_script_lang_js_,
-  Settingsvue_type_template_id_4b73f880_render,
-  Settingsvue_type_template_id_4b73f880_staticRenderFns,
+  Settingsvue_type_template_id_c38202f8_render,
+  Settingsvue_type_template_id_c38202f8_staticRenderFns,
   false,
   null,
   null,
@@ -51507,7 +51442,7 @@ function () {
 
 framework_Vuetify.install = install_install;
 framework_Vuetify.installed = false;
-framework_Vuetify.version = "2.2.3";
+framework_Vuetify.version = "2.2.4";
 // CONCATENATED MODULE: ./src/plugins/vuetify.js
 
 
@@ -55507,7 +55442,7 @@ exports.f = Object.getOwnPropertySymbols;
 /***/ "a625":
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"$vuetify\":{\"badge\":\"insigne\",\"calendar\":{\"moreEvents\":\"{0} meer\"},\"carousel\":{\"ariaLabel\":{\"delimiter\":\"Carousel slide {0} of {1}\"},\"next\":\"Volgend beeld\",\"prev\":\"Vorig beeld\"},\"close\":\"Sluiten\",\"dataFooter\":{\"firstPage\":\"Eerste pagina\",\"itemsPerPageAll\":\"Alles\",\"itemsPerPageText\":\"Aantal per pagina:\",\"lastPage\":\"Laatste pagina\",\"nextPage\":\"Volgende pagina\",\"pageText\":\"{0}-{1} van {2}\",\"prevPage\":\"Vorige pagina\"},\"dataIterator\":{\"loadingText\":\"Items aan het laden...\",\"noResultsText\":\"Geen overeenkomende resultaten gevonden\"},\"dataTable\":{\"ariaLabel\":{\"sortAscending\":\": Oplopend gesorteerd. Activeer om aflopend te sorteren.\",\"sortDescending\":\": Aflopend gesorteerd. Activeer om de sortering te verwijderen.\",\"sortNone\":\": Niet gesorterrd. Activeer om oplopend te sorteren.\"},\"itemsPerPageText\":\"Rijen per pagina:\",\"sortBy\":\"Sorteer volgens\"},\"datePicker\":{\"itemsSelected\":\"{0} geselecteerd\"},\"fileInput\":{\"counter\":\"{0} bestanden\",\"counterSize\":\"{0} bestanden ({1} in totaal)\"},\"noDataText\":\"Geen gegevens beschikbaar\",\"timePicker\":{\"am\":\"AM\",\"pm\":\"PM\"}},\"actual\":\"Actueel\",\"bar\":\"Balk\",\"charts\":\"Grafieken\",\"costs_€\":\"Kosten (€)\",\"current_l1\":\"Stroom L1\",\"current_l2\":\"Stroom L2\",\"current_l3\":\"Stroom L3\",\"data\":\"Data\",\"date_day\":\"Datum [dag]\",\"date_hour\":\"Datum [uur]\",\"date_month\":\"Datum [maand]\",\"day\":\"Dag\",\"days\":\"Dagen\",\"delivered_l1\":\"Verbruik (L1)\",\"delivered_l2\":\"Verbruik (L2)\",\"delivered_l3\":\"Verbruik (L3)\",\"dutch\":\"Nederlands\",\"electricity_failure_log\":\"Stroomstoringslogboek\",\"electricity_failures\":\"Stroomstoringen\",\"electricity_long_failures\":\"Lange stroomstoringen\",\"electricity_sags_l1\":\"Stroomdips L1\",\"electricity_sags_l2\":\"Stroomdips L2\",\"electricity_sags_l3\":\"Stroomdips L3\",\"electricity_swells_l1\":\"Stroomzwelling L1\",\"electricity_swells_l2\":\"Stroomzwelling L2\",\"electricity_swells_l3\":\"Stroomzwelling L3\",\"electricity_switch_position\":\"Positie van de stroomschakelaar\",\"electricity_tariff\":\"Stroomtarief\",\"electricity_threshold\":\"Elektriciteitsdrempel\",\"energy_delivered_tariff1\":\"Energie verbruikt tarief 1\",\"energy_delivered_tariff2\":\"Energie verbruikt tarief 2\",\"energy_delivered_watt\":\"Energieverbruik (Watt)\",\"energy_returned_tariff1\":\"Energie geleverd tarief 1\",\"energy_returned_tariff2\":\"Energie geleverd tarief 2\",\"energy_returned_watt\":\"Energieteruglevering (Watt)\",\"english\":\"Engels\",\"equipment_id\":\"Apparaat ID\",\"financial\":\"Financieel\",\"gas_delivered\":\"Gas verbruikt\",\"gas_delivered_m3\":\"Gasverbruik (m3)\",\"gas_device_type\":\"Type gasapparaat\",\"gas_equipment_id\":\"Gasapparaat ID\",\"gas_valve_position\":\"Positie gasklep\",\"graphs\":\"Grafieken\",\"hours\":\"Uren\",\"identification\":\"Slimme meter ID\",\"kw\":\"kW\",\"language\":\"Taal\",\"line\":\"Lijn\",\"loading_please_wait\":\"Aan het laden... Even geduld a.u.b.\",\"message_long\":\"Lang bericht\",\"message_short\":\"Kort bericht\",\"months\":\"Maanden\",\"p1_version\":\"P1 versie\",\"per_day\":\"Per dag\",\"per_hour\":\"Per uur\",\"per_month\":\"Per maand\",\"power_delivered\":\"Vermogen verbruikt\",\"power_delivered_l1\":\"Vermogen verbruikt L1\",\"power_delivered_l2\":\"Vermogen verbruikt L2\",\"power_delivered_l3\":\"Vermogen verbruikt L3\",\"power_returned\":\"Vermogen opgewekt\",\"power_returned_l1\":\"Vermogen opgewekt L1\",\"power_returned_l2\":\"Vermogen opgewekt L2\",\"power_returned_l3\":\"Vermogen opgewekt L3\",\"refresh\":\"Vernieuw\",\"returned_(l1_l2_l3)\":\"Teruglevering (L1+L2+L3)\",\"settings\":\"Instellingen\",\"slave_delivered\":\"Slave verbruikt\",\"slave_device_type\":\"Type slave-apparaat\",\"slave_equipment_id\":\"Slave-apparaat ID\",\"slave_valve_position\":\"Positie slave-klep\",\"smart_meter\":\"Slimme meter\",\"system_info\":\"Systeeminfo\",\"thermal_delivered\":\"Thermisch verbruikt\",\"thermal_device_type\":\"Type thermisch apparaat\",\"thermal_equipment_id\":\"Thermisch apparaat ID\",\"thermal_valve_position\":\"Positie thermische klep\",\"timestamp\":\"Tijdstempel\",\"type\":\"Soort\",\"voltage_l1\":\"Voltage L1\",\"voltage_l2\":\"Voltage L2\",\"voltage_l3\":\"Voltage L3\",\"water_delivered\":\"Water verbruikt\",\"water_device_type\":\"Type waterapparaat\",\"water_equipment_id\":\"Waterapparaat ID\",\"water_valve_position\":\"Positie waterklep\",\"week\":\"Week\",\"year\":\"Jaar\"}");
+module.exports = JSON.parse("{\"$vuetify\":{\"badge\":\"insigne\",\"calendar\":{\"moreEvents\":\"{0} meer\"},\"carousel\":{\"ariaLabel\":{\"delimiter\":\"Carousel slide {0} of {1}\"},\"next\":\"Volgend beeld\",\"prev\":\"Vorig beeld\"},\"close\":\"Sluiten\",\"dataFooter\":{\"firstPage\":\"Eerste pagina\",\"itemsPerPageAll\":\"Alles\",\"itemsPerPageText\":\"Aantal per pagina:\",\"lastPage\":\"Laatste pagina\",\"nextPage\":\"Volgende pagina\",\"pageText\":\"{0}-{1} van {2}\",\"prevPage\":\"Vorige pagina\"},\"dataIterator\":{\"loadingText\":\"Items aan het laden...\",\"noResultsText\":\"Geen overeenkomende resultaten gevonden\"},\"dataTable\":{\"ariaLabel\":{\"sortAscending\":\": Oplopend gesorteerd. Activeer om aflopend te sorteren.\",\"sortDescending\":\": Aflopend gesorteerd. Activeer om de sortering te verwijderen.\",\"sortNone\":\": Niet gesorterrd. Activeer om oplopend te sorteren.\"},\"itemsPerPageText\":\"Rijen per pagina:\",\"sortBy\":\"Sorteer volgens\"},\"datePicker\":{\"itemsSelected\":\"{0} geselecteerd\"},\"fileInput\":{\"counter\":\"{0} bestanden\",\"counterSize\":\"{0} bestanden ({1} in totaal)\"},\"noDataText\":\"Geen gegevens beschikbaar\",\"timePicker\":{\"am\":\"AM\",\"pm\":\"PM\"}},\"actual\":\"Actueel\",\"bar\":\"Balk\",\"charts\":\"Grafieken\",\"costs_€\":\"Kosten (€)\",\"current_l1\":\"Stroom L1\",\"current_l2\":\"Stroom L2\",\"current_l3\":\"Stroom L3\",\"data\":\"Data\",\"date_day\":\"Datum [dag]\",\"date_hour\":\"Datum [uur]\",\"date_month\":\"Datum [maand]\",\"day\":\"Dag\",\"days\":\"Dagen\",\"delivered_l1\":\"Verbruik (L1)\",\"delivered_l2\":\"Verbruik (L2)\",\"delivered_l3\":\"Verbruik (L3)\",\"dutch\":\"Nederlands\",\"electricity_failure_log\":\"Stroomstoringslogboek\",\"electricity_failures\":\"Stroomstoringen\",\"electricity_long_failures\":\"Lange stroomstoringen\",\"electricity_sags_l1\":\"Stroomdips L1\",\"electricity_sags_l2\":\"Stroomdips L2\",\"electricity_sags_l3\":\"Stroomdips L3\",\"electricity_swells_l1\":\"Stroomzwelling L1\",\"electricity_swells_l2\":\"Stroomzwelling L2\",\"electricity_swells_l3\":\"Stroomzwelling L3\",\"electricity_switch_position\":\"Positie van de stroomschakelaar\",\"electricity_tariff\":\"Stroomtarief\",\"electricity_threshold\":\"Elektriciteitsdrempel\",\"energy_delivered_tariff1\":\"Energie verbruikt tarief 1\",\"energy_delivered_tariff2\":\"Energie verbruikt tarief 2\",\"energy_delivered_watt\":\"Energieverbruik (Watt)\",\"energy_returned_tariff1\":\"Energie geleverd tarief 1\",\"energy_returned_tariff2\":\"Energie geleverd tarief 2\",\"energy_returned_watt\":\"Energieteruglevering (Watt)\",\"english\":\"Engels\",\"equipment_id\":\"Apparaat ID\",\"financial\":\"Financieel\",\"gas_delivered\":\"Gas verbruikt\",\"gas_delivered_m3\":\"Gasverbruik (m3)\",\"gas_device_type\":\"Type gasapparaat\",\"gas_equipment_id\":\"Gasapparaat ID\",\"gas_valve_position\":\"Positie gasklep\",\"graphs\":\"Grafieken\",\"hours\":\"Uren\",\"identification\":\"Slimme meter ID\",\"kw\":\"kW\",\"language\":\"Taal\",\"line\":\"Lijn\",\"loading_please_wait\":\"Aan het laden... Even geduld a.u.b.\",\"message_long\":\"Lang bericht\",\"message_short\":\"Kort bericht\",\"months\":\"Maanden\",\"number_too_big\":\"Nummer te groot!\",\"number_too_small\":\"Nummer te klein!\",\"p1_version\":\"P1 versie\",\"per_day\":\"Per dag\",\"per_hour\":\"Per uur\",\"per_month\":\"Per maand\",\"power_delivered\":\"Vermogen verbruikt\",\"power_delivered_l1\":\"Vermogen verbruikt L1\",\"power_delivered_l2\":\"Vermogen verbruikt L2\",\"power_delivered_l3\":\"Vermogen verbruikt L3\",\"power_returned\":\"Vermogen opgewekt\",\"power_returned_l1\":\"Vermogen opgewekt L1\",\"power_returned_l2\":\"Vermogen opgewekt L2\",\"power_returned_l3\":\"Vermogen opgewekt L3\",\"refresh\":\"Vernieuw\",\"returned_(l1_l2_l3)\":\"Teruglevering (L1+L2+L3)\",\"save\":\"Opslaan\",\"settings\":\"Instellingen\",\"settings_ed_tariff1\":\"Prijs per verbruikte kWh (tarief 1)\",\"settings_ed_tariff2\":\"Prijs per verbruikte kWh (tarief 2)\",\"settings_electr_netw_costs\":\"Electra vaste kosten per maand\",\"settings_er_tariff1\":\"Prijs per teruggeleverde kWh (tarief 1)\",\"settings_er_tariff2\":\"Prijs per teruggeleverde kWh (tarief 2)\",\"settings_gas_netw_costs\":\"Gas vaste kosten per maand\",\"settings_gd_tariff\":\"Prijs per verbruikte m3 gas\",\"settings_mindergastoken\":\"Mindergas.nl API-sleutel\",\"settings_mqtt_broker\":\"MQTT Broker URL/IP\",\"settings_mqtt_broker_port\":\"MQTT Broker port\",\"settings_mqtt_interval\":\"MQTT verwerkingsinterval (sec.)\",\"settings_mqtt_passwd\":\"MQTT wachtwoord\",\"settings_mqtt_topTopic\":\"MQTT hoofdonderwerp\",\"settings_mqtt_user\":\"MQTT gebruikersnaam\",\"settings_tlgrm_interval\":\"Telegram verwerkingsinterval (sec.)\",\"slave_delivered\":\"Slave verbruikt\",\"slave_device_type\":\"Type slave-apparaat\",\"slave_equipment_id\":\"Slave-apparaat ID\",\"slave_valve_position\":\"Positie slave-klep\",\"smart_meter\":\"Slimme meter\",\"system_info\":\"Systeeminfo\",\"thermal_delivered\":\"Thermisch verbruikt\",\"thermal_device_type\":\"Type thermisch apparaat\",\"thermal_equipment_id\":\"Thermisch apparaat ID\",\"thermal_valve_position\":\"Positie thermische klep\",\"timestamp\":\"Tijdstempel\",\"too_long\":\"Invoer te lang!\",\"type\":\"Soort\",\"voltage_l1\":\"Voltage L1\",\"voltage_l2\":\"Voltage L2\",\"voltage_l3\":\"Voltage L3\",\"water_delivered\":\"Water verbruikt\",\"water_device_type\":\"Type waterapparaat\",\"water_equipment_id\":\"Waterapparaat ID\",\"water_valve_position\":\"Positie waterklep\",\"week\":\"Week\",\"wrong_format\":\"Verkeerd formaat!\",\"year\":\"Jaar\"}");
 
 /***/ }),
 
@@ -55785,28 +55720,25 @@ var fails = __webpack_require__("d039");
 var has = __webpack_require__("5135");
 
 var defineProperty = Object.defineProperty;
+var cache = {};
 
 var thrower = function (it) { throw it; };
 
 module.exports = function (METHOD_NAME, options) {
+  if (has(cache, METHOD_NAME)) return cache[METHOD_NAME];
   if (!options) options = {};
   var method = [][METHOD_NAME];
   var ACCESSORS = has(options, 'ACCESSORS') ? options.ACCESSORS : false;
   var argument0 = has(options, 0) ? options[0] : thrower;
   var argument1 = has(options, 1) ? options[1] : undefined;
 
-  return !!method && !fails(function () {
+  return cache[METHOD_NAME] = !!method && !fails(function () {
     if (ACCESSORS && !DESCRIPTORS) return true;
     var O = { length: -1 };
 
-    var addTrap = function (key) {
-      if (ACCESSORS) defineProperty(O, key, { enumerable: true, get: thrower });
-      else O[key] = 1;
-    };
+    if (ACCESSORS) defineProperty(O, 1, { enumerable: true, get: thrower });
+    else O[1] = 1;
 
-    addTrap(1);
-    addTrap(2147483646);
-    addTrap(4294967294);
     method.call(O, argument0, argument1);
   });
 };
@@ -59612,7 +59544,7 @@ module.exports = function (argument) {
 /***/ "edd4":
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"$vuetify\":{\"badge\":\"Badge\",\"calendar\":{\"moreEvents\":\"{0} more\"},\"carousel\":{\"ariaLabel\":{\"delimiter\":\"Carousel slide {0} of {1}\"},\"next\":\"Next visual\",\"prev\":\"Previous visual\"},\"close\":\"Close\",\"dataFooter\":{\"firstPage\":\"First page\",\"itemsPerPageAll\":\"All\",\"itemsPerPageText\":\"Items per page:\",\"lastPage\":\"Last page\",\"nextPage\":\"Next page\",\"pageText\":\"{0}-{1} of {2}\",\"prevPage\":\"Previous page\"},\"dataIterator\":{\"loadingText\":\"Loading items...\",\"noResultsText\":\"No matching records found\"},\"dataTable\":{\"ariaLabel\":{\"sortAscending\":\": Sorted ascending. Activate to sort descending.\",\"sortDescending\":\": Sorted descending. Activate to remove sorting.\",\"sortNone\":\": Not sorted. Activate to sort ascending.\"},\"itemsPerPageText\":\"Rows per page:\",\"sortBy\":\"Sort by\"},\"datePicker\":{\"itemsSelected\":\"{0} selected\"},\"fileInput\":{\"counter\":\"{0} files\",\"counterSize\":\"{0} files ({1} in total)\"},\"noDataText\":\"No data available\",\"timePicker\":{\"am\":\"AM\",\"pm\":\"PM\"}},\"actual\":\"Actual\",\"bar\":\"Bar\",\"charts\":\"Charts\",\"costs_€\":\"Costs (€)\",\"current_l1\":\"Current L1\",\"current_l2\":\"Current L2\",\"current_l3\":\"Current L3\",\"data\":\"Data\",\"date_day\":\"Date [day]\",\"date_hour\":\"Date [hour]\",\"date_month\":\"Date [month]\",\"day\":\"Day\",\"days\":\"Days\",\"delivered_l1\":\"Delivery (L1)\",\"delivered_l2\":\"Delivery (L2)\",\"delivered_l3\":\"Delivery (L3)\",\"dutch\":\"Dutch\",\"electricity_failure_log\":\"Electricity failure log\",\"electricity_failures\":\"Electricity failures\",\"electricity_long_failures\":\"Long electricity failures\",\"electricity_sags_l1\":\"Electricity sags L1\",\"electricity_sags_l2\":\"Electricity sags L2\",\"electricity_sags_l3\":\"Electricity sags L3\",\"electricity_swells_l1\":\"Electricity swells L1\",\"electricity_swells_l2\":\"Electricity swells L2\",\"electricity_swells_l3\":\"Electricity swells L3\",\"electricity_switch_position\":\"Electricity switch position\",\"electricity_tariff\":\"Electricity tariff\",\"electricity_threshold\":\"Electricity threshold\",\"energy_delivered_tariff1\":\"Energy delivered tariff 1\",\"energy_delivered_tariff2\":\"Energy delivered tariff 2\",\"energy_delivered_watt\":\"Energy delivered (Watt)\",\"energy_returned_tariff1\":\"Energy returned tariff 1\",\"energy_returned_tariff2\":\"Energy returned tariff 2\",\"energy_returned_watt\":\"Energy returned (Watt)\",\"english\":\"English\",\"equipment_id\":\"Equipment ID\",\"financial\":\"Financial\",\"gas_delivered\":\"Gas delivered\",\"gas_delivered_m3\":\"Gas delivered (m3)\",\"gas_device_type\":\"Gas device type\",\"gas_equipment_id\":\"Gas equipment ID\",\"gas_valve_position\":\"Gas valve position\",\"graphs\":\"Graphs\",\"hours\":\"Hours\",\"identification\":\"Smart meter ID\",\"kw\":\"kW\",\"language\":\"Language\",\"line\":\"Line\",\"loading_please_wait\":\"Loading.. One moment please.\",\"message_long\":\"Long message\",\"message_short\":\"Short message\",\"months\":\"Months\",\"p1_version\":\"P1 version\",\"per_day\":\"Per day\",\"per_hour\":\"Per hour\",\"per_month\":\"Per month\",\"power_delivered\":\"Power delivered\",\"power_delivered_l1\":\"Power delivered L1\",\"power_delivered_l2\":\"Power delivered L2\",\"power_delivered_l3\":\"Power delivered L3\",\"power_returned\":\"Power returned\",\"power_returned_l1\":\"Power returned L1\",\"power_returned_l2\":\"Power returned L2\",\"power_returned_l3\":\"Power returned L3\",\"refresh\":\"Refresh\",\"returned_(l1_l2_l3)\":\"Return (L1+L2+L3)\",\"settings\":\"Settings\",\"slave_delivered\":\"Slave delivered\",\"slave_device_type\":\"Slave device type\",\"slave_equipment_id\":\"Slave equipment ID\",\"slave_valve_position\":\"Slave valve position\",\"smart_meter\":\"Smart meter\",\"system_info\":\"System info\",\"thermal_delivered\":\"Thermal delivered\",\"thermal_device_type\":\"Thermal device type\",\"thermal_equipment_id\":\"Thermal equipment ID\",\"thermal_valve_position\":\"Thermal valve position\",\"timestamp\":\"Timestamp\",\"type\":\"Type\",\"voltage_l1\":\"Voltage L1\",\"voltage_l2\":\"Voltage L2\",\"voltage_l3\":\"Voltage L3\",\"water_delivered\":\"Water delivered\",\"water_device_type\":\"Water device type\",\"water_equipment_id\":\"Water equipment ID\",\"water_valve_position\":\"Water valve position\",\"week\":\"Week\",\"year\":\"Year\"}");
+module.exports = JSON.parse("{\"$vuetify\":{\"badge\":\"Badge\",\"calendar\":{\"moreEvents\":\"{0} more\"},\"carousel\":{\"ariaLabel\":{\"delimiter\":\"Carousel slide {0} of {1}\"},\"next\":\"Next visual\",\"prev\":\"Previous visual\"},\"close\":\"Close\",\"dataFooter\":{\"firstPage\":\"First page\",\"itemsPerPageAll\":\"All\",\"itemsPerPageText\":\"Items per page:\",\"lastPage\":\"Last page\",\"nextPage\":\"Next page\",\"pageText\":\"{0}-{1} of {2}\",\"prevPage\":\"Previous page\"},\"dataIterator\":{\"loadingText\":\"Loading items...\",\"noResultsText\":\"No matching records found\"},\"dataTable\":{\"ariaLabel\":{\"sortAscending\":\": Sorted ascending. Activate to sort descending.\",\"sortDescending\":\": Sorted descending. Activate to remove sorting.\",\"sortNone\":\": Not sorted. Activate to sort ascending.\"},\"itemsPerPageText\":\"Rows per page:\",\"sortBy\":\"Sort by\"},\"datePicker\":{\"itemsSelected\":\"{0} selected\"},\"fileInput\":{\"counter\":\"{0} files\",\"counterSize\":\"{0} files ({1} in total)\"},\"noDataText\":\"No data available\",\"timePicker\":{\"am\":\"AM\",\"pm\":\"PM\"}},\"actual\":\"Actual\",\"bar\":\"Bar\",\"charts\":\"Charts\",\"costs_€\":\"Costs (€)\",\"current_l1\":\"Current L1\",\"current_l2\":\"Current L2\",\"current_l3\":\"Current L3\",\"data\":\"Data\",\"date_day\":\"Date [day]\",\"date_hour\":\"Date [hour]\",\"date_month\":\"Date [month]\",\"day\":\"Day\",\"days\":\"Days\",\"delivered_l1\":\"Delivery (L1)\",\"delivered_l2\":\"Delivery (L2)\",\"delivered_l3\":\"Delivery (L3)\",\"dutch\":\"Dutch\",\"electricity_failure_log\":\"Electricity failure log\",\"electricity_failures\":\"Electricity failures\",\"electricity_long_failures\":\"Long electricity failures\",\"electricity_sags_l1\":\"Electricity sags L1\",\"electricity_sags_l2\":\"Electricity sags L2\",\"electricity_sags_l3\":\"Electricity sags L3\",\"electricity_swells_l1\":\"Electricity swells L1\",\"electricity_swells_l2\":\"Electricity swells L2\",\"electricity_swells_l3\":\"Electricity swells L3\",\"electricity_switch_position\":\"Electricity switch position\",\"electricity_tariff\":\"Electricity tariff\",\"electricity_threshold\":\"Electricity threshold\",\"energy_delivered_tariff1\":\"Energy delivered tariff 1\",\"energy_delivered_tariff2\":\"Energy delivered tariff 2\",\"energy_delivered_watt\":\"Energy delivered (Watt)\",\"energy_returned_tariff1\":\"Energy returned tariff 1\",\"energy_returned_tariff2\":\"Energy returned tariff 2\",\"energy_returned_watt\":\"Energy returned (Watt)\",\"english\":\"English\",\"equipment_id\":\"Equipment ID\",\"financial\":\"Financial\",\"gas_delivered\":\"Gas delivered\",\"gas_delivered_m3\":\"Gas delivered (m3)\",\"gas_device_type\":\"Gas device type\",\"gas_equipment_id\":\"Gas equipment ID\",\"gas_valve_position\":\"Gas valve position\",\"graphs\":\"Graphs\",\"hours\":\"Hours\",\"identification\":\"Smart meter ID\",\"kw\":\"kW\",\"language\":\"Language\",\"line\":\"Line\",\"loading_please_wait\":\"Loading.. One moment please.\",\"message_long\":\"Long message\",\"message_short\":\"Short message\",\"months\":\"Months\",\"number_too_big\":\"Number too big!\",\"number_too_small\":\"Number too small!\",\"p1_version\":\"P1 version\",\"per_day\":\"Per day\",\"per_hour\":\"Per hour\",\"per_month\":\"Per month\",\"power_delivered\":\"Power delivered\",\"power_delivered_l1\":\"Power delivered L1\",\"power_delivered_l2\":\"Power delivered L2\",\"power_delivered_l3\":\"Power delivered L3\",\"power_returned\":\"Power returned\",\"power_returned_l1\":\"Power returned L1\",\"power_returned_l2\":\"Power returned L2\",\"power_returned_l3\":\"Power returned L3\",\"refresh\":\"Refresh\",\"returned_(l1_l2_l3)\":\"Return (L1+L2+L3)\",\"save\":\"Save\",\"settings\":\"Settings\",\"settings_ed_tariff1\":\"Price per delivered kWh (tariff 1)\",\"settings_ed_tariff2\":\"Price per delivered kWh (tariff 2)\",\"settings_electr_netw_costs\":\"Electricity fixed costs per month\",\"settings_er_tariff1\":\"Price per returned kWh (tariff 1)\",\"settings_er_tariff2\":\"Price per returned kWh (tariff 2)\",\"settings_gas_netw_costs\":\"Gas fixed costs per month\",\"settings_gd_tariff\":\"Price per delivered m3 gas\",\"settings_mindergastoken\":\"Mindergas.nl API key\",\"settings_mqtt_broker\":\"MQTT Broker URL/IP\",\"settings_mqtt_broker_port\":\"MQTT Broker port\",\"settings_mqtt_interval\":\"MQTT processing interval (sec.)\",\"settings_mqtt_passwd\":\"MQTT password\",\"settings_mqtt_topTopic\":\"MQTT top topic\",\"settings_mqtt_user\":\"MQTT username\",\"settings_tlgrm_interval\":\"Telegram processing interval (sec.)\",\"slave_delivered\":\"Slave delivered\",\"slave_device_type\":\"Slave device type\",\"slave_equipment_id\":\"Slave equipment ID\",\"slave_valve_position\":\"Slave valve position\",\"smart_meter\":\"Smart meter\",\"system_info\":\"System info\",\"thermal_delivered\":\"Thermal delivered\",\"thermal_device_type\":\"Thermal device type\",\"thermal_equipment_id\":\"Thermal equipment ID\",\"thermal_valve_position\":\"Thermal valve position\",\"timestamp\":\"Timestamp\",\"too_long\":\"Input too long!\",\"type\":\"Type\",\"voltage_l1\":\"Voltage L1\",\"voltage_l2\":\"Voltage L2\",\"voltage_l3\":\"Voltage L3\",\"water_delivered\":\"Water delivered\",\"water_device_type\":\"Water device type\",\"water_equipment_id\":\"Water equipment ID\",\"water_valve_position\":\"Water valve position\",\"week\":\"Week\",\"wrong_format\":\"Wrong format!\",\"year\":\"Year\"}");
 
 /***/ }),
 
