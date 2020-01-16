@@ -48703,16 +48703,19 @@ var Charts_component = normalizeComponent(
 
 installComponents_default()(Charts_component, {VBtn: VBtn_VBtn,VBtnToggle: VBtnToggle_VBtnToggle,VCard: VCard_VCard,VCardText: VCardText,VCol: VCol,VContainer: VContainer,VIcon: components_VIcon_VIcon,VRow: VRow})
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"f072728c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/Settings.vue?vue&type=template&id=c38202f8&
-var Settingsvue_type_template_id_c38202f8_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"settings"},[_c('v-container',[_c('v-row',{attrs:{"text-center":"","wrap":"","justify":"center"}},[_c('v-col',{attrs:{"cols":"12","sm":"12","md":"6"}},[_c('v-row',[_c('v-col',{staticClass:"d-flex justify-space-between",attrs:{"cols":"12","sm":"12"}},[_c('h1',[_vm._v(_vm._s(_vm.$t('settings')))]),_c('refresh-button',{attrs:{"dispatch":"getSettings"}})],1),_c('v-col',{attrs:{"cols":"12","sm":"12"}},[_c('v-card',{staticClass:"mb-4",attrs:{"elevation":"4","loading":_vm.isLoading}},[_c('v-card-text',[_c('v-form',{ref:"form",attrs:{"lazy-validation":""},model:{value:(_vm.valid),callback:function ($$v) {_vm.valid=$$v},expression:"valid"}},[_vm._l((_vm.settingsData),function(value,name){return _c('v-text-field',{key:name,attrs:{"label":_vm.$t(("settings_" + (_vm.settingsData[name].name))),"rules":_vm.settingsData[name].rules || [],"type":_vm.settingsData[name].type || 'text',"counter":_vm.settingsData[name].maxlen
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"f072728c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/Settings.vue?vue&type=template&id=67123705&
+var Settingsvue_type_template_id_67123705_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"settings"},[_c('v-container',[_c('v-row',{attrs:{"text-center":"","wrap":"","justify":"center"}},[_c('v-col',{attrs:{"cols":"12","sm":"12","md":"6"}},[_c('v-row',[_c('v-col',{staticClass:"d-flex justify-space-between",attrs:{"cols":"12","sm":"12"}},[_c('h1',[_vm._v(_vm._s(_vm.$t("settings")))]),_c('refresh-button',{attrs:{"dispatch":"getSettings"}})],1),_c('v-col',{attrs:{"cols":"12","sm":"12"}},[_c('v-card',{staticClass:"mb-4",attrs:{"elevation":"4","loading":_vm.isLoading}},[_c('v-card-text',[_c('v-form',{ref:"form",attrs:{"lazy-validation":""},model:{value:(_vm.valid),callback:function ($$v) {_vm.valid=$$v},expression:"valid"}},[_vm._l((_vm.settingsData),function(value,name){return _c('v-text-field',{key:name,attrs:{"label":_vm.$t(("settings_" + (_vm.settingsData[name].name))),"rules":_vm.settingsData[name].rules || [],"type":_vm.settingsData[name].type || 'text',"counter":_vm.settingsData[name].maxlen
                         ? _vm.settingsData[name].maxlen
                         : null,"filled":"","required":"","loading":_vm.isLoading},model:{value:(_vm.settingsData[name].value),callback:function ($$v) {_vm.$set(_vm.settingsData[name], "value", $$v)},expression:"settingsData[name].value"}})}),_c('v-btn',{staticClass:"ma-2",attrs:{"disabled":_vm.isLoading || !_vm.valid},on:{"click":_vm.saveSettings}},[_vm._v(" "+_vm._s(_vm.$t("save"))+" "),_c('v-icon',{attrs:{"right":""}},[_vm._v("mdi-content-save")])],1)],2)],1)],1)],1)],1)],1)],1)],1)],1)}
-var Settingsvue_type_template_id_c38202f8_staticRenderFns = []
+var Settingsvue_type_template_id_67123705_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/views/Settings.vue?vue&type=template&id=c38202f8&
+// CONCATENATED MODULE: ./src/views/Settings.vue?vue&type=template&id=67123705&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/Settings.vue?vue&type=script&lang=js&
+
+
+
 
 
 
@@ -48858,7 +48861,23 @@ function Settingsvue_type_script_lang_js_objectSpread(target) { for (var i = 1; 
     }
   },
   methods: {
-    saveSettings: function saveSettings() {// Remove unwanted properties from each object and send it.
+    saveSettings: function saveSettings() {
+      var _this2 = this;
+
+      // Remove unwanted properties from each object and return a promise, so we can execute them all at once.
+      var data = this.settingsData.map(function (_ref) {
+        var name = _ref.name,
+            value = _ref.value;
+        return _this2.$store.dispatch("postSettings", {
+          name: name,
+          value: value
+        });
+      }); // Set the loading indicator to true, so we can set it to false when every setting has been posted.
+
+      this.$store.dispatch("setLoadingStatus", true);
+      Promise.all(data).then(function () {
+        _this2.$store.dispatch("getSettings");
+      });
     }
   }
 });
@@ -49031,8 +49050,8 @@ function VForm_objectSpread(target) { for (var i = 1; i < arguments.length; i++)
 
 var Settings_component = normalizeComponent(
   views_Settingsvue_type_script_lang_js_,
-  Settingsvue_type_template_id_c38202f8_render,
-  Settingsvue_type_template_id_c38202f8_staticRenderFns,
+  Settingsvue_type_template_id_67123705_render,
+  Settingsvue_type_template_id_67123705_staticRenderFns,
   false,
   null,
   null,
@@ -49169,11 +49188,16 @@ vue_runtime_esm["a" /* default */].use(vuex_esm["a" /* default */]);
   },
   mutations: (_mutations = {}, _defineProperty(_mutations, FETCH_START, function (state) {
     state.isLoading = true;
-  }), _defineProperty(_mutations, FETCH_END, function (state, _ref) {
-    var data = _ref.data,
+  }), _defineProperty(_mutations, FETCH_END, function (state) {
+    var _ref = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {},
+        data = _ref.data,
         stateProperty = _ref.stateProperty;
+
     state.isLoading = false;
-    state[stateProperty] = data;
+
+    if (typeof data !== "undefined" && typeof stateProperty !== "undefined") {
+      state[stateProperty] = data;
+    }
   }), _mutations),
   actions: {
     getSmartMeter: function () {
@@ -49495,7 +49519,53 @@ vue_runtime_esm["a" /* default */].use(vuex_esm["a" /* default */]);
       }
 
       return getSettings;
-    }()
+    }(),
+    postSettings: function () {
+      var _postSettings = _asyncToGenerator(
+      /*#__PURE__*/
+      regeneratorRuntime.mark(function _callee8(_ref16, payload) {
+        var commit;
+        return regeneratorRuntime.wrap(function _callee8$(_context8) {
+          while (1) {
+            switch (_context8.prev = _context8.next) {
+              case 0:
+                commit = _ref16.commit;
+                _context8.prev = 1;
+                _context8.next = 4;
+                return vue_runtime_esm["a" /* default */].axios.post("/dev/settings", payload);
+
+              case 4:
+                _context8.next = 9;
+                break;
+
+              case 6:
+                _context8.prev = 6;
+                _context8.t0 = _context8["catch"](1);
+                throw new Error(_context8.t0);
+
+              case 9:
+              case "end":
+                return _context8.stop();
+            }
+          }
+        }, _callee8, null, [[1, 6]]);
+      }));
+
+      function postSettings(_x9, _x10) {
+        return _postSettings.apply(this, arguments);
+      }
+
+      return postSettings;
+    }(),
+    setLoadingStatus: function setLoadingStatus(_ref17, payload) {
+      var commit = _ref17.commit;
+
+      if (payload === true) {
+        commit(FETCH_START);
+      } else if (payload === false) {
+        commit(FETCH_START);
+      }
+    }
   },
   modules: {}
 }));

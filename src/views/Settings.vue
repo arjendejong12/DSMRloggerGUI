@@ -5,7 +5,7 @@
         <v-col cols="12" sm="12" md="6">
           <v-row>
             <v-col cols="12" sm="12" class="d-flex justify-space-between">
-              <h1>{{ $t('settings') }}</h1>
+              <h1>{{ $t("settings") }}</h1>
               <refresh-button dispatch="getSettings"></refresh-button>
             </v-col>
             <v-col cols="12" sm="12">
@@ -117,7 +117,19 @@ export default {
   },
   methods: {
     saveSettings() {
-      // Remove unwanted properties from each object and send it.
+      // Remove unwanted properties from each object and return a promise, so we can execute them all at once.
+      const data = this.settingsData.map(({ name, value }) => {
+        return this.$store.dispatch("postSettings", {
+          name,
+          value
+        });
+      });
+
+      // Set the loading indicator to true, so we can set it to false when every setting has been posted.
+      this.$store.dispatch("setLoadingStatus", true);
+      Promise.all(data).then(() => {
+        this.$store.dispatch("getSettings");
+      });
     }
   }
 };

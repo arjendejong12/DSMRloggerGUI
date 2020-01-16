@@ -19,9 +19,11 @@ export default new Vuex.Store({
     [FETCH_START](state) {
       state.isLoading = true;
     },
-    [FETCH_END](state, { data, stateProperty }) {
+    [FETCH_END](state, { data, stateProperty } = {}) {
       state.isLoading = false;
-      state[stateProperty] = data;
+      if (typeof data !== "undefined" && typeof stateProperty !== "undefined") {
+        state[stateProperty] = data;
+      }
     }
   },
   actions: {
@@ -90,6 +92,20 @@ export default new Vuex.Store({
         commit(FETCH_END, { data: data.settings, stateProperty: "settings" });
       } catch (error) {
         throw new Error(error);
+      }
+    },
+    async postSettings({ commit }, payload) {
+      try {
+        await Vue.axios.post("/dev/settings", payload);
+      } catch (error) {
+        throw new Error(error);
+      }
+    },
+    setLoadingStatus({ commit }, payload) {
+      if (payload === true) {
+        commit(FETCH_START);
+      } else if (payload === false) {
+        commit(FETCH_START);
       }
     }
   },
