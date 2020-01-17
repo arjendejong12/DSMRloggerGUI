@@ -76,6 +76,13 @@ export default {
           case "er_tariff1":
           case "er_tariff2":
           case "gd_tariff":
+            obj.type = "number";
+            obj.rules = [
+              v => /^\d+(\.\d{1,5})?$/.test(v) || this.$t("wrong_format"),
+              v => v >= obj.min || this.$t("number_too_small"),
+              v => v <= obj.max || this.$t("number_too_big")
+            ];
+            break;
           case "electr_netw_costs":
           case "gas_netw_costs":
             obj.type = "number";

@@ -48703,14 +48703,14 @@ var Charts_component = normalizeComponent(
 
 installComponents_default()(Charts_component, {VBtn: VBtn_VBtn,VBtnToggle: VBtnToggle_VBtnToggle,VCard: VCard_VCard,VCardText: VCardText,VCol: VCol,VContainer: VContainer,VIcon: components_VIcon_VIcon,VRow: VRow})
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"f072728c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/Settings.vue?vue&type=template&id=67123705&
-var Settingsvue_type_template_id_67123705_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"settings"},[_c('v-container',[_c('v-row',{attrs:{"text-center":"","wrap":"","justify":"center"}},[_c('v-col',{attrs:{"cols":"12","sm":"12","md":"6"}},[_c('v-row',[_c('v-col',{staticClass:"d-flex justify-space-between",attrs:{"cols":"12","sm":"12"}},[_c('h1',[_vm._v(_vm._s(_vm.$t("settings")))]),_c('refresh-button',{attrs:{"dispatch":"getSettings"}})],1),_c('v-col',{attrs:{"cols":"12","sm":"12"}},[_c('v-card',{staticClass:"mb-4",attrs:{"elevation":"4","loading":_vm.isLoading}},[_c('v-card-text',[_c('v-form',{ref:"form",attrs:{"lazy-validation":""},model:{value:(_vm.valid),callback:function ($$v) {_vm.valid=$$v},expression:"valid"}},[_vm._l((_vm.settingsData),function(value,name){return _c('v-text-field',{key:name,attrs:{"label":_vm.$t(("settings_" + (_vm.settingsData[name].name))),"rules":_vm.settingsData[name].rules || [],"type":_vm.settingsData[name].type || 'text',"counter":_vm.settingsData[name].maxlen
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"f072728c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/Settings.vue?vue&type=template&id=5c997c46&
+var Settingsvue_type_template_id_5c997c46_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"settings"},[_c('v-container',[_c('v-row',{attrs:{"text-center":"","wrap":"","justify":"center"}},[_c('v-col',{attrs:{"cols":"12","sm":"12","md":"6"}},[_c('v-row',[_c('v-col',{staticClass:"d-flex justify-space-between",attrs:{"cols":"12","sm":"12"}},[_c('h1',[_vm._v(_vm._s(_vm.$t("settings")))]),_c('refresh-button',{attrs:{"dispatch":"getSettings"}})],1),_c('v-col',{attrs:{"cols":"12","sm":"12"}},[_c('v-card',{staticClass:"mb-4",attrs:{"elevation":"4","loading":_vm.isLoading}},[_c('v-card-text',[_c('v-form',{ref:"form",attrs:{"lazy-validation":""},model:{value:(_vm.valid),callback:function ($$v) {_vm.valid=$$v},expression:"valid"}},[_vm._l((_vm.settingsData),function(value,name){return _c('v-text-field',{key:name,attrs:{"label":_vm.$t(("settings_" + (_vm.settingsData[name].name))),"rules":_vm.settingsData[name].rules || [],"type":_vm.settingsData[name].type || 'text',"counter":_vm.settingsData[name].maxlen
                         ? _vm.settingsData[name].maxlen
                         : null,"filled":"","required":"","loading":_vm.isLoading},model:{value:(_vm.settingsData[name].value),callback:function ($$v) {_vm.$set(_vm.settingsData[name], "value", $$v)},expression:"settingsData[name].value"}})}),_c('v-btn',{staticClass:"ma-2",attrs:{"disabled":_vm.isLoading || !_vm.valid},on:{"click":_vm.saveSettings}},[_vm._v(" "+_vm._s(_vm.$t("save"))+" "),_c('v-icon',{attrs:{"right":""}},[_vm._v("mdi-content-save")])],1)],2)],1)],1)],1)],1)],1)],1)],1)],1)}
-var Settingsvue_type_template_id_67123705_staticRenderFns = []
+var Settingsvue_type_template_id_5c997c46_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/views/Settings.vue?vue&type=template&id=67123705&
+// CONCATENATED MODULE: ./src/views/Settings.vue?vue&type=template&id=5c997c46&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/Settings.vue?vue&type=script&lang=js&
 
@@ -48814,6 +48814,16 @@ function Settingsvue_type_script_lang_js_objectSpread(target) { for (var i = 1; 
           case "er_tariff1":
           case "er_tariff2":
           case "gd_tariff":
+            obj.type = "number";
+            obj.rules = [function (v) {
+              return /^\d+(\.\d{1,5})?$/.test(v) || _this.$t("wrong_format");
+            }, function (v) {
+              return v >= obj.min || _this.$t("number_too_small");
+            }, function (v) {
+              return v <= obj.max || _this.$t("number_too_big");
+            }];
+            break;
+
           case "electr_netw_costs":
           case "gas_netw_costs":
             obj.type = "number";
@@ -49050,8 +49060,8 @@ function VForm_objectSpread(target) { for (var i = 1; i < arguments.length; i++)
 
 var Settings_component = normalizeComponent(
   views_Settingsvue_type_script_lang_js_,
-  Settingsvue_type_template_id_67123705_render,
-  Settingsvue_type_template_id_67123705_staticRenderFns,
+  Settingsvue_type_template_id_5c997c46_render,
+  Settingsvue_type_template_id_5c997c46_staticRenderFns,
   false,
   null,
   null,
