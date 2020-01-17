@@ -4,6 +4,34 @@ import { FETCH_START, FETCH_END } from "./mutation-types";
 
 Vue.use(Vuex);
 
+const apiRequest = async (
+  type = "get",
+  route,
+  stateProperty,
+  commit,
+  payload = false
+) => {
+  // Don't change loading status after initial request.
+  if (payload !== true) {
+    commit(FETCH_START);
+  }
+
+  try {
+    if (type === "post") {
+      await Vue.axios.post(route, payload);
+    } else {
+      let { data } = await Vue.axios.get(route);
+      data = data[Object.keys(data)[0]]; // Get the first (and only) object.
+      commit(FETCH_END, {
+        data,
+        stateProperty: stateProperty
+      });
+    }
+  } catch (error) {
+    throw new Error(error);
+  }
+};
+
 export default new Vuex.Store({
   state: {
     smartMeter: [],
@@ -27,79 +55,29 @@ export default new Vuex.Store({
     }
   },
   actions: {
-    async getSmartMeter({ commit }) {
-      commit(FETCH_START);
-      try {
-        const { data } = await Vue.axios.get("/sm/fields");
-        commit(FETCH_END, { data: data.fields, stateProperty: "smartMeter" });
-      } catch (error) {
-        throw new Error(error);
-      }
+    getSmartMeter({ commit }) {
+      return apiRequest("get", "/sm/fields", "smartMeter", commit);
     },
-    async getActual({ commit }, payload) {
-      // Don't change loading status after initial request.
-      if (payload !== true) {
-        commit(FETCH_START);
-      }
-
-      try {
-        const { data } = await Vue.axios.get("/sm/actual");
-        commit(FETCH_END, { data: data.actual, stateProperty: "actual" });
-      } catch (error) {
-        throw new Error(error);
-      }
+    getActual({ commit }, payload) {
+      return apiRequest("get", "/sm/actual", "actual", commit, payload);
     },
-    async getHours({ commit }) {
-      commit(FETCH_START);
-      try {
-        const { data } = await Vue.axios.get("/hist/hours/asc");
-        commit(FETCH_END, { data: data.hours, stateProperty: "hours" });
-      } catch (error) {
-        throw new Error(error);
-      }
+    getHours({ commit }) {
+      return apiRequest("get", "/hist/hours/asc", "hours", commit);
     },
-    async getDays({ commit }) {
-      commit(FETCH_START);
-      try {
-        const { data } = await Vue.axios.get("/hist/days/asc");
-        commit(FETCH_END, { data: data.days, stateProperty: "days" });
-      } catch (error) {
-        throw new Error(error);
-      }
+    getDays({ commit }) {
+      return apiRequest("get", "/hist/days/asc", "days", commit);
     },
-    async getMonths({ commit }) {
-      commit(FETCH_START);
-      try {
-        const { data } = await Vue.axios.get("/hist/months/asc");
-        commit(FETCH_END, { data: data.months, stateProperty: "months" });
-      } catch (error) {
-        throw new Error(error);
-      }
+    getMonths({ commit }) {
+      return apiRequest("get", "/hist/months/asc", "months", commit);
     },
-    async getDeviceInfo({ commit }) {
-      commit(FETCH_START);
-      try {
-        const { data } = await Vue.axios.get("/dev/info");
-        commit(FETCH_END, { data, stateProperty: "deviceInfo" });
-      } catch (error) {
-        throw new Error(error);
-      }
+    getDeviceInfo({ commit }) {
+      return apiRequest("get", "/dev/info", "deviceInfo", commit);
     },
-    async getSettings({ commit }) {
-      commit(FETCH_START);
-      try {
-        const { data } = await Vue.axios.get("/dev/settings");
-        commit(FETCH_END, { data: data.settings, stateProperty: "settings" });
-      } catch (error) {
-        throw new Error(error);
-      }
+    getSettings({ commit }) {
+      return apiRequest("get", "/dev/settings", "settings", commit);
     },
-    async postSettings({ commit }, payload) {
-      try {
-        await Vue.axios.post("/dev/settings", payload);
-      } catch (error) {
-        throw new Error(error);
-      }
+    postSettings({ commit }, payload) {
+      return apiRequest("post", "/dev/settings", "", commit, payload);
     },
     setLoadingStatus({ commit }, payload) {
       if (payload === true) {
