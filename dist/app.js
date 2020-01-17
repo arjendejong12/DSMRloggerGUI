@@ -27086,6 +27086,13 @@ module.exports = function (it) {
 
 /***/ }),
 
+/***/ "368e":
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
 /***/ "36a7":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -28407,12 +28414,12 @@ var es_promise_finally = __webpack_require__("37e1");
 // EXTERNAL MODULE: ./node_modules/vue/dist/vue.runtime.esm.js
 var vue_runtime_esm = __webpack_require__("2b0e");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"f072728c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App.vue?vue&type=template&id=675bf799&
-var Appvue_type_template_id_675bf799_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('v-app',[_c('v-navigation-drawer',{attrs:{"app":"","clipped":""},model:{value:(_vm.drawer),callback:function ($$v) {_vm.drawer=$$v},expression:"drawer"}},[_c('v-list',{attrs:{"dense":""}},[_vm._l((_vm.menuItems),function(item){return _c('v-list-item',{key:item.title,attrs:{"link":"","to":item.link}},[_c('v-list-item-action',[_c('v-icon',[_vm._v(_vm._s(item.icon))])],1),_c('v-list-item-content',[_c('v-list-item-title',[_vm._v(_vm._s(item.title))])],1)],1)}),_c('v-list-item',{key:"FSexplorer",attrs:{"href":"/FSexplorer"}},[_c('v-list-item-action',[_c('v-icon',[_vm._v("mdi-folder")])],1),_c('v-list-item-content',[_c('v-list-item-title',[_vm._v("FSExplorer")])],1)],1)],2)],1),_c('v-app-bar',{attrs:{"app":"","clipped-left":""}},[_c('v-app-bar-nav-icon',{on:{"click":function($event){$event.stopPropagation();_vm.drawer = !_vm.drawer}}}),_c('v-toolbar-title',[_vm._v("DSMRloggerGUI")]),_c('v-spacer'),_c('language-switcher',{attrs:{"languages":_vm.languages}}),_c('v-btn',{attrs:{"icon":""},on:{"click":function($event){_vm.isDark = !_vm.isDark}}},[_c('v-icon',[_vm._v("mdi-theme-light-dark")])],1)],1),_c('v-content',[_c('router-view')],1),_c('v-footer',{attrs:{"app":""}},[_c('span',[_vm._v("© 2020 - Arjen de Jong")])])],1)}
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"f072728c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App.vue?vue&type=template&id=21b2f3b9&
+var Appvue_type_template_id_21b2f3b9_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('v-app',[_c('v-navigation-drawer',{attrs:{"app":"","clipped":""},model:{value:(_vm.drawer),callback:function ($$v) {_vm.drawer=$$v},expression:"drawer"}},[_c('v-list',{attrs:{"dense":""}},[_vm._l((_vm.menuItems),function(item){return _c('v-list-item',{key:item.title,attrs:{"link":"","to":item.link}},[_c('v-list-item-action',[_c('v-icon',[_vm._v(_vm._s(item.icon))])],1),_c('v-list-item-content',[_c('v-list-item-title',[_vm._v(_vm._s(item.title))])],1)],1)}),_c('v-list-item',{key:"FSexplorer",attrs:{"href":"/FSexplorer"}},[_c('v-list-item-action',[_c('v-icon',[_vm._v("mdi-folder")])],1),_c('v-list-item-content',[_c('v-list-item-title',[_vm._v("FSExplorer")])],1)],1)],2)],1),_c('v-app-bar',{attrs:{"app":"","clipped-left":""}},[_c('v-app-bar-nav-icon',{on:{"click":function($event){$event.stopPropagation();_vm.drawer = !_vm.drawer}}}),_c('v-toolbar-title',[_vm._v("DSMRloggerGUI")]),_c('v-spacer'),_c('language-switcher',{attrs:{"languages":_vm.languages}}),_c('v-btn',{attrs:{"icon":""},on:{"click":function($event){_vm.isDark = !_vm.isDark}}},[_c('v-icon',[_vm._v("mdi-theme-light-dark")])],1)],1),_c('v-content',[_c('router-view'),_c('Modal')],1),_c('v-footer',{attrs:{"app":""}},[_c('span',[_vm._v("© 2020 - Arjen de Jong")])])],1)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/App.vue?vue&type=template&id=675bf799&
+// CONCATENATED MODULE: ./src/App.vue?vue&type=template&id=21b2f3b9&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"f072728c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/LanguageSwitcher.vue?vue&type=template&id=d5960546&
 var LanguageSwitchervue_type_template_id_d5960546_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('v-menu',{attrs:{"offset-y":""},scopedSlots:_vm._u([{key:"activator",fn:function(ref){
@@ -34162,6 +34169,1067 @@ var component = normalizeComponent(
 
 installComponents_default()(component, {VBtn: VBtn_VBtn,VIcon: components_VIcon_VIcon,VImg: VImg_VImg,VList: VList_VList,VListItem: VList_VListItem,VListItemAvatar: VListItemAvatar,VListItemTitle: VListItemTitle,VMenu: VMenu_VMenu})
 
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"f072728c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal.vue?vue&type=template&id=9419b94a&
+var Modalvue_type_template_id_9419b94a_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('v-dialog',{attrs:{"persistent":"","max-width":"500"},model:{value:(_vm.showModal),callback:function ($$v) {_vm.showModal=$$v},expression:"showModal"}},[_c('v-card',[_c('v-card-title',{staticClass:"headline"},[_vm._v(_vm._s(_vm.$t("error_title")))]),_c('v-card-text',[_vm._v(_vm._s(_vm.$t("error_message")))]),_c('v-card-text',{domProps:{"innerHTML":_vm._s(_vm.errorMessage)}}),_c('v-card-actions',[_c('v-spacer'),_c('v-btn',{attrs:{"color":"darken-1","text":""},on:{"click":_vm.reloadPage}},[_vm._v(" "+_vm._s(_vm.$t("reload"))+" "),_c('v-icon',{attrs:{"right":""}},[_vm._v("mdi-refresh")])],1)],1)],1)],1)}
+var Modalvue_type_template_id_9419b94a_staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/components/Modal.vue?vue&type=template&id=9419b94a&
+
+// EXTERNAL MODULE: ./node_modules/vuex/dist/vuex.esm.js
+var vuex_esm = __webpack_require__("2f62");
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal.vue?vue&type=script&lang=js&
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ var Modalvue_type_script_lang_js_ = ({
+  data: function data() {
+    return {
+      isClosed: false
+    };
+  },
+  computed: Object(vuex_esm["b" /* mapState */])({
+    showModal: function showModal(state) {
+      return state.showModal;
+    },
+    errorMessage: function errorMessage(state) {
+      return state.errorMessage;
+    }
+  }),
+  methods: {
+    reloadPage: function reloadPage() {
+      window.location.reload();
+    }
+  }
+});
+// CONCATENATED MODULE: ./src/components/Modal.vue?vue&type=script&lang=js&
+ /* harmony default export */ var components_Modalvue_type_script_lang_js_ = (Modalvue_type_script_lang_js_); 
+// EXTERNAL MODULE: ./node_modules/vuetify/src/components/VCard/VCard.sass
+var VCard = __webpack_require__("615b");
+
+// EXTERNAL MODULE: ./node_modules/vuetify/src/components/VProgressLinear/VProgressLinear.sass
+var VProgressLinear = __webpack_require__("6ece");
+
+// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VProgressLinear/VProgressLinear.js
+
+
+
+
+
+
+
+
+
+
+
+function VProgressLinear_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function VProgressLinear_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { VProgressLinear_ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { VProgressLinear_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+ // Components
+
+ // Mixins
+
+
+
+
+ // Utilities
+
+
+
+var VProgressLinear_baseMixins = mixins(colorable, positionable_factory(['absolute', 'fixed', 'top', 'bottom']), proxyable, themeable);
+/* @vue/component */
+
+/* harmony default export */ var VProgressLinear_VProgressLinear = (VProgressLinear_baseMixins.extend({
+  name: 'v-progress-linear',
+  props: {
+    active: {
+      type: Boolean,
+      default: true
+    },
+    backgroundColor: {
+      type: String,
+      default: null
+    },
+    backgroundOpacity: {
+      type: [Number, String],
+      default: null
+    },
+    bufferValue: {
+      type: [Number, String],
+      default: 100
+    },
+    color: {
+      type: String,
+      default: 'primary'
+    },
+    height: {
+      type: [Number, String],
+      default: 4
+    },
+    indeterminate: Boolean,
+    query: Boolean,
+    rounded: Boolean,
+    stream: Boolean,
+    striped: Boolean,
+    value: {
+      type: [Number, String],
+      default: 0
+    }
+  },
+  data: function data() {
+    return {
+      internalLazyValue: this.value || 0
+    };
+  },
+  computed: {
+    __cachedBackground: function __cachedBackground() {
+      return this.$createElement('div', this.setBackgroundColor(this.backgroundColor || this.color, {
+        staticClass: 'v-progress-linear__background',
+        style: this.backgroundStyle
+      }));
+    },
+    __cachedBar: function __cachedBar() {
+      return this.$createElement(this.computedTransition, [this.__cachedBarType]);
+    },
+    __cachedBarType: function __cachedBarType() {
+      return this.indeterminate ? this.__cachedIndeterminate : this.__cachedDeterminate;
+    },
+    __cachedBuffer: function __cachedBuffer() {
+      return this.$createElement('div', {
+        staticClass: 'v-progress-linear__buffer',
+        style: this.styles
+      });
+    },
+    __cachedDeterminate: function __cachedDeterminate() {
+      return this.$createElement('div', this.setBackgroundColor(this.color, {
+        staticClass: "v-progress-linear__determinate",
+        style: {
+          width: convertToUnit(this.normalizedValue, '%')
+        }
+      }));
+    },
+    __cachedIndeterminate: function __cachedIndeterminate() {
+      return this.$createElement('div', {
+        staticClass: 'v-progress-linear__indeterminate',
+        class: {
+          'v-progress-linear__indeterminate--active': this.active
+        }
+      }, [this.genProgressBar('long'), this.genProgressBar('short')]);
+    },
+    __cachedStream: function __cachedStream() {
+      if (!this.stream) return null;
+      return this.$createElement('div', this.setTextColor(this.color, {
+        staticClass: 'v-progress-linear__stream',
+        style: {
+          width: convertToUnit(100 - this.normalizedBuffer, '%')
+        }
+      }));
+    },
+    backgroundStyle: function backgroundStyle() {
+      var _ref;
+
+      var backgroundOpacity = this.backgroundOpacity == null ? this.backgroundColor ? 1 : 0.3 : parseFloat(this.backgroundOpacity);
+      return _ref = {
+        opacity: backgroundOpacity
+      }, _defineProperty(_ref, this.$vuetify.rtl ? 'right' : 'left', convertToUnit(this.normalizedValue, '%')), _defineProperty(_ref, "width", convertToUnit(this.normalizedBuffer - this.normalizedValue, '%')), _ref;
+    },
+    classes: function classes() {
+      return VProgressLinear_objectSpread({
+        'v-progress-linear--absolute': this.absolute,
+        'v-progress-linear--fixed': this.fixed,
+        'v-progress-linear--query': this.query,
+        'v-progress-linear--reactive': this.reactive,
+        'v-progress-linear--rounded': this.rounded,
+        'v-progress-linear--striped': this.striped
+      }, this.themeClasses);
+    },
+    computedTransition: function computedTransition() {
+      return this.indeterminate ? VFadeTransition : VSlideXTransition;
+    },
+    normalizedBuffer: function normalizedBuffer() {
+      return this.normalize(this.bufferValue);
+    },
+    normalizedValue: function normalizedValue() {
+      return this.normalize(this.internalLazyValue);
+    },
+    reactive: function reactive() {
+      return Boolean(this.$listeners.change);
+    },
+    styles: function styles() {
+      var styles = {};
+
+      if (!this.active) {
+        styles.height = 0;
+      }
+
+      if (!this.indeterminate && parseFloat(this.normalizedBuffer) !== 100) {
+        styles.width = convertToUnit(this.normalizedBuffer, '%');
+      }
+
+      return styles;
+    }
+  },
+  methods: {
+    genContent: function genContent() {
+      var slot = getSlot(this, 'default', {
+        value: this.internalLazyValue
+      });
+      if (!slot) return null;
+      return this.$createElement('div', {
+        staticClass: 'v-progress-linear__content'
+      }, slot);
+    },
+    genListeners: function genListeners() {
+      var listeners = this.$listeners;
+
+      if (this.reactive) {
+        listeners.click = this.onClick;
+      }
+
+      return listeners;
+    },
+    genProgressBar: function genProgressBar(name) {
+      return this.$createElement('div', this.setBackgroundColor(this.color, {
+        staticClass: 'v-progress-linear__indeterminate',
+        class: _defineProperty({}, name, true)
+      }));
+    },
+    onClick: function onClick(e) {
+      if (!this.reactive) return;
+
+      var _this$$el$getBounding = this.$el.getBoundingClientRect(),
+          width = _this$$el$getBounding.width;
+
+      this.internalValue = e.offsetX / width * 100;
+    },
+    normalize: function normalize(value) {
+      if (value < 0) return 0;
+      if (value > 100) return 100;
+      return parseFloat(value);
+    }
+  },
+  render: function render(h) {
+    var data = {
+      staticClass: 'v-progress-linear',
+      attrs: {
+        role: 'progressbar',
+        'aria-valuemin': 0,
+        'aria-valuemax': this.normalizedBuffer,
+        'aria-valuenow': this.indeterminate ? undefined : this.normalizedValue
+      },
+      class: this.classes,
+      style: {
+        bottom: this.bottom ? 0 : undefined,
+        height: this.active ? convertToUnit(this.height) : 0,
+        top: this.top ? 0 : undefined
+      },
+      on: this.genListeners()
+    };
+    return h('div', data, [this.__cachedStream, this.__cachedBackground, this.__cachedBuffer, this.__cachedBar, this.genContent()]);
+  }
+}));
+// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VProgressLinear/index.js
+
+
+/* harmony default export */ var components_VProgressLinear = (VProgressLinear_VProgressLinear);
+// CONCATENATED MODULE: ./node_modules/vuetify/lib/mixins/loadable/index.js
+
+
+
+/**
+ * Loadable
+ *
+ * @mixin
+ *
+ * Used to add linear progress bar to components
+ * Can use a default bar with a specific color
+ * or designate a custom progress linear bar
+ */
+
+/* @vue/component */
+
+/* harmony default export */ var loadable = (vue_runtime_esm["a" /* default */].extend().extend({
+  name: 'loadable',
+  props: {
+    loading: {
+      type: [Boolean, String],
+      default: false
+    },
+    loaderHeight: {
+      type: [Number, String],
+      default: 2
+    }
+  },
+  methods: {
+    genProgress: function genProgress() {
+      if (this.loading === false) return null;
+      return this.$slots.progress || this.$createElement(components_VProgressLinear, {
+        props: {
+          absolute: true,
+          color: this.loading === true || this.loading === '' ? this.color || 'primary' : this.loading,
+          height: this.loaderHeight,
+          indeterminate: true
+        }
+      });
+    }
+  }
+}));
+// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VCard/VCard.js
+
+
+
+
+
+
+
+
+
+
+
+function VCard_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function VCard_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { VCard_ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { VCard_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+// Styles
+ // Extensions
+
+ // Mixins
+
+
+ // Helpers
+
+
+/* @vue/component */
+
+/* harmony default export */ var VCard_VCard = (mixins(loadable, routable, components_VSheet).extend({
+  name: 'v-card',
+  props: {
+    flat: Boolean,
+    hover: Boolean,
+    img: String,
+    link: Boolean,
+    loaderHeight: {
+      type: [Number, String],
+      default: 4
+    },
+    outlined: Boolean,
+    raised: Boolean,
+    shaped: Boolean
+  },
+  computed: {
+    classes: function classes() {
+      return VCard_objectSpread({
+        'v-card': true
+      }, routable.options.computed.classes.call(this), {
+        'v-card--flat': this.flat,
+        'v-card--hover': this.hover,
+        'v-card--link': this.isClickable,
+        'v-card--loading': this.loading,
+        'v-card--disabled': this.disabled,
+        'v-card--outlined': this.outlined,
+        'v-card--raised': this.raised,
+        'v-card--shaped': this.shaped
+      }, components_VSheet.options.computed.classes.call(this));
+    },
+    styles: function styles() {
+      var style = VCard_objectSpread({}, components_VSheet.options.computed.styles.call(this));
+
+      if (this.img) {
+        style.background = "url(\"".concat(this.img, "\") center center / cover no-repeat");
+      }
+
+      return style;
+    }
+  },
+  methods: {
+    genProgress: function genProgress() {
+      var render = loadable.options.methods.genProgress.call(this);
+      if (!render) return null;
+      return this.$createElement('div', {
+        staticClass: 'v-card__progress'
+      }, [render]);
+    }
+  },
+  render: function render(h) {
+    var _this$generateRouteLi = this.generateRouteLink(),
+        tag = _this$generateRouteLi.tag,
+        data = _this$generateRouteLi.data;
+
+    data.style = this.styles;
+
+    if (this.isClickable) {
+      data.attrs = data.attrs || {};
+      data.attrs.tabindex = 0;
+    }
+
+    return h(tag, this.setBackgroundColor(this.color, data), [this.genProgress(), this.$slots.default]);
+  }
+}));
+// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VCard/index.js
+
+
+var VCardActions = createSimpleFunctional('v-card__actions');
+var VCardSubtitle = createSimpleFunctional('v-card__subtitle');
+var VCardText = createSimpleFunctional('v-card__text');
+var VCardTitle = createSimpleFunctional('v-card__title');
+
+/* harmony default export */ var components_VCard = ({
+  $_vuetify_subcomponents: {
+    VCard: VCard_VCard,
+    VCardActions: VCardActions,
+    VCardSubtitle: VCardSubtitle,
+    VCardText: VCardText,
+    VCardTitle: VCardTitle
+  }
+});
+// EXTERNAL MODULE: ./node_modules/vuetify/src/components/VDialog/VDialog.sass
+var VDialog = __webpack_require__("368e");
+
+// EXTERNAL MODULE: ./node_modules/vuetify/src/components/VOverlay/VOverlay.sass
+var VOverlay = __webpack_require__("3c93");
+
+// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VOverlay/VOverlay.js
+
+
+
+
+
+
+
+
+
+function VOverlay_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function VOverlay_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { VOverlay_ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { VOverlay_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+// Styles
+ // Mixins
+
+
+
+ // Utilities
+
+
+/* @vue/component */
+
+/* harmony default export */ var VOverlay_VOverlay = (mixins(colorable, themeable, toggleable).extend({
+  name: 'v-overlay',
+  props: {
+    absolute: Boolean,
+    color: {
+      type: String,
+      default: '#212121'
+    },
+    dark: {
+      type: Boolean,
+      default: true
+    },
+    opacity: {
+      type: [Number, String],
+      default: 0.46
+    },
+    value: {
+      default: true
+    },
+    zIndex: {
+      type: [Number, String],
+      default: 5
+    }
+  },
+  computed: {
+    __scrim: function __scrim() {
+      var data = this.setBackgroundColor(this.color, {
+        staticClass: 'v-overlay__scrim',
+        style: {
+          opacity: this.computedOpacity
+        }
+      });
+      return this.$createElement('div', data);
+    },
+    classes: function classes() {
+      return VOverlay_objectSpread({
+        'v-overlay--absolute': this.absolute,
+        'v-overlay--active': this.isActive
+      }, this.themeClasses);
+    },
+    computedOpacity: function computedOpacity() {
+      return Number(this.isActive ? this.opacity : 0);
+    },
+    styles: function styles() {
+      return {
+        zIndex: this.zIndex
+      };
+    }
+  },
+  methods: {
+    genContent: function genContent() {
+      return this.$createElement('div', {
+        staticClass: 'v-overlay__content'
+      }, this.$slots.default);
+    }
+  },
+  render: function render(h) {
+    var children = [this.__scrim];
+    if (this.isActive) children.push(this.genContent());
+    return h('div', {
+      staticClass: 'v-overlay',
+      class: this.classes,
+      style: this.styles
+    }, children);
+  }
+}));
+// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VOverlay/index.js
+
+
+/* harmony default export */ var components_VOverlay = (VOverlay_VOverlay);
+// CONCATENATED MODULE: ./node_modules/vuetify/lib/mixins/overlayable/index.js
+
+
+
+// Components
+ // Utilities
+
+ // Types
+
+
+/* @vue/component */
+
+/* harmony default export */ var overlayable = (vue_runtime_esm["a" /* default */].extend().extend({
+  name: 'overlayable',
+  props: {
+    hideOverlay: Boolean,
+    overlayColor: String,
+    overlayOpacity: [Number, String]
+  },
+  data: function data() {
+    return {
+      overlay: null
+    };
+  },
+  watch: {
+    hideOverlay: function hideOverlay(value) {
+      if (!this.isActive) return;
+      if (value) this.removeOverlay();else this.genOverlay();
+    }
+  },
+  beforeDestroy: function beforeDestroy() {
+    this.removeOverlay();
+  },
+  methods: {
+    createOverlay: function createOverlay() {
+      var overlay = new components_VOverlay({
+        propsData: {
+          absolute: this.absolute,
+          value: false,
+          color: this.overlayColor,
+          opacity: this.overlayOpacity
+        }
+      });
+      overlay.$mount();
+      var parent = this.absolute ? this.$el.parentNode : document.querySelector('[data-app]');
+      parent && parent.insertBefore(overlay.$el, parent.firstChild);
+      this.overlay = overlay;
+    },
+    genOverlay: function genOverlay() {
+      var _this = this;
+
+      this.hideScroll();
+      if (this.hideOverlay) return;
+      if (!this.overlay) this.createOverlay();
+      requestAnimationFrame(function () {
+        if (!_this.overlay) return;
+
+        if (_this.activeZIndex !== undefined) {
+          _this.overlay.zIndex = String(_this.activeZIndex - 1);
+        } else if (_this.$el) {
+          _this.overlay.zIndex = getZIndex(_this.$el);
+        }
+
+        _this.overlay.value = true;
+      });
+      return true;
+    },
+
+    /** removeOverlay(false) will not restore the scollbar afterwards */
+    removeOverlay: function removeOverlay() {
+      var _this2 = this;
+
+      var showScroll = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
+
+      if (this.overlay) {
+        addOnceEventListener(this.overlay.$el, 'transitionend', function () {
+          if (!_this2.overlay || !_this2.overlay.$el || !_this2.overlay.$el.parentNode || _this2.overlay.value) return;
+
+          _this2.overlay.$el.parentNode.removeChild(_this2.overlay.$el);
+
+          _this2.overlay.$destroy();
+
+          _this2.overlay = null;
+        });
+        this.overlay.value = false;
+      }
+
+      showScroll && this.showScroll();
+    },
+    scrollListener: function scrollListener(e) {
+      if (e.type === 'keydown') {
+        if (['INPUT', 'TEXTAREA', 'SELECT'].includes(e.target.tagName) || // https://github.com/vuetifyjs/vuetify/issues/4715
+        e.target.isContentEditable) return;
+        var up = [keyCodes.up, keyCodes.pageup];
+        var down = [keyCodes.down, keyCodes.pagedown];
+
+        if (up.includes(e.keyCode)) {
+          e.deltaY = -1;
+        } else if (down.includes(e.keyCode)) {
+          e.deltaY = 1;
+        } else {
+          return;
+        }
+      }
+
+      if (e.target === this.overlay || e.type !== 'keydown' && e.target === document.body || this.checkPath(e)) e.preventDefault();
+    },
+    hasScrollbar: function hasScrollbar(el) {
+      if (!el || el.nodeType !== Node.ELEMENT_NODE) return false;
+      var style = window.getComputedStyle(el);
+      return ['auto', 'scroll'].includes(style.overflowY) && el.scrollHeight > el.clientHeight;
+    },
+    shouldScroll: function shouldScroll(el, delta) {
+      if (el.scrollTop === 0 && delta < 0) return true;
+      return el.scrollTop + el.clientHeight === el.scrollHeight && delta > 0;
+    },
+    isInside: function isInside(el, parent) {
+      if (el === parent) {
+        return true;
+      } else if (el === null || el === document.body) {
+        return false;
+      } else {
+        return this.isInside(el.parentNode, parent);
+      }
+    },
+    checkPath: function checkPath(e) {
+      var path = e.path || this.composedPath(e);
+      var delta = e.deltaY;
+
+      if (e.type === 'keydown' && path[0] === document.body) {
+        var dialog = this.$refs.dialog; // getSelection returns null in firefox in some edge cases, can be ignored
+
+        var selected = window.getSelection().anchorNode;
+
+        if (dialog && this.hasScrollbar(dialog) && this.isInside(selected, dialog)) {
+          return this.shouldScroll(dialog, delta);
+        }
+
+        return true;
+      }
+
+      for (var index = 0; index < path.length; index++) {
+        var el = path[index];
+        if (el === document) return true;
+        if (el === document.documentElement) return true;
+        if (el === this.$refs.content) return true;
+        if (this.hasScrollbar(el)) return this.shouldScroll(el, delta);
+      }
+
+      return true;
+    },
+
+    /**
+     * Polyfill for Event.prototype.composedPath
+     */
+    composedPath: function composedPath(e) {
+      if (e.composedPath) return e.composedPath();
+      var path = [];
+      var el = e.target;
+
+      while (el) {
+        path.push(el);
+
+        if (el.tagName === 'HTML') {
+          path.push(document);
+          path.push(window);
+          return path;
+        }
+
+        el = el.parentElement;
+      }
+
+      return path;
+    },
+    hideScroll: function hideScroll() {
+      if (this.$vuetify.breakpoint.smAndDown) {
+        document.documentElement.classList.add('overflow-y-hidden');
+      } else {
+        addPassiveEventListener(window, 'wheel', this.scrollListener, {
+          passive: false
+        });
+        window.addEventListener('keydown', this.scrollListener);
+      }
+    },
+    showScroll: function showScroll() {
+      document.documentElement.classList.remove('overflow-y-hidden');
+      window.removeEventListener('wheel', this.scrollListener);
+      window.removeEventListener('keydown', this.scrollListener);
+    }
+  }
+}));
+// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VDialog/VDialog.js
+
+
+
+
+
+
+
+
+
+
+
+
+function VDialog_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function VDialog_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { VDialog_ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { VDialog_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+// Styles
+ // Components
+
+ // Mixins
+
+
+
+
+
+
+
+ // Directives
+
+ // Helpers
+
+
+
+
+var VDialog_baseMixins = mixins(activatable, dependent, detachable, overlayable, returnable, stackable, toggleable);
+/* @vue/component */
+
+/* harmony default export */ var VDialog_VDialog = (VDialog_baseMixins.extend({
+  name: 'v-dialog',
+  directives: {
+    ClickOutside: click_outside
+  },
+  props: {
+    dark: Boolean,
+    disabled: Boolean,
+    fullscreen: Boolean,
+    light: Boolean,
+    maxWidth: {
+      type: [String, Number],
+      default: 'none'
+    },
+    noClickAnimation: Boolean,
+    origin: {
+      type: String,
+      default: 'center center'
+    },
+    persistent: Boolean,
+    retainFocus: {
+      type: Boolean,
+      default: true
+    },
+    scrollable: Boolean,
+    transition: {
+      type: [String, Boolean],
+      default: 'dialog-transition'
+    },
+    width: {
+      type: [String, Number],
+      default: 'auto'
+    }
+  },
+  data: function data() {
+    return {
+      activatedBy: null,
+      animate: false,
+      animateTimeout: -1,
+      isActive: !!this.value,
+      stackMinZIndex: 200
+    };
+  },
+  computed: {
+    classes: function classes() {
+      var _ref;
+
+      return _ref = {}, _defineProperty(_ref, "v-dialog ".concat(this.contentClass).trim(), true), _defineProperty(_ref, 'v-dialog--active', this.isActive), _defineProperty(_ref, 'v-dialog--persistent', this.persistent), _defineProperty(_ref, 'v-dialog--fullscreen', this.fullscreen), _defineProperty(_ref, 'v-dialog--scrollable', this.scrollable), _defineProperty(_ref, 'v-dialog--animated', this.animate), _ref;
+    },
+    contentClasses: function contentClasses() {
+      return {
+        'v-dialog__content': true,
+        'v-dialog__content--active': this.isActive
+      };
+    },
+    hasActivator: function hasActivator() {
+      return Boolean(!!this.$slots.activator || !!this.$scopedSlots.activator);
+    }
+  },
+  watch: {
+    isActive: function isActive(val) {
+      if (val) {
+        this.show();
+        this.hideScroll();
+      } else {
+        this.removeOverlay();
+        this.unbind();
+      }
+    },
+    fullscreen: function fullscreen(val) {
+      if (!this.isActive) return;
+
+      if (val) {
+        this.hideScroll();
+        this.removeOverlay(false);
+      } else {
+        this.showScroll();
+        this.genOverlay();
+      }
+    }
+  },
+  created: function created() {
+    /* istanbul ignore next */
+    if (this.$attrs.hasOwnProperty('full-width')) {
+      removed('full-width', this);
+    }
+  },
+  beforeMount: function beforeMount() {
+    var _this = this;
+
+    this.$nextTick(function () {
+      _this.isBooted = _this.isActive;
+      _this.isActive && _this.show();
+    });
+  },
+  beforeDestroy: function beforeDestroy() {
+    if (typeof window !== 'undefined') this.unbind();
+  },
+  methods: {
+    animateClick: function animateClick() {
+      var _this2 = this;
+
+      this.animate = false; // Needed for when clicking very fast
+      // outside of the dialog
+
+      this.$nextTick(function () {
+        _this2.animate = true;
+        window.clearTimeout(_this2.animateTimeout);
+        _this2.animateTimeout = window.setTimeout(function () {
+          return _this2.animate = false;
+        }, 150);
+      });
+    },
+    closeConditional: function closeConditional(e) {
+      var target = e.target; // Ignore the click if the dialog is closed or destroyed,
+      // if it was on an element inside the content,
+      // if it was dragged onto the overlay (#6969),
+      // or if this isn't the topmost dialog (#9907)
+
+      return !(this._isDestroyed || !this.isActive || this.$refs.content.contains(target) || this.overlay && target && !this.overlay.$el.contains(target)) && this.activeZIndex >= this.getMaxZIndex();
+    },
+    hideScroll: function hideScroll() {
+      if (this.fullscreen) {
+        document.documentElement.classList.add('overflow-y-hidden');
+      } else {
+        overlayable.options.methods.hideScroll.call(this);
+      }
+    },
+    show: function show() {
+      var _this3 = this;
+
+      !this.fullscreen && !this.hideOverlay && this.genOverlay();
+      this.$nextTick(function () {
+        _this3.$refs.content.focus();
+
+        _this3.bind();
+      });
+    },
+    bind: function bind() {
+      window.addEventListener('focusin', this.onFocusin);
+    },
+    unbind: function unbind() {
+      window.removeEventListener('focusin', this.onFocusin);
+    },
+    onClickOutside: function onClickOutside(e) {
+      this.$emit('click:outside', e);
+
+      if (this.persistent) {
+        this.noClickAnimation || this.animateClick();
+      } else {
+        this.isActive = false;
+      }
+    },
+    onKeydown: function onKeydown(e) {
+      if (e.keyCode === keyCodes.esc && !this.getOpenDependents().length) {
+        if (!this.persistent) {
+          this.isActive = false;
+          var activator = this.getActivator();
+          this.$nextTick(function () {
+            return activator && activator.focus();
+          });
+        } else if (!this.noClickAnimation) {
+          this.animateClick();
+        }
+      }
+
+      this.$emit('keydown', e);
+    },
+    // On focus change, wrap focus to stay inside the dialog
+    // https://github.com/vuetifyjs/vuetify/issues/6892
+    onFocusin: function onFocusin(e) {
+      if (!e || !this.retainFocus) return;
+      var target = e.target;
+
+      if (!!target && // It isn't the document or the dialog body
+      ![document, this.$refs.content].includes(target) && // It isn't inside the dialog body
+      !this.$refs.content.contains(target) && // We're the topmost dialog
+      this.activeZIndex >= this.getMaxZIndex() && // It isn't inside a dependent element (like a menu)
+      !this.getOpenDependentElements().some(function (el) {
+        return el.contains(target);
+      }) // So we must have focused something outside the dialog and its children
+      ) {
+          // Find and focus the first available element inside the dialog
+          var focusable = this.$refs.content.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+          focusable.length && focusable[0].focus();
+        }
+    }
+  },
+  render: function render(h) {
+    var children = [];
+    var data = {
+      class: this.classes,
+      ref: 'dialog',
+      directives: [{
+        name: 'click-outside',
+        value: this.onClickOutside,
+        args: {
+          closeConditional: this.closeConditional,
+          include: this.getOpenDependentElements
+        }
+      }, {
+        name: 'show',
+        value: this.isActive
+      }],
+      on: {
+        click: function click(e) {
+          e.stopPropagation();
+        }
+      },
+      style: {}
+    };
+
+    if (!this.fullscreen) {
+      data.style = {
+        maxWidth: this.maxWidth === 'none' ? undefined : convertToUnit(this.maxWidth),
+        width: this.width === 'auto' ? undefined : convertToUnit(this.width)
+      };
+    }
+
+    children.push(this.genActivator());
+    var dialog = h('div', data, this.showLazyContent(this.getContentSlot()));
+
+    if (this.transition) {
+      dialog = h('transition', {
+        props: {
+          name: this.transition,
+          origin: this.origin
+        }
+      }, [dialog]);
+    }
+
+    children.push(h('div', {
+      class: this.contentClasses,
+      attrs: VDialog_objectSpread({
+        role: 'document',
+        tabindex: this.isActive ? 0 : undefined
+      }, this.getScopeIdAttrs()),
+      on: {
+        keydown: this.onKeydown
+      },
+      style: {
+        zIndex: this.activeZIndex
+      },
+      ref: 'content'
+    }, [this.$createElement(VThemeProvider, {
+      props: {
+        root: true,
+        light: this.light,
+        dark: this.dark
+      }
+    }, [dialog])]));
+    return h('div', {
+      staticClass: 'v-dialog__container',
+      class: {
+        'v-dialog__container--attached': this.attach === '' || this.attach === true || this.attach === 'attach'
+      },
+      attrs: {
+        role: 'dialog'
+      }
+    }, children);
+  }
+}));
+// EXTERNAL MODULE: ./node_modules/vuetify/src/components/VGrid/_grid.sass
+var _grid = __webpack_require__("20f6");
+
+// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VGrid/VSpacer.js
+
+
+/* harmony default export */ var VSpacer = (createSimpleFunctional('spacer', 'div', 'v-spacer'));
+// CONCATENATED MODULE: ./src/components/Modal.vue
+
+
+
+
+
+/* normalize component */
+
+var Modal_component = normalizeComponent(
+  components_Modalvue_type_script_lang_js_,
+  Modalvue_type_template_id_9419b94a_render,
+  Modalvue_type_template_id_9419b94a_staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* harmony default export */ var Modal = (Modal_component.exports);
+
+/* vuetify-loader */
+
+
+
+
+
+
+
+
+
+installComponents_default()(Modal_component, {VBtn: VBtn_VBtn,VCard: VCard_VCard,VCardActions: VCardActions,VCardText: VCardText,VCardTitle: VCardTitle,VDialog: VDialog_VDialog,VIcon: components_VIcon_VIcon,VSpacer: VSpacer})
+
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App.vue?vue&type=script&lang=js&
 //
 //
@@ -34211,12 +35279,14 @@ installComponents_default()(component, {VBtn: VBtn_VBtn,VIcon: components_VIcon_
 //
 //
 //
+//
 
 
-/* harmony default export */ var Appvue_type_script_lang_js_ = (vue_runtime_esm["a" /* default */].extend({
+/* harmony default export */ var Appvue_type_script_lang_js_ = ({
   name: "App",
   components: {
-    LanguageSwitcher: LanguageSwitcher
+    LanguageSwitcher: LanguageSwitcher,
+    Modal: Modal
   },
   data: function data() {
     return {
@@ -34289,7 +35359,7 @@ installComponents_default()(component, {VBtn: VBtn_VBtn,VIcon: components_VIcon_
       }
     }
   }
-}));
+});
 // CONCATENATED MODULE: ./src/App.vue?vue&type=script&lang=js&
  /* harmony default export */ var src_Appvue_type_script_lang_js_ = (Appvue_type_script_lang_js_); 
 // EXTERNAL MODULE: ./node_modules/vuetify/src/components/VApp/VApp.sass
@@ -35165,294 +36235,6 @@ function VFooter_objectSpread(target) { for (var i = 1; i < arguments.length; i+
 // EXTERNAL MODULE: ./node_modules/vuetify/src/components/VNavigationDrawer/VNavigationDrawer.sass
 var VNavigationDrawer = __webpack_require__("7958");
 
-// EXTERNAL MODULE: ./node_modules/vuetify/src/components/VOverlay/VOverlay.sass
-var VOverlay = __webpack_require__("3c93");
-
-// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VOverlay/VOverlay.js
-
-
-
-
-
-
-
-
-
-function VOverlay_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function VOverlay_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { VOverlay_ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { VOverlay_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-// Styles
- // Mixins
-
-
-
- // Utilities
-
-
-/* @vue/component */
-
-/* harmony default export */ var VOverlay_VOverlay = (mixins(colorable, themeable, toggleable).extend({
-  name: 'v-overlay',
-  props: {
-    absolute: Boolean,
-    color: {
-      type: String,
-      default: '#212121'
-    },
-    dark: {
-      type: Boolean,
-      default: true
-    },
-    opacity: {
-      type: [Number, String],
-      default: 0.46
-    },
-    value: {
-      default: true
-    },
-    zIndex: {
-      type: [Number, String],
-      default: 5
-    }
-  },
-  computed: {
-    __scrim: function __scrim() {
-      var data = this.setBackgroundColor(this.color, {
-        staticClass: 'v-overlay__scrim',
-        style: {
-          opacity: this.computedOpacity
-        }
-      });
-      return this.$createElement('div', data);
-    },
-    classes: function classes() {
-      return VOverlay_objectSpread({
-        'v-overlay--absolute': this.absolute,
-        'v-overlay--active': this.isActive
-      }, this.themeClasses);
-    },
-    computedOpacity: function computedOpacity() {
-      return Number(this.isActive ? this.opacity : 0);
-    },
-    styles: function styles() {
-      return {
-        zIndex: this.zIndex
-      };
-    }
-  },
-  methods: {
-    genContent: function genContent() {
-      return this.$createElement('div', {
-        staticClass: 'v-overlay__content'
-      }, this.$slots.default);
-    }
-  },
-  render: function render(h) {
-    var children = [this.__scrim];
-    if (this.isActive) children.push(this.genContent());
-    return h('div', {
-      staticClass: 'v-overlay',
-      class: this.classes,
-      style: this.styles
-    }, children);
-  }
-}));
-// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VOverlay/index.js
-
-
-/* harmony default export */ var components_VOverlay = (VOverlay_VOverlay);
-// CONCATENATED MODULE: ./node_modules/vuetify/lib/mixins/overlayable/index.js
-
-
-
-// Components
- // Utilities
-
- // Types
-
-
-/* @vue/component */
-
-/* harmony default export */ var overlayable = (vue_runtime_esm["a" /* default */].extend().extend({
-  name: 'overlayable',
-  props: {
-    hideOverlay: Boolean,
-    overlayColor: String,
-    overlayOpacity: [Number, String]
-  },
-  data: function data() {
-    return {
-      overlay: null
-    };
-  },
-  watch: {
-    hideOverlay: function hideOverlay(value) {
-      if (!this.isActive) return;
-      if (value) this.removeOverlay();else this.genOverlay();
-    }
-  },
-  beforeDestroy: function beforeDestroy() {
-    this.removeOverlay();
-  },
-  methods: {
-    createOverlay: function createOverlay() {
-      var overlay = new components_VOverlay({
-        propsData: {
-          absolute: this.absolute,
-          value: false,
-          color: this.overlayColor,
-          opacity: this.overlayOpacity
-        }
-      });
-      overlay.$mount();
-      var parent = this.absolute ? this.$el.parentNode : document.querySelector('[data-app]');
-      parent && parent.insertBefore(overlay.$el, parent.firstChild);
-      this.overlay = overlay;
-    },
-    genOverlay: function genOverlay() {
-      var _this = this;
-
-      this.hideScroll();
-      if (this.hideOverlay) return;
-      if (!this.overlay) this.createOverlay();
-      requestAnimationFrame(function () {
-        if (!_this.overlay) return;
-
-        if (_this.activeZIndex !== undefined) {
-          _this.overlay.zIndex = String(_this.activeZIndex - 1);
-        } else if (_this.$el) {
-          _this.overlay.zIndex = getZIndex(_this.$el);
-        }
-
-        _this.overlay.value = true;
-      });
-      return true;
-    },
-
-    /** removeOverlay(false) will not restore the scollbar afterwards */
-    removeOverlay: function removeOverlay() {
-      var _this2 = this;
-
-      var showScroll = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
-
-      if (this.overlay) {
-        addOnceEventListener(this.overlay.$el, 'transitionend', function () {
-          if (!_this2.overlay || !_this2.overlay.$el || !_this2.overlay.$el.parentNode || _this2.overlay.value) return;
-
-          _this2.overlay.$el.parentNode.removeChild(_this2.overlay.$el);
-
-          _this2.overlay.$destroy();
-
-          _this2.overlay = null;
-        });
-        this.overlay.value = false;
-      }
-
-      showScroll && this.showScroll();
-    },
-    scrollListener: function scrollListener(e) {
-      if (e.type === 'keydown') {
-        if (['INPUT', 'TEXTAREA', 'SELECT'].includes(e.target.tagName) || // https://github.com/vuetifyjs/vuetify/issues/4715
-        e.target.isContentEditable) return;
-        var up = [keyCodes.up, keyCodes.pageup];
-        var down = [keyCodes.down, keyCodes.pagedown];
-
-        if (up.includes(e.keyCode)) {
-          e.deltaY = -1;
-        } else if (down.includes(e.keyCode)) {
-          e.deltaY = 1;
-        } else {
-          return;
-        }
-      }
-
-      if (e.target === this.overlay || e.type !== 'keydown' && e.target === document.body || this.checkPath(e)) e.preventDefault();
-    },
-    hasScrollbar: function hasScrollbar(el) {
-      if (!el || el.nodeType !== Node.ELEMENT_NODE) return false;
-      var style = window.getComputedStyle(el);
-      return ['auto', 'scroll'].includes(style.overflowY) && el.scrollHeight > el.clientHeight;
-    },
-    shouldScroll: function shouldScroll(el, delta) {
-      if (el.scrollTop === 0 && delta < 0) return true;
-      return el.scrollTop + el.clientHeight === el.scrollHeight && delta > 0;
-    },
-    isInside: function isInside(el, parent) {
-      if (el === parent) {
-        return true;
-      } else if (el === null || el === document.body) {
-        return false;
-      } else {
-        return this.isInside(el.parentNode, parent);
-      }
-    },
-    checkPath: function checkPath(e) {
-      var path = e.path || this.composedPath(e);
-      var delta = e.deltaY;
-
-      if (e.type === 'keydown' && path[0] === document.body) {
-        var dialog = this.$refs.dialog; // getSelection returns null in firefox in some edge cases, can be ignored
-
-        var selected = window.getSelection().anchorNode;
-
-        if (dialog && this.hasScrollbar(dialog) && this.isInside(selected, dialog)) {
-          return this.shouldScroll(dialog, delta);
-        }
-
-        return true;
-      }
-
-      for (var index = 0; index < path.length; index++) {
-        var el = path[index];
-        if (el === document) return true;
-        if (el === document.documentElement) return true;
-        if (el === this.$refs.content) return true;
-        if (this.hasScrollbar(el)) return this.shouldScroll(el, delta);
-      }
-
-      return true;
-    },
-
-    /**
-     * Polyfill for Event.prototype.composedPath
-     */
-    composedPath: function composedPath(e) {
-      if (e.composedPath) return e.composedPath();
-      var path = [];
-      var el = e.target;
-
-      while (el) {
-        path.push(el);
-
-        if (el.tagName === 'HTML') {
-          path.push(document);
-          path.push(window);
-          return path;
-        }
-
-        el = el.parentElement;
-      }
-
-      return path;
-    },
-    hideScroll: function hideScroll() {
-      if (this.$vuetify.breakpoint.smAndDown) {
-        document.documentElement.classList.add('overflow-y-hidden');
-      } else {
-        addPassiveEventListener(window, 'wheel', this.scrollListener, {
-          passive: false
-        });
-        window.addEventListener('keydown', this.scrollListener);
-      }
-    },
-    showScroll: function showScroll() {
-      document.documentElement.classList.remove('overflow-y-hidden');
-      window.removeEventListener('wheel', this.scrollListener);
-      window.removeEventListener('keydown', this.scrollListener);
-    }
-  }
-}));
 // CONCATENATED MODULE: ./node_modules/vuetify/lib/directives/touch/index.js
 
 
@@ -35950,13 +36732,6 @@ var VNavigationDrawer_baseMixins = mixins(applicationable('left', ['isActive', '
     }), children);
   }
 }));
-// EXTERNAL MODULE: ./node_modules/vuetify/src/components/VGrid/_grid.sass
-var _grid = __webpack_require__("20f6");
-
-// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VGrid/VSpacer.js
-
-
-/* harmony default export */ var VSpacer = (createSimpleFunctional('spacer', 'div', 'v-spacer'));
 // CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VToolbar/index.js
 // Components
  // Utilities
@@ -35982,7 +36757,7 @@ var VToolbarItems = createSimpleFunctional('v-toolbar__items');
 
 var App_component = normalizeComponent(
   src_Appvue_type_script_lang_js_,
-  Appvue_type_template_id_675bf799_render,
+  Appvue_type_template_id_21b2f3b9_render,
   staticRenderFns,
   false,
   null,
@@ -40764,9 +41539,6 @@ var RefreshButtonvue_type_template_id_f20c023e_staticRenderFns = []
 
 // CONCATENATED MODULE: ./src/components/RefreshButton.vue?vue&type=template&id=f20c023e&
 
-// EXTERNAL MODULE: ./node_modules/vuex/dist/vuex.esm.js
-var vuex_esm = __webpack_require__("2f62");
-
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/RefreshButton.vue?vue&type=script&lang=js&
 //
 //
@@ -41006,385 +41778,6 @@ function SmartMetervue_type_script_lang_js_objectSpread(target) { for (var i = 1
 });
 // CONCATENATED MODULE: ./src/views/SmartMeter.vue?vue&type=script&lang=js&
  /* harmony default export */ var views_SmartMetervue_type_script_lang_js_ = (SmartMetervue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./node_modules/vuetify/src/components/VCard/VCard.sass
-var VCard = __webpack_require__("615b");
-
-// EXTERNAL MODULE: ./node_modules/vuetify/src/components/VProgressLinear/VProgressLinear.sass
-var VProgressLinear = __webpack_require__("6ece");
-
-// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VProgressLinear/VProgressLinear.js
-
-
-
-
-
-
-
-
-
-
-
-function VProgressLinear_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function VProgressLinear_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { VProgressLinear_ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { VProgressLinear_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
- // Components
-
- // Mixins
-
-
-
-
- // Utilities
-
-
-
-var VProgressLinear_baseMixins = mixins(colorable, positionable_factory(['absolute', 'fixed', 'top', 'bottom']), proxyable, themeable);
-/* @vue/component */
-
-/* harmony default export */ var VProgressLinear_VProgressLinear = (VProgressLinear_baseMixins.extend({
-  name: 'v-progress-linear',
-  props: {
-    active: {
-      type: Boolean,
-      default: true
-    },
-    backgroundColor: {
-      type: String,
-      default: null
-    },
-    backgroundOpacity: {
-      type: [Number, String],
-      default: null
-    },
-    bufferValue: {
-      type: [Number, String],
-      default: 100
-    },
-    color: {
-      type: String,
-      default: 'primary'
-    },
-    height: {
-      type: [Number, String],
-      default: 4
-    },
-    indeterminate: Boolean,
-    query: Boolean,
-    rounded: Boolean,
-    stream: Boolean,
-    striped: Boolean,
-    value: {
-      type: [Number, String],
-      default: 0
-    }
-  },
-  data: function data() {
-    return {
-      internalLazyValue: this.value || 0
-    };
-  },
-  computed: {
-    __cachedBackground: function __cachedBackground() {
-      return this.$createElement('div', this.setBackgroundColor(this.backgroundColor || this.color, {
-        staticClass: 'v-progress-linear__background',
-        style: this.backgroundStyle
-      }));
-    },
-    __cachedBar: function __cachedBar() {
-      return this.$createElement(this.computedTransition, [this.__cachedBarType]);
-    },
-    __cachedBarType: function __cachedBarType() {
-      return this.indeterminate ? this.__cachedIndeterminate : this.__cachedDeterminate;
-    },
-    __cachedBuffer: function __cachedBuffer() {
-      return this.$createElement('div', {
-        staticClass: 'v-progress-linear__buffer',
-        style: this.styles
-      });
-    },
-    __cachedDeterminate: function __cachedDeterminate() {
-      return this.$createElement('div', this.setBackgroundColor(this.color, {
-        staticClass: "v-progress-linear__determinate",
-        style: {
-          width: convertToUnit(this.normalizedValue, '%')
-        }
-      }));
-    },
-    __cachedIndeterminate: function __cachedIndeterminate() {
-      return this.$createElement('div', {
-        staticClass: 'v-progress-linear__indeterminate',
-        class: {
-          'v-progress-linear__indeterminate--active': this.active
-        }
-      }, [this.genProgressBar('long'), this.genProgressBar('short')]);
-    },
-    __cachedStream: function __cachedStream() {
-      if (!this.stream) return null;
-      return this.$createElement('div', this.setTextColor(this.color, {
-        staticClass: 'v-progress-linear__stream',
-        style: {
-          width: convertToUnit(100 - this.normalizedBuffer, '%')
-        }
-      }));
-    },
-    backgroundStyle: function backgroundStyle() {
-      var _ref;
-
-      var backgroundOpacity = this.backgroundOpacity == null ? this.backgroundColor ? 1 : 0.3 : parseFloat(this.backgroundOpacity);
-      return _ref = {
-        opacity: backgroundOpacity
-      }, _defineProperty(_ref, this.$vuetify.rtl ? 'right' : 'left', convertToUnit(this.normalizedValue, '%')), _defineProperty(_ref, "width", convertToUnit(this.normalizedBuffer - this.normalizedValue, '%')), _ref;
-    },
-    classes: function classes() {
-      return VProgressLinear_objectSpread({
-        'v-progress-linear--absolute': this.absolute,
-        'v-progress-linear--fixed': this.fixed,
-        'v-progress-linear--query': this.query,
-        'v-progress-linear--reactive': this.reactive,
-        'v-progress-linear--rounded': this.rounded,
-        'v-progress-linear--striped': this.striped
-      }, this.themeClasses);
-    },
-    computedTransition: function computedTransition() {
-      return this.indeterminate ? VFadeTransition : VSlideXTransition;
-    },
-    normalizedBuffer: function normalizedBuffer() {
-      return this.normalize(this.bufferValue);
-    },
-    normalizedValue: function normalizedValue() {
-      return this.normalize(this.internalLazyValue);
-    },
-    reactive: function reactive() {
-      return Boolean(this.$listeners.change);
-    },
-    styles: function styles() {
-      var styles = {};
-
-      if (!this.active) {
-        styles.height = 0;
-      }
-
-      if (!this.indeterminate && parseFloat(this.normalizedBuffer) !== 100) {
-        styles.width = convertToUnit(this.normalizedBuffer, '%');
-      }
-
-      return styles;
-    }
-  },
-  methods: {
-    genContent: function genContent() {
-      var slot = getSlot(this, 'default', {
-        value: this.internalLazyValue
-      });
-      if (!slot) return null;
-      return this.$createElement('div', {
-        staticClass: 'v-progress-linear__content'
-      }, slot);
-    },
-    genListeners: function genListeners() {
-      var listeners = this.$listeners;
-
-      if (this.reactive) {
-        listeners.click = this.onClick;
-      }
-
-      return listeners;
-    },
-    genProgressBar: function genProgressBar(name) {
-      return this.$createElement('div', this.setBackgroundColor(this.color, {
-        staticClass: 'v-progress-linear__indeterminate',
-        class: _defineProperty({}, name, true)
-      }));
-    },
-    onClick: function onClick(e) {
-      if (!this.reactive) return;
-
-      var _this$$el$getBounding = this.$el.getBoundingClientRect(),
-          width = _this$$el$getBounding.width;
-
-      this.internalValue = e.offsetX / width * 100;
-    },
-    normalize: function normalize(value) {
-      if (value < 0) return 0;
-      if (value > 100) return 100;
-      return parseFloat(value);
-    }
-  },
-  render: function render(h) {
-    var data = {
-      staticClass: 'v-progress-linear',
-      attrs: {
-        role: 'progressbar',
-        'aria-valuemin': 0,
-        'aria-valuemax': this.normalizedBuffer,
-        'aria-valuenow': this.indeterminate ? undefined : this.normalizedValue
-      },
-      class: this.classes,
-      style: {
-        bottom: this.bottom ? 0 : undefined,
-        height: this.active ? convertToUnit(this.height) : 0,
-        top: this.top ? 0 : undefined
-      },
-      on: this.genListeners()
-    };
-    return h('div', data, [this.__cachedStream, this.__cachedBackground, this.__cachedBuffer, this.__cachedBar, this.genContent()]);
-  }
-}));
-// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VProgressLinear/index.js
-
-
-/* harmony default export */ var components_VProgressLinear = (VProgressLinear_VProgressLinear);
-// CONCATENATED MODULE: ./node_modules/vuetify/lib/mixins/loadable/index.js
-
-
-
-/**
- * Loadable
- *
- * @mixin
- *
- * Used to add linear progress bar to components
- * Can use a default bar with a specific color
- * or designate a custom progress linear bar
- */
-
-/* @vue/component */
-
-/* harmony default export */ var loadable = (vue_runtime_esm["a" /* default */].extend().extend({
-  name: 'loadable',
-  props: {
-    loading: {
-      type: [Boolean, String],
-      default: false
-    },
-    loaderHeight: {
-      type: [Number, String],
-      default: 2
-    }
-  },
-  methods: {
-    genProgress: function genProgress() {
-      if (this.loading === false) return null;
-      return this.$slots.progress || this.$createElement(components_VProgressLinear, {
-        props: {
-          absolute: true,
-          color: this.loading === true || this.loading === '' ? this.color || 'primary' : this.loading,
-          height: this.loaderHeight,
-          indeterminate: true
-        }
-      });
-    }
-  }
-}));
-// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VCard/VCard.js
-
-
-
-
-
-
-
-
-
-
-
-function VCard_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function VCard_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { VCard_ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { VCard_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-// Styles
- // Extensions
-
- // Mixins
-
-
- // Helpers
-
-
-/* @vue/component */
-
-/* harmony default export */ var VCard_VCard = (mixins(loadable, routable, components_VSheet).extend({
-  name: 'v-card',
-  props: {
-    flat: Boolean,
-    hover: Boolean,
-    img: String,
-    link: Boolean,
-    loaderHeight: {
-      type: [Number, String],
-      default: 4
-    },
-    outlined: Boolean,
-    raised: Boolean,
-    shaped: Boolean
-  },
-  computed: {
-    classes: function classes() {
-      return VCard_objectSpread({
-        'v-card': true
-      }, routable.options.computed.classes.call(this), {
-        'v-card--flat': this.flat,
-        'v-card--hover': this.hover,
-        'v-card--link': this.isClickable,
-        'v-card--loading': this.loading,
-        'v-card--disabled': this.disabled,
-        'v-card--outlined': this.outlined,
-        'v-card--raised': this.raised,
-        'v-card--shaped': this.shaped
-      }, components_VSheet.options.computed.classes.call(this));
-    },
-    styles: function styles() {
-      var style = VCard_objectSpread({}, components_VSheet.options.computed.styles.call(this));
-
-      if (this.img) {
-        style.background = "url(\"".concat(this.img, "\") center center / cover no-repeat");
-      }
-
-      return style;
-    }
-  },
-  methods: {
-    genProgress: function genProgress() {
-      var render = loadable.options.methods.genProgress.call(this);
-      if (!render) return null;
-      return this.$createElement('div', {
-        staticClass: 'v-card__progress'
-      }, [render]);
-    }
-  },
-  render: function render(h) {
-    var _this$generateRouteLi = this.generateRouteLink(),
-        tag = _this$generateRouteLi.tag,
-        data = _this$generateRouteLi.data;
-
-    data.style = this.styles;
-
-    if (this.isClickable) {
-      data.attrs = data.attrs || {};
-      data.attrs.tabindex = 0;
-    }
-
-    return h(tag, this.setBackgroundColor(this.color, data), [this.genProgress(), this.$slots.default]);
-  }
-}));
-// CONCATENATED MODULE: ./node_modules/vuetify/lib/components/VCard/index.js
-
-
-var VCardActions = createSimpleFunctional('v-card__actions');
-var VCardSubtitle = createSimpleFunctional('v-card__subtitle');
-var VCardText = createSimpleFunctional('v-card__text');
-var VCardTitle = createSimpleFunctional('v-card__title');
-
-/* harmony default export */ var components_VCard = ({
-  $_vuetify_subcomponents: {
-    VCard: VCard_VCard,
-    VCardActions: VCardActions,
-    VCardSubtitle: VCardSubtitle,
-    VCardText: VCardText,
-    VCardTitle: VCardTitle
-  }
-});
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.map.js
 var es_map = __webpack_require__("4ec9");
 
@@ -49174,7 +49567,10 @@ function _asyncToGenerator(fn) {
 // CONCATENATED MODULE: ./src/store/mutation-types.js
 var FETCH_START = "FETCH_START";
 var FETCH_END = "FETCH_END";
+var SET_ERROR = "SET_ERROR";
+var SHOW_MODAL = "SHOW_MODAL";
 // CONCATENATED MODULE: ./src/store/index.js
+
 
 
 
@@ -49185,6 +49581,89 @@ var _mutations;
 
 
 vue_runtime_esm["a" /* default */].use(vuex_esm["a" /* default */]);
+
+var apiRequest =
+/*#__PURE__*/
+function () {
+  var _ref = _asyncToGenerator(
+  /*#__PURE__*/
+  regeneratorRuntime.mark(function _callee() {
+    var type,
+        route,
+        stateProperty,
+        commit,
+        payload,
+        _ref2,
+        data,
+        _args = arguments;
+
+    return regeneratorRuntime.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            type = _args.length > 0 && _args[0] !== undefined ? _args[0] : "get";
+            route = _args.length > 1 ? _args[1] : undefined;
+            stateProperty = _args.length > 2 ? _args[2] : undefined;
+            commit = _args.length > 3 ? _args[3] : undefined;
+            payload = _args.length > 4 && _args[4] !== undefined ? _args[4] : false;
+
+            // Don't change loading status after initial request.
+            if (payload !== true) {
+              commit(FETCH_START);
+            }
+
+            _context.prev = 6;
+
+            if (!(type === "post")) {
+              _context.next = 12;
+              break;
+            }
+
+            _context.next = 10;
+            return vue_runtime_esm["a" /* default */].axios.post(route, payload);
+
+          case 10:
+            _context.next = 18;
+            break;
+
+          case 12:
+            _context.next = 14;
+            return vue_runtime_esm["a" /* default */].axios.get(route);
+
+          case 14:
+            _ref2 = _context.sent;
+            data = _ref2.data;
+            data = data[Object.keys(data)[0]]; // Get the first (and only) object.
+
+            commit(FETCH_END, {
+              data: data,
+              stateProperty: stateProperty
+            });
+
+          case 18:
+            _context.next = 25;
+            break;
+
+          case 20:
+            _context.prev = 20;
+            _context.t0 = _context["catch"](6);
+            commit(SHOW_MODAL);
+            commit(SET_ERROR, _context.t0);
+            throw new Error(_context.t0);
+
+          case 25:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee, null, [[6, 20]]);
+  }));
+
+  return function apiRequest() {
+    return _ref.apply(this, arguments);
+  };
+}();
+
 /* harmony default export */ var store = (new vuex_esm["a" /* default */].Store({
   state: {
     smartMeter: [],
@@ -49194,381 +49673,63 @@ vue_runtime_esm["a" /* default */].use(vuex_esm["a" /* default */]);
     months: [],
     deviceInfo: [],
     settings: [],
-    isLoading: true
+    isLoading: true,
+    showModal: false,
+    errorMessage: null
   },
   mutations: (_mutations = {}, _defineProperty(_mutations, FETCH_START, function (state) {
     state.isLoading = true;
   }), _defineProperty(_mutations, FETCH_END, function (state) {
-    var _ref = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {},
-        data = _ref.data,
-        stateProperty = _ref.stateProperty;
+    var _ref3 = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {},
+        data = _ref3.data,
+        stateProperty = _ref3.stateProperty;
 
     state.isLoading = false;
+    state.errorMessage = null;
 
     if (typeof data !== "undefined" && typeof stateProperty !== "undefined") {
       state[stateProperty] = data;
     }
+  }), _defineProperty(_mutations, SET_ERROR, function (state, payload) {
+    state.errorMessage = payload;
+  }), _defineProperty(_mutations, SHOW_MODAL, function (state) {
+    state.showModal = !state.showModal;
   }), _mutations),
   actions: {
-    getSmartMeter: function () {
-      var _getSmartMeter = _asyncToGenerator(
-      /*#__PURE__*/
-      regeneratorRuntime.mark(function _callee(_ref2) {
-        var commit, _ref3, data;
-
-        return regeneratorRuntime.wrap(function _callee$(_context) {
-          while (1) {
-            switch (_context.prev = _context.next) {
-              case 0:
-                commit = _ref2.commit;
-                commit(FETCH_START);
-                _context.prev = 2;
-                _context.next = 5;
-                return vue_runtime_esm["a" /* default */].axios.get("/sm/fields");
-
-              case 5:
-                _ref3 = _context.sent;
-                data = _ref3.data;
-                commit(FETCH_END, {
-                  data: data.fields,
-                  stateProperty: "smartMeter"
-                });
-                _context.next = 13;
-                break;
-
-              case 10:
-                _context.prev = 10;
-                _context.t0 = _context["catch"](2);
-                throw new Error(_context.t0);
-
-              case 13:
-              case "end":
-                return _context.stop();
-            }
-          }
-        }, _callee, null, [[2, 10]]);
-      }));
-
-      function getSmartMeter(_x) {
-        return _getSmartMeter.apply(this, arguments);
-      }
-
-      return getSmartMeter;
-    }(),
-    getActual: function () {
-      var _getActual = _asyncToGenerator(
-      /*#__PURE__*/
-      regeneratorRuntime.mark(function _callee2(_ref4, payload) {
-        var commit, _ref5, data;
-
-        return regeneratorRuntime.wrap(function _callee2$(_context2) {
-          while (1) {
-            switch (_context2.prev = _context2.next) {
-              case 0:
-                commit = _ref4.commit;
-
-                // Don't change loading status after initial request.
-                if (payload !== true) {
-                  commit(FETCH_START);
-                }
-
-                _context2.prev = 2;
-                _context2.next = 5;
-                return vue_runtime_esm["a" /* default */].axios.get("/sm/actual");
-
-              case 5:
-                _ref5 = _context2.sent;
-                data = _ref5.data;
-                commit(FETCH_END, {
-                  data: data.actual,
-                  stateProperty: "actual"
-                });
-                _context2.next = 13;
-                break;
-
-              case 10:
-                _context2.prev = 10;
-                _context2.t0 = _context2["catch"](2);
-                throw new Error(_context2.t0);
-
-              case 13:
-              case "end":
-                return _context2.stop();
-            }
-          }
-        }, _callee2, null, [[2, 10]]);
-      }));
-
-      function getActual(_x2, _x3) {
-        return _getActual.apply(this, arguments);
-      }
-
-      return getActual;
-    }(),
-    getHours: function () {
-      var _getHours = _asyncToGenerator(
-      /*#__PURE__*/
-      regeneratorRuntime.mark(function _callee3(_ref6) {
-        var commit, _ref7, data;
-
-        return regeneratorRuntime.wrap(function _callee3$(_context3) {
-          while (1) {
-            switch (_context3.prev = _context3.next) {
-              case 0:
-                commit = _ref6.commit;
-                commit(FETCH_START);
-                _context3.prev = 2;
-                _context3.next = 5;
-                return vue_runtime_esm["a" /* default */].axios.get("/hist/hours/asc");
-
-              case 5:
-                _ref7 = _context3.sent;
-                data = _ref7.data;
-                commit(FETCH_END, {
-                  data: data.hours,
-                  stateProperty: "hours"
-                });
-                _context3.next = 13;
-                break;
-
-              case 10:
-                _context3.prev = 10;
-                _context3.t0 = _context3["catch"](2);
-                throw new Error(_context3.t0);
-
-              case 13:
-              case "end":
-                return _context3.stop();
-            }
-          }
-        }, _callee3, null, [[2, 10]]);
-      }));
-
-      function getHours(_x4) {
-        return _getHours.apply(this, arguments);
-      }
-
-      return getHours;
-    }(),
-    getDays: function () {
-      var _getDays = _asyncToGenerator(
-      /*#__PURE__*/
-      regeneratorRuntime.mark(function _callee4(_ref8) {
-        var commit, _ref9, data;
-
-        return regeneratorRuntime.wrap(function _callee4$(_context4) {
-          while (1) {
-            switch (_context4.prev = _context4.next) {
-              case 0:
-                commit = _ref8.commit;
-                commit(FETCH_START);
-                _context4.prev = 2;
-                _context4.next = 5;
-                return vue_runtime_esm["a" /* default */].axios.get("/hist/days/asc");
-
-              case 5:
-                _ref9 = _context4.sent;
-                data = _ref9.data;
-                commit(FETCH_END, {
-                  data: data.days,
-                  stateProperty: "days"
-                });
-                _context4.next = 13;
-                break;
-
-              case 10:
-                _context4.prev = 10;
-                _context4.t0 = _context4["catch"](2);
-                throw new Error(_context4.t0);
-
-              case 13:
-              case "end":
-                return _context4.stop();
-            }
-          }
-        }, _callee4, null, [[2, 10]]);
-      }));
-
-      function getDays(_x5) {
-        return _getDays.apply(this, arguments);
-      }
-
-      return getDays;
-    }(),
-    getMonths: function () {
-      var _getMonths = _asyncToGenerator(
-      /*#__PURE__*/
-      regeneratorRuntime.mark(function _callee5(_ref10) {
-        var commit, _ref11, data;
-
-        return regeneratorRuntime.wrap(function _callee5$(_context5) {
-          while (1) {
-            switch (_context5.prev = _context5.next) {
-              case 0:
-                commit = _ref10.commit;
-                commit(FETCH_START);
-                _context5.prev = 2;
-                _context5.next = 5;
-                return vue_runtime_esm["a" /* default */].axios.get("/hist/months/asc");
-
-              case 5:
-                _ref11 = _context5.sent;
-                data = _ref11.data;
-                commit(FETCH_END, {
-                  data: data.months,
-                  stateProperty: "months"
-                });
-                _context5.next = 13;
-                break;
-
-              case 10:
-                _context5.prev = 10;
-                _context5.t0 = _context5["catch"](2);
-                throw new Error(_context5.t0);
-
-              case 13:
-              case "end":
-                return _context5.stop();
-            }
-          }
-        }, _callee5, null, [[2, 10]]);
-      }));
-
-      function getMonths(_x6) {
-        return _getMonths.apply(this, arguments);
-      }
-
-      return getMonths;
-    }(),
-    getDeviceInfo: function () {
-      var _getDeviceInfo = _asyncToGenerator(
-      /*#__PURE__*/
-      regeneratorRuntime.mark(function _callee6(_ref12) {
-        var commit, _ref13, data;
-
-        return regeneratorRuntime.wrap(function _callee6$(_context6) {
-          while (1) {
-            switch (_context6.prev = _context6.next) {
-              case 0:
-                commit = _ref12.commit;
-                commit(FETCH_START);
-                _context6.prev = 2;
-                _context6.next = 5;
-                return vue_runtime_esm["a" /* default */].axios.get("/dev/info");
-
-              case 5:
-                _ref13 = _context6.sent;
-                data = _ref13.data;
-                commit(FETCH_END, {
-                  data: data,
-                  stateProperty: "deviceInfo"
-                });
-                _context6.next = 13;
-                break;
-
-              case 10:
-                _context6.prev = 10;
-                _context6.t0 = _context6["catch"](2);
-                throw new Error(_context6.t0);
-
-              case 13:
-              case "end":
-                return _context6.stop();
-            }
-          }
-        }, _callee6, null, [[2, 10]]);
-      }));
-
-      function getDeviceInfo(_x7) {
-        return _getDeviceInfo.apply(this, arguments);
-      }
-
-      return getDeviceInfo;
-    }(),
-    getSettings: function () {
-      var _getSettings = _asyncToGenerator(
-      /*#__PURE__*/
-      regeneratorRuntime.mark(function _callee7(_ref14) {
-        var commit, _ref15, data;
-
-        return regeneratorRuntime.wrap(function _callee7$(_context7) {
-          while (1) {
-            switch (_context7.prev = _context7.next) {
-              case 0:
-                commit = _ref14.commit;
-                commit(FETCH_START);
-                _context7.prev = 2;
-                _context7.next = 5;
-                return vue_runtime_esm["a" /* default */].axios.get("/dev/settings");
-
-              case 5:
-                _ref15 = _context7.sent;
-                data = _ref15.data;
-                commit(FETCH_END, {
-                  data: data.settings,
-                  stateProperty: "settings"
-                });
-                _context7.next = 13;
-                break;
-
-              case 10:
-                _context7.prev = 10;
-                _context7.t0 = _context7["catch"](2);
-                throw new Error(_context7.t0);
-
-              case 13:
-              case "end":
-                return _context7.stop();
-            }
-          }
-        }, _callee7, null, [[2, 10]]);
-      }));
-
-      function getSettings(_x8) {
-        return _getSettings.apply(this, arguments);
-      }
-
-      return getSettings;
-    }(),
-    postSettings: function () {
-      var _postSettings = _asyncToGenerator(
-      /*#__PURE__*/
-      regeneratorRuntime.mark(function _callee8(_ref16, payload) {
-        var commit;
-        return regeneratorRuntime.wrap(function _callee8$(_context8) {
-          while (1) {
-            switch (_context8.prev = _context8.next) {
-              case 0:
-                commit = _ref16.commit;
-                _context8.prev = 1;
-                _context8.next = 4;
-                return vue_runtime_esm["a" /* default */].axios.post("/dev/settings", payload);
-
-              case 4:
-                _context8.next = 9;
-                break;
-
-              case 6:
-                _context8.prev = 6;
-                _context8.t0 = _context8["catch"](1);
-                throw new Error(_context8.t0);
-
-              case 9:
-              case "end":
-                return _context8.stop();
-            }
-          }
-        }, _callee8, null, [[1, 6]]);
-      }));
-
-      function postSettings(_x9, _x10) {
-        return _postSettings.apply(this, arguments);
-      }
-
-      return postSettings;
-    }(),
-    setLoadingStatus: function setLoadingStatus(_ref17, payload) {
-      var commit = _ref17.commit;
+    getSmartMeter: function getSmartMeter(_ref4) {
+      var commit = _ref4.commit;
+      return apiRequest("get", "/sm/fields", "smartMeter", commit);
+    },
+    getActual: function getActual(_ref5, payload) {
+      var commit = _ref5.commit;
+      return apiRequest("get", "/sm/actual", "actual", commit, payload);
+    },
+    getHours: function getHours(_ref6) {
+      var commit = _ref6.commit;
+      return apiRequest("get", "/hist/hours/asc", "hours", commit);
+    },
+    getDays: function getDays(_ref7) {
+      var commit = _ref7.commit;
+      return apiRequest("get", "/hist/days/asc", "days", commit);
+    },
+    getMonths: function getMonths(_ref8) {
+      var commit = _ref8.commit;
+      return apiRequest("get", "/hist/months/asc", "months", commit);
+    },
+    getDeviceInfo: function getDeviceInfo(_ref9) {
+      var commit = _ref9.commit;
+      return apiRequest("get", "/dev/info", "deviceInfo", commit);
+    },
+    getSettings: function getSettings(_ref10) {
+      var commit = _ref10.commit;
+      return apiRequest("get", "/dev/settings", "settings", commit);
+    },
+    postSettings: function postSettings(_ref11, payload) {
+      var commit = _ref11.commit;
+      return apiRequest("post", "/dev/settings", "", commit, payload);
+    },
+    setLoadingStatus: function setLoadingStatus(_ref12, payload) {
+      var commit = _ref12.commit;
 
       if (payload === true) {
         commit(FETCH_START);
@@ -55522,7 +55683,7 @@ exports.f = Object.getOwnPropertySymbols;
 /***/ "a625":
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"$vuetify\":{\"badge\":\"insigne\",\"calendar\":{\"moreEvents\":\"{0} meer\"},\"carousel\":{\"ariaLabel\":{\"delimiter\":\"Carousel slide {0} of {1}\"},\"next\":\"Volgend beeld\",\"prev\":\"Vorig beeld\"},\"close\":\"Sluiten\",\"dataFooter\":{\"firstPage\":\"Eerste pagina\",\"itemsPerPageAll\":\"Alles\",\"itemsPerPageText\":\"Aantal per pagina:\",\"lastPage\":\"Laatste pagina\",\"nextPage\":\"Volgende pagina\",\"pageText\":\"{0}-{1} van {2}\",\"prevPage\":\"Vorige pagina\"},\"dataIterator\":{\"loadingText\":\"Items aan het laden...\",\"noResultsText\":\"Geen overeenkomende resultaten gevonden\"},\"dataTable\":{\"ariaLabel\":{\"sortAscending\":\": Oplopend gesorteerd. Activeer om aflopend te sorteren.\",\"sortDescending\":\": Aflopend gesorteerd. Activeer om de sortering te verwijderen.\",\"sortNone\":\": Niet gesorterrd. Activeer om oplopend te sorteren.\"},\"itemsPerPageText\":\"Rijen per pagina:\",\"sortBy\":\"Sorteer volgens\"},\"datePicker\":{\"itemsSelected\":\"{0} geselecteerd\"},\"fileInput\":{\"counter\":\"{0} bestanden\",\"counterSize\":\"{0} bestanden ({1} in totaal)\"},\"noDataText\":\"Geen gegevens beschikbaar\",\"timePicker\":{\"am\":\"AM\",\"pm\":\"PM\"}},\"actual\":\"Actueel\",\"bar\":\"Balk\",\"charts\":\"Grafieken\",\"costs_€\":\"Kosten (€)\",\"current_l1\":\"Stroom L1\",\"current_l2\":\"Stroom L2\",\"current_l3\":\"Stroom L3\",\"data\":\"Data\",\"date_day\":\"Datum [dag]\",\"date_hour\":\"Datum [uur]\",\"date_month\":\"Datum [maand]\",\"day\":\"Dag\",\"days\":\"Dagen\",\"delivered_l1\":\"Verbruik (L1)\",\"delivered_l2\":\"Verbruik (L2)\",\"delivered_l3\":\"Verbruik (L3)\",\"dutch\":\"Nederlands\",\"electricity_failure_log\":\"Stroomstoringslogboek\",\"electricity_failures\":\"Stroomstoringen\",\"electricity_long_failures\":\"Lange stroomstoringen\",\"electricity_sags_l1\":\"Stroomdips L1\",\"electricity_sags_l2\":\"Stroomdips L2\",\"electricity_sags_l3\":\"Stroomdips L3\",\"electricity_swells_l1\":\"Stroomzwelling L1\",\"electricity_swells_l2\":\"Stroomzwelling L2\",\"electricity_swells_l3\":\"Stroomzwelling L3\",\"electricity_switch_position\":\"Positie van de stroomschakelaar\",\"electricity_tariff\":\"Stroomtarief\",\"electricity_threshold\":\"Elektriciteitsdrempel\",\"energy_delivered_tariff1\":\"Energie verbruikt tarief 1\",\"energy_delivered_tariff2\":\"Energie verbruikt tarief 2\",\"energy_delivered_watt\":\"Energieverbruik (Watt)\",\"energy_returned_tariff1\":\"Energie geleverd tarief 1\",\"energy_returned_tariff2\":\"Energie geleverd tarief 2\",\"energy_returned_watt\":\"Energieteruglevering (Watt)\",\"english\":\"Engels\",\"equipment_id\":\"Apparaat ID\",\"financial\":\"Financieel\",\"gas_delivered\":\"Gas verbruikt\",\"gas_delivered_m3\":\"Gasverbruik (m3)\",\"gas_device_type\":\"Type gasapparaat\",\"gas_equipment_id\":\"Gasapparaat ID\",\"gas_valve_position\":\"Positie gasklep\",\"graphs\":\"Grafieken\",\"hours\":\"Uren\",\"identification\":\"Slimme meter ID\",\"kw\":\"kW\",\"language\":\"Taal\",\"line\":\"Lijn\",\"loading_please_wait\":\"Aan het laden... Even geduld a.u.b.\",\"message_long\":\"Lang bericht\",\"message_short\":\"Kort bericht\",\"months\":\"Maanden\",\"number_too_big\":\"Nummer te groot!\",\"number_too_small\":\"Nummer te klein!\",\"p1_version\":\"P1 versie\",\"per_day\":\"Per dag\",\"per_hour\":\"Per uur\",\"per_month\":\"Per maand\",\"power_delivered\":\"Vermogen verbruikt\",\"power_delivered_l1\":\"Vermogen verbruikt L1\",\"power_delivered_l2\":\"Vermogen verbruikt L2\",\"power_delivered_l3\":\"Vermogen verbruikt L3\",\"power_returned\":\"Vermogen opgewekt\",\"power_returned_l1\":\"Vermogen opgewekt L1\",\"power_returned_l2\":\"Vermogen opgewekt L2\",\"power_returned_l3\":\"Vermogen opgewekt L3\",\"refresh\":\"Vernieuw\",\"returned_(l1_l2_l3)\":\"Teruglevering (L1+L2+L3)\",\"save\":\"Opslaan\",\"settings\":\"Instellingen\",\"settings_ed_tariff1\":\"Prijs per verbruikte kWh (tarief 1)\",\"settings_ed_tariff2\":\"Prijs per verbruikte kWh (tarief 2)\",\"settings_electr_netw_costs\":\"Electra vaste kosten per maand\",\"settings_er_tariff1\":\"Prijs per teruggeleverde kWh (tarief 1)\",\"settings_er_tariff2\":\"Prijs per teruggeleverde kWh (tarief 2)\",\"settings_gas_netw_costs\":\"Gas vaste kosten per maand\",\"settings_gd_tariff\":\"Prijs per verbruikte m3 gas\",\"settings_mindergastoken\":\"Mindergas.nl API-sleutel\",\"settings_mqtt_broker\":\"MQTT Broker URL/IP\",\"settings_mqtt_broker_port\":\"MQTT Broker port\",\"settings_mqtt_interval\":\"MQTT verwerkingsinterval (sec.)\",\"settings_mqtt_passwd\":\"MQTT wachtwoord\",\"settings_mqtt_topTopic\":\"MQTT hoofdonderwerp\",\"settings_mqtt_user\":\"MQTT gebruikersnaam\",\"settings_tlgrm_interval\":\"Telegram verwerkingsinterval (sec.)\",\"slave_delivered\":\"Slave verbruikt\",\"slave_device_type\":\"Type slave-apparaat\",\"slave_equipment_id\":\"Slave-apparaat ID\",\"slave_valve_position\":\"Positie slave-klep\",\"smart_meter\":\"Slimme meter\",\"system_info\":\"Systeeminfo\",\"thermal_delivered\":\"Thermisch verbruikt\",\"thermal_device_type\":\"Type thermisch apparaat\",\"thermal_equipment_id\":\"Thermisch apparaat ID\",\"thermal_valve_position\":\"Positie thermische klep\",\"timestamp\":\"Tijdstempel\",\"too_long\":\"Invoer te lang!\",\"type\":\"Soort\",\"voltage_l1\":\"Voltage L1\",\"voltage_l2\":\"Voltage L2\",\"voltage_l3\":\"Voltage L3\",\"water_delivered\":\"Water verbruikt\",\"water_device_type\":\"Type waterapparaat\",\"water_equipment_id\":\"Waterapparaat ID\",\"water_valve_position\":\"Positie waterklep\",\"week\":\"Week\",\"wrong_format\":\"Verkeerd formaat!\",\"year\":\"Jaar\"}");
+module.exports = JSON.parse("{\"$vuetify\":{\"badge\":\"insigne\",\"calendar\":{\"moreEvents\":\"{0} meer\"},\"carousel\":{\"ariaLabel\":{\"delimiter\":\"Carousel slide {0} of {1}\"},\"next\":\"Volgend beeld\",\"prev\":\"Vorig beeld\"},\"close\":\"Sluiten\",\"dataFooter\":{\"firstPage\":\"Eerste pagina\",\"itemsPerPageAll\":\"Alles\",\"itemsPerPageText\":\"Aantal per pagina:\",\"lastPage\":\"Laatste pagina\",\"nextPage\":\"Volgende pagina\",\"pageText\":\"{0}-{1} van {2}\",\"prevPage\":\"Vorige pagina\"},\"dataIterator\":{\"loadingText\":\"Items aan het laden...\",\"noResultsText\":\"Geen overeenkomende resultaten gevonden\"},\"dataTable\":{\"ariaLabel\":{\"sortAscending\":\": Oplopend gesorteerd. Activeer om aflopend te sorteren.\",\"sortDescending\":\": Aflopend gesorteerd. Activeer om de sortering te verwijderen.\",\"sortNone\":\": Niet gesorterrd. Activeer om oplopend te sorteren.\"},\"itemsPerPageText\":\"Rijen per pagina:\",\"sortBy\":\"Sorteer volgens\"},\"datePicker\":{\"itemsSelected\":\"{0} geselecteerd\"},\"fileInput\":{\"counter\":\"{0} bestanden\",\"counterSize\":\"{0} bestanden ({1} in totaal)\"},\"noDataText\":\"Geen gegevens beschikbaar\",\"timePicker\":{\"am\":\"AM\",\"pm\":\"PM\"}},\"actual\":\"Actueel\",\"bar\":\"Balk\",\"charts\":\"Grafieken\",\"costs_€\":\"Kosten (€)\",\"current_l1\":\"Stroom L1\",\"current_l2\":\"Stroom L2\",\"current_l3\":\"Stroom L3\",\"data\":\"Data\",\"date_day\":\"Datum [dag]\",\"date_hour\":\"Datum [uur]\",\"date_month\":\"Datum [maand]\",\"day\":\"Dag\",\"days\":\"Dagen\",\"delivered_l1\":\"Verbruik (L1)\",\"delivered_l2\":\"Verbruik (L2)\",\"delivered_l3\":\"Verbruik (L3)\",\"dutch\":\"Nederlands\",\"electricity_failure_log\":\"Stroomstoringslogboek\",\"electricity_failures\":\"Stroomstoringen\",\"electricity_long_failures\":\"Lange stroomstoringen\",\"electricity_sags_l1\":\"Stroomdips L1\",\"electricity_sags_l2\":\"Stroomdips L2\",\"electricity_sags_l3\":\"Stroomdips L3\",\"electricity_swells_l1\":\"Stroomzwelling L1\",\"electricity_swells_l2\":\"Stroomzwelling L2\",\"electricity_swells_l3\":\"Stroomzwelling L3\",\"electricity_switch_position\":\"Positie van de stroomschakelaar\",\"electricity_tariff\":\"Stroomtarief\",\"electricity_threshold\":\"Elektriciteitsdrempel\",\"energy_delivered_tariff1\":\"Energie verbruikt tarief 1\",\"energy_delivered_tariff2\":\"Energie verbruikt tarief 2\",\"energy_delivered_watt\":\"Energieverbruik (Watt)\",\"energy_returned_tariff1\":\"Energie geleverd tarief 1\",\"energy_returned_tariff2\":\"Energie geleverd tarief 2\",\"energy_returned_watt\":\"Energieteruglevering (Watt)\",\"english\":\"Engels\",\"equipment_id\":\"Apparaat ID\",\"error_message\":\"Er is een fout opgetreden. Hieronder staat de fout beschreven. Probeer uw actie opnieuw door de pagina opnieuw te laden.\",\"error_title\":\"Oeps, er is een fout opgetreden!\",\"financial\":\"Financieel\",\"gas_delivered\":\"Gas verbruikt\",\"gas_delivered_m3\":\"Gasverbruik (m3)\",\"gas_device_type\":\"Type gasapparaat\",\"gas_equipment_id\":\"Gasapparaat ID\",\"gas_valve_position\":\"Positie gasklep\",\"graphs\":\"Grafieken\",\"hours\":\"Uren\",\"identification\":\"Slimme meter ID\",\"kw\":\"kW\",\"language\":\"Taal\",\"line\":\"Lijn\",\"loading_please_wait\":\"Aan het laden... Even geduld a.u.b.\",\"message_long\":\"Lang bericht\",\"message_short\":\"Kort bericht\",\"months\":\"Maanden\",\"number_too_big\":\"Nummer te groot!\",\"number_too_small\":\"Nummer te klein!\",\"p1_version\":\"P1 versie\",\"per_day\":\"Per dag\",\"per_hour\":\"Per uur\",\"per_month\":\"Per maand\",\"power_delivered\":\"Vermogen verbruikt\",\"power_delivered_l1\":\"Vermogen verbruikt L1\",\"power_delivered_l2\":\"Vermogen verbruikt L2\",\"power_delivered_l3\":\"Vermogen verbruikt L3\",\"power_returned\":\"Vermogen opgewekt\",\"power_returned_l1\":\"Vermogen opgewekt L1\",\"power_returned_l2\":\"Vermogen opgewekt L2\",\"power_returned_l3\":\"Vermogen opgewekt L3\",\"refresh\":\"Vernieuw\",\"reload\":\"Opnieuw laden\",\"returned_(l1_l2_l3)\":\"Teruglevering (L1+L2+L3)\",\"save\":\"Opslaan\",\"settings\":\"Instellingen\",\"settings_ed_tariff1\":\"Prijs per verbruikte kWh (tarief 1)\",\"settings_ed_tariff2\":\"Prijs per verbruikte kWh (tarief 2)\",\"settings_electr_netw_costs\":\"Electra vaste kosten per maand\",\"settings_er_tariff1\":\"Prijs per teruggeleverde kWh (tarief 1)\",\"settings_er_tariff2\":\"Prijs per teruggeleverde kWh (tarief 2)\",\"settings_gas_netw_costs\":\"Gas vaste kosten per maand\",\"settings_gd_tariff\":\"Prijs per verbruikte m3 gas\",\"settings_mindergastoken\":\"Mindergas.nl API-sleutel\",\"settings_mqtt_broker\":\"MQTT Broker URL/IP\",\"settings_mqtt_broker_port\":\"MQTT Broker port\",\"settings_mqtt_interval\":\"MQTT verwerkingsinterval (sec.)\",\"settings_mqtt_passwd\":\"MQTT wachtwoord\",\"settings_mqtt_topTopic\":\"MQTT hoofdonderwerp\",\"settings_mqtt_user\":\"MQTT gebruikersnaam\",\"settings_tlgrm_interval\":\"Telegram verwerkingsinterval (sec.)\",\"slave_delivered\":\"Slave verbruikt\",\"slave_device_type\":\"Type slave-apparaat\",\"slave_equipment_id\":\"Slave-apparaat ID\",\"slave_valve_position\":\"Positie slave-klep\",\"smart_meter\":\"Slimme meter\",\"system_info\":\"Systeeminfo\",\"thermal_delivered\":\"Thermisch verbruikt\",\"thermal_device_type\":\"Type thermisch apparaat\",\"thermal_equipment_id\":\"Thermisch apparaat ID\",\"thermal_valve_position\":\"Positie thermische klep\",\"timestamp\":\"Tijdstempel\",\"too_long\":\"Invoer te lang!\",\"type\":\"Soort\",\"voltage_l1\":\"Voltage L1\",\"voltage_l2\":\"Voltage L2\",\"voltage_l3\":\"Voltage L3\",\"water_delivered\":\"Water verbruikt\",\"water_device_type\":\"Type waterapparaat\",\"water_equipment_id\":\"Waterapparaat ID\",\"water_valve_position\":\"Positie waterklep\",\"week\":\"Week\",\"wrong_format\":\"Verkeerd formaat!\",\"year\":\"Jaar\"}");
 
 /***/ }),
 
@@ -59624,7 +59785,7 @@ module.exports = function (argument) {
 /***/ "edd4":
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"$vuetify\":{\"badge\":\"Badge\",\"calendar\":{\"moreEvents\":\"{0} more\"},\"carousel\":{\"ariaLabel\":{\"delimiter\":\"Carousel slide {0} of {1}\"},\"next\":\"Next visual\",\"prev\":\"Previous visual\"},\"close\":\"Close\",\"dataFooter\":{\"firstPage\":\"First page\",\"itemsPerPageAll\":\"All\",\"itemsPerPageText\":\"Items per page:\",\"lastPage\":\"Last page\",\"nextPage\":\"Next page\",\"pageText\":\"{0}-{1} of {2}\",\"prevPage\":\"Previous page\"},\"dataIterator\":{\"loadingText\":\"Loading items...\",\"noResultsText\":\"No matching records found\"},\"dataTable\":{\"ariaLabel\":{\"sortAscending\":\": Sorted ascending. Activate to sort descending.\",\"sortDescending\":\": Sorted descending. Activate to remove sorting.\",\"sortNone\":\": Not sorted. Activate to sort ascending.\"},\"itemsPerPageText\":\"Rows per page:\",\"sortBy\":\"Sort by\"},\"datePicker\":{\"itemsSelected\":\"{0} selected\"},\"fileInput\":{\"counter\":\"{0} files\",\"counterSize\":\"{0} files ({1} in total)\"},\"noDataText\":\"No data available\",\"timePicker\":{\"am\":\"AM\",\"pm\":\"PM\"}},\"actual\":\"Actual\",\"bar\":\"Bar\",\"charts\":\"Charts\",\"costs_€\":\"Costs (€)\",\"current_l1\":\"Current L1\",\"current_l2\":\"Current L2\",\"current_l3\":\"Current L3\",\"data\":\"Data\",\"date_day\":\"Date [day]\",\"date_hour\":\"Date [hour]\",\"date_month\":\"Date [month]\",\"day\":\"Day\",\"days\":\"Days\",\"delivered_l1\":\"Delivery (L1)\",\"delivered_l2\":\"Delivery (L2)\",\"delivered_l3\":\"Delivery (L3)\",\"dutch\":\"Dutch\",\"electricity_failure_log\":\"Electricity failure log\",\"electricity_failures\":\"Electricity failures\",\"electricity_long_failures\":\"Long electricity failures\",\"electricity_sags_l1\":\"Electricity sags L1\",\"electricity_sags_l2\":\"Electricity sags L2\",\"electricity_sags_l3\":\"Electricity sags L3\",\"electricity_swells_l1\":\"Electricity swells L1\",\"electricity_swells_l2\":\"Electricity swells L2\",\"electricity_swells_l3\":\"Electricity swells L3\",\"electricity_switch_position\":\"Electricity switch position\",\"electricity_tariff\":\"Electricity tariff\",\"electricity_threshold\":\"Electricity threshold\",\"energy_delivered_tariff1\":\"Energy delivered tariff 1\",\"energy_delivered_tariff2\":\"Energy delivered tariff 2\",\"energy_delivered_watt\":\"Energy delivered (Watt)\",\"energy_returned_tariff1\":\"Energy returned tariff 1\",\"energy_returned_tariff2\":\"Energy returned tariff 2\",\"energy_returned_watt\":\"Energy returned (Watt)\",\"english\":\"English\",\"equipment_id\":\"Equipment ID\",\"financial\":\"Financial\",\"gas_delivered\":\"Gas delivered\",\"gas_delivered_m3\":\"Gas delivered (m3)\",\"gas_device_type\":\"Gas device type\",\"gas_equipment_id\":\"Gas equipment ID\",\"gas_valve_position\":\"Gas valve position\",\"graphs\":\"Graphs\",\"hours\":\"Hours\",\"identification\":\"Smart meter ID\",\"kw\":\"kW\",\"language\":\"Language\",\"line\":\"Line\",\"loading_please_wait\":\"Loading.. One moment please.\",\"message_long\":\"Long message\",\"message_short\":\"Short message\",\"months\":\"Months\",\"number_too_big\":\"Number too big!\",\"number_too_small\":\"Number too small!\",\"p1_version\":\"P1 version\",\"per_day\":\"Per day\",\"per_hour\":\"Per hour\",\"per_month\":\"Per month\",\"power_delivered\":\"Power delivered\",\"power_delivered_l1\":\"Power delivered L1\",\"power_delivered_l2\":\"Power delivered L2\",\"power_delivered_l3\":\"Power delivered L3\",\"power_returned\":\"Power returned\",\"power_returned_l1\":\"Power returned L1\",\"power_returned_l2\":\"Power returned L2\",\"power_returned_l3\":\"Power returned L3\",\"refresh\":\"Refresh\",\"returned_(l1_l2_l3)\":\"Return (L1+L2+L3)\",\"save\":\"Save\",\"settings\":\"Settings\",\"settings_ed_tariff1\":\"Price per delivered kWh (tariff 1)\",\"settings_ed_tariff2\":\"Price per delivered kWh (tariff 2)\",\"settings_electr_netw_costs\":\"Electricity fixed costs per month\",\"settings_er_tariff1\":\"Price per returned kWh (tariff 1)\",\"settings_er_tariff2\":\"Price per returned kWh (tariff 2)\",\"settings_gas_netw_costs\":\"Gas fixed costs per month\",\"settings_gd_tariff\":\"Price per delivered m3 gas\",\"settings_mindergastoken\":\"Mindergas.nl API key\",\"settings_mqtt_broker\":\"MQTT Broker URL/IP\",\"settings_mqtt_broker_port\":\"MQTT Broker port\",\"settings_mqtt_interval\":\"MQTT processing interval (sec.)\",\"settings_mqtt_passwd\":\"MQTT password\",\"settings_mqtt_topTopic\":\"MQTT top topic\",\"settings_mqtt_user\":\"MQTT username\",\"settings_tlgrm_interval\":\"Telegram processing interval (sec.)\",\"slave_delivered\":\"Slave delivered\",\"slave_device_type\":\"Slave device type\",\"slave_equipment_id\":\"Slave equipment ID\",\"slave_valve_position\":\"Slave valve position\",\"smart_meter\":\"Smart meter\",\"system_info\":\"System info\",\"thermal_delivered\":\"Thermal delivered\",\"thermal_device_type\":\"Thermal device type\",\"thermal_equipment_id\":\"Thermal equipment ID\",\"thermal_valve_position\":\"Thermal valve position\",\"timestamp\":\"Timestamp\",\"too_long\":\"Input too long!\",\"type\":\"Type\",\"voltage_l1\":\"Voltage L1\",\"voltage_l2\":\"Voltage L2\",\"voltage_l3\":\"Voltage L3\",\"water_delivered\":\"Water delivered\",\"water_device_type\":\"Water device type\",\"water_equipment_id\":\"Water equipment ID\",\"water_valve_position\":\"Water valve position\",\"week\":\"Week\",\"wrong_format\":\"Wrong format!\",\"year\":\"Year\"}");
+module.exports = JSON.parse("{\"$vuetify\":{\"badge\":\"Badge\",\"calendar\":{\"moreEvents\":\"{0} more\"},\"carousel\":{\"ariaLabel\":{\"delimiter\":\"Carousel slide {0} of {1}\"},\"next\":\"Next visual\",\"prev\":\"Previous visual\"},\"close\":\"Close\",\"dataFooter\":{\"firstPage\":\"First page\",\"itemsPerPageAll\":\"All\",\"itemsPerPageText\":\"Items per page:\",\"lastPage\":\"Last page\",\"nextPage\":\"Next page\",\"pageText\":\"{0}-{1} of {2}\",\"prevPage\":\"Previous page\"},\"dataIterator\":{\"loadingText\":\"Loading items...\",\"noResultsText\":\"No matching records found\"},\"dataTable\":{\"ariaLabel\":{\"sortAscending\":\": Sorted ascending. Activate to sort descending.\",\"sortDescending\":\": Sorted descending. Activate to remove sorting.\",\"sortNone\":\": Not sorted. Activate to sort ascending.\"},\"itemsPerPageText\":\"Rows per page:\",\"sortBy\":\"Sort by\"},\"datePicker\":{\"itemsSelected\":\"{0} selected\"},\"fileInput\":{\"counter\":\"{0} files\",\"counterSize\":\"{0} files ({1} in total)\"},\"noDataText\":\"No data available\",\"timePicker\":{\"am\":\"AM\",\"pm\":\"PM\"}},\"actual\":\"Actual\",\"bar\":\"Bar\",\"charts\":\"Charts\",\"costs_€\":\"Costs (€)\",\"current_l1\":\"Current L1\",\"current_l2\":\"Current L2\",\"current_l3\":\"Current L3\",\"data\":\"Data\",\"date_day\":\"Date [day]\",\"date_hour\":\"Date [hour]\",\"date_month\":\"Date [month]\",\"day\":\"Day\",\"days\":\"Days\",\"delivered_l1\":\"Delivery (L1)\",\"delivered_l2\":\"Delivery (L2)\",\"delivered_l3\":\"Delivery (L3)\",\"dutch\":\"Dutch\",\"electricity_failure_log\":\"Electricity failure log\",\"electricity_failures\":\"Electricity failures\",\"electricity_long_failures\":\"Long electricity failures\",\"electricity_sags_l1\":\"Electricity sags L1\",\"electricity_sags_l2\":\"Electricity sags L2\",\"electricity_sags_l3\":\"Electricity sags L3\",\"electricity_swells_l1\":\"Electricity swells L1\",\"electricity_swells_l2\":\"Electricity swells L2\",\"electricity_swells_l3\":\"Electricity swells L3\",\"electricity_switch_position\":\"Electricity switch position\",\"electricity_tariff\":\"Electricity tariff\",\"electricity_threshold\":\"Electricity threshold\",\"energy_delivered_tariff1\":\"Energy delivered tariff 1\",\"energy_delivered_tariff2\":\"Energy delivered tariff 2\",\"energy_delivered_watt\":\"Energy delivered (Watt)\",\"energy_returned_tariff1\":\"Energy returned tariff 1\",\"energy_returned_tariff2\":\"Energy returned tariff 2\",\"energy_returned_watt\":\"Energy returned (Watt)\",\"english\":\"English\",\"equipment_id\":\"Equipment ID\",\"error_message\":\"An error has occurred. The error is described below. Try your action again by reloading the page.\",\"error_title\":\"Oh no, an error appeared!\",\"financial\":\"Financial\",\"gas_delivered\":\"Gas delivered\",\"gas_delivered_m3\":\"Gas delivered (m3)\",\"gas_device_type\":\"Gas device type\",\"gas_equipment_id\":\"Gas equipment ID\",\"gas_valve_position\":\"Gas valve position\",\"graphs\":\"Graphs\",\"hours\":\"Hours\",\"identification\":\"Smart meter ID\",\"kw\":\"kW\",\"language\":\"Language\",\"line\":\"Line\",\"loading_please_wait\":\"Loading.. One moment please.\",\"message_long\":\"Long message\",\"message_short\":\"Short message\",\"months\":\"Months\",\"number_too_big\":\"Number too big!\",\"number_too_small\":\"Number too small!\",\"p1_version\":\"P1 version\",\"per_day\":\"Per day\",\"per_hour\":\"Per hour\",\"per_month\":\"Per month\",\"power_delivered\":\"Power delivered\",\"power_delivered_l1\":\"Power delivered L1\",\"power_delivered_l2\":\"Power delivered L2\",\"power_delivered_l3\":\"Power delivered L3\",\"power_returned\":\"Power returned\",\"power_returned_l1\":\"Power returned L1\",\"power_returned_l2\":\"Power returned L2\",\"power_returned_l3\":\"Power returned L3\",\"refresh\":\"Refresh\",\"reload\":\"Reload\",\"returned_(l1_l2_l3)\":\"Return (L1+L2+L3)\",\"save\":\"Save\",\"settings\":\"Settings\",\"settings_ed_tariff1\":\"Price per delivered kWh (tariff 1)\",\"settings_ed_tariff2\":\"Price per delivered kWh (tariff 2)\",\"settings_electr_netw_costs\":\"Electricity fixed costs per month\",\"settings_er_tariff1\":\"Price per returned kWh (tariff 1)\",\"settings_er_tariff2\":\"Price per returned kWh (tariff 2)\",\"settings_gas_netw_costs\":\"Gas fixed costs per month\",\"settings_gd_tariff\":\"Price per delivered m3 gas\",\"settings_mindergastoken\":\"Mindergas.nl API key\",\"settings_mqtt_broker\":\"MQTT Broker URL/IP\",\"settings_mqtt_broker_port\":\"MQTT Broker port\",\"settings_mqtt_interval\":\"MQTT processing interval (sec.)\",\"settings_mqtt_passwd\":\"MQTT password\",\"settings_mqtt_topTopic\":\"MQTT top topic\",\"settings_mqtt_user\":\"MQTT username\",\"settings_tlgrm_interval\":\"Telegram processing interval (sec.)\",\"slave_delivered\":\"Slave delivered\",\"slave_device_type\":\"Slave device type\",\"slave_equipment_id\":\"Slave equipment ID\",\"slave_valve_position\":\"Slave valve position\",\"smart_meter\":\"Smart meter\",\"system_info\":\"System info\",\"thermal_delivered\":\"Thermal delivered\",\"thermal_device_type\":\"Thermal device type\",\"thermal_equipment_id\":\"Thermal equipment ID\",\"thermal_valve_position\":\"Thermal valve position\",\"timestamp\":\"Timestamp\",\"too_long\":\"Input too long!\",\"type\":\"Type\",\"voltage_l1\":\"Voltage L1\",\"voltage_l2\":\"Voltage L2\",\"voltage_l3\":\"Voltage L3\",\"water_delivered\":\"Water delivered\",\"water_device_type\":\"Water device type\",\"water_equipment_id\":\"Water equipment ID\",\"water_valve_position\":\"Water valve position\",\"week\":\"Week\",\"wrong_format\":\"Wrong format!\",\"year\":\"Year\"}");
 
 /***/ }),
 
