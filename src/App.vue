@@ -38,6 +38,7 @@
 
     <v-content>
       <router-view></router-view>
+      <Modal />
     </v-content>
 
     <v-footer app>
@@ -47,14 +48,15 @@
 </template>
 
 <script>
-import Vue from "vue";
 import LanguageSwitcher from "@/components/LanguageSwitcher.vue";
+import Modal from "@/components/Modal.vue";
 
-export default Vue.extend({
+export default {
   name: "App",
 
   components: {
-    LanguageSwitcher
+    LanguageSwitcher,
+    Modal
   },
 
   data: () => ({
@@ -130,5 +132,5 @@ export default Vue.extend({
       }
     }
   }
-});
+};
 </script>

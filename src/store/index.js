@@ -1,6 +1,11 @@
 import Vue from "vue";
 import Vuex from "vuex";
-import { FETCH_START, FETCH_END } from "./mutation-types";
+import {
+  FETCH_START,
+  FETCH_END,
+  SET_ERROR,
+  SHOW_MODAL
+} from "./mutation-types";
 
 Vue.use(Vuex);
 
@@ -28,6 +33,8 @@ const apiRequest = async (
       });
     }
   } catch (error) {
+    commit(SHOW_MODAL);
+    commit(SET_ERROR, error);
     throw new Error(error);
   }
 };
@@ -41,7 +48,9 @@ export default new Vuex.Store({
     months: [],
     deviceInfo: [],
     settings: [],
-    isLoading: true
+    isLoading: true,
+    showModal: false,
+    errorMessage: null
   },
   mutations: {
     [FETCH_START](state) {
@@ -49,9 +58,16 @@ export default new Vuex.Store({
     },
     [FETCH_END](state, { data, stateProperty } = {}) {
       state.isLoading = false;
+      state.errorMessage = null;
       if (typeof data !== "undefined" && typeof stateProperty !== "undefined") {
         state[stateProperty] = data;
       }
+    },
+    [SET_ERROR](state, payload) {
+      state.errorMessage = payload;
+    },
+    [SHOW_MODAL](state) {
+      state.showModal = !state.showModal;
     }
   },
   actions: {
