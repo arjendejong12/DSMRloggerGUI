@@ -57,65 +57,64 @@ export default {
   components: { RefreshButton },
   mixins: [mixin],
   data: () => ({
-    valid: true,
-    settingsData: []
+    valid: true
   }),
   computed: {
+    settingsData() {
+      try {
+        // Add rules for each object.
+        return this.settings.map(obj => {
+          switch (obj.name) {
+            case "ed_tariff1":
+            case "ed_tariff2":
+            case "er_tariff1":
+            case "er_tariff2":
+            case "gd_tariff":
+              obj.type = "number";
+              obj.rules = [
+                v => /^\d+(\.\d{1,5})?$/.test(v) || this.$t("wrong_format"),
+                v => v >= obj.min || this.$t("number_too_small"),
+                v => v <= obj.max || this.$t("number_too_big")
+              ];
+              break;
+            case "electr_netw_costs":
+            case "gas_netw_costs":
+              obj.type = "number";
+              obj.rules = [
+                v => /^\d+(\.\d{1,2})?$/.test(v) || this.$t("wrong_format"),
+                v => v >= obj.min || this.$t("number_too_small"),
+                v => v <= obj.max || this.$t("number_too_big")
+              ];
+              break;
+            case "tlgrm_interval":
+            case "mqtt_broker_port":
+            case "mqtt_interval":
+              obj.type = "number";
+              obj.rules = [
+                v => /^([+-]?[1-9]\d*|0)$/.test(v) || this.$t("wrong_format"),
+                v => v >= obj.min || this.$t("number_too_small"),
+                v => v <= obj.max || this.$t("number_too_big")
+              ];
+              break;
+            case "mqtt_broker":
+            case "mqtt_user":
+            case "mqtt_passwd":
+            case "mqtt_topTopic":
+            case "mindergastoken":
+              obj.type = "text";
+              obj.rules = [v => v.length <= obj.maxlen || this.$t("too_long")];
+          }
+
+          return obj;
+        });
+      } catch (error) {
+        return this.settings;
+      }
+    },
     ...mapState({
       isLoading: state => state.isLoading,
       settings: state => state.settings
     })
-  },
-  watch: {
-    settings(newValue) {
-      // Add rules for each object.
-      newValue.map(obj => {
-        switch (obj.name) {
-          case "ed_tariff1":
-          case "ed_tariff2":
-          case "er_tariff1":
-          case "er_tariff2":
-          case "gd_tariff":
-            obj.type = "number";
-            obj.rules = [
-              v => /^\d+(\.\d{1,5})?$/.test(v) || this.$t("wrong_format"),
-              v => v >= obj.min || this.$t("number_too_small"),
-              v => v <= obj.max || this.$t("number_too_big")
-            ];
-            break;
-          case "electr_netw_costs":
-          case "gas_netw_costs":
-            obj.type = "number";
-            obj.rules = [
-              v => /^\d+(\.\d{1,2})?$/.test(v) || this.$t("wrong_format"),
-              v => v >= obj.min || this.$t("number_too_small"),
-              v => v <= obj.max || this.$t("number_too_big")
-            ];
-            break;
-          case "tlgrm_interval":
-          case "mqtt_broker_port":
-          case "mqtt_interval":
-            obj.type = "number";
-            obj.rules = [
-              v => /^([+-]?[1-9]\d*|0)$/.test(v) || this.$t("wrong_format"),
-              v => v >= obj.min || this.$t("number_too_small"),
-              v => v <= obj.max || this.$t("number_too_big")
-            ];
-            break;
-          case "mqtt_broker":
-          case "mqtt_user":
-          case "mqtt_passwd":
-          case "mqtt_topTopic":
-          case "mindergastoken":
-            obj.type = "text";
-            obj.rules = [v => v.length <= obj.maxlen || this.$t("too_long")];
-        }
-
-        return obj;
-      });
-
-      this.settingsData = newValue;
-    }
   },
   created() {
     if (!this.$store.state.settings.length) {
