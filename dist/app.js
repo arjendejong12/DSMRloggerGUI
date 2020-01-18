@@ -47563,16 +47563,14 @@ var PerDay_component = normalizeComponent(
 
 installComponents_default()(PerDay_component, {VCol: VCol,VContainer: VContainer,VDataTable: VDataTable_VDataTable,VRow: VRow})
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"f072728c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/PerMonth.vue?vue&type=template&id=49affcf2&
-var PerMonthvue_type_template_id_49affcf2_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"per-month"},[_c('v-container',[_c('v-row',{attrs:{"text-center":"","wrap":""}},[_c('v-col',{staticClass:"d-flex justify-space-between",attrs:{"cols":"12","sm":"12"}},[_c('h1',[_vm._v(_vm._s(_vm.$t("months")))]),_c('refresh-button',{attrs:{"dispatch":"getMonths"}})],1),_c('v-col',{attrs:{"cols":"12","sm":"12"}},[_c('v-data-table',{staticClass:"elevation-1",attrs:{"hide-default-footer":"","loading":_vm.isLoading,"loading-text":_vm.$t('loading_please_wait'),"items-per-page":-1,"headers":_vm.headers,"items":_vm.tableData,"item-key":"month"}})],1)],1)],1)],1)}
-var PerMonthvue_type_template_id_49affcf2_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"f072728c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/PerMonth.vue?vue&type=template&id=ef333632&
+var PerMonthvue_type_template_id_ef333632_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"per-month"},[_c('v-container',[_c('v-row',{attrs:{"text-center":"","wrap":""}},[_c('v-col',{staticClass:"d-flex justify-space-between",attrs:{"cols":"12","sm":"12"}},[_c('h1',[_vm._v(_vm._s(_vm.$t("months")))]),_c('refresh-button',{attrs:{"dispatch":"getMonths"}})],1),_c('v-col',{attrs:{"cols":"12","sm":"12"}},[_c('v-data-table',{staticClass:"elevation-1",attrs:{"hide-default-footer":"","loading":_vm.isLoading,"loading-text":_vm.$t('loading_please_wait'),"items-per-page":-1,"headers":_vm.headers,"items":_vm.tableData,"item-key":"month"}})],1)],1)],1)],1)}
+var PerMonthvue_type_template_id_ef333632_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/views/PerMonth.vue?vue&type=template&id=49affcf2&
+// CONCATENATED MODULE: ./src/views/PerMonth.vue?vue&type=template&id=ef333632&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/PerMonth.vue?vue&type=script&lang=js&
-
-
 
 
 
@@ -47629,92 +47627,71 @@ function PerMonthvue_type_script_lang_js_objectSpread(target) { for (var i = 1; 
   computed: PerMonthvue_type_script_lang_js_objectSpread({
     headers: function headers() {
       return [{
-        text: this.$t("date_month"),
+        text: this.$t("month"),
         value: "month"
       }, {
+        text: this.$t("year"),
+        value: "yearCurrent"
+      }, {
         text: this.$t("energy_delivered_watt"),
-        value: "energy_delivered"
+        value: "edCurrent"
       }, {
         text: this.$t("energy_returned_watt"),
-        value: "energy_returned"
+        value: "erCurrent"
       }, {
         text: this.$t("gas_delivered_m3"),
-        value: "gas_delivered"
+        value: "gdCurrent"
       }, {
         text: this.$t("costs_€"),
-        value: "costs"
+        value: "costsCurrent"
+      }, {
+        text: this.$t("year"),
+        value: "yearPrevious"
+      }, {
+        text: this.$t("energy_delivered_watt"),
+        value: "edPrevious"
+      }, {
+        text: this.$t("energy_returned_watt"),
+        value: "erPrevious"
+      }, {
+        text: this.$t("gas_delivered_m3"),
+        value: "gdPrevious"
+      }, {
+        text: this.$t("costs_€"),
+        value: "costsPrevious"
       }];
     },
     tableData: function tableData() {
-      var _this = this;
-
       try {
-        this.processData(this.months);
-        return this.months.map(function (currentMonth, index, array) {
-          var energy_delivered;
-          var energy_returned;
-          var gas_delivered;
-          var costs;
-          var prevMonth = array[index + 1];
-          var settings = {
-            ed_tariff1: _this.settings.find(function (setting) {
-              return setting.name === "ed_tariff1";
-            }).value,
-            ed_tariff2: _this.settings.find(function (setting) {
-              return setting.name === "ed_tariff2";
-            }).value,
-            er_tariff1: _this.settings.find(function (setting) {
-              return setting.name === "er_tariff1";
-            }).value,
-            er_tariff2: _this.settings.find(function (setting) {
-              return setting.name === "er_tariff2";
-            }).value,
-            gd_tariff: _this.settings.find(function (setting) {
-              return setting.name === "gd_tariff";
-            }).value,
-            electr_netw_costs: _this.settings.find(function (setting) {
-              return setting.name === "electr_netw_costs";
-            }).value,
-            gas_netw_costs: _this.settings.find(function (setting) {
-              return setting.name === "gas_netw_costs";
-            }).value
-          };
-
-          if (index < array.length - 1) {
-            energy_delivered = ((currentMonth.edt1 + currentMonth.edt2 - (prevMonth.edt1 + prevMonth.edt2)) * 1000).toFixed(0);
-            energy_returned = ((currentMonth.ert1 + currentMonth.ert2 - (prevMonth.ert1 + prevMonth.ert2)) * 1000).toFixed(0);
-            gas_delivered = (currentMonth.gdt - prevMonth.gdt).toFixed(3);
-            costs = (currentMonth.edt1 - prevMonth.edt1) * settings.ed_tariff1;
-            costs += (currentMonth.edt2 - prevMonth.edt2) * settings.ed_tariff2;
-            costs -= (currentMonth.ert1 - prevMonth.ert1) * settings.er_tariff1;
-            costs -= (currentMonth.ert2 - prevMonth.ert2) * settings.er_tariff2;
-            costs += (currentMonth.gdt - prevMonth.gdt) * settings.gd_tariff;
-            costs += settings.electr_netw_costs;
-            costs += settings.gas_netw_costs;
-          } else {
-            energy_delivered = (currentMonth.edt1 + currentMonth.edt2).toFixed(3);
-            energy_returned = (currentMonth.ert1 + currentMonth.ert2).toFixed(3);
-            gas_delivered = currentMonth.gdt.toFixed(3);
-            costs = currentMonth.edt1 * settings.ed_tariff1;
-            costs += currentMonth.edt2 * settings.ed_tariff2;
-            costs -= currentMonth.ert1 * settings.er_tariff1;
-            costs -= currentMonth.ert2 * settings.er_tariff2;
-            costs += currentMonth.gdt * settings.gd_tariff;
-            costs += settings.electr_netw_costs;
-            costs += settings.gas_netw_costs;
-          }
-
-          return {
-            month: _this.formatDate("months", currentMonth.recid),
-            energy_delivered: energy_delivered,
-            energy_returned: energy_returned,
-            gas_delivered: gas_delivered,
-            costs: +costs.toFixed(4)
-          };
-        }).slice(0, -1);
+        return this.processData(this.months);
       } catch (error) {
         return [];
       }
+    },
+    settingsTariffs: function settingsTariffs() {
+      return {
+        ed_tariff1: this.settings.find(function (setting) {
+          return setting.name === "ed_tariff1";
+        }).value,
+        ed_tariff2: this.settings.find(function (setting) {
+          return setting.name === "ed_tariff2";
+        }).value,
+        er_tariff1: this.settings.find(function (setting) {
+          return setting.name === "er_tariff1";
+        }).value,
+        er_tariff2: this.settings.find(function (setting) {
+          return setting.name === "er_tariff2";
+        }).value,
+        gd_tariff: this.settings.find(function (setting) {
+          return setting.name === "gd_tariff";
+        }).value,
+        electr_netw_costs: this.settings.find(function (setting) {
+          return setting.name === "electr_netw_costs";
+        }).value,
+        gas_netw_costs: this.settings.find(function (setting) {
+          return setting.name === "gas_netw_costs";
+        }).value
+      };
     }
   }, Object(vuex_esm["b" /* mapState */])({
     isLoading: function isLoading(state) {
@@ -47729,41 +47706,90 @@ function PerMonthvue_type_script_lang_js_objectSpread(target) { for (var i = 1; 
   })),
   watch: {},
   created: function created() {
-    var _this2 = this;
-
     if (!this.$store.state.months.length) {
       this.$store.dispatch("getMonths");
-      this.intervalTab = setInterval(function () {
-        _this2.$store.dispatch("getMonths");
-      }, 20000);
+    }
+
+    if (!this.$store.state.settings.length) {
+      this.$store.dispatch("getSettings");
     }
   },
   methods: {
     processData: function processData(data) {
-      var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-      var amountOfRows = data.length > 24 ? 12 : data.length / 2;
+      var monthNames = [this.$t("january"), this.$t("february"), this.$t("march"), this.$t("april"), this.$t("may"), this.$t("june"), this.$t("july"), this.$t("august"), this.$t("september"), this.$t("october"), this.$t("november"), this.$t("december")];
 
-      for (var i = 0; i < amountOfRows; i++) {
-        var month = parseInt(data[i].recid.substring(2, 4), 10) - 1;
-        var ed1 = (data[i].edt1 + data[i].edt2).toFixed(3);
-        var ed2 = (data[i + 12].edt1 + data[i + 12].edt2).toFixed(3);
-        var er1 = (data[i].ert1 + data[i].ert2).toFixed(3);
-        var er2 = (data[i + 12].ert1 + data[i + 12].ert2).toFixed(3);
-        var gd1 = data[i].gdt.toFixed(3);
-        var gd2 = data[i + 12].gdt.toFixed(3);
+      for (var i = 0; i < data.length; i++) {
+        data[i].p_ed = {};
+        data[i].p_er = {};
+        data[i].p_gd = {};
+        data[i].p_costs = {};
+
+        if (i < data.length - 1) {
+          var edAMonth = ((data[i].edt1 + data[i].edt2 - (data[i + 1].edt1 + data[i + 1].edt2)) * 1000).toFixed(0);
+          var edCostsAMonth = data[i].edt1 * this.settingsTariffs.ed_tariff1 + data[i].edt2 * this.settingsTariffs.ed_tariff2 - (data[i + 1].edt1 * this.settingsTariffs.ed_tariff1 + data[i + 1].edt2 * this.settingsTariffs.ed_tariff2);
+          var erAMonth = ((data[i].ert1 + data[i].ert2 - (data[i + 1].ert1 + data[i + 1].ert2)) * 1000).toFixed(0);
+          var erCostsAMonth = data[i].ert1 * this.settingsTariffs.er_tariff1 + data[i].ert2 * this.settingsTariffs.er_tariff2 - (data[i + 1].ert1 * this.settingsTariffs.er_tariff1 + data[i + 1].ert2 * this.settingsTariffs.er_tariff2);
+          var gdAMonth = (data[i].gdt - data[i + 1].gdt).toFixed(3);
+          var gdCostsAMonth = data[i].gdt * this.settingsTariffs.gd_tariff - data[i + 1].gdt * this.settingsTariffs.gd_tariff;
+          data[i].p_ed = edAMonth;
+          data[i].p_er = erAMonth;
+          data[i].p_gd = gdAMonth;
+          data[i].p_costs = (edCostsAMonth - erCostsAMonth + gdCostsAMonth).toFixed(2);
+        } else {
+          var _edAMonth = (data[i].edt1 + data[i].edt2).toFixed(0);
+
+          var _edCostsAMonth = data[i].edt1 * this.settingsTariffs.ed_tariff1 + data[i].edt2 * this.settingsTariffs.ed_tariff2;
+
+          var _erAMonth = (data[i].ert1 + data[i].ert2).toFixed(0);
+
+          var _erCostsAMonth = data[i].ert1 * this.settingsTariffs.er_tariff1 + data[i].ert2 * this.settingsTariffs.er_tariff2;
+
+          var _gdAMonth = data[i].gdt.toFixed(3);
+
+          var _gdCostsAMonth = data[i].gdt * this.settingsTariffs.gd_tariff;
+
+          data[i].p_ed = _edAMonth;
+          data[i].p_er = _erAMonth;
+          data[i].p_gd = _gdAMonth;
+          data[i].p_costs = (_edCostsAMonth - _erCostsAMonth + _gdCostsAMonth).toFixed(2);
+        }
+      }
+
+      var amountOfRows = data.length > 24 ? 12 : data.length / 2;
+      var tableData = [];
+
+      for (var _i = 0; _i < amountOfRows; _i++) {
+        var month = parseInt(data[_i].recid.substring(2, 4), 10) - 1;
+
+        var ed1 = (data[_i].edt1 + data[_i].edt2).toFixed(3);
+
+        var ed2 = (data[_i + 12].edt1 + data[_i + 12].edt2).toFixed(3);
+
+        var er1 = (data[_i].ert1 + data[_i].ert2).toFixed(3);
+
+        var er2 = (data[_i + 12].ert1 + data[_i + 12].ert2).toFixed(3);
+
+        var gd1 = data[_i].gdt.toFixed(3);
+
+        var gd2 = data[_i + 12].gdt.toFixed(3);
+
         var obj = {
           month: monthNames[month],
-          year1: "20" + data[i].recid.substring(0, 2) === "2000" ? "-" : "20" + data[i].recid.substring(0, 2),
-          year2: "20" + data[i + 12].recid.substring(0, 2) === "2000" ? "-" : "20" + data[i + 12].recid.substring(0, 2),
-          ed1: ed1,
-          ed2: ed2,
-          er1: er1,
-          er2: er2,
-          gd1: gd1,
-          gd2: gd2
+          yearCurrent: "20" + data[_i].recid.substring(0, 2) === "2000" ? "-" : "20" + data[_i].recid.substring(0, 2),
+          yearPrevious: "20" + data[_i + 12].recid.substring(0, 2) === "2000" ? "-" : "20" + data[_i + 12].recid.substring(0, 2),
+          edCurrent: data[_i].p_ed,
+          edPrevious: data[_i + 12].p_ed,
+          erCurrent: data[_i].p_er,
+          erPrevious: data[_i + 12].p_er,
+          gdCurrent: data[_i].p_gd,
+          gdPrevious: data[_i + 12].p_gd,
+          costsCurrent: data[_i].p_costs,
+          costsPrevious: data[_i + 12].p_costs
         };
-        console.log(obj);
+        tableData.push(obj);
       }
+
+      return tableData;
     }
   }
 });
@@ -47779,8 +47805,8 @@ function PerMonthvue_type_script_lang_js_objectSpread(target) { for (var i = 1; 
 
 var PerMonth_component = normalizeComponent(
   views_PerMonthvue_type_script_lang_js_,
-  PerMonthvue_type_template_id_49affcf2_render,
-  PerMonthvue_type_template_id_49affcf2_staticRenderFns,
+  PerMonthvue_type_template_id_ef333632_render,
+  PerMonthvue_type_template_id_ef333632_staticRenderFns,
   false,
   null,
   null,
@@ -55684,7 +55710,7 @@ exports.f = Object.getOwnPropertySymbols;
 /***/ "a625":
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"$vuetify\":{\"badge\":\"insigne\",\"calendar\":{\"moreEvents\":\"{0} meer\"},\"carousel\":{\"ariaLabel\":{\"delimiter\":\"Carousel slide {0} of {1}\"},\"next\":\"Volgend beeld\",\"prev\":\"Vorig beeld\"},\"close\":\"Sluiten\",\"dataFooter\":{\"firstPage\":\"Eerste pagina\",\"itemsPerPageAll\":\"Alles\",\"itemsPerPageText\":\"Aantal per pagina:\",\"lastPage\":\"Laatste pagina\",\"nextPage\":\"Volgende pagina\",\"pageText\":\"{0}-{1} van {2}\",\"prevPage\":\"Vorige pagina\"},\"dataIterator\":{\"loadingText\":\"Items aan het laden...\",\"noResultsText\":\"Geen overeenkomende resultaten gevonden\"},\"dataTable\":{\"ariaLabel\":{\"sortAscending\":\": Oplopend gesorteerd. Activeer om aflopend te sorteren.\",\"sortDescending\":\": Aflopend gesorteerd. Activeer om de sortering te verwijderen.\",\"sortNone\":\": Niet gesorterrd. Activeer om oplopend te sorteren.\"},\"itemsPerPageText\":\"Rijen per pagina:\",\"sortBy\":\"Sorteer volgens\"},\"datePicker\":{\"itemsSelected\":\"{0} geselecteerd\"},\"fileInput\":{\"counter\":\"{0} bestanden\",\"counterSize\":\"{0} bestanden ({1} in totaal)\"},\"noDataText\":\"Geen gegevens beschikbaar\",\"timePicker\":{\"am\":\"AM\",\"pm\":\"PM\"}},\"actual\":\"Actueel\",\"bar\":\"Balk\",\"charts\":\"Grafieken\",\"costs_€\":\"Kosten (€)\",\"current_l1\":\"Stroom L1\",\"current_l2\":\"Stroom L2\",\"current_l3\":\"Stroom L3\",\"data\":\"Data\",\"date_day\":\"Datum [dag]\",\"date_hour\":\"Datum [uur]\",\"date_month\":\"Datum [maand]\",\"day\":\"Dag\",\"days\":\"Dagen\",\"delivered_l1\":\"Verbruik (L1)\",\"delivered_l2\":\"Verbruik (L2)\",\"delivered_l3\":\"Verbruik (L3)\",\"dutch\":\"Nederlands\",\"electricity_failure_log\":\"Stroomstoringslogboek\",\"electricity_failures\":\"Stroomstoringen\",\"electricity_long_failures\":\"Lange stroomstoringen\",\"electricity_sags_l1\":\"Stroomdips L1\",\"electricity_sags_l2\":\"Stroomdips L2\",\"electricity_sags_l3\":\"Stroomdips L3\",\"electricity_swells_l1\":\"Stroomzwelling L1\",\"electricity_swells_l2\":\"Stroomzwelling L2\",\"electricity_swells_l3\":\"Stroomzwelling L3\",\"electricity_switch_position\":\"Positie van de stroomschakelaar\",\"electricity_tariff\":\"Stroomtarief\",\"electricity_threshold\":\"Elektriciteitsdrempel\",\"energy_delivered_tariff1\":\"Energie verbruikt tarief 1\",\"energy_delivered_tariff2\":\"Energie verbruikt tarief 2\",\"energy_delivered_watt\":\"Energieverbruik (Watt)\",\"energy_returned_tariff1\":\"Energie geleverd tarief 1\",\"energy_returned_tariff2\":\"Energie geleverd tarief 2\",\"energy_returned_watt\":\"Energieteruglevering (Watt)\",\"english\":\"Engels\",\"equipment_id\":\"Apparaat ID\",\"error_message\":\"Er is een fout opgetreden. Hieronder staat de fout beschreven. Probeer uw actie opnieuw door de pagina opnieuw te laden.\",\"error_title\":\"Oeps, er is een fout opgetreden!\",\"financial\":\"Financieel\",\"gas_delivered\":\"Gas verbruikt\",\"gas_delivered_m3\":\"Gasverbruik (m3)\",\"gas_device_type\":\"Type gasapparaat\",\"gas_equipment_id\":\"Gasapparaat ID\",\"gas_valve_position\":\"Positie gasklep\",\"graphs\":\"Grafieken\",\"hours\":\"Uren\",\"identification\":\"Slimme meter ID\",\"kw\":\"kW\",\"language\":\"Taal\",\"line\":\"Lijn\",\"loading_please_wait\":\"Aan het laden... Even geduld a.u.b.\",\"message_long\":\"Lang bericht\",\"message_short\":\"Kort bericht\",\"months\":\"Maanden\",\"number_too_big\":\"Nummer te groot!\",\"number_too_small\":\"Nummer te klein!\",\"p1_version\":\"P1 versie\",\"per_day\":\"Per dag\",\"per_hour\":\"Per uur\",\"per_month\":\"Per maand\",\"power_delivered\":\"Vermogen verbruikt\",\"power_delivered_l1\":\"Vermogen verbruikt L1\",\"power_delivered_l2\":\"Vermogen verbruikt L2\",\"power_delivered_l3\":\"Vermogen verbruikt L3\",\"power_returned\":\"Vermogen opgewekt\",\"power_returned_l1\":\"Vermogen opgewekt L1\",\"power_returned_l2\":\"Vermogen opgewekt L2\",\"power_returned_l3\":\"Vermogen opgewekt L3\",\"refresh\":\"Vernieuw\",\"reload\":\"Opnieuw laden\",\"returned_(l1_l2_l3)\":\"Teruglevering (L1+L2+L3)\",\"save\":\"Opslaan\",\"settings\":\"Instellingen\",\"settings_ed_tariff1\":\"Prijs per verbruikte kWh (tarief 1)\",\"settings_ed_tariff2\":\"Prijs per verbruikte kWh (tarief 2)\",\"settings_electr_netw_costs\":\"Electra vaste kosten per maand\",\"settings_er_tariff1\":\"Prijs per teruggeleverde kWh (tarief 1)\",\"settings_er_tariff2\":\"Prijs per teruggeleverde kWh (tarief 2)\",\"settings_gas_netw_costs\":\"Gas vaste kosten per maand\",\"settings_gd_tariff\":\"Prijs per verbruikte m3 gas\",\"settings_mindergastoken\":\"Mindergas.nl API-sleutel\",\"settings_mqtt_broker\":\"MQTT Broker URL/IP\",\"settings_mqtt_broker_port\":\"MQTT Broker port\",\"settings_mqtt_interval\":\"MQTT verwerkingsinterval (sec.)\",\"settings_mqtt_passwd\":\"MQTT wachtwoord\",\"settings_mqtt_topTopic\":\"MQTT hoofdonderwerp\",\"settings_mqtt_user\":\"MQTT gebruikersnaam\",\"settings_tlgrm_interval\":\"Telegram verwerkingsinterval (sec.)\",\"slave_delivered\":\"Slave verbruikt\",\"slave_device_type\":\"Type slave-apparaat\",\"slave_equipment_id\":\"Slave-apparaat ID\",\"slave_valve_position\":\"Positie slave-klep\",\"smart_meter\":\"Slimme meter\",\"system_info\":\"Systeeminfo\",\"thermal_delivered\":\"Thermisch verbruikt\",\"thermal_device_type\":\"Type thermisch apparaat\",\"thermal_equipment_id\":\"Thermisch apparaat ID\",\"thermal_valve_position\":\"Positie thermische klep\",\"timestamp\":\"Tijdstempel\",\"too_long\":\"Invoer te lang!\",\"type\":\"Soort\",\"voltage_l1\":\"Voltage L1\",\"voltage_l2\":\"Voltage L2\",\"voltage_l3\":\"Voltage L3\",\"water_delivered\":\"Water verbruikt\",\"water_device_type\":\"Type waterapparaat\",\"water_equipment_id\":\"Waterapparaat ID\",\"water_valve_position\":\"Positie waterklep\",\"week\":\"Week\",\"wrong_format\":\"Verkeerd formaat!\",\"year\":\"Jaar\"}");
+module.exports = JSON.parse("{\"$vuetify\":{\"badge\":\"insigne\",\"calendar\":{\"moreEvents\":\"{0} meer\"},\"carousel\":{\"ariaLabel\":{\"delimiter\":\"Carousel slide {0} of {1}\"},\"next\":\"Volgend beeld\",\"prev\":\"Vorig beeld\"},\"close\":\"Sluiten\",\"dataFooter\":{\"firstPage\":\"Eerste pagina\",\"itemsPerPageAll\":\"Alles\",\"itemsPerPageText\":\"Aantal per pagina:\",\"lastPage\":\"Laatste pagina\",\"nextPage\":\"Volgende pagina\",\"pageText\":\"{0}-{1} van {2}\",\"prevPage\":\"Vorige pagina\"},\"dataIterator\":{\"loadingText\":\"Items aan het laden...\",\"noResultsText\":\"Geen overeenkomende resultaten gevonden\"},\"dataTable\":{\"ariaLabel\":{\"sortAscending\":\": Oplopend gesorteerd. Activeer om aflopend te sorteren.\",\"sortDescending\":\": Aflopend gesorteerd. Activeer om de sortering te verwijderen.\",\"sortNone\":\": Niet gesorterrd. Activeer om oplopend te sorteren.\"},\"itemsPerPageText\":\"Rijen per pagina:\",\"sortBy\":\"Sorteer volgens\"},\"datePicker\":{\"itemsSelected\":\"{0} geselecteerd\"},\"fileInput\":{\"counter\":\"{0} bestanden\",\"counterSize\":\"{0} bestanden ({1} in totaal)\"},\"noDataText\":\"Geen gegevens beschikbaar\",\"timePicker\":{\"am\":\"AM\",\"pm\":\"PM\"}},\"actual\":\"Actueel\",\"april\":\"April\",\"august\":\"Augustus\",\"bar\":\"Balk\",\"charts\":\"Grafieken\",\"costs_€\":\"Kosten (€)\",\"current_l1\":\"Stroom L1\",\"current_l2\":\"Stroom L2\",\"current_l3\":\"Stroom L3\",\"data\":\"Data\",\"date_day\":\"Datum [dag]\",\"date_hour\":\"Datum [uur]\",\"date_month\":\"Datum [maand]\",\"day\":\"Dag\",\"days\":\"Dagen\",\"december\":\"December\",\"delivered_l1\":\"Verbruik (L1)\",\"delivered_l2\":\"Verbruik (L2)\",\"delivered_l3\":\"Verbruik (L3)\",\"dutch\":\"Nederlands\",\"electricity_failure_log\":\"Stroomstoringslogboek\",\"electricity_failures\":\"Stroomstoringen\",\"electricity_long_failures\":\"Lange stroomstoringen\",\"electricity_sags_l1\":\"Stroomdips L1\",\"electricity_sags_l2\":\"Stroomdips L2\",\"electricity_sags_l3\":\"Stroomdips L3\",\"electricity_swells_l1\":\"Stroomzwelling L1\",\"electricity_swells_l2\":\"Stroomzwelling L2\",\"electricity_swells_l3\":\"Stroomzwelling L3\",\"electricity_switch_position\":\"Positie van de stroomschakelaar\",\"electricity_tariff\":\"Stroomtarief\",\"electricity_threshold\":\"Elektriciteitsdrempel\",\"energy_delivered\":\"Energie verbruikt\",\"energy_delivered_tariff1\":\"Energie verbruikt tarief 1\",\"energy_delivered_tariff2\":\"Energie verbruikt tarief 2\",\"energy_delivered_watt\":\"Energieverbruik (Watt)\",\"energy_returned\":\"Energieteruglevering\",\"energy_returned_tariff1\":\"Energie geleverd tarief 1\",\"energy_returned_tariff2\":\"Energie geleverd tarief 2\",\"energy_returned_watt\":\"Energieteruglevering (Watt)\",\"english\":\"Engels\",\"equipment_id\":\"Apparaat ID\",\"error_message\":\"Er is een fout opgetreden. Hieronder staat de fout beschreven. Probeer uw actie opnieuw door de pagina opnieuw te laden.\",\"error_title\":\"Oeps, er is een fout opgetreden!\",\"february\":\"Februari\",\"financial\":\"Financieel\",\"gas_delivered\":\"Gas verbruikt\",\"gas_delivered_m3\":\"Gasverbruik (m3)\",\"gas_device_type\":\"Type gasapparaat\",\"gas_equipment_id\":\"Gasapparaat ID\",\"gas_valve_position\":\"Positie gasklep\",\"graphs\":\"Grafieken\",\"hours\":\"Uren\",\"identification\":\"Slimme meter ID\",\"january\":\"Januari\",\"july\":\"Juli\",\"june\":\"Juni\",\"kw\":\"kW\",\"language\":\"Taal\",\"line\":\"Lijn\",\"loading_please_wait\":\"Aan het laden... Even geduld a.u.b.\",\"march\":\"Maart\",\"may\":\"Mei\",\"message_long\":\"Lang bericht\",\"message_short\":\"Kort bericht\",\"month\":\"Maand\",\"months\":\"Maanden\",\"november\":\"November\",\"number_too_big\":\"Nummer te groot!\",\"number_too_small\":\"Nummer te klein!\",\"october\":\"Oktober\",\"p1_version\":\"P1 versie\",\"per_day\":\"Per dag\",\"per_hour\":\"Per uur\",\"per_month\":\"Per maand\",\"power_delivered\":\"Vermogen verbruikt\",\"power_delivered_l1\":\"Vermogen verbruikt L1\",\"power_delivered_l2\":\"Vermogen verbruikt L2\",\"power_delivered_l3\":\"Vermogen verbruikt L3\",\"power_returned\":\"Vermogen opgewekt\",\"power_returned_l1\":\"Vermogen opgewekt L1\",\"power_returned_l2\":\"Vermogen opgewekt L2\",\"power_returned_l3\":\"Vermogen opgewekt L3\",\"refresh\":\"Vernieuw\",\"reload\":\"Opnieuw laden\",\"returned_(l1_l2_l3)\":\"Teruglevering (L1+L2+L3)\",\"save\":\"Opslaan\",\"september\":\"September\",\"settings\":\"Instellingen\",\"settings_ed_tariff1\":\"Prijs per verbruikte kWh (tarief 1)\",\"settings_ed_tariff2\":\"Prijs per verbruikte kWh (tarief 2)\",\"settings_electr_netw_costs\":\"Electra vaste kosten per maand\",\"settings_er_tariff1\":\"Prijs per teruggeleverde kWh (tarief 1)\",\"settings_er_tariff2\":\"Prijs per teruggeleverde kWh (tarief 2)\",\"settings_gas_netw_costs\":\"Gas vaste kosten per maand\",\"settings_gd_tariff\":\"Prijs per verbruikte m3 gas\",\"settings_mindergastoken\":\"Mindergas.nl API-sleutel\",\"settings_mqtt_broker\":\"MQTT Broker URL/IP\",\"settings_mqtt_broker_port\":\"MQTT Broker port\",\"settings_mqtt_interval\":\"MQTT verwerkingsinterval (sec.)\",\"settings_mqtt_passwd\":\"MQTT wachtwoord\",\"settings_mqtt_topTopic\":\"MQTT hoofdonderwerp\",\"settings_mqtt_user\":\"MQTT gebruikersnaam\",\"settings_tlgrm_interval\":\"Telegram verwerkingsinterval (sec.)\",\"slave_delivered\":\"Slave verbruikt\",\"slave_device_type\":\"Type slave-apparaat\",\"slave_equipment_id\":\"Slave-apparaat ID\",\"slave_valve_position\":\"Positie slave-klep\",\"smart_meter\":\"Slimme meter\",\"system_info\":\"Systeeminfo\",\"thermal_delivered\":\"Thermisch verbruikt\",\"thermal_device_type\":\"Type thermisch apparaat\",\"thermal_equipment_id\":\"Thermisch apparaat ID\",\"thermal_valve_position\":\"Positie thermische klep\",\"timestamp\":\"Tijdstempel\",\"too_long\":\"Invoer te lang!\",\"type\":\"Soort\",\"voltage_l1\":\"Voltage L1\",\"voltage_l2\":\"Voltage L2\",\"voltage_l3\":\"Voltage L3\",\"water_delivered\":\"Water verbruikt\",\"water_device_type\":\"Type waterapparaat\",\"water_equipment_id\":\"Waterapparaat ID\",\"water_valve_position\":\"Positie waterklep\",\"week\":\"Week\",\"wrong_format\":\"Verkeerd formaat!\",\"year\":\"Jaar\"}");
 
 /***/ }),
 
@@ -59786,7 +59812,7 @@ module.exports = function (argument) {
 /***/ "edd4":
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"$vuetify\":{\"badge\":\"Badge\",\"calendar\":{\"moreEvents\":\"{0} more\"},\"carousel\":{\"ariaLabel\":{\"delimiter\":\"Carousel slide {0} of {1}\"},\"next\":\"Next visual\",\"prev\":\"Previous visual\"},\"close\":\"Close\",\"dataFooter\":{\"firstPage\":\"First page\",\"itemsPerPageAll\":\"All\",\"itemsPerPageText\":\"Items per page:\",\"lastPage\":\"Last page\",\"nextPage\":\"Next page\",\"pageText\":\"{0}-{1} of {2}\",\"prevPage\":\"Previous page\"},\"dataIterator\":{\"loadingText\":\"Loading items...\",\"noResultsText\":\"No matching records found\"},\"dataTable\":{\"ariaLabel\":{\"sortAscending\":\": Sorted ascending. Activate to sort descending.\",\"sortDescending\":\": Sorted descending. Activate to remove sorting.\",\"sortNone\":\": Not sorted. Activate to sort ascending.\"},\"itemsPerPageText\":\"Rows per page:\",\"sortBy\":\"Sort by\"},\"datePicker\":{\"itemsSelected\":\"{0} selected\"},\"fileInput\":{\"counter\":\"{0} files\",\"counterSize\":\"{0} files ({1} in total)\"},\"noDataText\":\"No data available\",\"timePicker\":{\"am\":\"AM\",\"pm\":\"PM\"}},\"actual\":\"Actual\",\"bar\":\"Bar\",\"charts\":\"Charts\",\"costs_€\":\"Costs (€)\",\"current_l1\":\"Current L1\",\"current_l2\":\"Current L2\",\"current_l3\":\"Current L3\",\"data\":\"Data\",\"date_day\":\"Date [day]\",\"date_hour\":\"Date [hour]\",\"date_month\":\"Date [month]\",\"day\":\"Day\",\"days\":\"Days\",\"delivered_l1\":\"Delivery (L1)\",\"delivered_l2\":\"Delivery (L2)\",\"delivered_l3\":\"Delivery (L3)\",\"dutch\":\"Dutch\",\"electricity_failure_log\":\"Electricity failure log\",\"electricity_failures\":\"Electricity failures\",\"electricity_long_failures\":\"Long electricity failures\",\"electricity_sags_l1\":\"Electricity sags L1\",\"electricity_sags_l2\":\"Electricity sags L2\",\"electricity_sags_l3\":\"Electricity sags L3\",\"electricity_swells_l1\":\"Electricity swells L1\",\"electricity_swells_l2\":\"Electricity swells L2\",\"electricity_swells_l3\":\"Electricity swells L3\",\"electricity_switch_position\":\"Electricity switch position\",\"electricity_tariff\":\"Electricity tariff\",\"electricity_threshold\":\"Electricity threshold\",\"energy_delivered_tariff1\":\"Energy delivered tariff 1\",\"energy_delivered_tariff2\":\"Energy delivered tariff 2\",\"energy_delivered_watt\":\"Energy delivered (Watt)\",\"energy_returned_tariff1\":\"Energy returned tariff 1\",\"energy_returned_tariff2\":\"Energy returned tariff 2\",\"energy_returned_watt\":\"Energy returned (Watt)\",\"english\":\"English\",\"equipment_id\":\"Equipment ID\",\"error_message\":\"An error has occurred. The error is described below. Try your action again by reloading the page.\",\"error_title\":\"Oh no, an error appeared!\",\"financial\":\"Financial\",\"gas_delivered\":\"Gas delivered\",\"gas_delivered_m3\":\"Gas delivered (m3)\",\"gas_device_type\":\"Gas device type\",\"gas_equipment_id\":\"Gas equipment ID\",\"gas_valve_position\":\"Gas valve position\",\"graphs\":\"Graphs\",\"hours\":\"Hours\",\"identification\":\"Smart meter ID\",\"kw\":\"kW\",\"language\":\"Language\",\"line\":\"Line\",\"loading_please_wait\":\"Loading.. One moment please.\",\"message_long\":\"Long message\",\"message_short\":\"Short message\",\"months\":\"Months\",\"number_too_big\":\"Number too big!\",\"number_too_small\":\"Number too small!\",\"p1_version\":\"P1 version\",\"per_day\":\"Per day\",\"per_hour\":\"Per hour\",\"per_month\":\"Per month\",\"power_delivered\":\"Power delivered\",\"power_delivered_l1\":\"Power delivered L1\",\"power_delivered_l2\":\"Power delivered L2\",\"power_delivered_l3\":\"Power delivered L3\",\"power_returned\":\"Power returned\",\"power_returned_l1\":\"Power returned L1\",\"power_returned_l2\":\"Power returned L2\",\"power_returned_l3\":\"Power returned L3\",\"refresh\":\"Refresh\",\"reload\":\"Reload\",\"returned_(l1_l2_l3)\":\"Return (L1+L2+L3)\",\"save\":\"Save\",\"settings\":\"Settings\",\"settings_ed_tariff1\":\"Price per delivered kWh (tariff 1)\",\"settings_ed_tariff2\":\"Price per delivered kWh (tariff 2)\",\"settings_electr_netw_costs\":\"Electricity fixed costs per month\",\"settings_er_tariff1\":\"Price per returned kWh (tariff 1)\",\"settings_er_tariff2\":\"Price per returned kWh (tariff 2)\",\"settings_gas_netw_costs\":\"Gas fixed costs per month\",\"settings_gd_tariff\":\"Price per delivered m3 gas\",\"settings_mindergastoken\":\"Mindergas.nl API key\",\"settings_mqtt_broker\":\"MQTT Broker URL/IP\",\"settings_mqtt_broker_port\":\"MQTT Broker port\",\"settings_mqtt_interval\":\"MQTT processing interval (sec.)\",\"settings_mqtt_passwd\":\"MQTT password\",\"settings_mqtt_topTopic\":\"MQTT top topic\",\"settings_mqtt_user\":\"MQTT username\",\"settings_tlgrm_interval\":\"Telegram processing interval (sec.)\",\"slave_delivered\":\"Slave delivered\",\"slave_device_type\":\"Slave device type\",\"slave_equipment_id\":\"Slave equipment ID\",\"slave_valve_position\":\"Slave valve position\",\"smart_meter\":\"Smart meter\",\"system_info\":\"System info\",\"thermal_delivered\":\"Thermal delivered\",\"thermal_device_type\":\"Thermal device type\",\"thermal_equipment_id\":\"Thermal equipment ID\",\"thermal_valve_position\":\"Thermal valve position\",\"timestamp\":\"Timestamp\",\"too_long\":\"Input too long!\",\"type\":\"Type\",\"voltage_l1\":\"Voltage L1\",\"voltage_l2\":\"Voltage L2\",\"voltage_l3\":\"Voltage L3\",\"water_delivered\":\"Water delivered\",\"water_device_type\":\"Water device type\",\"water_equipment_id\":\"Water equipment ID\",\"water_valve_position\":\"Water valve position\",\"week\":\"Week\",\"wrong_format\":\"Wrong format!\",\"year\":\"Year\"}");
+module.exports = JSON.parse("{\"$vuetify\":{\"badge\":\"Badge\",\"calendar\":{\"moreEvents\":\"{0} more\"},\"carousel\":{\"ariaLabel\":{\"delimiter\":\"Carousel slide {0} of {1}\"},\"next\":\"Next visual\",\"prev\":\"Previous visual\"},\"close\":\"Close\",\"dataFooter\":{\"firstPage\":\"First page\",\"itemsPerPageAll\":\"All\",\"itemsPerPageText\":\"Items per page:\",\"lastPage\":\"Last page\",\"nextPage\":\"Next page\",\"pageText\":\"{0}-{1} of {2}\",\"prevPage\":\"Previous page\"},\"dataIterator\":{\"loadingText\":\"Loading items...\",\"noResultsText\":\"No matching records found\"},\"dataTable\":{\"ariaLabel\":{\"sortAscending\":\": Sorted ascending. Activate to sort descending.\",\"sortDescending\":\": Sorted descending. Activate to remove sorting.\",\"sortNone\":\": Not sorted. Activate to sort ascending.\"},\"itemsPerPageText\":\"Rows per page:\",\"sortBy\":\"Sort by\"},\"datePicker\":{\"itemsSelected\":\"{0} selected\"},\"fileInput\":{\"counter\":\"{0} files\",\"counterSize\":\"{0} files ({1} in total)\"},\"noDataText\":\"No data available\",\"timePicker\":{\"am\":\"AM\",\"pm\":\"PM\"}},\"actual\":\"Actual\",\"april\":\"April\",\"august\":\"August\",\"bar\":\"Bar\",\"charts\":\"Charts\",\"costs_€\":\"Costs (€)\",\"current_l1\":\"Current L1\",\"current_l2\":\"Current L2\",\"current_l3\":\"Current L3\",\"data\":\"Data\",\"date_day\":\"Date [day]\",\"date_hour\":\"Date [hour]\",\"date_month\":\"Date [month]\",\"day\":\"Day\",\"days\":\"Days\",\"december\":\"December\",\"delivered_l1\":\"Delivery (L1)\",\"delivered_l2\":\"Delivery (L2)\",\"delivered_l3\":\"Delivery (L3)\",\"dutch\":\"Dutch\",\"electricity_failure_log\":\"Electricity failure log\",\"electricity_failures\":\"Electricity failures\",\"electricity_long_failures\":\"Long electricity failures\",\"electricity_sags_l1\":\"Electricity sags L1\",\"electricity_sags_l2\":\"Electricity sags L2\",\"electricity_sags_l3\":\"Electricity sags L3\",\"electricity_swells_l1\":\"Electricity swells L1\",\"electricity_swells_l2\":\"Electricity swells L2\",\"electricity_swells_l3\":\"Electricity swells L3\",\"electricity_switch_position\":\"Electricity switch position\",\"electricity_tariff\":\"Electricity tariff\",\"electricity_threshold\":\"Electricity threshold\",\"energy_delivered\":\"Energy delivered\",\"energy_delivered_tariff1\":\"Energy delivered tariff 1\",\"energy_delivered_tariff2\":\"Energy delivered tariff 2\",\"energy_delivered_watt\":\"Energy delivered (Watt)\",\"energy_returned\":\"Energy returned\",\"energy_returned_tariff1\":\"Energy returned tariff 1\",\"energy_returned_tariff2\":\"Energy returned tariff 2\",\"energy_returned_watt\":\"Energy returned (Watt)\",\"english\":\"English\",\"equipment_id\":\"Equipment ID\",\"error_message\":\"An error has occurred. The error is described below. Try your action again by reloading the page.\",\"error_title\":\"Oh no, an error appeared!\",\"february\":\"February\",\"financial\":\"Financial\",\"gas_delivered\":\"Gas delivered\",\"gas_delivered_m3\":\"Gas delivered (m3)\",\"gas_device_type\":\"Gas device type\",\"gas_equipment_id\":\"Gas equipment ID\",\"gas_valve_position\":\"Gas valve position\",\"graphs\":\"Graphs\",\"hours\":\"Hours\",\"identification\":\"Smart meter ID\",\"january\":\"January\",\"july\":\"July\",\"june\":\"June\",\"kw\":\"kW\",\"language\":\"Language\",\"line\":\"Line\",\"loading_please_wait\":\"Loading.. One moment please.\",\"march\":\"March\",\"may\":\"May\",\"message_long\":\"Long message\",\"message_short\":\"Short message\",\"month\":\"Month\",\"months\":\"Months\",\"november\":\"November\",\"number_too_big\":\"Number too big!\",\"number_too_small\":\"Number too small!\",\"october\":\"October\",\"p1_version\":\"P1 version\",\"per_day\":\"Per day\",\"per_hour\":\"Per hour\",\"per_month\":\"Per month\",\"power_delivered\":\"Power delivered\",\"power_delivered_l1\":\"Power delivered L1\",\"power_delivered_l2\":\"Power delivered L2\",\"power_delivered_l3\":\"Power delivered L3\",\"power_returned\":\"Power returned\",\"power_returned_l1\":\"Power returned L1\",\"power_returned_l2\":\"Power returned L2\",\"power_returned_l3\":\"Power returned L3\",\"refresh\":\"Refresh\",\"reload\":\"Reload\",\"returned_(l1_l2_l3)\":\"Return (L1+L2+L3)\",\"save\":\"Save\",\"september\":\"September\",\"settings\":\"Settings\",\"settings_ed_tariff1\":\"Price per delivered kWh (tariff 1)\",\"settings_ed_tariff2\":\"Price per delivered kWh (tariff 2)\",\"settings_electr_netw_costs\":\"Electricity fixed costs per month\",\"settings_er_tariff1\":\"Price per returned kWh (tariff 1)\",\"settings_er_tariff2\":\"Price per returned kWh (tariff 2)\",\"settings_gas_netw_costs\":\"Gas fixed costs per month\",\"settings_gd_tariff\":\"Price per delivered m3 gas\",\"settings_mindergastoken\":\"Mindergas.nl API key\",\"settings_mqtt_broker\":\"MQTT Broker URL/IP\",\"settings_mqtt_broker_port\":\"MQTT Broker port\",\"settings_mqtt_interval\":\"MQTT processing interval (sec.)\",\"settings_mqtt_passwd\":\"MQTT password\",\"settings_mqtt_topTopic\":\"MQTT top topic\",\"settings_mqtt_user\":\"MQTT username\",\"settings_tlgrm_interval\":\"Telegram processing interval (sec.)\",\"slave_delivered\":\"Slave delivered\",\"slave_device_type\":\"Slave device type\",\"slave_equipment_id\":\"Slave equipment ID\",\"slave_valve_position\":\"Slave valve position\",\"smart_meter\":\"Smart meter\",\"system_info\":\"System info\",\"thermal_delivered\":\"Thermal delivered\",\"thermal_device_type\":\"Thermal device type\",\"thermal_equipment_id\":\"Thermal equipment ID\",\"thermal_valve_position\":\"Thermal valve position\",\"timestamp\":\"Timestamp\",\"too_long\":\"Input too long!\",\"type\":\"Type\",\"voltage_l1\":\"Voltage L1\",\"voltage_l2\":\"Voltage L2\",\"voltage_l3\":\"Voltage L3\",\"water_delivered\":\"Water delivered\",\"water_device_type\":\"Water device type\",\"water_equipment_id\":\"Water equipment ID\",\"water_valve_position\":\"Water valve position\",\"week\":\"Week\",\"wrong_format\":\"Wrong format!\",\"year\":\"Year\"}");
 
 /***/ }),
 

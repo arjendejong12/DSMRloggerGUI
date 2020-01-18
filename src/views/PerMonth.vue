@@ -36,103 +36,45 @@ export default {
   computed: {
     headers: function() {
       return [
-        { text: this.$t("date_month"), value: "month" },
-        { text: this.$t("energy_delivered_watt"), value: "energy_delivered" },
-        { text: this.$t("energy_returned_watt"), value: "energy_returned" },
-        { text: this.$t("gas_delivered_m3"), value: "gas_delivered" },
-        { text: this.$t("costs_€"), value: "costs" }
+        { text: this.$t("month"), value: "month" },
+        { text: this.$t("year"), value: "yearCurrent" },
+        { text: this.$t("energy_delivered_watt"), value: "edCurrent" },
+        { text: this.$t("energy_returned_watt"), value: "erCurrent" },
+        { text: this.$t("gas_delivered_m3"), value: "gdCurrent" },
+        { text: this.$t("costs_€"), value: "costsCurrent" },
+        { text: this.$t("year"), value: "yearPrevious" },
+        { text: this.$t("energy_delivered_watt"), value: "edPrevious" },
+        { text: this.$t("energy_returned_watt"), value: "erPrevious" },
+        { text: this.$t("gas_delivered_m3"), value: "gdPrevious" },
+        { text: this.$t("costs_€"), value: "costsPrevious" }
       ];
     },
     tableData: function() {
       try {
-        this.processData(this.months);
-        return this.months
-          .map((currentMonth, index, array) => {
-            let energy_delivered;
-            let energy_returned;
-            let gas_delivered;
-            let costs;
-            const prevMonth = array[index + 1];
-            const settings = {
-              ed_tariff1: this.settings.find(
-                setting => setting.name === "ed_tariff1"
-              ).value,
-              ed_tariff2: this.settings.find(
-                setting => setting.name === "ed_tariff2"
-              ).value,
-              er_tariff1: this.settings.find(
-                setting => setting.name === "er_tariff1"
-              ).value,
-              er_tariff2: this.settings.find(
-                setting => setting.name === "er_tariff2"
-              ).value,
-              gd_tariff: this.settings.find(
-                setting => setting.name === "gd_tariff"
-              ).value,
-              electr_netw_costs: this.settings.find(
-                setting => setting.name === "electr_netw_costs"
-              ).value,
-              gas_netw_costs: this.settings.find(
-                setting => setting.name === "gas_netw_costs"
-              ).value
-            };
-
-            if (index < array.length - 1) {
-              energy_delivered = (
-                (currentMonth.edt1 +
-                  currentMonth.edt2 -
-                  (prevMonth.edt1 + prevMonth.edt2)) *
-                1000
-              ).toFixed(0);
-              energy_returned = (
-                (currentMonth.ert1 +
-                  currentMonth.ert2 -
-                  (prevMonth.ert1 + prevMonth.ert2)) *
-                1000
-              ).toFixed(0);
-              gas_delivered = (currentMonth.gdt - prevMonth.gdt).toFixed(3);
-
-              costs =
-                (currentMonth.edt1 - prevMonth.edt1) * settings.ed_tariff1;
-              costs +=
-                (currentMonth.edt2 - prevMonth.edt2) * settings.ed_tariff2;
-              costs -=
-                (currentMonth.ert1 - prevMonth.ert1) * settings.er_tariff1;
-              costs -=
-                (currentMonth.ert2 - prevMonth.ert2) * settings.er_tariff2;
-              costs += (currentMonth.gdt - prevMonth.gdt) * settings.gd_tariff;
-              costs += settings.electr_netw_costs;
-              costs += settings.gas_netw_costs;
-            } else {
-              energy_delivered = (
-                currentMonth.edt1 + currentMonth.edt2
-              ).toFixed(3);
-              energy_returned = (currentMonth.ert1 + currentMonth.ert2).toFixed(
-                3
-              );
-              gas_delivered = currentMonth.gdt.toFixed(3);
-
-              costs = currentMonth.edt1 * settings.ed_tariff1;
-              costs += currentMonth.edt2 * settings.ed_tariff2;
-              costs -= currentMonth.ert1 * settings.er_tariff1;
-              costs -= currentMonth.ert2 * settings.er_tariff2;
-              costs += currentMonth.gdt * settings.gd_tariff;
-              costs += settings.electr_netw_costs;
-              costs += settings.gas_netw_costs;
-            }
-
-            return {
-              month: this.formatDate("months", currentMonth.recid),
-              energy_delivered: energy_delivered,
-              energy_returned: energy_returned,
-              gas_delivered: gas_delivered,
-              costs: +costs.toFixed(4)
-            };
-          })
-          .slice(0, -1);
+        return this.processData(this.months);
       } catch (error) {
         return [];
       }
+    },
+    settingsTariffs() {
+      return {
+        ed_tariff1: this.settings.find(setting => setting.name === "ed_tariff1")
+          .value,
+        ed_tariff2: this.settings.find(setting => setting.name === "ed_tariff2")
+          .value,
+        er_tariff1: this.settings.find(setting => setting.name === "er_tariff1")
+          .value,
+        er_tariff2: this.settings.find(setting => setting.name === "er_tariff2")
+          .value,
+        gd_tariff: this.settings.find(setting => setting.name === "gd_tariff")
+          .value,
+        electr_netw_costs: this.settings.find(
+          setting => setting.name === "electr_netw_costs"
+        ).value,
+        gas_netw_costs: this.settings.find(
+          setting => setting.name === "gas_netw_costs"
+        ).value
+      };
     },
     ...mapState({
       isLoading: state => state.isLoading,
@@ -144,30 +86,96 @@ export default {
   created() {
     if (!this.$store.state.months.length) {
       this.$store.dispatch("getMonths");
+    }
 
-      this.intervalTab = setInterval(() => {
-        this.$store.dispatch("getMonths");
-      }, 20000);
+    if (!this.$store.state.settings.length) {
+      this.$store.dispatch("getSettings");
     }
   },
   methods: {
     processData(data) {
       const monthNames = [
-        "January",
-        "February",
-        "March",
-        "April",
-        "May",
-        "June",
-        "July",
-        "August",
-        "September",
-        "October",
-        "November",
-        "December"
+        this.$t("january"),
+        this.$t("february"),
+        this.$t("march"),
+        this.$t("april"),
+        this.$t("may"),
+        this.$t("june"),
+        this.$t("july"),
+        this.$t("august"),
+        this.$t("september"),
+        this.$t("october"),
+        this.$t("november"),
+        this.$t("december")
       ];
 
+      for (let i = 0; i < data.length; i++) {
+        data[i].p_ed = {};
+        data[i].p_er = {};
+        data[i].p_gd = {};
+        data[i].p_costs = {};
+
+        if (i < data.length - 1) {
+          const edAMonth = (
+            (data[i].edt1 +
+              data[i].edt2 -
+              (data[i + 1].edt1 + data[i + 1].edt2)) *
+            1000
+          ).toFixed(0);
+          const edCostsAMonth =
+            data[i].edt1 * this.settingsTariffs.ed_tariff1 +
+            data[i].edt2 * this.settingsTariffs.ed_tariff2 -
+            (data[i + 1].edt1 * this.settingsTariffs.ed_tariff1 +
+              data[i + 1].edt2 * this.settingsTariffs.ed_tariff2);
+          const erAMonth = (
+            (data[i].ert1 +
+              data[i].ert2 -
+              (data[i + 1].ert1 + data[i + 1].ert2)) *
+            1000
+          ).toFixed(0);
+          const erCostsAMonth =
+            data[i].ert1 * this.settingsTariffs.er_tariff1 +
+            data[i].ert2 * this.settingsTariffs.er_tariff2 -
+            (data[i + 1].ert1 * this.settingsTariffs.er_tariff1 +
+              data[i + 1].ert2 * this.settingsTariffs.er_tariff2);
+          const gdAMonth = (data[i].gdt - data[i + 1].gdt).toFixed(3);
+          const gdCostsAMonth =
+            data[i].gdt * this.settingsTariffs.gd_tariff -
+            data[i + 1].gdt * this.settingsTariffs.gd_tariff;
+
+          data[i].p_ed = edAMonth;
+          data[i].p_er = erAMonth;
+          data[i].p_gd = gdAMonth;
+          data[i].p_costs = (
+            edCostsAMonth -
+            erCostsAMonth +
+            gdCostsAMonth
+          ).toFixed(2);
+        } else {
+          const edAMonth = (data[i].edt1 + data[i].edt2).toFixed(0);
+          const edCostsAMonth =
+            data[i].edt1 * this.settingsTariffs.ed_tariff1 +
+            data[i].edt2 * this.settingsTariffs.ed_tariff2;
+          const erAMonth = (data[i].ert1 + data[i].ert2).toFixed(0);
+          const erCostsAMonth =
+            data[i].ert1 * this.settingsTariffs.er_tariff1 +
+            data[i].ert2 * this.settingsTariffs.er_tariff2;
+          const gdAMonth = data[i].gdt.toFixed(3);
+          const gdCostsAMonth = data[i].gdt * this.settingsTariffs.gd_tariff;
+
+          data[i].p_ed = edAMonth;
+          data[i].p_er = erAMonth;
+          data[i].p_gd = gdAMonth;
+          data[i].p_costs = (
+            edCostsAMonth -
+            erCostsAMonth +
+            gdCostsAMonth
+          ).toFixed(2);
+        }
+      }
+
       const amountOfRows = data.length > 24 ? 12 : data.length / 2;
+      const tableData = [];
       for (let i = 0; i < amountOfRows; i++) {
         const month = parseInt(data[i].recid.substring(2, 4), 10) - 1;
         const ed1 = (data[i].edt1 + data[i].edt2).toFixed(3);
@@ -179,23 +187,27 @@ export default {
 
         const obj = {
           month: monthNames[month],
-          year1:
+          yearCurrent:
             "20" + data[i].recid.substring(0, 2) === "2000"
               ? "-"
               : "20" + data[i].recid.substring(0, 2),
-          year2:
+          yearPrevious:
             "20" + data[i + 12].recid.substring(0, 2) === "2000"
               ? "-"
               : "20" + data[i + 12].recid.substring(0, 2),
-          ed1: ed1,
-          ed2: ed2,
-          er1: er1,
-          er2: er2,
-          gd1: gd1,
-          gd2: gd2
+          edCurrent: data[i].p_ed,
+          edPrevious: data[i + 12].p_ed,
+          erCurrent: data[i].p_er,
+          erPrevious: data[i + 12].p_er,
+          gdCurrent: data[i].p_gd,
+          gdPrevious: data[i + 12].p_gd,
+          costsCurrent: data[i].p_costs,
+          costsPrevious: data[i + 12].p_costs
         };
-        console.log(obj);
+        tableData.push(obj);
       }
+
+      return tableData;
     }
   }
 };
