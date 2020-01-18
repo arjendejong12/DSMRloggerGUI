@@ -212,3 +212,67 @@ export default {
   }
 };
 </script>
+
+<style lang="scss">
+@import "~vuetify/src/styles/styles.sass";
+
+@media #{map-get($display-breakpoints, 'sm-and-up')} {
+  .theme--light {
+    .per-month {
+      tr {
+        th,
+        td {
+          &:first-child,
+          &:nth-child(6) {
+            border-right: thin solid rgba(0, 0, 0, 0.12);
+          }
+        }
+      }
+    }
+  }
+
+  .theme--dark {
+    .per-month {
+      tr {
+        th,
+        td {
+          &:first-child,
+          &:nth-child(6) {
+            border-right: thin solid rgba(255, 255, 255, 0.12);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media #{map-get($display-breakpoints, 'sm-and-down')} {
+  .theme--light {
+    .per-month {
+      tr {
+        th,
+        td {
+          &:first-child,
+          &:nth-child(6) {
+            border-bottom: thin solid rgba(0, 0, 0, 0.12);
+          }
+        }
+      }
+    }
+  }
+
+  .theme--dark {
+    .per-month {
+      tr {
+        th,
+        td {
+          &:first-child,
+          &:nth-child(6) {
+            border-bottom: thin solid rgba(255, 255, 255, 0.12);
+          }
+        }
+      }
+    }
+  }
+}
+</style>
