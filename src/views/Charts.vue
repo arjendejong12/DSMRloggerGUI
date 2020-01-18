@@ -24,10 +24,6 @@
                       {{ $t("actual") }}
                       <v-icon small right>mdi-clock-outline</v-icon>
                     </v-btn>
-                    <v-btn value="financial">
-                      {{ $t("financial") }}
-                      <v-icon small right>mdi-currency-eur</v-icon>
-                    </v-btn>
                     <v-btn value="day">
                       {{ $t("day") }}
                       <v-icon small right>mdi-calendar-today</v-icon>
@@ -39,6 +35,10 @@
                     <v-btn value="year">
                       {{ $t("year") }}
                       <v-icon small right>mdi-calendar-multiple</v-icon>
+                    </v-btn>
+                    <v-btn value="financial">
+                      {{ $t("financial") }}
+                      <v-icon small right>mdi-currency-eur</v-icon>
                     </v-btn>
                   </v-btn-toggle>
                 </v-col>
@@ -491,9 +491,7 @@ export default {
   },
   methods: {
     refresh: function() {
-      clearInterval(this.intervalTab);
       this.clearVariables(this);
-      this.graphStart(this.chart);
     },
     graphStart(graphType) {
       if (graphType == "year") {
