@@ -44,8 +44,10 @@
     <v-footer app>
       <span
         >&copy; 2020 - Arjen de Jong ({{ $t("compiled_on") }}
-        {{ buildTime }})</span
+        {{ buildDateTime }})</span
       >
+      <v-spacer></v-spacer>
+      <span>{{ currentDateTime }}</span>
     </v-footer>
   </v-app>
 </template>
@@ -54,6 +56,15 @@
 import preval from "preval.macro";
 import LanguageSwitcher from "@/components/LanguageSwitcher.vue";
 import Modal from "@/components/Modal.vue";
+
+const dateOptions = {
+  day: "2-digit",
+  month: "2-digit",
+  year: "numeric",
+  hour: "2-digit",
+  minute: "2-digit",
+  second: "2-digit"
+};
 
 export default {
   name: "App",
@@ -78,7 +89,8 @@ export default {
       }
     ],
     isDark: true,
-    buildTime: preval`module.exports = new Date().toLocaleString('nl-NL', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' });`
+    currentDateTime: new Date().toLocaleString("nl-NL", dateOptions),
+    buildDateTime: preval`module.exports = new Date().toLocaleString('nl-NL', { day: "2-digit", month: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit", second: "2-digit" });`
   }),
 
   computed: {
@@ -119,6 +131,8 @@ export default {
   },
 
   created() {
+    setInterval(this.getNow, 1000);
+
     if (!this.$store.state.settings.length) {
       this.$store.dispatch("getSettings");
     }
@@ -135,6 +149,12 @@ export default {
       if (localStorage.getItem("dsmrloggergui-darkmode") == "false") {
         this.isDark = false;
       }
+    }
+  },
+
+  methods: {
+    getNow: function() {
+      this.currentDateTime = new Date().toLocaleString("nl-NL", dateOptions);
     }
   }
 };
