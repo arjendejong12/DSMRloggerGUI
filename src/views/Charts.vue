@@ -99,9 +99,9 @@ export default {
   components: { BarChart, LineChart, RefreshButton },
   mixins: [mixin],
   data: () => ({
+    intervalTab: null,
     chart: "actual",
     chartType: "bar",
-    intervalTab: null,
     Labels: [],
     Delivered: [],
     Returned: [],
@@ -479,17 +479,23 @@ export default {
     if (!this.$store.state.actual.length) {
       this.$store.dispatch("getActual");
 
+      this.setAPIInterval();
+    }
+  },
+  beforeRouteEnter(to, from, next) {
+    next(vm => {
+      vm.setAPIInterval();
+    });
+  },
+  beforeDestroy: function() {
+    clearInterval(this.intervalTab);
+  },
+  methods: {
+    setAPIInterval() {
       this.intervalTab = setInterval(() => {
         this.$store.dispatch("getActual", true);
       }, 9900);
-    }
-  },
-  beforeRouteLeave(to, from, next) {
-    next(vm => {
-      clearInterval(vm.data.intervalTab);
-    });
-  },
-  methods: {
+    },
     refresh: function() {
       this.clearVariables(this);
     },

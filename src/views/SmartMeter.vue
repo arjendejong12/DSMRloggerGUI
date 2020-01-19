@@ -121,16 +121,23 @@ export default {
     if (!this.$store.state.smartMeter.length) {
       this.$store.dispatch("getSmartMeter");
 
+      this.setAPIInterval();
+    }
+  },
+  beforeRouteEnter(to, from, next) {
+    next(vm => {
+      vm.setAPIInterval();
+    });
+  },
+  beforeDestroy: function() {
+    clearInterval(this.intervalTab);
+  },
+  methods: {
+    setAPIInterval() {
       this.intervalTab = setInterval(() => {
         this.$store.dispatch("getSmartMeter");
       }, 20000);
     }
-  },
-  beforeRouteLeave(to, from, next) {
-    next(vm => {
-      clearInterval(vm.data.intervalTab);
-    });
-  },
-  methods: {}
+  }
 };
 </script>

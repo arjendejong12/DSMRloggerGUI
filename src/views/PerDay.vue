@@ -32,7 +32,9 @@ export default {
   name: "per-day",
   components: { RefreshButton },
   mixins: [mixin],
-  data: () => ({}),
+  data: () => ({
+    intervalTab: null,
+  }),
   computed: {
     headers: function() {
       return [
@@ -137,12 +139,23 @@ export default {
     if (!this.$store.state.days.length) {
       this.$store.dispatch("getDays");
 
+      this.setAPIInterval();
+    }
+  },
+  beforeRouteEnter(to, from, next) {
+    next(vm => {
+      vm.setAPIInterval();
+    });
+  },
+  beforeDestroy: function() {
+    clearInterval(this.intervalTab);
+  },
+  methods: {
+    setAPIInterval() {
       this.intervalTab = setInterval(() => {
         this.$store.dispatch("getDays");
       }, 20000);
-    }
-  },
-  methods: {
+    },
     daysInThisMonth: function() {
       const now = new Date();
       return new Date(now.getFullYear(), now.getMonth() + 1, 0).getDate();

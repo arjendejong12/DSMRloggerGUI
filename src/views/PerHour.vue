@@ -32,7 +32,9 @@ export default {
   name: "per-hour",
   components: { RefreshButton },
   mixins: [mixin],
-  data: () => ({}),
+  data: () => ({
+    intervalTab: null,
+  }),
   computed: {
     headers: function() {
       return [
@@ -145,12 +147,23 @@ export default {
     if (!this.$store.state.hours.length) {
       this.$store.dispatch("getHours");
 
+      this.setAPIInterval();
+    }
+  },
+  beforeRouteEnter(to, from, next) {
+    next(vm => {
+      vm.setAPIInterval();
+    });
+  },
+  beforeDestroy: function() {
+    clearInterval(this.intervalTab);
+  },
+  methods: {
+    setAPIInterval() {
       this.intervalTab = setInterval(() => {
         this.$store.dispatch("getHours");
       }, 20000);
-    }
-  },
-  methods: {
+    },
     daysInThisMonth: function() {
       const now = new Date();
       return new Date(now.getFullYear(), now.getMonth() + 1, 0).getDate();
