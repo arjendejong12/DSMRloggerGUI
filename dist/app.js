@@ -49143,7 +49143,7 @@ function () {
           case 20:
             _context.prev = 20;
             _context.t0 = _context["catch"](6);
-            commit(SHOW_MODAL);
+            commit(SHOW_MODAL, true);
             commit(SET_ERROR, _context.t0);
             throw new Error(_context.t0);
 
@@ -49188,8 +49188,8 @@ function () {
     }
   }), _defineProperty(_mutations, SET_ERROR, function (state, payload) {
     state.errorMessage = payload;
-  }), _defineProperty(_mutations, SHOW_MODAL, function (state) {
-    state.showModal = !state.showModal;
+  }), _defineProperty(_mutations, SHOW_MODAL, function (state, payload) {
+    state.showModal = payload;
   }), _mutations),
   actions: {
     getSmartMeter: function getSmartMeter(_ref4) {

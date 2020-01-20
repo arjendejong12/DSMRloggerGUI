@@ -33,7 +33,7 @@ const apiRequest = async (
       });
     }
   } catch (error) {
-    commit(SHOW_MODAL);
+    commit(SHOW_MODAL, true);
     commit(SET_ERROR, error);
     throw new Error(error);
   }
@@ -66,8 +66,8 @@ export default new Vuex.Store({
     [SET_ERROR](state, payload) {
       state.errorMessage = payload;
     },
-    [SHOW_MODAL](state) {
-      state.showModal = !state.showModal;
+    [SHOW_MODAL](state, payload) {
+      state.showModal = payload;
     }
   },
   actions: {
