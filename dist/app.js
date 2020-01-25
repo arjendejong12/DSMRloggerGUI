@@ -26678,7 +26678,6 @@ $({ target: 'String', proto: true }, {
 
 
 var utils = __webpack_require__("c532");
-var isValidXss = __webpack_require__("6dc0");
 
 module.exports = (
   utils.isStandardBrowserEnv() ?
@@ -26698,10 +26697,6 @@ module.exports = (
     */
       function resolveURL(url) {
         var href = url;
-
-        if (isValidXss(url)) {
-          throw new Error('URL contains XSS injection attempt');
-        }
 
         if (msie) {
         // IE needs attribute set twice to normalize properties
@@ -27767,14 +27762,14 @@ var es_promise_finally = __webpack_require__("a79d");
 // EXTERNAL MODULE: ./node_modules/vue/dist/vue.runtime.esm.js
 var vue_runtime_esm = __webpack_require__("2b0e");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"51c159fb-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App.vue?vue&type=template&id=12cd6180&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"55381ec2-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/App.vue?vue&type=template&id=12cd6180&
 var Appvue_type_template_id_12cd6180_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('v-app',[_c('v-navigation-drawer',{attrs:{"app":"","clipped":""},model:{value:(_vm.drawer),callback:function ($$v) {_vm.drawer=$$v},expression:"drawer"}},[_c('v-list',{attrs:{"dense":""}},[_vm._l((_vm.menuItems),function(item){return _c('v-list-item',{key:item.title,attrs:{"link":"","to":item.link}},[_c('v-list-item-action',[_c('v-icon',[_vm._v(_vm._s(item.icon))])],1),_c('v-list-item-content',[_c('v-list-item-title',[_vm._v(_vm._s(item.title))])],1)],1)}),_c('v-list-item',{key:"FSexplorer",attrs:{"href":"/FSexplorer"}},[_c('v-list-item-action',[_c('v-icon',[_vm._v("mdi-folder")])],1),_c('v-list-item-content',[_c('v-list-item-title',[_vm._v("FSExplorer")])],1)],1)],2)],1),_c('v-app-bar',{attrs:{"app":"","clipped-left":""}},[_c('v-app-bar-nav-icon',{on:{"click":function($event){$event.stopPropagation();_vm.drawer = !_vm.drawer}}}),_c('v-toolbar-title',[_vm._v("DSMRloggerGUI")]),_c('v-spacer'),_c('language-switcher',{attrs:{"languages":_vm.languages}}),_c('v-btn',{attrs:{"icon":""},on:{"click":function($event){_vm.isDark = !_vm.isDark}}},[_c('v-icon',[_vm._v("mdi-theme-light-dark")])],1)],1),_c('v-content',[_c('router-view'),_c('Modal')],1),_c('v-footer',{attrs:{"app":""}},[_c('span',[_vm._v("© 2020 - Arjen de Jong ("+_vm._s(_vm.$t("compiled_on"))+" "+_vm._s(_vm.buildDateTime)+")")]),_c('v-spacer'),_c('span',[_vm._v(_vm._s(_vm.currentDateTime))])],1)],1)}
 var staticRenderFns = []
 
 
 // CONCATENATED MODULE: ./src/App.vue?vue&type=template&id=12cd6180&
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"51c159fb-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/LanguageSwitcher.vue?vue&type=template&id=d5960546&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"55381ec2-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/LanguageSwitcher.vue?vue&type=template&id=d5960546&
 var LanguageSwitchervue_type_template_id_d5960546_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('v-menu',{attrs:{"offset-y":""},scopedSlots:_vm._u([{key:"activator",fn:function(ref){
 var menu = ref.on;
 return [_c('v-btn',_vm._g({attrs:{"icon":""}},Object.assign({}, menu)),[(_vm.currentLanguageIcon)?_c('img',{attrs:{"src":_vm.currentLanguageIcon}}):_c('v-icon',[_vm._v("mdi-translate")])],1)]}}])},[_c('v-list',_vm._l((_vm.languages),function(language){return _c('v-list-item',{key:language.id,on:{"click":function($event){return _vm.changeLanguage(language.id)}}},[_c('v-list-item-avatar',{attrs:{"tile":"","size":"24"}},[_c('v-img',{attrs:{"src":language.flagSrc}})],1),_c('v-list-item-title',[_vm._v(_vm._s(_vm.$t(language.title)))])],1)}),1)],1)}
@@ -30125,7 +30120,8 @@ var VIcon_VIcon = mixins(binds_attrs, colorable, sizeable, themeable
         },
         attrs: VIcon_objectSpread({
           'aria-hidden': !hasClickListener,
-          role: hasClickListener ? 'button' : null
+          role: hasClickListener ? 'button' : null,
+          tabindex: hasClickListener ? 0 : undefined
         }, this.attrs$),
         on: this.listeners$
       };
@@ -31642,7 +31638,7 @@ var VListGroup_baseMixins = mixins(binds_attrs, bootable, colorable, inject('lis
       }, this.showLazyContent([this.$createElement('div', this.$slots.default)]));
     },
     genPrependIcon: function genPrependIcon() {
-      var icon = this.prependIcon ? this.prependIcon : this.subGroup ? '$subgroup' : false;
+      var icon = this.subGroup && this.prependIcon == null ? '$subgroup' : this.prependIcon;
       if (!icon && !this.$slots.prependIcon) return null;
       return this.$createElement(VListItemIcon, {
         staticClass: 'v-list-group__header__prepend-icon'
@@ -32352,7 +32348,7 @@ function validateAttachTarget(val) {
         return;
       }
 
-      target.insertBefore(this.$refs.content, target.firstChild);
+      target.appendChild(this.$refs.content);
       this.hasDetached = true;
     }
   }
@@ -32513,6 +32509,7 @@ var activatable_baseMixins = mixins(delayable, toggleable);
           var activator = _this.getActivator(e);
 
           if (activator) activator.focus();
+          e.stopPropagation();
           _this.isActive = !_this.isActive;
         };
       }
@@ -33375,7 +33372,6 @@ var VMenu_baseMixins = mixins(dependent, delayable, detachable, menuable, return
         ref: 'content',
         on: {
           click: function click(e) {
-            e.stopPropagation();
             var target = e.target;
             if (target.getAttribute('disabled')) return;
             if (_this3.closeOnContentClick) _this3.isActive = false;
@@ -33538,7 +33534,7 @@ var component = normalizeComponent(
 
 installComponents_default()(component, {VBtn: VBtn_VBtn,VIcon: components_VIcon_VIcon,VImg: VImg_VImg,VList: VList_VList,VListItem: VList_VListItem,VListItemAvatar: VListItemAvatar,VListItemTitle: VListItemTitle,VMenu: VMenu_VMenu})
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"51c159fb-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal.vue?vue&type=template&id=9419b94a&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"55381ec2-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Modal.vue?vue&type=template&id=9419b94a&
 var Modalvue_type_template_id_9419b94a_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('v-dialog',{attrs:{"persistent":"","max-width":"500"},model:{value:(_vm.showModal),callback:function ($$v) {_vm.showModal=$$v},expression:"showModal"}},[_c('v-card',[_c('v-card-title',{staticClass:"headline"},[_vm._v(_vm._s(_vm.$t("error_title")))]),_c('v-card-text',[_vm._v(_vm._s(_vm.$t("error_message")))]),_c('v-card-text',{domProps:{"innerHTML":_vm._s(_vm.errorMessage)}}),_c('v-card-actions',[_c('v-spacer'),_c('v-btn',{attrs:{"color":"darken-1","text":""},on:{"click":_vm.reloadPage}},[_vm._v(" "+_vm._s(_vm.$t("reload"))+" "),_c('v-icon',{attrs:{"right":""}},[_vm._v("mdi-refresh")])],1)],1)],1)],1)}
 var Modalvue_type_template_id_9419b94a_staticRenderFns = []
 
@@ -34505,11 +34501,6 @@ var VDialog_baseMixins = mixins(activatable, dependent, detachable, overlayable,
         name: 'show',
         value: this.isActive
       }],
-      on: {
-        click: function click(e) {
-          e.stopPropagation();
-        }
-      },
       style: {}
     };
 
@@ -34688,7 +34679,7 @@ var dateOptions = {
       }],
       isDark: true,
       currentDateTime: new Date().toLocaleString("nl-NL", dateOptions),
-      buildDateTime: "19-01-2020 21:11:10"
+      buildDateTime: "25-01-2020 21:32:19"
     };
   },
   computed: {
@@ -35807,7 +35798,7 @@ var VNavigationDrawer_baseMixins = mixins(applicationable('left', ['isActive', '
     miniVariant: Boolean,
     miniVariantWidth: {
       type: [Number, String],
-      default: 80
+      default: 56
     },
     mobileBreakPoint: {
       type: [Number, String],
@@ -35864,6 +35855,7 @@ var VNavigationDrawer_baseMixins = mixins(applicationable('left', ['isActive', '
         'v-navigation-drawer--is-mobile': this.isMobile,
         'v-navigation-drawer--is-mouseover': this.isMouseover,
         'v-navigation-drawer--mini-variant': this.isMiniVariant,
+        'v-navigation-drawer--custom-mini-variant': Number(this.miniVariantWidth) !== 56,
         'v-navigation-drawer--open': this.isActive,
         'v-navigation-drawer--open-on-hover': this.expandOnHover,
         'v-navigation-drawer--right': this.right,
@@ -40923,19 +40915,19 @@ if (inBrowser && window.Vue) {
 
 /* harmony default export */ var vue_router_esm = (VueRouter);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"51c159fb-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/SmartMeter.vue?vue&type=template&id=68272f11&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"55381ec2-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/SmartMeter.vue?vue&type=template&id=68272f11&
 var SmartMetervue_type_template_id_68272f11_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"smart-meter"},[_c('v-container',[_c('v-row',{attrs:{"text-center":"","wrap":""}},[_c('v-col',{staticClass:"d-flex justify-space-between",attrs:{"cols":"12","sm":"12"}},[_c('h1',[_vm._v(_vm._s(_vm.$t("smart_meter")))]),_c('refresh-button',{attrs:{"dispatch":"getSmartMeter"}})],1),_c('v-col',{attrs:{"cols":"12","sm":"12","md":"6"}},[_c('v-row',[_c('v-col',{attrs:{"cols":"12","sm":"12"}},[_c('v-card',{staticClass:"mb-4",attrs:{"elevation":"4","loading":_vm.isLoading}},[_c('v-card-title',[_c('h4',[_vm._v(_vm._s(_vm.$t("actual")))])]),_c('v-divider'),_c('v-list',{attrs:{"dense":""}},_vm._l((_vm.actual),function(field){return _c('v-list-item',{key:field.name},[_c('v-list-item-content',{staticStyle:{"font-weight":"bold"}},[_vm._v(_vm._s(_vm.$t(field.name))+":")]),_c('v-list-item-content',{staticClass:"align-end"},[_vm._v(_vm._s(field.name === "timestamp" ? _vm.formatDate("timestamp", field.value) : field.value)+_vm._s(field.unit ? " " + field.unit : ""))])],1)}),1)],1)],1)],1)],1),_c('v-col',{attrs:{"cols":"12","sm":"12","md":"6"}},[_c('v-row',[_c('v-col',{attrs:{"cols":"12","sm":"12"}})],1)],1)],1)],1)],1)}
 var SmartMetervue_type_template_id_68272f11_staticRenderFns = []
 
 
 // CONCATENATED MODULE: ./src/views/SmartMeter.vue?vue&type=template&id=68272f11&
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"51c159fb-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/RefreshButton.vue?vue&type=template&id=f20c023e&
-var RefreshButtonvue_type_template_id_f20c023e_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('v-btn',{staticClass:"ma-2 white--text",attrs:{"color":"orange","disabled":_vm.isLoading},on:{"click":_vm.refresh}},[_vm._v(" "+_vm._s(_vm.$t("refresh"))+" "),_c('v-icon',{attrs:{"right":""}},[_vm._v("mdi-refresh")])],1)}
-var RefreshButtonvue_type_template_id_f20c023e_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"55381ec2-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/RefreshButton.vue?vue&type=template&id=3da71ef0&
+var RefreshButtonvue_type_template_id_3da71ef0_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('v-btn',{staticClass:"white--text",attrs:{"color":"orange","disabled":_vm.isLoading},on:{"click":_vm.refresh}},[_vm._v(" "+_vm._s(_vm.$t("refresh"))+" "),_c('v-icon',{attrs:{"right":""}},[_vm._v("mdi-refresh")])],1)}
+var RefreshButtonvue_type_template_id_3da71ef0_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/RefreshButton.vue?vue&type=template&id=f20c023e&
+// CONCATENATED MODULE: ./src/components/RefreshButton.vue?vue&type=template&id=3da71ef0&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/RefreshButton.vue?vue&type=script&lang=js&
 //
@@ -40982,8 +40974,8 @@ var RefreshButtonvue_type_template_id_f20c023e_staticRenderFns = []
 
 var RefreshButton_component = normalizeComponent(
   components_RefreshButtonvue_type_script_lang_js_,
-  RefreshButtonvue_type_template_id_f20c023e_render,
-  RefreshButtonvue_type_template_id_f20c023e_staticRenderFns,
+  RefreshButtonvue_type_template_id_3da71ef0_render,
+  RefreshButtonvue_type_template_id_3da71ef0_staticRenderFns,
   false,
   null,
   null,
@@ -41740,7 +41732,7 @@ var SmartMeter_component = normalizeComponent(
 
 installComponents_default()(SmartMeter_component, {VCard: VCard_VCard,VCardTitle: VCardTitle,VCol: VCol,VContainer: VContainer,VDivider: VDivider_VDivider,VList: VList_VList,VListItem: VList_VListItem,VListItemContent: VListItemContent,VRow: VRow})
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"51c159fb-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/PerHour.vue?vue&type=template&id=a13cc034&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"55381ec2-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/PerHour.vue?vue&type=template&id=a13cc034&
 var PerHourvue_type_template_id_a13cc034_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"per-hour"},[_c('v-container',[_c('v-row',{attrs:{"text-center":"","wrap":""}},[_c('v-col',{staticClass:"d-flex justify-space-between",attrs:{"cols":"12","sm":"12"}},[_c('h1',[_vm._v(_vm._s(_vm.$t("hours")))]),_c('refresh-button',{attrs:{"dispatch":"getHours"}})],1),_c('v-col',{attrs:{"cols":"12","sm":"12"}},[_c('v-data-table',{staticClass:"elevation-1",attrs:{"hide-default-footer":"","loading":_vm.isLoading,"loading-text":_vm.$t('loading_please_wait'),"items-per-page":-1,"headers":_vm.headers,"items":_vm.tableData,"item-key":"hour"}})],1)],1)],1)],1)}
 var PerHourvue_type_template_id_a13cc034_staticRenderFns = []
 
@@ -44772,6 +44764,7 @@ var VSelect_baseMixins = mixins(VTextField_VTextField, comparable, filterable);
       var menu = this.$refs.menu; // If enter, space, open menu
 
       if ([keyCodes.enter, keyCodes.space].includes(keyCode)) this.activateMenu();
+      this.$emit('keydown', e);
       if (!menu) return; // If menu is active, allow default
       // listIndex change from menu
 
@@ -46797,7 +46790,7 @@ var PerHour_component = normalizeComponent(
 
 installComponents_default()(PerHour_component, {VCol: VCol,VContainer: VContainer,VDataTable: VDataTable_VDataTable,VRow: VRow})
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"51c159fb-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/PerDay.vue?vue&type=template&id=57e2f0b1&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"55381ec2-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/PerDay.vue?vue&type=template&id=57e2f0b1&
 var PerDayvue_type_template_id_57e2f0b1_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"per-day"},[_c('v-container',[_c('v-row',{attrs:{"text-center":"","wrap":""}},[_c('v-col',{staticClass:"d-flex justify-space-between",attrs:{"cols":"12","sm":"12"}},[_c('h1',[_vm._v(_vm._s(_vm.$t("days")))]),_c('refresh-button',{attrs:{"dispatch":"getDays"}})],1),_c('v-col',{attrs:{"cols":"12","sm":"12"}},[_c('v-data-table',{staticClass:"elevation-1",attrs:{"hide-default-footer":"","loading":_vm.isLoading,"loading-text":_vm.$t('loading_please_wait'),"items-per-page":-1,"headers":_vm.headers,"items":_vm.tableData,"item-key":"day"}})],1)],1)],1)],1)}
 var PerDayvue_type_template_id_57e2f0b1_staticRenderFns = []
 
@@ -47022,7 +47015,7 @@ var PerDay_component = normalizeComponent(
 
 installComponents_default()(PerDay_component, {VCol: VCol,VContainer: VContainer,VDataTable: VDataTable_VDataTable,VRow: VRow})
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"51c159fb-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/PerMonth.vue?vue&type=template&id=7673cfb9&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"55381ec2-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/PerMonth.vue?vue&type=template&id=7673cfb9&
 var PerMonthvue_type_template_id_7673cfb9_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"per-month"},[_c('v-container',[_c('v-row',{attrs:{"text-center":"","wrap":""}},[_c('v-col',{staticClass:"d-flex justify-space-between",attrs:{"cols":"12","sm":"12"}},[_c('h1',[_vm._v(_vm._s(_vm.$t("months")))]),_c('refresh-button',{attrs:{"dispatch":"getMonths"}})],1),_c('v-col',{attrs:{"cols":"12","sm":"12"}},[_c('v-data-table',{staticClass:"elevation-1",attrs:{"hide-default-footer":"","loading":_vm.isLoading,"loading-text":_vm.$t('loading_please_wait'),"items-per-page":-1,"headers":_vm.headers,"items":_vm.tableData,"item-key":"month"}})],1)],1)],1)],1)}
 var PerMonthvue_type_template_id_7673cfb9_staticRenderFns = []
 
@@ -47287,7 +47280,7 @@ var PerMonth_component = normalizeComponent(
 
 installComponents_default()(PerMonth_component, {VCol: VCol,VContainer: VContainer,VDataTable: VDataTable_VDataTable,VRow: VRow})
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"51c159fb-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/Charts.vue?vue&type=template&id=3c17a603&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"55381ec2-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/Charts.vue?vue&type=template&id=3c17a603&
 var Chartsvue_type_template_id_3c17a603_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"charts"},[_c('v-container',[_c('v-row',{attrs:{"text-center":"","wrap":""}},[_c('v-col',{staticClass:"d-flex justify-space-between",attrs:{"cols":"12","sm":"12"}},[_c('h1',[_vm._v(_vm._s(_vm.$t("charts")))]),_c('refresh-button',{attrs:{"dispatch":"getActual"},on:{"execute":_vm.refresh}})],1),_c('v-col',{attrs:{"cols":"12","sm":"12"}},[_c('v-card',{staticClass:"mb-4",attrs:{"elevation":"4","loading":_vm.isLoading}},[_c('v-card-text',[_c('v-row',{attrs:{"wrap":""}},[_c('v-col',{staticClass:"py-2",attrs:{"cols":"12","sm":"12","lg":"6"}},[_c('p',[_vm._v(_vm._s(_vm.$t("data")))]),_c('v-btn-toggle',{staticClass:"flex-column flex-sm-row",attrs:{"mandatory":""},model:{value:(_vm.chart),callback:function ($$v) {_vm.chart=$$v},expression:"chart"}},[_c('v-btn',{attrs:{"value":"actual"}},[_vm._v(" "+_vm._s(_vm.$t("actual"))+" "),_c('v-icon',{attrs:{"small":"","right":""}},[_vm._v("mdi-clock-outline")])],1),_c('v-btn',{attrs:{"value":"day"}},[_vm._v(" "+_vm._s(_vm.$t("day"))+" "),_c('v-icon',{attrs:{"small":"","right":""}},[_vm._v("mdi-calendar-today")])],1),_c('v-btn',{attrs:{"value":"week"}},[_vm._v(" "+_vm._s(_vm.$t("week"))+" "),_c('v-icon',{attrs:{"small":"","right":""}},[_vm._v("mdi-calendar-month")])],1),_c('v-btn',{attrs:{"value":"year"}},[_vm._v(" "+_vm._s(_vm.$t("year"))+" "),_c('v-icon',{attrs:{"small":"","right":""}},[_vm._v("mdi-calendar-multiple")])],1),_c('v-btn',{attrs:{"value":"financial"}},[_vm._v(" "+_vm._s(_vm.$t("financial"))+" "),_c('v-icon',{attrs:{"small":"","right":""}},[_vm._v("mdi-currency-eur")])],1)],1)],1),_c('v-col',{staticClass:"py-2",attrs:{"cols":"12","sm":"12","lg":"6"}},[_c('p',[_vm._v(_vm._s(_vm.$t("type")))]),_c('v-btn-toggle',{attrs:{"mandatory":""},model:{value:(_vm.chartType),callback:function ($$v) {_vm.chartType=$$v},expression:"chartType"}},[_c('v-btn',{attrs:{"value":"bar"}},[_vm._v(" "+_vm._s(_vm.$t("bar"))+" "),_c('v-icon',{attrs:{"small":"","right":""}},[_vm._v("mdi-chart-bar")])],1),_c('v-btn',{attrs:{"value":"line"}},[_vm._v(" "+_vm._s(_vm.$t("line"))+" "),_c('v-icon',{attrs:{"small":"","right":""}},[_vm._v("mdi-chart-line")])],1)],1)],1),_c('v-col',{staticClass:"py-2",attrs:{"cols":"12","sm":"12"}},[(
                     !_vm.isLoading &&
                       _vm.chartType === 'line' &&
@@ -48592,7 +48585,7 @@ var Charts_component = normalizeComponent(
 
 installComponents_default()(Charts_component, {VBtn: VBtn_VBtn,VBtnToggle: VBtnToggle_VBtnToggle,VCard: VCard_VCard,VCardText: VCardText,VCol: VCol,VContainer: VContainer,VIcon: components_VIcon_VIcon,VRow: VRow})
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"51c159fb-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/Settings.vue?vue&type=template&id=2cc04ad2&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"55381ec2-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/Settings.vue?vue&type=template&id=2cc04ad2&
 var Settingsvue_type_template_id_2cc04ad2_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"settings"},[_c('v-container',[_c('v-row',{attrs:{"text-center":"","wrap":"","justify":"center"}},[_c('v-col',{attrs:{"cols":"12","sm":"12","md":"6"}},[_c('v-row',[_c('v-col',{staticClass:"d-flex justify-space-between",attrs:{"cols":"12","sm":"12"}},[_c('h1',[_vm._v(_vm._s(_vm.$t("settings")))]),_c('refresh-button',{attrs:{"dispatch":"getSettings"}})],1),_c('v-col',{attrs:{"cols":"12","sm":"12"}},[_c('v-card',{staticClass:"mb-4",attrs:{"elevation":"4","loading":_vm.isLoading}},[_c('v-card-text',[_c('v-form',{ref:"form",attrs:{"lazy-validation":""},model:{value:(_vm.valid),callback:function ($$v) {_vm.valid=$$v},expression:"valid"}},[_vm._l((_vm.settingsData),function(value,name){return _c('v-text-field',{key:name,attrs:{"label":_vm.$t(("settings_" + (_vm.settingsData[name].name))),"rules":_vm.settingsData[name].rules || [],"type":_vm.settingsData[name].type || 'text',"counter":_vm.settingsData[name].maxlen
                         ? _vm.settingsData[name].maxlen
                         : null,"filled":"","required":"","loading":_vm.isLoading},model:{value:(_vm.settingsData[name].value),callback:function ($$v) {_vm.$set(_vm.settingsData[name], "value", $$v)},expression:"settingsData[name].value"}})}),_c('v-btn',{staticClass:"ma-2",attrs:{"disabled":_vm.isLoading || !_vm.valid},on:{"click":_vm.saveSettings}},[_vm._v(" "+_vm._s(_vm.$t("save"))+" "),_c('v-icon',{attrs:{"right":""}},[_vm._v("mdi-content-save")])],1)],2)],1)],1)],1)],1)],1)],1)],1)],1)}
@@ -48976,7 +48969,183 @@ var Settings_component = normalizeComponent(
 
 installComponents_default()(Settings_component, {VBtn: VBtn_VBtn,VCard: VCard_VCard,VCardText: VCardText,VCol: VCol,VContainer: VContainer,VForm: VForm,VIcon: components_VIcon_VIcon,VRow: VRow,VTextField: VTextField_VTextField})
 
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"55381ec2-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/SystemInfo.vue?vue&type=template&id=5066897f&
+var SystemInfovue_type_template_id_5066897f_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"system-info"},[_c('v-container',[_c('v-row',{attrs:{"text-center":"","wrap":"","justify":"center"}},[_c('v-col',{attrs:{"cols":"12","sm":"12","md":"6"}},[_c('v-row',[_c('v-col',{staticClass:"d-flex justify-space-between",attrs:{"cols":"12","sm":"12"}},[_c('h1',[_vm._v(_vm._s(_vm.$t("system_info")))]),_c('refresh-button',{attrs:{"dispatch":"getSystemInfo"}})],1),_c('v-col',{attrs:{"cols":"12","sm":"12"}},[_c('v-card',{staticClass:"mb-4",attrs:{"elevation":"4","loading":_vm.isLoading}},[_c('v-card-title',[_c('h4',[_vm._v(_vm._s(_vm.$t("information")))])]),_c('v-divider'),_c('v-list',{attrs:{"dense":""}},_vm._l((_vm.systemInfo),function(field){return _c('v-list-item',{key:field.name},[_c('v-list-item-content',{staticStyle:{"font-weight":"bold"}},[_vm._v(_vm._s(_vm.$t(field.name))+":")]),_c('v-list-item-content',{staticClass:"align-end"},[_vm._v(_vm._s(field.name === "timestamp" ? _vm.formatDate("timestamp", field.value) : field.value)+_vm._s(field.unit ? " " + field.unit : ""))])],1)}),1)],1)],1)],1)],1)],1)],1)],1)}
+var SystemInfovue_type_template_id_5066897f_staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/views/SystemInfo.vue?vue&type=template&id=5066897f&
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vuetify-loader/lib/loader.js??ref--18-0!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/SystemInfo.vue?vue&type=script&lang=js&
+
+
+
+
+
+
+
+
+
+function SystemInfovue_type_script_lang_js_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function SystemInfovue_type_script_lang_js_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { SystemInfovue_type_script_lang_js_ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { SystemInfovue_type_script_lang_js_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ var SystemInfovue_type_script_lang_js_ = ({
+  name: "system-info",
+  components: {
+    RefreshButton: RefreshButton
+  },
+  mixins: [src_mixin],
+  data: function data() {
+    return {
+      intervalTab: null
+    };
+  },
+  computed: SystemInfovue_type_script_lang_js_objectSpread({
+    systemInfo: function systemInfo() {
+      try {
+        return this.systemInfo.filter(function (field) {
+          return field; // return [
+          //   "timestamp",
+          //   "energy_delivered_tariff1",
+          //   "energy_delivered_tariff2",
+          //   "energy_returned_tariff1",
+          //   "energy_returned_tariff2",
+          //   "power_delivered",
+          //   "power_returned",
+          //   "voltage_l1",
+          //   "voltage_l2",
+          //   "voltage_l3",
+          //   "current_l1",
+          //   "current_l2",
+          //   "current_l3",
+          //   "power_delivered_l1",
+          //   "power_delivered_l2",
+          //   "power_delivered_l3",
+          //   "power_returned_l1",
+          //   "power_returned_l2",
+          //   "power_returned_l3"
+          // ].includes(field.name);
+        });
+      } catch (error) {
+        return [];
+      }
+    }
+  }, Object(vuex_esm["b" /* mapState */])({
+    isLoading: function isLoading(state) {
+      return state.isLoading;
+    },
+    systemInfo: function systemInfo(state) {
+      return state.systemInfo;
+    }
+  })),
+  watch: {},
+  created: function created() {
+    if (!this.$store.state.systemInfo.length) {
+      this.$store.dispatch("getSystemInfo");
+      this.setAPIInterval();
+    }
+  },
+  beforeRouteEnter: function beforeRouteEnter(to, from, next) {
+    next(function (vm) {
+      vm.setAPIInterval();
+    });
+  },
+  beforeDestroy: function beforeDestroy() {
+    clearInterval(this.intervalTab);
+  },
+  methods: {
+    setAPIInterval: function setAPIInterval() {
+      var _this = this;
+
+      this.intervalTab = setInterval(function () {
+        _this.$store.dispatch("getSystemInfo");
+      }, 20000);
+    }
+  }
+});
+// CONCATENATED MODULE: ./src/views/SystemInfo.vue?vue&type=script&lang=js&
+ /* harmony default export */ var views_SystemInfovue_type_script_lang_js_ = (SystemInfovue_type_script_lang_js_); 
+// CONCATENATED MODULE: ./src/views/SystemInfo.vue
+
+
+
+
+
+/* normalize component */
+
+var SystemInfo_component = normalizeComponent(
+  views_SystemInfovue_type_script_lang_js_,
+  SystemInfovue_type_template_id_5066897f_render,
+  SystemInfovue_type_template_id_5066897f_staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* harmony default export */ var SystemInfo = (SystemInfo_component.exports);
+
+/* vuetify-loader */
+
+
+
+
+
+
+
+
+
+
+installComponents_default()(SystemInfo_component, {VCard: VCard_VCard,VCardTitle: VCardTitle,VCol: VCol,VContainer: VContainer,VDivider: VDivider_VDivider,VList: VList_VList,VListItem: VList_VListItem,VListItemContent: VListItemContent,VRow: VRow})
+
 // CONCATENATED MODULE: ./src/router/index.js
+
 
 
 
@@ -49012,6 +49181,10 @@ var routes = [{
   path: "/settings",
   name: "settings",
   component: Settings
+}, {
+  path: "/system-info",
+  name: "system-info",
+  component: SystemInfo
 }];
 var router = new vue_router_esm({
   base: "/",
@@ -49167,7 +49340,7 @@ function () {
     hours: [],
     days: [],
     months: [],
-    deviceInfo: [],
+    systemInfo: [],
     settings: [],
     isLoading: true,
     showModal: false,
@@ -49212,17 +49385,17 @@ function () {
       var commit = _ref8.commit;
       return apiRequest("get", "/hist/months/asc", "months", commit);
     },
-    getDeviceInfo: function getDeviceInfo(_ref9) {
+    getSettings: function getSettings(_ref9) {
       var commit = _ref9.commit;
-      return apiRequest("get", "/dev/info", "deviceInfo", commit);
-    },
-    getSettings: function getSettings(_ref10) {
-      var commit = _ref10.commit;
       return apiRequest("get", "/dev/settings", "settings", commit);
     },
-    postSettings: function postSettings(_ref11, payload) {
-      var commit = _ref11.commit;
+    postSettings: function postSettings(_ref10, payload) {
+      var commit = _ref10.commit;
       return apiRequest("post", "/dev/settings", "", commit, payload);
+    },
+    getSystemInfo: function getSystemInfo(_ref11) {
+      var commit = _ref11.commit;
+      return apiRequest("get", "/dev/info", "systemInfo", commit);
     },
     setLoadingStatus: function setLoadingStatus(_ref12, payload) {
       var commit = _ref12.commit;
@@ -49593,6 +49766,7 @@ presets_Presets.property = 'presets';
 
 
 
+
 // Extensions
 
 var application_Application =
@@ -49628,7 +49802,7 @@ function (_Service) {
   _createClass(Application, [{
     key: "register",
     value: function register(uid, location, size) {
-      this.application[location][uid] = size;
+      this.application[location] = _defineProperty({}, uid, size);
       this.update(location);
     }
   }, {
@@ -51182,7 +51356,7 @@ function () {
 
 framework_Vuetify.install = install_install;
 framework_Vuetify.installed = false;
-framework_Vuetify.version = "2.2.4";
+framework_Vuetify.version = "2.2.6";
 // CONCATENATED MODULE: ./src/plugins/vuetify.js
 
 
@@ -51899,21 +52073,6 @@ module.exports = function (CONSTRUCTOR_NAME, wrapper, common) {
 
   return Constructor;
 };
-
-
-/***/ }),
-
-/***/ "6dc0":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-module.exports = function isValidXss(requestURL) {
-  var xssRegex = /(\b)(on\w+)=|javascript|(<\s*)(\/*)script/gi;
-  return xssRegex.test(requestURL);
-};
-
 
 
 /***/ }),
@@ -54317,7 +54476,7 @@ $({ target: 'Array', proto: true, forced: !STRICT_METHOD || !USES_TO_LENGTH }, {
 /***/ "a625":
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"$vuetify\":{\"badge\":\"insigne\",\"calendar\":{\"moreEvents\":\"{0} meer\"},\"carousel\":{\"ariaLabel\":{\"delimiter\":\"Carousel slide {0} of {1}\"},\"next\":\"Volgend beeld\",\"prev\":\"Vorig beeld\"},\"close\":\"Sluiten\",\"dataFooter\":{\"firstPage\":\"Eerste pagina\",\"itemsPerPageAll\":\"Alles\",\"itemsPerPageText\":\"Aantal per pagina:\",\"lastPage\":\"Laatste pagina\",\"nextPage\":\"Volgende pagina\",\"pageText\":\"{0}-{1} van {2}\",\"prevPage\":\"Vorige pagina\"},\"dataIterator\":{\"loadingText\":\"Items aan het laden...\",\"noResultsText\":\"Geen overeenkomende resultaten gevonden\"},\"dataTable\":{\"ariaLabel\":{\"sortAscending\":\": Oplopend gesorteerd. Activeer om aflopend te sorteren.\",\"sortDescending\":\": Aflopend gesorteerd. Activeer om de sortering te verwijderen.\",\"sortNone\":\": Niet gesorterrd. Activeer om oplopend te sorteren.\"},\"itemsPerPageText\":\"Rijen per pagina:\",\"sortBy\":\"Sorteer volgens\"},\"datePicker\":{\"itemsSelected\":\"{0} geselecteerd\"},\"fileInput\":{\"counter\":\"{0} bestanden\",\"counterSize\":\"{0} bestanden ({1} in totaal)\"},\"noDataText\":\"Geen gegevens beschikbaar\",\"timePicker\":{\"am\":\"AM\",\"pm\":\"PM\"}},\"actual\":\"Actueel\",\"april\":\"April\",\"august\":\"Augustus\",\"bar\":\"Balk\",\"charts\":\"Grafieken\",\"compiled_on\":\"Gecompileerd op:\",\"costs_€\":\"Kosten (€)\",\"current_l1\":\"Stroom L1\",\"current_l2\":\"Stroom L2\",\"current_l3\":\"Stroom L3\",\"data\":\"Data\",\"date_day\":\"Datum [dag]\",\"date_hour\":\"Datum [uur]\",\"date_month\":\"Datum [maand]\",\"day\":\"Dag\",\"days\":\"Dagen\",\"december\":\"December\",\"delivered_l1\":\"Verbruik (L1)\",\"delivered_l2\":\"Verbruik (L2)\",\"delivered_l3\":\"Verbruik (L3)\",\"dutch\":\"Nederlands\",\"electricity_failure_log\":\"Stroomstoringslogboek\",\"electricity_failures\":\"Stroomstoringen\",\"electricity_long_failures\":\"Lange stroomstoringen\",\"electricity_sags_l1\":\"Stroomdips L1\",\"electricity_sags_l2\":\"Stroomdips L2\",\"electricity_sags_l3\":\"Stroomdips L3\",\"electricity_swells_l1\":\"Stroomzwelling L1\",\"electricity_swells_l2\":\"Stroomzwelling L2\",\"electricity_swells_l3\":\"Stroomzwelling L3\",\"electricity_switch_position\":\"Positie van de stroomschakelaar\",\"electricity_tariff\":\"Stroomtarief\",\"electricity_threshold\":\"Elektriciteitsdrempel\",\"energy_delivered\":\"Energie verbruikt\",\"energy_delivered_tariff1\":\"Energie verbruikt tarief 1\",\"energy_delivered_tariff2\":\"Energie verbruikt tarief 2\",\"energy_delivered_watt\":\"Energieverbruik (Watt)\",\"energy_returned\":\"Energieteruglevering\",\"energy_returned_tariff1\":\"Energie geleverd tarief 1\",\"energy_returned_tariff2\":\"Energie geleverd tarief 2\",\"energy_returned_watt\":\"Energieteruglevering (Watt)\",\"english\":\"Engels\",\"equipment_id\":\"Apparaat ID\",\"error_message\":\"Er is een fout opgetreden. Hieronder staat de fout beschreven. Probeer uw actie opnieuw door de pagina opnieuw te laden.\",\"error_title\":\"Oeps, er is een fout opgetreden!\",\"february\":\"Februari\",\"financial\":\"Financieel\",\"gas_delivered\":\"Gas verbruikt\",\"gas_delivered_m3\":\"Gasverbruik (m3)\",\"gas_device_type\":\"Type gasapparaat\",\"gas_equipment_id\":\"Gasapparaat ID\",\"gas_valve_position\":\"Positie gasklep\",\"graphs\":\"Grafieken\",\"hours\":\"Uren\",\"identification\":\"Slimme meter ID\",\"january\":\"Januari\",\"july\":\"Juli\",\"june\":\"Juni\",\"kw\":\"kW\",\"language\":\"Taal\",\"line\":\"Lijn\",\"loading_please_wait\":\"Aan het laden... Even geduld a.u.b.\",\"march\":\"Maart\",\"may\":\"Mei\",\"message_long\":\"Lang bericht\",\"message_short\":\"Kort bericht\",\"month\":\"Maand\",\"months\":\"Maanden\",\"november\":\"November\",\"number_too_big\":\"Nummer te groot!\",\"number_too_small\":\"Nummer te klein!\",\"october\":\"Oktober\",\"p1_version\":\"P1 versie\",\"per_day\":\"Per dag\",\"per_hour\":\"Per uur\",\"per_month\":\"Per maand\",\"power_delivered\":\"Vermogen verbruikt\",\"power_delivered_l1\":\"Vermogen verbruikt L1\",\"power_delivered_l2\":\"Vermogen verbruikt L2\",\"power_delivered_l3\":\"Vermogen verbruikt L3\",\"power_returned\":\"Vermogen opgewekt\",\"power_returned_l1\":\"Vermogen opgewekt L1\",\"power_returned_l2\":\"Vermogen opgewekt L2\",\"power_returned_l3\":\"Vermogen opgewekt L3\",\"refresh\":\"Vernieuw\",\"reload\":\"Opnieuw laden\",\"returned_(l1_l2_l3)\":\"Teruglevering (L1+L2+L3)\",\"save\":\"Opslaan\",\"september\":\"September\",\"settings\":\"Instellingen\",\"settings_ed_tariff1\":\"Prijs per verbruikte kWh (tarief 1)\",\"settings_ed_tariff2\":\"Prijs per verbruikte kWh (tarief 2)\",\"settings_electr_netw_costs\":\"Electra vaste kosten per maand\",\"settings_er_tariff1\":\"Prijs per teruggeleverde kWh (tarief 1)\",\"settings_er_tariff2\":\"Prijs per teruggeleverde kWh (tarief 2)\",\"settings_gas_netw_costs\":\"Gas vaste kosten per maand\",\"settings_gd_tariff\":\"Prijs per verbruikte m3 gas\",\"settings_mindergastoken\":\"Mindergas.nl API-sleutel\",\"settings_mqtt_broker\":\"MQTT Broker URL/IP\",\"settings_mqtt_broker_port\":\"MQTT Broker port\",\"settings_mqtt_interval\":\"MQTT verwerkingsinterval (sec.)\",\"settings_mqtt_passwd\":\"MQTT wachtwoord\",\"settings_mqtt_topTopic\":\"MQTT hoofdonderwerp\",\"settings_mqtt_user\":\"MQTT gebruikersnaam\",\"settings_tlgrm_interval\":\"Telegram verwerkingsinterval (sec.)\",\"slave_delivered\":\"Slave verbruikt\",\"slave_device_type\":\"Type slave-apparaat\",\"slave_equipment_id\":\"Slave-apparaat ID\",\"slave_valve_position\":\"Positie slave-klep\",\"smart_meter\":\"Slimme meter\",\"system_info\":\"Systeeminfo\",\"thermal_delivered\":\"Thermisch verbruikt\",\"thermal_device_type\":\"Type thermisch apparaat\",\"thermal_equipment_id\":\"Thermisch apparaat ID\",\"thermal_valve_position\":\"Positie thermische klep\",\"timestamp\":\"Tijdstempel\",\"too_long\":\"Invoer te lang!\",\"type\":\"Soort\",\"voltage_l1\":\"Voltage L1\",\"voltage_l2\":\"Voltage L2\",\"voltage_l3\":\"Voltage L3\",\"water_delivered\":\"Water verbruikt\",\"water_device_type\":\"Type waterapparaat\",\"water_equipment_id\":\"Waterapparaat ID\",\"water_valve_position\":\"Positie waterklep\",\"week\":\"Week\",\"wrong_format\":\"Verkeerd formaat!\",\"year\":\"Jaar\"}");
+module.exports = JSON.parse("{\"$vuetify\":{\"badge\":\"insigne\",\"calendar\":{\"moreEvents\":\"{0} meer\"},\"carousel\":{\"ariaLabel\":{\"delimiter\":\"Carousel slide {0} of {1}\"},\"next\":\"Volgend beeld\",\"prev\":\"Vorig beeld\"},\"close\":\"Sluiten\",\"dataFooter\":{\"firstPage\":\"Eerste pagina\",\"itemsPerPageAll\":\"Alles\",\"itemsPerPageText\":\"Aantal per pagina:\",\"lastPage\":\"Laatste pagina\",\"nextPage\":\"Volgende pagina\",\"pageText\":\"{0}-{1} van {2}\",\"prevPage\":\"Vorige pagina\"},\"dataIterator\":{\"loadingText\":\"Items aan het laden...\",\"noResultsText\":\"Geen overeenkomende resultaten gevonden\"},\"dataTable\":{\"ariaLabel\":{\"sortAscending\":\": Oplopend gesorteerd. Activeer om aflopend te sorteren.\",\"sortDescending\":\": Aflopend gesorteerd. Activeer om de sortering te verwijderen.\",\"sortNone\":\": Niet gesorterrd. Activeer om oplopend te sorteren.\"},\"itemsPerPageText\":\"Rijen per pagina:\",\"sortBy\":\"Sorteer volgens\"},\"datePicker\":{\"itemsSelected\":\"{0} geselecteerd\"},\"fileInput\":{\"counter\":\"{0} bestanden\",\"counterSize\":\"{0} bestanden ({1} in totaal)\"},\"noDataText\":\"Geen gegevens beschikbaar\",\"timePicker\":{\"am\":\"AM\",\"pm\":\"PM\"}},\"actual\":\"Actueel\",\"april\":\"April\",\"august\":\"Augustus\",\"author\":\"Auteur\",\"author_gui\":\"Auteur (GUI)\",\"bar\":\"Balk\",\"boardtype\":\"Bordtype\",\"charts\":\"Grafieken\",\"chipid\":\"Chip ID\",\"compiled\":\"Gecompileerd op\",\"compiled_gui\":\"Gecompileerd op (GUI)\",\"compiled_on\":\"Gecompileerd op:\",\"coreversion\":\"Core versie\",\"costs_€\":\"Kosten (€)\",\"cpufreq\":\"CPU frequentie (Mhz)\",\"current_l1\":\"Stroom L1\",\"current_l2\":\"Stroom L2\",\"current_l3\":\"Stroom L3\",\"data\":\"Data\",\"date_day\":\"Datum [dag]\",\"date_hour\":\"Datum [uur]\",\"date_month\":\"Datum [maand]\",\"day\":\"Dag\",\"days\":\"Dagen\",\"december\":\"December\",\"delivered_l1\":\"Verbruik (L1)\",\"delivered_l2\":\"Verbruik (L2)\",\"delivered_l3\":\"Verbruik (L3)\",\"dutch\":\"Nederlands\",\"electricity_failure_log\":\"Stroomstoringslogboek\",\"electricity_failures\":\"Stroomstoringen\",\"electricity_long_failures\":\"Lange stroomstoringen\",\"electricity_sags_l1\":\"Stroomdips L1\",\"electricity_sags_l2\":\"Stroomdips L2\",\"electricity_sags_l3\":\"Stroomdips L3\",\"electricity_swells_l1\":\"Stroomzwelling L1\",\"electricity_swells_l2\":\"Stroomzwelling L2\",\"electricity_swells_l3\":\"Stroomzwelling L3\",\"electricity_switch_position\":\"Positie van de stroomschakelaar\",\"electricity_tariff\":\"Stroomtarief\",\"electricity_threshold\":\"Elektriciteitsdrempel\",\"energy_delivered\":\"Energie verbruikt\",\"energy_delivered_tariff1\":\"Energie verbruikt tarief 1\",\"energy_delivered_tariff2\":\"Energie verbruikt tarief 2\",\"energy_delivered_watt\":\"Energieverbruik (Watt)\",\"energy_returned\":\"Energieteruglevering\",\"energy_returned_tariff1\":\"Energie geleverd tarief 1\",\"energy_returned_tariff2\":\"Energie geleverd tarief 2\",\"energy_returned_watt\":\"Energieteruglevering (Watt)\",\"english\":\"Engels\",\"equipment_id\":\"Apparaat ID\",\"error_message\":\"Er is een fout opgetreden. Hieronder staat de fout beschreven. Probeer uw actie opnieuw door de pagina opnieuw te laden.\",\"error_title\":\"Oeps, er is een fout opgetreden!\",\"february\":\"Februari\",\"financial\":\"Financieel\",\"flashchipid\":\"Flash chip ID\",\"flashchipmode\":\"Flash chip modus\",\"flashchiprealsize\":\"Flash chip ware grootte\",\"flashchipsize\":\"Flash chip grootte\",\"flashchipspeed\":\"Flash chip snelheid\",\"freeheap\":\"Vrije geheugen\",\"freesketchSpace\":\"Vrije sketch ruimte\",\"fwversion\":\"Firmware versie\",\"gas_delivered\":\"Gas verbruikt\",\"gas_delivered_m3\":\"Gasverbruik (m3)\",\"gas_device_type\":\"Type gasapparaat\",\"gas_equipment_id\":\"Gasapparaat ID\",\"gas_valve_position\":\"Positie gasklep\",\"graphs\":\"Grafieken\",\"hostname\":\"Hostnaam\",\"hours\":\"Uren\",\"identification\":\"Slimme meter ID\",\"information\":\"Informatie\",\"ipaddress\":\"IP-adres\",\"january\":\"Januari\",\"july\":\"Juli\",\"june\":\"Juni\",\"kw\":\"kW\",\"language\":\"Taal\",\"lastreset\":\"Laatste reset\",\"line\":\"Lijn\",\"loading_please_wait\":\"Aan het laden... Even geduld a.u.b.\",\"march\":\"Maart\",\"maxfreeblock\":\"Max vrije blok\",\"may\":\"Mei\",\"message_long\":\"Lang bericht\",\"message_short\":\"Kort bericht\",\"month\":\"Maand\",\"months\":\"Maanden\",\"november\":\"November\",\"number_too_big\":\"Nummer te groot!\",\"number_too_small\":\"Nummer te klein!\",\"october\":\"Oktober\",\"p1_version\":\"P1 versie\",\"per_day\":\"Per dag\",\"per_hour\":\"Per uur\",\"per_month\":\"Per maand\",\"power_delivered\":\"Vermogen verbruikt\",\"power_delivered_l1\":\"Vermogen verbruikt L1\",\"power_delivered_l2\":\"Vermogen verbruikt L2\",\"power_delivered_l3\":\"Vermogen verbruikt L3\",\"power_returned\":\"Vermogen opgewekt\",\"power_returned_l1\":\"Vermogen opgewekt L1\",\"power_returned_l2\":\"Vermogen opgewekt L2\",\"power_returned_l3\":\"Vermogen opgewekt L3\",\"reboots\":\"Reboots\",\"refresh\":\"Vernieuw\",\"reload\":\"Opnieuw laden\",\"returned_(l1_l2_l3)\":\"Teruglevering (L1+L2+L3)\",\"save\":\"Opslaan\",\"sdkversion\":\"SDK versie\",\"september\":\"September\",\"settings\":\"Instellingen\",\"settings_ed_tariff1\":\"Prijs per verbruikte kWh (tarief 1)\",\"settings_ed_tariff2\":\"Prijs per verbruikte kWh (tarief 2)\",\"settings_electr_netw_costs\":\"Electra vaste kosten per maand\",\"settings_er_tariff1\":\"Prijs per teruggeleverde kWh (tarief 1)\",\"settings_er_tariff2\":\"Prijs per teruggeleverde kWh (tarief 2)\",\"settings_gas_netw_costs\":\"Gas vaste kosten per maand\",\"settings_gd_tariff\":\"Prijs per verbruikte m3 gas\",\"settings_mindergastoken\":\"Mindergas.nl API-sleutel\",\"settings_mqtt_broker\":\"MQTT Broker URL/IP\",\"settings_mqtt_broker_port\":\"MQTT Broker port\",\"settings_mqtt_interval\":\"MQTT verwerkingsinterval (sec.)\",\"settings_mqtt_passwd\":\"MQTT wachtwoord\",\"settings_mqtt_topTopic\":\"MQTT hoofdonderwerp\",\"settings_mqtt_user\":\"MQTT gebruikersnaam\",\"settings_tlgrm_interval\":\"Telegram verwerkingsinterval (sec.)\",\"sketchsize\":\"Sketchgrootte\",\"slave_delivered\":\"Slave verbruikt\",\"slave_device_type\":\"Type slave-apparaat\",\"slave_equipment_id\":\"Slave-apparaat ID\",\"slave_valve_position\":\"Positie slave-klep\",\"smart_meter\":\"Slimme meter\",\"ssid\":\"SSID\",\"system_info\":\"Systeeminfo\",\"telegramcount\":\"Telegramaantal\",\"telegramerrors\":\"Telegramfouten\",\"thermal_delivered\":\"Thermisch verbruikt\",\"thermal_device_type\":\"Type thermisch apparaat\",\"thermal_equipment_id\":\"Thermisch apparaat ID\",\"thermal_valve_position\":\"Positie thermische klep\",\"timestamp\":\"Tijdstempel\",\"too_long\":\"Invoer te lang!\",\"type\":\"Soort\",\"uptime\":\"Bedrijfstijd\",\"voltage_l1\":\"Voltage L1\",\"voltage_l2\":\"Voltage L2\",\"voltage_l3\":\"Voltage L3\",\"water_delivered\":\"Water verbruikt\",\"water_device_type\":\"Type waterapparaat\",\"water_equipment_id\":\"Waterapparaat ID\",\"water_valve_position\":\"Positie waterklep\",\"week\":\"Week\",\"wifirssi\":\"WiFi signaalsterkte (RSSI) (dBm)\",\"wrong_format\":\"Verkeerd formaat!\",\"year\":\"Jaar\"}");
 
 /***/ }),
 
@@ -57646,7 +57805,7 @@ module.exports = function (it) {
 /***/ "edd4":
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"$vuetify\":{\"badge\":\"Badge\",\"calendar\":{\"moreEvents\":\"{0} more\"},\"carousel\":{\"ariaLabel\":{\"delimiter\":\"Carousel slide {0} of {1}\"},\"next\":\"Next visual\",\"prev\":\"Previous visual\"},\"close\":\"Close\",\"dataFooter\":{\"firstPage\":\"First page\",\"itemsPerPageAll\":\"All\",\"itemsPerPageText\":\"Items per page:\",\"lastPage\":\"Last page\",\"nextPage\":\"Next page\",\"pageText\":\"{0}-{1} of {2}\",\"prevPage\":\"Previous page\"},\"dataIterator\":{\"loadingText\":\"Loading items...\",\"noResultsText\":\"No matching records found\"},\"dataTable\":{\"ariaLabel\":{\"sortAscending\":\": Sorted ascending. Activate to sort descending.\",\"sortDescending\":\": Sorted descending. Activate to remove sorting.\",\"sortNone\":\": Not sorted. Activate to sort ascending.\"},\"itemsPerPageText\":\"Rows per page:\",\"sortBy\":\"Sort by\"},\"datePicker\":{\"itemsSelected\":\"{0} selected\"},\"fileInput\":{\"counter\":\"{0} files\",\"counterSize\":\"{0} files ({1} in total)\"},\"noDataText\":\"No data available\",\"timePicker\":{\"am\":\"AM\",\"pm\":\"PM\"}},\"actual\":\"Actual\",\"april\":\"April\",\"august\":\"August\",\"bar\":\"Bar\",\"charts\":\"Charts\",\"compiled_on\":\"Compiled on:\",\"costs_€\":\"Costs (€)\",\"current_l1\":\"Current L1\",\"current_l2\":\"Current L2\",\"current_l3\":\"Current L3\",\"data\":\"Data\",\"date_day\":\"Date [day]\",\"date_hour\":\"Date [hour]\",\"date_month\":\"Date [month]\",\"day\":\"Day\",\"days\":\"Days\",\"december\":\"December\",\"delivered_l1\":\"Delivery (L1)\",\"delivered_l2\":\"Delivery (L2)\",\"delivered_l3\":\"Delivery (L3)\",\"dutch\":\"Dutch\",\"electricity_failure_log\":\"Electricity failure log\",\"electricity_failures\":\"Electricity failures\",\"electricity_long_failures\":\"Long electricity failures\",\"electricity_sags_l1\":\"Electricity sags L1\",\"electricity_sags_l2\":\"Electricity sags L2\",\"electricity_sags_l3\":\"Electricity sags L3\",\"electricity_swells_l1\":\"Electricity swells L1\",\"electricity_swells_l2\":\"Electricity swells L2\",\"electricity_swells_l3\":\"Electricity swells L3\",\"electricity_switch_position\":\"Electricity switch position\",\"electricity_tariff\":\"Electricity tariff\",\"electricity_threshold\":\"Electricity threshold\",\"energy_delivered\":\"Energy delivered\",\"energy_delivered_tariff1\":\"Energy delivered tariff 1\",\"energy_delivered_tariff2\":\"Energy delivered tariff 2\",\"energy_delivered_watt\":\"Energy delivered (Watt)\",\"energy_returned\":\"Energy returned\",\"energy_returned_tariff1\":\"Energy returned tariff 1\",\"energy_returned_tariff2\":\"Energy returned tariff 2\",\"energy_returned_watt\":\"Energy returned (Watt)\",\"english\":\"English\",\"equipment_id\":\"Equipment ID\",\"error_message\":\"An error has occurred. The error is described below. Try your action again by reloading the page.\",\"error_title\":\"Oh no, an error appeared!\",\"february\":\"February\",\"financial\":\"Financial\",\"gas_delivered\":\"Gas delivered\",\"gas_delivered_m3\":\"Gas delivered (m3)\",\"gas_device_type\":\"Gas device type\",\"gas_equipment_id\":\"Gas equipment ID\",\"gas_valve_position\":\"Gas valve position\",\"graphs\":\"Graphs\",\"hours\":\"Hours\",\"identification\":\"Smart meter ID\",\"january\":\"January\",\"july\":\"July\",\"june\":\"June\",\"kw\":\"kW\",\"language\":\"Language\",\"line\":\"Line\",\"loading_please_wait\":\"Loading.. One moment please.\",\"march\":\"March\",\"may\":\"May\",\"message_long\":\"Long message\",\"message_short\":\"Short message\",\"month\":\"Month\",\"months\":\"Months\",\"november\":\"November\",\"number_too_big\":\"Number too big!\",\"number_too_small\":\"Number too small!\",\"october\":\"October\",\"p1_version\":\"P1 version\",\"per_day\":\"Per day\",\"per_hour\":\"Per hour\",\"per_month\":\"Per month\",\"power_delivered\":\"Power delivered\",\"power_delivered_l1\":\"Power delivered L1\",\"power_delivered_l2\":\"Power delivered L2\",\"power_delivered_l3\":\"Power delivered L3\",\"power_returned\":\"Power returned\",\"power_returned_l1\":\"Power returned L1\",\"power_returned_l2\":\"Power returned L2\",\"power_returned_l3\":\"Power returned L3\",\"refresh\":\"Refresh\",\"reload\":\"Reload\",\"returned_(l1_l2_l3)\":\"Return (L1+L2+L3)\",\"save\":\"Save\",\"september\":\"September\",\"settings\":\"Settings\",\"settings_ed_tariff1\":\"Price per delivered kWh (tariff 1)\",\"settings_ed_tariff2\":\"Price per delivered kWh (tariff 2)\",\"settings_electr_netw_costs\":\"Electricity fixed costs per month\",\"settings_er_tariff1\":\"Price per returned kWh (tariff 1)\",\"settings_er_tariff2\":\"Price per returned kWh (tariff 2)\",\"settings_gas_netw_costs\":\"Gas fixed costs per month\",\"settings_gd_tariff\":\"Price per delivered m3 gas\",\"settings_mindergastoken\":\"Mindergas.nl API key\",\"settings_mqtt_broker\":\"MQTT Broker URL/IP\",\"settings_mqtt_broker_port\":\"MQTT Broker port\",\"settings_mqtt_interval\":\"MQTT processing interval (sec.)\",\"settings_mqtt_passwd\":\"MQTT password\",\"settings_mqtt_topTopic\":\"MQTT top topic\",\"settings_mqtt_user\":\"MQTT username\",\"settings_tlgrm_interval\":\"Telegram processing interval (sec.)\",\"slave_delivered\":\"Slave delivered\",\"slave_device_type\":\"Slave device type\",\"slave_equipment_id\":\"Slave equipment ID\",\"slave_valve_position\":\"Slave valve position\",\"smart_meter\":\"Smart meter\",\"system_info\":\"System info\",\"thermal_delivered\":\"Thermal delivered\",\"thermal_device_type\":\"Thermal device type\",\"thermal_equipment_id\":\"Thermal equipment ID\",\"thermal_valve_position\":\"Thermal valve position\",\"timestamp\":\"Timestamp\",\"too_long\":\"Input too long!\",\"type\":\"Type\",\"voltage_l1\":\"Voltage L1\",\"voltage_l2\":\"Voltage L2\",\"voltage_l3\":\"Voltage L3\",\"water_delivered\":\"Water delivered\",\"water_device_type\":\"Water device type\",\"water_equipment_id\":\"Water equipment ID\",\"water_valve_position\":\"Water valve position\",\"week\":\"Week\",\"wrong_format\":\"Wrong format!\",\"year\":\"Year\"}");
+module.exports = JSON.parse("{\"$vuetify\":{\"badge\":\"Badge\",\"calendar\":{\"moreEvents\":\"{0} more\"},\"carousel\":{\"ariaLabel\":{\"delimiter\":\"Carousel slide {0} of {1}\"},\"next\":\"Next visual\",\"prev\":\"Previous visual\"},\"close\":\"Close\",\"dataFooter\":{\"firstPage\":\"First page\",\"itemsPerPageAll\":\"All\",\"itemsPerPageText\":\"Items per page:\",\"lastPage\":\"Last page\",\"nextPage\":\"Next page\",\"pageText\":\"{0}-{1} of {2}\",\"prevPage\":\"Previous page\"},\"dataIterator\":{\"loadingText\":\"Loading items...\",\"noResultsText\":\"No matching records found\"},\"dataTable\":{\"ariaLabel\":{\"sortAscending\":\": Sorted ascending. Activate to sort descending.\",\"sortDescending\":\": Sorted descending. Activate to remove sorting.\",\"sortNone\":\": Not sorted. Activate to sort ascending.\"},\"itemsPerPageText\":\"Rows per page:\",\"sortBy\":\"Sort by\"},\"datePicker\":{\"itemsSelected\":\"{0} selected\"},\"fileInput\":{\"counter\":\"{0} files\",\"counterSize\":\"{0} files ({1} in total)\"},\"noDataText\":\"No data available\",\"timePicker\":{\"am\":\"AM\",\"pm\":\"PM\"}},\"actual\":\"Actual\",\"april\":\"April\",\"august\":\"August\",\"author\":\"Author\",\"author_gui\":\"Author (GUI)\",\"bar\":\"Bar\",\"boardtype\":\"Board type\",\"charts\":\"Charts\",\"chipid\":\"Chip ID\",\"compiled\":\"Compiled on\",\"compiled_gui\":\"Compiled on (GUI)\",\"compiled_on\":\"Compiled on:\",\"coreversion\":\"Core version\",\"costs_€\":\"Costs (€)\",\"cpufreq\":\"CPU frequency (Mhz)\",\"current_l1\":\"Current L1\",\"current_l2\":\"Current L2\",\"current_l3\":\"Current L3\",\"data\":\"Data\",\"date_day\":\"Date [day]\",\"date_hour\":\"Date [hour]\",\"date_month\":\"Date [month]\",\"day\":\"Day\",\"days\":\"Days\",\"december\":\"December\",\"delivered_l1\":\"Delivery (L1)\",\"delivered_l2\":\"Delivery (L2)\",\"delivered_l3\":\"Delivery (L3)\",\"dutch\":\"Dutch\",\"electricity_failure_log\":\"Electricity failure log\",\"electricity_failures\":\"Electricity failures\",\"electricity_long_failures\":\"Long electricity failures\",\"electricity_sags_l1\":\"Electricity sags L1\",\"electricity_sags_l2\":\"Electricity sags L2\",\"electricity_sags_l3\":\"Electricity sags L3\",\"electricity_swells_l1\":\"Electricity swells L1\",\"electricity_swells_l2\":\"Electricity swells L2\",\"electricity_swells_l3\":\"Electricity swells L3\",\"electricity_switch_position\":\"Electricity switch position\",\"electricity_tariff\":\"Electricity tariff\",\"electricity_threshold\":\"Electricity threshold\",\"energy_delivered\":\"Energy delivered\",\"energy_delivered_tariff1\":\"Energy delivered tariff 1\",\"energy_delivered_tariff2\":\"Energy delivered tariff 2\",\"energy_delivered_watt\":\"Energy delivered (Watt)\",\"energy_returned\":\"Energy returned\",\"energy_returned_tariff1\":\"Energy returned tariff 1\",\"energy_returned_tariff2\":\"Energy returned tariff 2\",\"energy_returned_watt\":\"Energy returned (Watt)\",\"english\":\"English\",\"equipment_id\":\"Equipment ID\",\"error_message\":\"An error has occurred. The error is described below. Try your action again by reloading the page.\",\"error_title\":\"Oh no, an error appeared!\",\"february\":\"February\",\"financial\":\"Financial\",\"flashchipid\":\"Flash chip ID\",\"flashchipmode\":\"Flash chip mode\",\"flashchiprealsize\":\"Flash chip real size\",\"flashchipsize\":\"Flash chip size\",\"flashchipspeed\":\"Flash chip speed\",\"freeheap\":\"Free heap\",\"freesketchSpace\":\"Free sketch space\",\"fwversion\":\"Firmware version\",\"gas_delivered\":\"Gas delivered\",\"gas_delivered_m3\":\"Gas delivered (m3)\",\"gas_device_type\":\"Gas device type\",\"gas_equipment_id\":\"Gas equipment ID\",\"gas_valve_position\":\"Gas valve position\",\"graphs\":\"Graphs\",\"hostname\":\"Hostname\",\"hours\":\"Hours\",\"identification\":\"Smart meter ID\",\"information\":\"Information\",\"ipaddress\":\"IP address\",\"january\":\"January\",\"july\":\"July\",\"june\":\"June\",\"kw\":\"kW\",\"language\":\"Language\",\"lastreset\":\"Last reset\",\"line\":\"Line\",\"loading_please_wait\":\"Loading.. One moment please.\",\"march\":\"March\",\"maxfreeblock\":\"Max free block\",\"may\":\"May\",\"message_long\":\"Long message\",\"message_short\":\"Short message\",\"month\":\"Month\",\"months\":\"Months\",\"november\":\"November\",\"number_too_big\":\"Number too big!\",\"number_too_small\":\"Number too small!\",\"october\":\"October\",\"p1_version\":\"P1 version\",\"per_day\":\"Per day\",\"per_hour\":\"Per hour\",\"per_month\":\"Per month\",\"power_delivered\":\"Power delivered\",\"power_delivered_l1\":\"Power delivered L1\",\"power_delivered_l2\":\"Power delivered L2\",\"power_delivered_l3\":\"Power delivered L3\",\"power_returned\":\"Power returned\",\"power_returned_l1\":\"Power returned L1\",\"power_returned_l2\":\"Power returned L2\",\"power_returned_l3\":\"Power returned L3\",\"reboots\":\"Reboots\",\"refresh\":\"Refresh\",\"reload\":\"Reload\",\"returned_(l1_l2_l3)\":\"Return (L1+L2+L3)\",\"save\":\"Save\",\"sdkversion\":\"SDK version\",\"september\":\"September\",\"settings\":\"Settings\",\"settings_ed_tariff1\":\"Price per delivered kWh (tariff 1)\",\"settings_ed_tariff2\":\"Price per delivered kWh (tariff 2)\",\"settings_electr_netw_costs\":\"Electricity fixed costs per month\",\"settings_er_tariff1\":\"Price per returned kWh (tariff 1)\",\"settings_er_tariff2\":\"Price per returned kWh (tariff 2)\",\"settings_gas_netw_costs\":\"Gas fixed costs per month\",\"settings_gd_tariff\":\"Price per delivered m3 gas\",\"settings_mindergastoken\":\"Mindergas.nl API key\",\"settings_mqtt_broker\":\"MQTT Broker URL/IP\",\"settings_mqtt_broker_port\":\"MQTT Broker port\",\"settings_mqtt_interval\":\"MQTT processing interval (sec.)\",\"settings_mqtt_passwd\":\"MQTT password\",\"settings_mqtt_topTopic\":\"MQTT top topic\",\"settings_mqtt_user\":\"MQTT username\",\"settings_tlgrm_interval\":\"Telegram processing interval (sec.)\",\"sketchsize\":\"Sketch size\",\"slave_delivered\":\"Slave delivered\",\"slave_device_type\":\"Slave device type\",\"slave_equipment_id\":\"Slave equipment ID\",\"slave_valve_position\":\"Slave valve position\",\"smart_meter\":\"Smart meter\",\"ssid\":\"SSID\",\"system_info\":\"System info\",\"telegramcount\":\"Telegram count\",\"telegramerrors\":\"Telegram errors\",\"thermal_delivered\":\"Thermal delivered\",\"thermal_device_type\":\"Thermal device type\",\"thermal_equipment_id\":\"Thermal equipment ID\",\"thermal_valve_position\":\"Thermal valve position\",\"timestamp\":\"Timestamp\",\"too_long\":\"Input too long!\",\"type\":\"Type\",\"uptime\":\"Uptime\",\"voltage_l1\":\"Voltage L1\",\"voltage_l2\":\"Voltage L2\",\"voltage_l3\":\"Voltage L3\",\"water_delivered\":\"Water delivered\",\"water_device_type\":\"Water device type\",\"water_equipment_id\":\"Water equipment ID\",\"water_valve_position\":\"Water valve position\",\"week\":\"Week\",\"wifirssi\":\"WiFi signal strength (RSSI) (dBm)\",\"wrong_format\":\"Wrong format!\",\"year\":\"Year\"}");
 
 /***/ }),
 

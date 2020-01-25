@@ -1,7 +1,7 @@
 <template>
   <v-btn
     color="orange"
-    class="ma-2 white--text"
+    class="white--text"
     :disabled="isLoading"
     @click="refresh"
   >

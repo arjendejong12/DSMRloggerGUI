@@ -46,7 +46,7 @@ export default new Vuex.Store({
     hours: [],
     days: [],
     months: [],
-    deviceInfo: [],
+    systemInfo: [],
     settings: [],
     isLoading: true,
     showModal: false,
@@ -86,14 +86,14 @@ export default new Vuex.Store({
     getMonths({ commit }) {
       return apiRequest("get", "/hist/months/asc", "months", commit);
     },
-    getDeviceInfo({ commit }) {
-      return apiRequest("get", "/dev/info", "deviceInfo", commit);
-    },
     getSettings({ commit }) {
       return apiRequest("get", "/dev/settings", "settings", commit);
     },
     postSettings({ commit }, payload) {
       return apiRequest("post", "/dev/settings", "", commit, payload);
+    },
+    getSystemInfo({ commit }) {
+      return apiRequest("get", "/dev/info", "systemInfo", commit);
     },
     setLoadingStatus({ commit }, payload) {
       if (payload === true) {
