@@ -7,16 +7,29 @@
           <refresh-button dispatch="getHours"></refresh-button>
         </v-col>
         <v-col cols="12" sm="12">
-          <v-data-table
-            hide-default-footer
-            :loading="isLoading"
-            :loading-text="$t('loading_please_wait')"
-            :items-per-page="-1"
-            :headers="headers"
-            :items="tableData"
-            item-key="hour"
-            class="elevation-1"
-          ></v-data-table>
+          <v-tabs v-model="tab" color="orange">
+            <v-tab>{{ $t("table") }}</v-tab>
+            <v-tab>{{ $t("graph") }}</v-tab>
+          </v-tabs>
+          <v-tabs-items v-model="tab">
+            <v-tab-item>
+              <v-data-table
+                hide-default-footer
+                :loading="isLoading"
+                :loading-text="$t('loading_please_wait')"
+                :items-per-page="-1"
+                :headers="headers"
+                :items="tableData"
+                item-key="hour"
+                class="elevation-1"
+              ></v-data-table>
+            </v-tab-item>
+            <v-tab-item>
+              <v-card flat>
+                <v-card-text>Graph</v-card-text>
+              </v-card>
+            </v-tab-item>
+          </v-tabs-items>
         </v-col>
       </v-row>
     </v-container>
@@ -33,7 +46,8 @@ export default {
   components: { RefreshButton },
   mixins: [mixin],
   data: () => ({
-    intervalTab: null,
+    tab: null,
+    intervalTab: null
   }),
   computed: {
     headers: function() {

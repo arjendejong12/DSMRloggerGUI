@@ -6,10 +6,13 @@
           <h1>{{ $t("smart_meter") }}</h1>
           <refresh-button dispatch="getSmartMeter"></refresh-button>
         </v-col>
-        <v-col cols="12" sm="12" md="6">
-          <v-row>
-            <v-col cols="12" sm="12">
-              <!-- <h2>Overzicht</h2> -->
+        <v-col cols="12" sm="12">
+          <v-tabs v-model="tab" color="orange">
+            <v-tab>{{ $t("table") }}</v-tab>
+            <v-tab>{{ $t("graph") }}</v-tab>
+          </v-tabs>
+          <v-tabs-items v-model="tab">
+            <v-tab-item>
               <v-card class="mb-4" elevation="4" :loading="isLoading">
                 <v-card-title>
                   <h4>{{ $t("actual") }}</h4>
@@ -32,37 +35,13 @@
                   </v-list-item>
                 </v-list>
               </v-card>
-            </v-col>
-          </v-row>
-        </v-col>
-        <v-col cols="12" sm="12" md="6">
-          <v-row>
-            <v-col cols="12" sm="12">
-              <!-- <h2>Fasen</h2> -->
-              <!-- <v-card
-                class="mb-4"
-                elevation="4"
-                :loading="isLoading"
-                v-for="(blocks, index) in phases"
-                :key="index"
-              >
-                <v-card-title>
-                  <h4>{{ getHeaderTitle(index) }}</h4>
-                </v-card-title>
-                <v-divider></v-divider>
-                <v-list dense>
-                  <v-list-item v-for="(block, index) in blocks" :key="index">
-                    <v-list-item-content style="font-weight: bold;"
-                      >{{ block.title }}:</v-list-item-content
-                    >
-                    <v-list-item-content class="align-end">{{
-                      block.value
-                    }}</v-list-item-content>
-                  </v-list-item>
-                </v-list>
-              </v-card> -->
-            </v-col>
-          </v-row>
+            </v-tab-item>
+            <v-tab-item>
+              <v-card flat>
+                <v-card-text>Graph</v-card-text>
+              </v-card>
+            </v-tab-item>
+          </v-tabs-items>
         </v-col>
       </v-row>
     </v-container>
@@ -79,6 +58,7 @@ export default {
   components: { RefreshButton },
   mixins: [mixin],
   data: () => ({
+    tab: null,
     intervalTab: null
   }),
   computed: {
