@@ -9,7 +9,7 @@
         <v-col cols="12" sm="12">
           <v-tabs v-model="tab" color="orange">
             <v-tab>{{ $t("table") }}</v-tab>
-            <v-tab>{{ $t("graph") }}</v-tab>
+            <v-tab>{{ $t("chart") }}</v-tab>
           </v-tabs>
           <v-tabs-items v-model="tab">
             <v-tab-item>
@@ -26,7 +26,7 @@
             </v-tab-item>
             <v-tab-item>
               <v-card flat>
-                <v-card-text>Graph</v-card-text>
+                <v-card-text>Chart</v-card-text>
               </v-card>
             </v-tab-item>
           </v-tabs-items>
