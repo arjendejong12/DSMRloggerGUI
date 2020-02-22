@@ -96,7 +96,7 @@ export default {
   computed: {
     menuItems: function() {
       return [
-        { icon: "mdi-clock-outline", title: this.$t("smart_meter"), link: "/" },
+        { icon: "mdi-clock-outline", title: this.$t("actual"), link: "/" },
         { icon: "mdi-history", title: this.$t("per_hour"), link: "/per-hour" },
         {
           icon: "mdi-calendar-today",

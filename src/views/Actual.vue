@@ -3,21 +3,17 @@
     <v-container>
       <v-row text-center wrap>
         <v-col cols="12" sm="12" class="d-flex justify-space-between">
-          <h1>{{ $t("smart_meter") }}</h1>
+          <h1>{{ $t("actual") }}</h1>
           <refresh-button dispatch="getSmartMeter"></refresh-button>
         </v-col>
         <v-col cols="12" sm="12">
           <v-tabs v-model="tab" color="orange">
             <v-tab>{{ $t("table") }}</v-tab>
-            <v-tab>{{ $t("graph") }}</v-tab>
+            <v-tab>{{ $t("chart") }}</v-tab>
           </v-tabs>
           <v-tabs-items v-model="tab">
             <v-tab-item>
               <v-card class="mb-4" elevation="4" :loading="isLoading">
-                <v-card-title>
-                  <h4>{{ $t("actual") }}</h4>
-                </v-card-title>
-                <v-divider></v-divider>
                 <v-list dense>
                   <v-list-item v-for="field in actual" :key="field.name">
                     <v-list-item-content style="font-weight: bold;"
@@ -37,9 +33,7 @@
               </v-card>
             </v-tab-item>
             <v-tab-item>
-              <v-card flat>
-                <v-card-text>Graph</v-card-text>
-              </v-card>
+              <actual-chart></actual-chart>
             </v-tab-item>
           </v-tabs-items>
         </v-col>
@@ -50,12 +44,13 @@
 
 <script>
 import RefreshButton from "@/components/RefreshButton.vue";
+import ActualChart from "@/components/ActualChart.vue";
 import mixin from "@/mixin";
 import { mapState } from "vuex";
 
 export default {
-  name: "smart-meter",
-  components: { RefreshButton },
+  name: "actual",
+  components: { RefreshButton, ActualChart },
   mixins: [mixin],
   data: () => ({
     tab: null,

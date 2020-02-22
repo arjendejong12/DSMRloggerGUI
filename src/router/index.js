@@ -1,6 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import SmartMeter from "../views/SmartMeter.vue";
+import Actual from "../views/Actual.vue";
 import PerHour from "../views/PerHour.vue";
 import PerDay from "../views/PerDay.vue";
 import PerMonth from "../views/PerMonth.vue";
@@ -13,10 +13,10 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
-    name: "smart-meter",
-    component: SmartMeter
+    name: "actual",
+    component: Actual
     // component: () =>
-    //   import(/* webpackChunkName: "smart-meter" */ "../views/SmartMeter.vue")
+    //   import(/* webpackChunkName: "actual" */ "../views/actual.vue")
   },
   {
     path: "/per-hour",
