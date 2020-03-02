@@ -42,10 +42,7 @@
     </v-content>
 
     <v-footer app>
-      <span
-        >&copy; 2020 - Arjen de Jong ({{ $t("compiled_on") }}
-        {{ buildDateTime }})</span
-      >
+      <span>&copy; 2020 - Arjen de Jong</span>
       <v-spacer></v-spacer>
       <span>{{ currentDateTime }}</span>
     </v-footer>
@@ -53,7 +50,6 @@
 </template>
 
 <script>
-import preval from "preval.macro";
 import LanguageSwitcher from "@/components/LanguageSwitcher.vue";
 import Modal from "@/components/Modal.vue";
 
@@ -89,8 +85,7 @@ export default {
       }
     ],
     isDark: true,
-    currentDateTime: new Date().toLocaleString("nl-NL", dateOptions),
-    buildDateTime: preval`module.exports = new Date().toLocaleString('nl-NL', { day: "2-digit", month: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit", second: "2-digit" });`
+    currentDateTime: new Date().toLocaleString("nl-NL", dateOptions)
   }),
 
   computed: {

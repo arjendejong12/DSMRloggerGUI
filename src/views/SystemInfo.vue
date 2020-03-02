@@ -15,7 +15,10 @@
                 </v-card-title>
                 <v-divider></v-divider>
                 <v-list dense>
-                  <v-list-item v-for="field in systemInfo" :key="field.name">
+                  <v-list-item
+                    v-for="field in updatedSystemInfo"
+                    :key="field.name"
+                  >
                     <v-list-item-content style="font-weight: bold;"
                       >{{ $t(field.name) }}:</v-list-item-content
                     >
@@ -40,6 +43,7 @@
 </template>
 
 <script>
+import preval from "preval.macro";
 import RefreshButton from "@/components/RefreshButton.vue";
 import mixin from "@/mixin";
 import { mapState } from "vuex";
@@ -49,35 +53,22 @@ export default {
   components: { RefreshButton },
   mixins: [mixin],
   data: () => ({
-    intervalTab: null
+    intervalTab: null,
+    buildDateTime: preval`module.exports = new Date().toLocaleString('nl-NL', { day: "2-digit", month: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit", second: "2-digit" });`
   }),
   computed: {
-    systemInfo: function() {
+    updatedSystemInfo: function() {
       try {
-        return this.systemInfo.filter(field => {
-          return field;
-          // return [
-          //   "timestamp",
-          //   "energy_delivered_tariff1",
-          //   "energy_delivered_tariff2",
-          //   "energy_returned_tariff1",
-          //   "energy_returned_tariff2",
-          //   "power_delivered",
-          //   "power_returned",
-          //   "voltage_l1",
-          //   "voltage_l2",
-          //   "voltage_l3",
-          //   "current_l1",
-          //   "current_l2",
-          //   "current_l3",
-          //   "power_delivered_l1",
-          //   "power_delivered_l2",
-          //   "power_delivered_l3",
-          //   "power_returned_l1",
-          //   "power_returned_l2",
-          //   "power_returned_l3"
-          // ].includes(field.name);
-        });
+        return this.systemInfo.concat([
+          {
+            name: this.$t("author_gui"),
+            value: "Arjen de Jong"
+          },
+          {
+            name: this.$t("compiled"),
+            value: this.buildDateTime
+          }
+        ]);
       } catch (error) {
         return [];
       }
