@@ -25,9 +25,7 @@
               ></v-data-table>
             </v-tab-item>
             <v-tab-item>
-              <v-card flat>
-                <v-card-text>Chart</v-card-text>
-              </v-card>
+              <hour-chart></hour-chart>
             </v-tab-item>
           </v-tabs-items>
         </v-col>
@@ -38,12 +36,13 @@
 
 <script>
 import RefreshButton from "@/components/RefreshButton.vue";
+import HourChart from "@/components/HourChart.vue";
 import mixin from "@/mixin";
 import { mapState } from "vuex";
 
 export default {
   name: "per-hour",
-  components: { RefreshButton },
+  components: { RefreshButton, HourChart },
   mixins: [mixin],
   data: () => ({
     tab: null,

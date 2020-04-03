@@ -10,7 +10,7 @@ import VueAxios from "vue-axios";
 // Set API URLs for development and production.
 const baseURL =
   process.env.NODE_ENV === "development"
-    ? "http://192.168.178.101/api/v1"
+    ? "http://192.168.178.102/api/v1"
     : "http://" + location.host + "/api/v1";
 axios.defaults.baseURL = baseURL;
 Vue.use(VueAxios, axios);
